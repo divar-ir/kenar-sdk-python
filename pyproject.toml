@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kenar_api_client"
-version = "0.16.0"
+version = "0.17.0"
 description = "divar_interface/open_platform/chatapi/chatapi.proto"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"
