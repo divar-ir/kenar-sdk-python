@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "kenar_api_client"
-version = "0.17.0"
-description = "divar_interface/open_platform/chatapi/chatapi.proto"
+version = "0.18.0"
+description = "Kenar API"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
-keywords = ["OpenAPI", "OpenAPI-Generator", "divar_interface/open_platform/chatapi/chatapi.proto"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "Kenar API"]
 include = ["kenar_api_client/py.typed"]
 
 [tool.poetry.dependencies]

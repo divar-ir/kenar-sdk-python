@@ -1,6 +1,6 @@
 # kenar_api_client.AssetsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -34,10 +34,10 @@ from kenar_api_client.models.assets_get_body_statuses_response import AssetsGetB
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -99,10 +99,10 @@ from kenar_api_client.models.assets_get_brand_models_response import AssetsGetBr
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -168,10 +168,10 @@ from kenar_api_client.models.assets_get_categories_response import AssetsGetCate
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -233,10 +233,10 @@ from kenar_api_client.models.assets_get_cities_response import AssetsGetCitiesRe
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -298,10 +298,10 @@ from kenar_api_client.models.assets_get_colors_response import AssetsGetColorsRe
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -367,10 +367,10 @@ from kenar_api_client.models.assets_get_districts_response import AssetsGetDistr
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -436,10 +436,10 @@ from kenar_api_client.models.assets_get_districts_response import AssetsGetDistr
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -505,10 +505,10 @@ from kenar_api_client.models.assets_get_internal_storages_response import Assets
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -571,10 +571,10 @@ from kenar_api_client.models.assets_get_o_auth_scopes_response import AssetsGetO
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -637,10 +637,10 @@ from kenar_api_client.models.assets_get_permissions_response import AssetsGetPer
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -702,10 +702,10 @@ from kenar_api_client.models.assets_get_ram_memories_response import AssetsGetRa
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -768,10 +768,10 @@ from kenar_api_client.models.assets_get_service_types_response import AssetsGetS
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 

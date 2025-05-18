@@ -1,11 +1,12 @@
 # AddonsAction
 
+Represents an action that can be performed
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**open_direct_link** | **str** |  | [optional] 
+**open_direct_link** | **str** | An action to send user to your URL directly with just a resource id (if applicable) | [optional] 
 **open_server_link** | [**AddonsOpenServerLink**](AddonsOpenServerLink.md) |  | [optional] 
 **get_dynamic_action** | [**AddonsGetDynamicAction**](AddonsGetDynamicAction.md) |  | [optional] 
 

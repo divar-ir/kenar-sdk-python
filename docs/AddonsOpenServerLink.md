@@ -1,11 +1,12 @@
 # AddonsOpenServerLink
 
+An action to pass complete session data and retrieve redirect location from your server on each user action
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **object** |  | [optional] 
+**data** | **object** | A data that you can set and will be returned to you upon user click to recognize the action | [optional] 
 
 ## Example
 

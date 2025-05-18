@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**conversation_id** | **str** |  | [optional] 
+**conversation_id** | **str** | ID of the conversation created or updated | [optional] [readonly] 
 
 ## Example
 

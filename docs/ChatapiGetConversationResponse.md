@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**conversation** | [**ChatapiConversation**](ChatapiConversation.md) |  | [optional] 
-**messages** | [**List[ChatapiMessage]**](ChatapiMessage.md) |  | [optional] 
+**conversation** | [**ChatapiConversation**](ChatapiConversation.md) |  | 
+**messages** | [**List[ChatapiMessage]**](ChatapiMessage.md) | List of messages in the conversation | 
 
 ## Example
 

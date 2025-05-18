@@ -14,10 +14,10 @@
 
 import unittest
 
-from kenar_api_client.models.apps_app_status_status import AppsAppStatusStatus
+from kenar_api_client.models.addons_addon_semantic_payment_method import AddonsAddonSemanticPaymentMethod
 
-class TestAppsAppStatusStatus(unittest.TestCase):
-    """AppsAppStatusStatus unit test stubs"""
+class TestAddonsAddonSemanticPaymentMethod(unittest.TestCase):
+    """AddonsAddonSemanticPaymentMethod unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,9 +25,9 @@ class TestAppsAppStatusStatus(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testAppsAppStatusStatus(self):
-        """Test AppsAppStatusStatus"""
-        # inst = AppsAppStatusStatus()
+    def testAddonsAddonSemanticPaymentMethod(self):
+        """Test AddonsAddonSemanticPaymentMethod"""
+        # inst = AddonsAddonSemanticPaymentMethod()
 
 if __name__ == '__main__':
     unittest.main()

@@ -1,6 +1,6 @@
 # kenar_api_client.SemanticApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,10 +29,10 @@ from kenar_api_client.models.semantic_create_post_semantic_body import SemanticC
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -104,10 +104,10 @@ from kenar_api_client.models.semantic_create_user_semantic_response import Seman
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -179,10 +179,10 @@ from kenar_api_client.models.semantic_create_user_semantic_response import Seman
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -249,10 +249,10 @@ import kenar_api_client
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -319,10 +319,10 @@ import kenar_api_client
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 

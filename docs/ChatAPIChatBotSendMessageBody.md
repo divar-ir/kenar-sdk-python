@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_id** | **str** |  | [optional] 
-**text_message** | **str** |  | [optional] 
-**media_token** | **str** |  | [optional] 
+**user_id** | **str** | Unique identifier for the user to start or continue a conversation with | [optional] 
+**text_message** | **str** | Text message content to be sent by the bot | 
+**media_token** | **str** | Token for attached media (if any) | [optional] 
 **buttons** | [**ChatapiChatButtonGrid**](ChatapiChatButtonGrid.md) |  | [optional] 
 
 ## Example

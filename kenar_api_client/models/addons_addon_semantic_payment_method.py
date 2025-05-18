@@ -18,21 +18,19 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class AddonsStatus(str, Enum):
+class AddonsAddonSemanticPaymentMethod(str, Enum):
     """
-    AddonsStatus
+    AddonsAddonSemanticPaymentMethod
     """
 
     """
     allowed enum values
     """
-    ACTIVE = 'ACTIVE'
-    HIDDEN = 'HIDDEN'
-    DELETED = 'DELETED'
+    SECURE = 'SECURE'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of AddonsStatus from a JSON string"""
+        """Create an instance of AddonsAddonSemanticPaymentMethod from a JSON string"""
         return cls(json.loads(json_str))
 
 

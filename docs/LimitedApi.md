@@ -1,6 +1,6 @@
 # kenar_api_client.LimitedApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,10 +24,10 @@ from kenar_api_client.models.payment_get_balance_response import PaymentGetBalan
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -88,10 +88,10 @@ from kenar_api_client.models.payment_get_post_pricing_response import PaymentGet
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -155,10 +155,10 @@ from kenar_api_client.models.payment_get_transaction_response import PaymentGetT
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -222,10 +222,10 @@ from kenar_api_client.models.payment_reorder_post_response import PaymentReorder
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 

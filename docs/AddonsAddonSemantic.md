@@ -6,7 +6,7 @@ This is the message extracted by OpenPlatform from service provider semantics. G
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_method** | [**AddonSemanticPaymentMethod**](AddonSemanticPaymentMethod.md) |  | [optional] 
+**payment_method** | [**AddonsAddonSemanticPaymentMethod**](AddonsAddonSemanticPaymentMethod.md) |  | [optional] 
 **identity_verification_result** | [**AddonSemanticIdentityVerificationResult**](AddonSemanticIdentityVerificationResult.md) |  | [optional] 
 **post_verification_result** | [**AddonSemanticPostVerificationResult**](AddonSemanticPostVerificationResult.md) |  | [optional] 
 **status** | [**AddonsAddonSemanticStatus**](AddonsAddonSemanticStatus.md) |  | [optional] 

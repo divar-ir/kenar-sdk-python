@@ -1,6 +1,6 @@
 # kenar_api_client.ChatAPIApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,10 +30,10 @@ from kenar_api_client.models.chatapi_chat_bot_send_message_response import Chata
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -41,7 +41,7 @@ configuration = kenar_api_client.Configuration(
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | 
+    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
     chat_api_chat_bot_send_message_body = kenar_api_client.ChatAPIChatBotSendMessageBody() # ChatAPIChatBotSendMessageBody | 
 
     try:
@@ -60,7 +60,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**|  | 
+ **conversation_id** | **str**| Unique identifier for the conversation | 
  **chat_api_chat_bot_send_message_body** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -103,10 +103,10 @@ from kenar_api_client.models.chatapi_chat_bot_send_message_response import Chata
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -114,7 +114,7 @@ configuration = kenar_api_client.Configuration(
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    user_id = 'user_id_example' # str | 
+    user_id = 'user_id_example' # str | Unique identifier for the user to start or continue a conversation with
     chat_api_chat_bot_send_message_body = kenar_api_client.ChatAPIChatBotSendMessageBody() # ChatAPIChatBotSendMessageBody | 
 
     try:
@@ -133,7 +133,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **str**|  | 
+ **user_id** | **str**| Unique identifier for the user to start or continue a conversation with | 
  **chat_api_chat_bot_send_message_body** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -176,10 +176,10 @@ from kenar_api_client.models.chatapi_chat_bot_send_message_response import Chata
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -187,7 +187,7 @@ configuration = kenar_api_client.Configuration(
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | 
+    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
     chat_api_chat_bot_send_message_body = kenar_api_client.ChatAPIChatBotSendMessageBody() # ChatAPIChatBotSendMessageBody | 
 
     try:
@@ -206,7 +206,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**|  | 
+ **conversation_id** | **str**| Unique identifier for the conversation | 
  **chat_api_chat_bot_send_message_body** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -253,10 +253,10 @@ from kenar_api_client.models.chatapi_conversation_send_message_response import C
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -264,7 +264,7 @@ configuration = kenar_api_client.Configuration(
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | 
+    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
     chat_api_conversation_send_message_body = kenar_api_client.ChatAPIConversationSendMessageBody() # ChatAPIConversationSendMessageBody | 
 
     try:
@@ -283,7 +283,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**|  | 
+ **conversation_id** | **str**| Unique identifier for the conversation | 
  **chat_api_conversation_send_message_body** | [**ChatAPIConversationSendMessageBody**](ChatAPIConversationSendMessageBody.md)|  | 
 
 ### Return type
@@ -324,10 +324,10 @@ from kenar_api_client.models.chatapi_generate_upload_token_response import Chata
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -393,10 +393,10 @@ from kenar_api_client.models.chatapi_get_conversation_response import ChatapiGet
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -404,7 +404,7 @@ configuration = kenar_api_client.Configuration(
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | 
+    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
 
     try:
         # Get Conversation by it's ID
@@ -422,7 +422,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**|  | 
+ **conversation_id** | **str**| Unique identifier for the conversation | 
 
 ### Return type
 

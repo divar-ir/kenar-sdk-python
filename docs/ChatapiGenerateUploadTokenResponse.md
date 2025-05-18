@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **str** |  | [optional] 
+**token** | **str** | A url safe base64 encoded token that can be used in the upload endpoint | [optional] [readonly] 
 
 ## Example
 

@@ -1,6 +1,6 @@
 # kenar_api_client.FinderApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,8 +17,7 @@ Method | HTTP request | Description
 Get a Divar post
 
 This API allows you to get details about Divar post by its token.
-You can use the token to get the post data and its state in order to implement your service.
-
+You can use the token to get the post data and its state 
 
 ### Example
 
@@ -29,10 +28,10 @@ from kenar_api_client.models.finder_get_post_response import FinderGetPostRespon
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -101,10 +100,10 @@ from kenar_api_client.models.finder_user import FinderUser
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -173,10 +172,10 @@ from kenar_api_client.models.finder_user import FinderUser
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -239,10 +238,10 @@ from kenar_api_client.models.finder_get_user_posts_response import FinderGetUser
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
@@ -308,10 +307,10 @@ from kenar_api_client.models.finder_search_posts_v2_request import FinderSearchP
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to https://open-api.divar.ir
 # See configuration.py for a list of all supported configuration parameters.
 configuration = kenar_api_client.Configuration(
-    host = "http://localhost"
+    host = "https://open-api.divar.ir"
 )
 
 
