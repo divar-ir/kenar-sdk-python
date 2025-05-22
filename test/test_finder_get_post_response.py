@@ -35,17 +35,17 @@ class TestFinderGetPostResponse(unittest.TestCase):
         model = FinderGetPostResponse()
         if include_optional:
             return FinderGetPostResponse(
-                state = 'PUBLISHED',
-                first_published_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                token = '',
-                category = '',
-                city = '',
-                district = '',
-                data = None,
-                chat_enabled = True,
                 business_data = kenar_api_client.models.get_post_response_business_data.GetPostResponseBusinessData(
-                    business_type = 'CAR', 
-                    business_name = '', )
+                    business_name = '', 
+                    business_type = 'CAR', ),
+                category = '',
+                chat_enabled = True,
+                city = '',
+                data = None,
+                district = '',
+                first_published_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                state = 'PUBLISHED',
+                token = ''
             )
         else:
             return FinderGetPostResponse(

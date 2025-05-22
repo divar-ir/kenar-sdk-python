@@ -6,14 +6,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **credit** | [**SearchPostItemPrice**](SearchPostItemPrice.md) |  | [optional] 
-**rent** | [**SearchPostItemPrice**](SearchPostItemPrice.md) |  | [optional] 
 **daily_rent** | **str** |  | [optional] 
+**floor** | **int** |  | [optional] 
+**has_elevator** | **bool** |  | [optional] 
+**has_parking** | **bool** |  | [optional] 
+**rent** | [**SearchPostItemPrice**](SearchPostItemPrice.md) |  | [optional] 
+**rooms** | **str** |  | [optional] 
 **size** | **int** |  | [optional] 
 **year** | **int** |  | [optional] 
-**has_parking** | **bool** |  | [optional] 
-**has_elevator** | **bool** |  | [optional] 
-**rooms** | **str** |  | [optional] 
-**floor** | **int** |  | [optional] 
 
 ## Example
 

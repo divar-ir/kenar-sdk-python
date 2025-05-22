@@ -35,38 +35,38 @@ class TestChatAPIConversationSendMessageBody(unittest.TestCase):
         model = ChatAPIConversationSendMessageBody()
         if include_optional:
             return ChatAPIConversationSendMessageBody(
-                message = 'Hello, I'm interested in your product',
                 media_token = 'media_token_12345',
-                sender_buttons = kenar_api_client.models.chatapi_chat_button_grid.chatapiChatButtonGrid(
-                    rows = [
-                        kenar_api_client.models.chatapi_chat_button_row.chatapiChatButtonRow(
-                            buttons = [
-                                kenar_api_client.models.chatapi_chat_button.chatapiChatButton(
-                                    action = kenar_api_client.models.action.Action(
-                                        open_direct_link = 'https://your-site.com/some-path', 
-                                        open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
-                                            data = {"your-internal-id":"something"}, ), 
-                                        get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
-                                            data = {"your-internal-id":"something"}, ), ), 
-                                    icon_name = '', 
-                                    caption = '', 
-                                    icon = 'KEYBOARD_ARROW_RIGHT', )
-                                ], )
-                        ], ),
+                message = 'Hello, I'm interested in your product',
                 receiver_buttons = kenar_api_client.models.chatapi_chat_button_grid.chatapiChatButtonGrid(
                     rows = [
                         kenar_api_client.models.chatapi_chat_button_row.chatapiChatButtonRow(
                             buttons = [
                                 kenar_api_client.models.chatapi_chat_button.chatapiChatButton(
                                     action = kenar_api_client.models.action.Action(
+                                        get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
+                                            data = {"your-internal-id":"something"}, ), 
                                         open_direct_link = 'https://your-site.com/some-path', 
                                         open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
-                                            data = {"your-internal-id":"something"}, ), 
-                                        get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
                                             data = {"your-internal-id":"something"}, ), ), 
-                                    icon_name = '', 
                                     caption = '', 
-                                    icon = 'KEYBOARD_ARROW_RIGHT', )
+                                    icon = 'KEYBOARD_ARROW_RIGHT', 
+                                    icon_name = '', )
+                                ], )
+                        ], ),
+                sender_buttons = kenar_api_client.models.chatapi_chat_button_grid.chatapiChatButtonGrid(
+                    rows = [
+                        kenar_api_client.models.chatapi_chat_button_row.chatapiChatButtonRow(
+                            buttons = [
+                                kenar_api_client.models.chatapi_chat_button.chatapiChatButton(
+                                    action = kenar_api_client.models.action.Action(
+                                        get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
+                                            data = {"your-internal-id":"something"}, ), 
+                                        open_direct_link = 'https://your-site.com/some-path', 
+                                        open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
+                                            data = {"your-internal-id":"something"}, ), ), 
+                                    caption = '', 
+                                    icon = 'KEYBOARD_ARROW_RIGHT', 
+                                    icon_name = '', )
                                 ], )
                         ], )
             )

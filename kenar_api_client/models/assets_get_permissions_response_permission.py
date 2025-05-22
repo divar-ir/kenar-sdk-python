@@ -27,11 +27,11 @@ class AssetsGetPermissionsResponsePermission(BaseModel):
     """
     AssetsGetPermissionsResponsePermission
     """ # noqa: E501
-    slug: Optional[StrictStr] = None
-    display: Optional[StrictStr] = None
     description: Optional[StrictStr] = None
+    display: Optional[StrictStr] = None
     lifecycle_state: Optional[AssetsGetPermissionsResponseLifeCycleState] = None
-    __properties: ClassVar[List[str]] = ["slug", "display", "description", "lifecycle_state"]
+    slug: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["description", "display", "lifecycle_state", "slug"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -84,10 +84,10 @@ class AssetsGetPermissionsResponsePermission(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "slug": obj.get("slug"),
-            "display": obj.get("display"),
             "description": obj.get("description"),
-            "lifecycle_state": obj.get("lifecycle_state")
+            "display": obj.get("display"),
+            "lifecycle_state": obj.get("lifecycle_state"),
+            "slug": obj.get("slug")
         })
         return _obj
 

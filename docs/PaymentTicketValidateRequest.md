@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ticket_uuid** | **str** |  | [optional] 
 **phone_number** | **str** | Deprecated. Use divar_user_id. | [optional] 
-**user_id** | **str** |  | [optional] 
 **service_cost** | **int** |  | [optional] 
+**ticket_uuid** | **str** |  | [optional] 
+**user_id** | **str** |  | [optional] 
 
 ## Example
 

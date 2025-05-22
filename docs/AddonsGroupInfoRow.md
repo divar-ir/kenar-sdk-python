@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List[AddonsGroupInfoRowGroupInfoItem]**](AddonsGroupInfoRowGroupInfoItem.md) |  | [optional] 
 **has_divider** | **bool** |  | [optional] 
+**items** | [**List[AddonsGroupInfoRowGroupInfoItem]**](AddonsGroupInfoRowGroupInfoItem.md) |  | [optional] 
 
 ## Example
 

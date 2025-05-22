@@ -28,12 +28,12 @@ class PaymentTransaction(BaseModel):
     """
     PaymentTransaction
     """ # noqa: E501
-    id: Optional[StrictStr] = Field(default=None, description="Same uuid when creating transaction")
     cost_rials: Optional[StrictStr] = Field(default=None, description="The cost of the transaction in rials for your application")
     extra_details: Optional[StrictStr] = Field(default=None, description="Same Additional details which you sent in the request")
+    id: Optional[StrictStr] = Field(default=None, description="Same uuid when creating transaction")
     state: Optional[PaymentTransactionState] = None
     type: Optional[PaymentTransactionType] = None
-    __properties: ClassVar[List[str]] = ["id", "cost_rials", "extra_details", "state", "type"]
+    __properties: ClassVar[List[str]] = ["cost_rials", "extra_details", "id", "state", "type"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -86,9 +86,9 @@ class PaymentTransaction(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
             "cost_rials": obj.get("cost_rials"),
             "extra_details": obj.get("extra_details"),
+            "id": obj.get("id"),
             "state": obj.get("state"),
             "type": obj.get("type")
         })

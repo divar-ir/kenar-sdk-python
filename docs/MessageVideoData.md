@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **link** | **str** |  | [optional] 
-**thumbnail_link** | **str** |  | [optional] 
 **size_bytes** | **str** |  | [optional] 
+**thumbnail_link** | **str** |  | [optional] 
 
 ## Example
 

@@ -35,8 +35,8 @@ class TestAddonsTitleRow(unittest.TestCase):
         model = AddonsTitleRow()
         if include_optional:
             return AddonsTitleRow(
-                text = '',
-                has_divider = True
+                has_divider = True,
+                text = ''
             )
         else:
             return AddonsTitleRow(

@@ -26,11 +26,11 @@ class FinderGetUserPostsResponsePost(BaseModel):
     """
     FinderGetUserPostsResponsePost
     """ # noqa: E501
-    token: Optional[StrictStr] = None
-    title: Optional[StrictStr] = None
-    images: Optional[List[StrictStr]] = None
     category: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["token", "title", "images", "category"]
+    images: Optional[List[StrictStr]] = None
+    title: Optional[StrictStr] = None
+    token: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["category", "images", "title", "token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -83,10 +83,10 @@ class FinderGetUserPostsResponsePost(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "token": obj.get("token"),
-            "title": obj.get("title"),
+            "category": obj.get("category"),
             "images": obj.get("images"),
-            "category": obj.get("category")
+            "title": obj.get("title"),
+            "token": obj.get("token")
         })
         return _obj
 

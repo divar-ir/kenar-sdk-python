@@ -35,12 +35,12 @@ class TestAddonsGroupInfoRow(unittest.TestCase):
         model = AddonsGroupInfoRow()
         if include_optional:
             return AddonsGroupInfoRow(
+                has_divider = True,
                 items = [
                     kenar_api_client.models.addons_group_info_row_group_info_item.addonsGroupInfoRowGroupInfoItem(
                         title = '', 
                         value = '', )
-                    ],
-                has_divider = True
+                    ]
             )
         else:
             return AddonsGroupInfoRow(

@@ -29,16 +29,16 @@ class FinderGetPostResponse(BaseModel):
     """
     FinderGetPostResponse
     """ # noqa: E501
-    state: Optional[FinderPostExtState] = None
-    first_published_at: Optional[datetime] = None
-    token: Optional[StrictStr] = None
-    category: Optional[StrictStr] = None
-    city: Optional[StrictStr] = None
-    district: Optional[StrictStr] = None
-    data: Optional[Dict[str, Any]] = None
-    chat_enabled: Optional[StrictBool] = None
     business_data: Optional[GetPostResponseBusinessData] = None
-    __properties: ClassVar[List[str]] = ["state", "first_published_at", "token", "category", "city", "district", "data", "chat_enabled", "business_data"]
+    category: Optional[StrictStr] = None
+    chat_enabled: Optional[StrictBool] = None
+    city: Optional[StrictStr] = None
+    data: Optional[Dict[str, Any]] = None
+    district: Optional[StrictStr] = None
+    first_published_at: Optional[datetime] = None
+    state: Optional[FinderPostExtState] = None
+    token: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["business_data", "category", "chat_enabled", "city", "data", "district", "first_published_at", "state", "token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -94,15 +94,15 @@ class FinderGetPostResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "state": obj.get("state"),
-            "first_published_at": obj.get("first_published_at"),
-            "token": obj.get("token"),
+            "business_data": GetPostResponseBusinessData.from_dict(obj["business_data"]) if obj.get("business_data") is not None else None,
             "category": obj.get("category"),
-            "city": obj.get("city"),
-            "district": obj.get("district"),
-            "data": obj.get("data"),
             "chat_enabled": obj.get("chat_enabled"),
-            "business_data": GetPostResponseBusinessData.from_dict(obj["business_data"]) if obj.get("business_data") is not None else None
+            "city": obj.get("city"),
+            "data": obj.get("data"),
+            "district": obj.get("district"),
+            "first_published_at": obj.get("first_published_at"),
+            "state": obj.get("state"),
+            "token": obj.get("token")
         })
         return _obj
 

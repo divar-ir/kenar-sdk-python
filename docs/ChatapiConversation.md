@@ -6,8 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**type** | [**ChatapiConversationType**](ChatapiConversationType.md) |  | [optional] 
 **post_token** | **str** |  | [optional] 
+**type** | [**ChatapiConversationType**](ChatapiConversationType.md) |  | [optional] 
 
 ## Example
 

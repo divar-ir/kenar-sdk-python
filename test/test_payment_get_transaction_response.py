@@ -36,9 +36,9 @@ class TestPaymentGetTransactionResponse(unittest.TestCase):
         if include_optional:
             return PaymentGetTransactionResponse(
                 transaction = kenar_api_client.models.payment_transaction.paymentTransaction(
-                    id = '', 
                     cost_rials = '', 
                     extra_details = '', 
+                    id = '', 
                     state = 'TRANSACTION_STATE_PENDING', 
                     type = 'TRANSACTION_TYPE_REORDER', )
             )

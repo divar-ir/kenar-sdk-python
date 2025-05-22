@@ -290,6 +290,7 @@ class PaymentTicketApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'APIKey'
         ]
 
         return self.api_client.param_serialize(

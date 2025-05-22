@@ -35,9 +35,9 @@ class TestMessageImageData(unittest.TestCase):
         model = MessageImageData()
         if include_optional:
             return MessageImageData(
+                height_px = 56,
                 link = '',
                 size_bytes = '',
-                height_px = 56,
                 width_px = 56
             )
         else:

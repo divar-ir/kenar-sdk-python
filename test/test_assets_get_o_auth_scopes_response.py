@@ -37,10 +37,10 @@ class TestAssetsGetOAuthScopesResponse(unittest.TestCase):
             return AssetsGetOAuthScopesResponse(
                 scopes = [
                     kenar_api_client.models.assets_get_o_auth_scopes_response_app_oauth_scope.assetsGetOAuthScopesResponseAppOauthScope(
-                        slug = 'POST_ADDON_CREATE', 
-                        display = '', 
                         description = '', 
-                        lifecycle_state = 'EXPERIMENTAL', )
+                        display = '', 
+                        lifecycle_state = 'EXPERIMENTAL', 
+                        slug = 'POST_ADDON_CREATE', )
                     ]
             )
         else:

@@ -35,8 +35,8 @@ class TestEventsRegisterEventSubscriptionRequest(unittest.TestCase):
         model = EventsRegisterEventSubscriptionRequest()
         if include_optional:
             return EventsRegisterEventSubscriptionRequest(
-                event_type = 'NEW_MESSAGE_ON_POST',
                 event_resource_id = '',
+                event_type = 'NEW_MESSAGE_ON_POST',
                 metadata = None
             )
         else:

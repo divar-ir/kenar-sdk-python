@@ -27,9 +27,9 @@ class GetPostResponseBusinessData(BaseModel):
     """
     GetPostResponseBusinessData
     """ # noqa: E501
-    business_type: Optional[PremiumPanelBusinessDataSubBusinessType] = None
     business_name: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["business_type", "business_name"]
+    business_type: Optional[PremiumPanelBusinessDataSubBusinessType] = None
+    __properties: ClassVar[List[str]] = ["business_name", "business_type"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,8 +82,8 @@ class GetPostResponseBusinessData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "business_type": obj.get("business_type"),
-            "business_name": obj.get("business_name")
+            "business_name": obj.get("business_name"),
+            "business_type": obj.get("business_type")
         })
         return _obj
 

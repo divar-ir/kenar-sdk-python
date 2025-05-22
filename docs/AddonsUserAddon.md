@@ -5,15 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**divar_user_id** | **str** |  | [optional] 
+**filters** | [**AddonsUserAddonFilters**](AddonsUserAddonFilters.md) |  | [optional] 
 **meta_data** | [**AddonsAddonMetaData**](AddonsAddonMetaData.md) |  | [optional] 
 **phone** | **str** |  | [optional] 
-**divar_user_id** | **str** |  | [optional] 
-**widgets** | **object** |  | [optional] 
 **semantic** | **Dict[str, str]** |  | [optional] 
 **semantic_data** | [**AddonsAddonSemantic**](AddonsAddonSemantic.md) |  | [optional] 
 **sensitive_semantic** | **Dict[str, str]** |  | [optional] 
+**widgets** | **object** |  | [optional] 
 **widgets_semantic** | **object** |  | [optional] 
-**filters** | [**AddonsUserAddonFilters**](AddonsUserAddonFilters.md) |  | [optional] 
 
 ## Example
 

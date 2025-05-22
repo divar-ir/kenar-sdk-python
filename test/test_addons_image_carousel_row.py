@@ -35,12 +35,12 @@ class TestAddonsImageCarouselRow(unittest.TestCase):
         model = AddonsImageCarouselRow()
         if include_optional:
             return AddonsImageCarouselRow(
+                has_divider = True,
                 items = [
                     kenar_api_client.models.image_carousel_row_image_item.ImageCarouselRowImageItem(
-                        image_id = '', 
-                        description = '', )
-                    ],
-                has_divider = True
+                        description = '', 
+                        image_id = '', )
+                    ]
             )
         else:
             return AddonsImageCarouselRow(

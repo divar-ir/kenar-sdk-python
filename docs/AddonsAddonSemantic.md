@@ -6,17 +6,17 @@ This is the message extracted by OpenPlatform from service provider semantics. G
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_method** | [**AddonsAddonSemanticPaymentMethod**](AddonsAddonSemanticPaymentMethod.md) |  | [optional] 
-**identity_verification_result** | [**AddonSemanticIdentityVerificationResult**](AddonSemanticIdentityVerificationResult.md) |  | [optional] 
-**post_verification_result** | [**AddonSemanticPostVerificationResult**](AddonSemanticPostVerificationResult.md) |  | [optional] 
-**status** | [**AddonsAddonSemanticStatus**](AddonsAddonSemanticStatus.md) |  | [optional] 
-**identity_verification_last_successful_stage** | [**AddonSemanticIdentityVerificationStage**](AddonSemanticIdentityVerificationStage.md) |  | [optional] 
-**identity_verification_failure_reason** | [**AddonSemanticIdentityVerificationStage**](AddonSemanticIdentityVerificationStage.md) |  | [optional] 
-**car_verification_last_successful_stage** | [**AddonSemanticCarVerificationStage**](AddonSemanticCarVerificationStage.md) |  | [optional] 
 **car_verification_failure_reason** | [**AddonSemanticCarVerificationStage**](AddonSemanticCarVerificationStage.md) |  | [optional] 
-**ownership_result** | [**AddonSemanticOwnershipResult**](AddonSemanticOwnershipResult.md) |  | [optional] 
+**car_verification_last_successful_stage** | [**AddonSemanticCarVerificationStage**](AddonSemanticCarVerificationStage.md) |  | [optional] 
+**identity_verification_failure_reason** | [**AddonSemanticIdentityVerificationStage**](AddonSemanticIdentityVerificationStage.md) |  | [optional] 
+**identity_verification_last_successful_stage** | [**AddonSemanticIdentityVerificationStage**](AddonSemanticIdentityVerificationStage.md) |  | [optional] 
+**identity_verification_result** | [**AddonSemanticIdentityVerificationResult**](AddonSemanticIdentityVerificationResult.md) |  | [optional] 
 **inspection_result** | [**AddonSemanticInspectionResult**](AddonSemanticInspectionResult.md) |  | [optional] 
 **new_face_verification_result** | [**AddonSemanticNewFaceVerificationResult**](AddonSemanticNewFaceVerificationResult.md) |  | [optional] 
+**ownership_result** | [**AddonSemanticOwnershipResult**](AddonSemanticOwnershipResult.md) |  | [optional] 
+**payment_method** | [**AddonsAddonSemanticPaymentMethod**](AddonsAddonSemanticPaymentMethod.md) |  | [optional] 
+**post_verification_result** | [**AddonSemanticPostVerificationResult**](AddonSemanticPostVerificationResult.md) |  | [optional] 
+**status** | [**AddonsAddonSemanticStatus**](AddonsAddonSemanticStatus.md) |  | [optional] 
 
 ## Example
 

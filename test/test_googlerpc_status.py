@@ -36,12 +36,12 @@ class TestGooglerpcStatus(unittest.TestCase):
         if include_optional:
             return GooglerpcStatus(
                 code = 56,
-                message = '',
                 details = [
                     {
                         'key' : null
                         }
-                    ]
+                    ],
+                message = ''
             )
         else:
             return GooglerpcStatus(

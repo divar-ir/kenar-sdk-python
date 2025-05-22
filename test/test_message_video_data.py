@@ -36,8 +36,8 @@ class TestMessageVideoData(unittest.TestCase):
         if include_optional:
             return MessageVideoData(
                 link = '',
-                thumbnail_link = '',
-                size_bytes = ''
+                size_bytes = '',
+                thumbnail_link = ''
             )
         else:
             return MessageVideoData(

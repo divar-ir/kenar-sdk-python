@@ -35,10 +35,10 @@ class TestFinderUser(unittest.TestCase):
         model = FinderUser()
         if include_optional:
             return FinderUser(
+                phone_number = '',
                 phone_numbers = [
                     ''
                     ],
-                phone_number = '',
                 user_id = ''
             )
         else:

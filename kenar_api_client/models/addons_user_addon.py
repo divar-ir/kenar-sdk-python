@@ -29,16 +29,16 @@ class AddonsUserAddon(BaseModel):
     """
     AddonsUserAddon
     """ # noqa: E501
+    divar_user_id: Optional[StrictStr] = None
+    filters: Optional[AddonsUserAddonFilters] = None
     meta_data: Optional[AddonsAddonMetaData] = None
     phone: Optional[StrictStr] = None
-    divar_user_id: Optional[StrictStr] = None
-    widgets: Optional[Dict[str, Any]] = None
     semantic: Optional[Dict[str, StrictStr]] = None
     semantic_data: Optional[AddonsAddonSemantic] = None
     sensitive_semantic: Optional[Dict[str, StrictStr]] = None
+    widgets: Optional[Dict[str, Any]] = None
     widgets_semantic: Optional[Dict[str, Any]] = None
-    filters: Optional[AddonsUserAddonFilters] = None
-    __properties: ClassVar[List[str]] = ["meta_data", "phone", "divar_user_id", "widgets", "semantic", "semantic_data", "sensitive_semantic", "widgets_semantic", "filters"]
+    __properties: ClassVar[List[str]] = ["divar_user_id", "filters", "meta_data", "phone", "semantic", "semantic_data", "sensitive_semantic", "widgets", "widgets_semantic"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -79,15 +79,15 @@ class AddonsUserAddon(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of filters
+        if self.filters:
+            _dict['filters'] = self.filters.to_dict()
         # override the default output from pydantic by calling `to_dict()` of meta_data
         if self.meta_data:
             _dict['meta_data'] = self.meta_data.to_dict()
         # override the default output from pydantic by calling `to_dict()` of semantic_data
         if self.semantic_data:
             _dict['semantic_data'] = self.semantic_data.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of filters
-        if self.filters:
-            _dict['filters'] = self.filters.to_dict()
         return _dict
 
     @classmethod
@@ -100,15 +100,15 @@ class AddonsUserAddon(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "divar_user_id": obj.get("divar_user_id"),
+            "filters": AddonsUserAddonFilters.from_dict(obj["filters"]) if obj.get("filters") is not None else None,
             "meta_data": AddonsAddonMetaData.from_dict(obj["meta_data"]) if obj.get("meta_data") is not None else None,
             "phone": obj.get("phone"),
-            "divar_user_id": obj.get("divar_user_id"),
-            "widgets": obj.get("widgets"),
             "semantic": obj.get("semantic"),
             "semantic_data": AddonsAddonSemantic.from_dict(obj["semantic_data"]) if obj.get("semantic_data") is not None else None,
             "sensitive_semantic": obj.get("sensitive_semantic"),
-            "widgets_semantic": obj.get("widgets_semantic"),
-            "filters": AddonsUserAddonFilters.from_dict(obj["filters"]) if obj.get("filters") is not None else None
+            "widgets": obj.get("widgets"),
+            "widgets_semantic": obj.get("widgets_semantic")
         })
         return _obj
 

@@ -29,14 +29,14 @@ class AppsApp(BaseModel):
     """
     AppsApp
     """ # noqa: E501
-    slug: Optional[StrictStr] = None
-    display: Optional[StrictStr] = None
     avatar: Optional[StrictStr] = None
+    display: Optional[StrictStr] = None
     divar_identification_key: Optional[StrictStr] = None
-    status: Optional[AppsAppStatus] = None
-    service_type: Optional[AppsServiceType] = None
     service_tags: Optional[List[AppsServiceTag]] = None
-    __properties: ClassVar[List[str]] = ["slug", "display", "avatar", "divar_identification_key", "status", "service_type", "service_tags"]
+    service_type: Optional[AppsServiceType] = None
+    slug: Optional[StrictStr] = None
+    status: Optional[AppsAppStatus] = None
+    __properties: ClassVar[List[str]] = ["avatar", "display", "divar_identification_key", "service_tags", "service_type", "slug", "status"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,13 +92,13 @@ class AppsApp(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "slug": obj.get("slug"),
-            "display": obj.get("display"),
             "avatar": obj.get("avatar"),
+            "display": obj.get("display"),
             "divar_identification_key": obj.get("divar_identification_key"),
-            "status": AppsAppStatus.from_dict(obj["status"]) if obj.get("status") is not None else None,
+            "service_tags": obj.get("service_tags"),
             "service_type": obj.get("service_type"),
-            "service_tags": obj.get("service_tags")
+            "slug": obj.get("slug"),
+            "status": AppsAppStatus.from_dict(obj["status"]) if obj.get("status") is not None else None
         })
         return _obj
 

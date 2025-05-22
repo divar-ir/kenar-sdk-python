@@ -27,11 +27,11 @@ class ChatAPIConversationSendMessageBody(BaseModel):
     """
     ChatAPIConversationSendMessageBody
     """ # noqa: E501
-    message: StrictStr = Field(description="Text message content to be sent")
     media_token: Optional[StrictStr] = Field(default=None, description="Token for attached media (if any)")
-    sender_buttons: Optional[ChatapiChatButtonGrid] = None
+    message: StrictStr = Field(description="Text message content to be sent")
     receiver_buttons: Optional[ChatapiChatButtonGrid] = None
-    __properties: ClassVar[List[str]] = ["message", "media_token", "sender_buttons", "receiver_buttons"]
+    sender_buttons: Optional[ChatapiChatButtonGrid] = None
+    __properties: ClassVar[List[str]] = ["media_token", "message", "receiver_buttons", "sender_buttons"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -72,12 +72,12 @@ class ChatAPIConversationSendMessageBody(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of sender_buttons
-        if self.sender_buttons:
-            _dict['sender_buttons'] = self.sender_buttons.to_dict()
         # override the default output from pydantic by calling `to_dict()` of receiver_buttons
         if self.receiver_buttons:
             _dict['receiver_buttons'] = self.receiver_buttons.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of sender_buttons
+        if self.sender_buttons:
+            _dict['sender_buttons'] = self.sender_buttons.to_dict()
         return _dict
 
     @classmethod
@@ -90,10 +90,10 @@ class ChatAPIConversationSendMessageBody(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "message": obj.get("message"),
             "media_token": obj.get("media_token"),
-            "sender_buttons": ChatapiChatButtonGrid.from_dict(obj["sender_buttons"]) if obj.get("sender_buttons") is not None else None,
-            "receiver_buttons": ChatapiChatButtonGrid.from_dict(obj["receiver_buttons"]) if obj.get("receiver_buttons") is not None else None
+            "message": obj.get("message"),
+            "receiver_buttons": ChatapiChatButtonGrid.from_dict(obj["receiver_buttons"]) if obj.get("receiver_buttons") is not None else None,
+            "sender_buttons": ChatapiChatButtonGrid.from_dict(obj["sender_buttons"]) if obj.get("sender_buttons") is not None else None
         })
         return _obj
 

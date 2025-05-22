@@ -26,10 +26,10 @@ class AddonsDescriptionRow(BaseModel):
     """
     AddonsDescriptionRow
     """ # noqa: E501
-    text: Optional[StrictStr] = None
-    has_divider: Optional[StrictBool] = None
     expandable: Optional[StrictBool] = None
-    __properties: ClassVar[List[str]] = ["text", "has_divider", "expandable"]
+    has_divider: Optional[StrictBool] = None
+    text: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["expandable", "has_divider", "text"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,9 +82,9 @@ class AddonsDescriptionRow(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "text": obj.get("text"),
+            "expandable": obj.get("expandable"),
             "has_divider": obj.get("has_divider"),
-            "expandable": obj.get("expandable")
+            "text": obj.get("text")
         })
         return _obj
 

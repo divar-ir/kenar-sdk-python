@@ -35,11 +35,11 @@ class TestPostEditPostBody(unittest.TestCase):
         model = PostEditPostBody()
         if include_optional:
             return PostEditPostBody(
-                title = '',
                 description = '',
                 image_paths = [
                     ''
-                    ]
+                    ],
+                title = ''
             )
         else:
             return PostEditPostBody(

@@ -26,9 +26,9 @@ class ChatapiConversationSendMessageResponse(BaseModel):
     """
     ChatapiConversationSendMessageResponse
     """ # noqa: E501
-    status: Optional[StrictInt] = None
     message: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["status", "message"]
+    status: Optional[StrictInt] = None
+    __properties: ClassVar[List[str]] = ["message", "status"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,8 +81,8 @@ class ChatapiConversationSendMessageResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "status": obj.get("status"),
-            "message": obj.get("message")
+            "message": obj.get("message"),
+            "status": obj.get("status")
         })
         return _obj
 

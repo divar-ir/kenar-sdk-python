@@ -35,10 +35,10 @@ class TestPaymentTicketValidateRequest(unittest.TestCase):
         model = PaymentTicketValidateRequest()
         if include_optional:
             return PaymentTicketValidateRequest(
-                ticket_uuid = '',
                 phone_number = '',
-                user_id = '',
-                service_cost = 56
+                service_cost = 56,
+                ticket_uuid = '',
+                user_id = ''
             )
         else:
             return PaymentTicketValidateRequest(

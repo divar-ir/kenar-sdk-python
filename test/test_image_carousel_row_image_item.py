@@ -35,8 +35,8 @@ class TestImageCarouselRowImageItem(unittest.TestCase):
         model = ImageCarouselRowImageItem()
         if include_optional:
             return ImageCarouselRowImageItem(
-                image_id = '',
-                description = ''
+                description = '',
+                image_id = ''
             )
         else:
             return ImageCarouselRowImageItem(

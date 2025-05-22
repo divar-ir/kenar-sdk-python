@@ -5,13 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | **str** |  | [optional] 
+**action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
 **descriptive_score** | **str** |  | [optional] 
-**percentage_score** | **int** |  | [optional] 
-**score_color** | [**AddonsWidgetColor**](AddonsWidgetColor.md) |  | [optional] 
 **has_divider** | **bool** |  | [optional] 
 **icon_name** | [**DivarIconsIconName**](DivarIconsIconName.md) |  | [optional] 
-**action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
+**percentage_score** | **int** |  | [optional] 
+**score_color** | [**AddonsWidgetColor**](AddonsWidgetColor.md) |  | [optional] 
+**title** | **str** |  | [optional] 
 
 ## Example
 

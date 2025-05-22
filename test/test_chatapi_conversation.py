@@ -36,8 +36,8 @@ class TestChatapiConversation(unittest.TestCase):
         if include_optional:
             return ChatapiConversation(
                 id = '',
-                type = 'POST',
-                post_token = ''
+                post_token = '',
+                type = 'POST'
             )
         else:
             return ChatapiConversation(

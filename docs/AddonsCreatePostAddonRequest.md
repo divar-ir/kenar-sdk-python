@@ -5,13 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **str** |  | [optional] 
-**widgets** | **object** |  | [optional] 
-**selector** | [**AddonsAddonSelector**](AddonsAddonSelector.md) |  | [optional] 
 **link_in_spec** | **str** |  | [optional] 
 **notes** | **str** |  | [optional] 
+**selector** | [**AddonsAddonSelector**](AddonsAddonSelector.md) |  | [optional] 
 **semantic** | **Dict[str, str]** |  | [optional] 
 **semantic_sensitives** | **List[str]** |  | [optional] 
+**token** | **str** |  | [optional] 
+**widgets** | **object** |  | [optional] 
 
 ## Example
 

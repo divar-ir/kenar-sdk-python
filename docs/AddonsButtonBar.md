@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | **str** |  | [optional] 
 **action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
+**title** | **str** |  | [optional] 
 
 ## Example
 

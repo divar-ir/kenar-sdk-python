@@ -5,17 +5,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
 **conversation** | [**ChatapiConversation**](ChatapiConversation.md) |  | [optional] 
+**file_data** | [**MessageFileData**](MessageFileData.md) |  | [optional] 
+**id** | **str** |  | [optional] 
+**image_data** | [**MessageImageData**](MessageImageData.md) |  | [optional] 
+**location_data** | [**MessageLocationData**](MessageLocationData.md) |  | [optional] 
 **sender** | [**MessageSender**](MessageSender.md) |  | [optional] 
-**type** | [**ChatapiMessageType**](ChatapiMessageType.md) |  | [optional] 
 **sent_at** | **datetime** |  | [optional] 
 **text** | **str** |  | [optional] 
-**image_data** | [**MessageImageData**](MessageImageData.md) |  | [optional] 
-**file_data** | [**MessageFileData**](MessageFileData.md) |  | [optional] 
-**voice_data** | [**MessageVoiceData**](MessageVoiceData.md) |  | [optional] 
-**location_data** | [**MessageLocationData**](MessageLocationData.md) |  | [optional] 
+**type** | [**ChatapiMessageType**](ChatapiMessageType.md) |  | [optional] 
 **video_data** | [**MessageVideoData**](MessageVideoData.md) |  | [optional] 
+**voice_data** | [**MessageVoiceData**](MessageVoiceData.md) |  | [optional] 
 
 ## Example
 

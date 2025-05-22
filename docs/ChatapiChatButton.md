@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
-**icon_name** | **str** |  | [optional] 
 **caption** | **str** |  | [optional] 
 **icon** | [**DivarIconsIconName**](DivarIconsIconName.md) |  | [optional] 
+**icon_name** | **str** |  | [optional] 
 
 ## Example
 

@@ -35,18 +35,18 @@ class AddonsAddonSemantic(BaseModel):
     """
     This is the message extracted by OpenPlatform from service provider semantics. Guidelines:  - Always check to see if an appropriate enum field or value exists before  adding one.  - Zero value of every enum should be {ENUM_NAME}_UNSPECIFIED.  - Enum values should not correspond to any specific post or person  attribute.
     """ # noqa: E501
-    payment_method: Optional[AddonsAddonSemanticPaymentMethod] = None
-    identity_verification_result: Optional[AddonSemanticIdentityVerificationResult] = None
-    post_verification_result: Optional[AddonSemanticPostVerificationResult] = None
-    status: Optional[AddonsAddonSemanticStatus] = None
-    identity_verification_last_successful_stage: Optional[AddonSemanticIdentityVerificationStage] = None
-    identity_verification_failure_reason: Optional[AddonSemanticIdentityVerificationStage] = None
-    car_verification_last_successful_stage: Optional[AddonSemanticCarVerificationStage] = None
     car_verification_failure_reason: Optional[AddonSemanticCarVerificationStage] = None
-    ownership_result: Optional[AddonSemanticOwnershipResult] = None
+    car_verification_last_successful_stage: Optional[AddonSemanticCarVerificationStage] = None
+    identity_verification_failure_reason: Optional[AddonSemanticIdentityVerificationStage] = None
+    identity_verification_last_successful_stage: Optional[AddonSemanticIdentityVerificationStage] = None
+    identity_verification_result: Optional[AddonSemanticIdentityVerificationResult] = None
     inspection_result: Optional[AddonSemanticInspectionResult] = None
     new_face_verification_result: Optional[AddonSemanticNewFaceVerificationResult] = None
-    __properties: ClassVar[List[str]] = ["payment_method", "identity_verification_result", "post_verification_result", "status", "identity_verification_last_successful_stage", "identity_verification_failure_reason", "car_verification_last_successful_stage", "car_verification_failure_reason", "ownership_result", "inspection_result", "new_face_verification_result"]
+    ownership_result: Optional[AddonSemanticOwnershipResult] = None
+    payment_method: Optional[AddonsAddonSemanticPaymentMethod] = None
+    post_verification_result: Optional[AddonSemanticPostVerificationResult] = None
+    status: Optional[AddonsAddonSemanticStatus] = None
+    __properties: ClassVar[List[str]] = ["car_verification_failure_reason", "car_verification_last_successful_stage", "identity_verification_failure_reason", "identity_verification_last_successful_stage", "identity_verification_result", "inspection_result", "new_face_verification_result", "ownership_result", "payment_method", "post_verification_result", "status"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -99,17 +99,17 @@ class AddonsAddonSemantic(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "payment_method": obj.get("payment_method"),
-            "identity_verification_result": obj.get("identity_verification_result"),
-            "post_verification_result": obj.get("post_verification_result"),
-            "status": obj.get("status"),
-            "identity_verification_last_successful_stage": obj.get("identity_verification_last_successful_stage"),
-            "identity_verification_failure_reason": obj.get("identity_verification_failure_reason"),
-            "car_verification_last_successful_stage": obj.get("car_verification_last_successful_stage"),
             "car_verification_failure_reason": obj.get("car_verification_failure_reason"),
-            "ownership_result": obj.get("ownership_result"),
+            "car_verification_last_successful_stage": obj.get("car_verification_last_successful_stage"),
+            "identity_verification_failure_reason": obj.get("identity_verification_failure_reason"),
+            "identity_verification_last_successful_stage": obj.get("identity_verification_last_successful_stage"),
+            "identity_verification_result": obj.get("identity_verification_result"),
             "inspection_result": obj.get("inspection_result"),
-            "new_face_verification_result": obj.get("new_face_verification_result")
+            "new_face_verification_result": obj.get("new_face_verification_result"),
+            "ownership_result": obj.get("ownership_result"),
+            "payment_method": obj.get("payment_method"),
+            "post_verification_result": obj.get("post_verification_result"),
+            "status": obj.get("status")
         })
         return _obj
 

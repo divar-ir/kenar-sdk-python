@@ -28,13 +28,13 @@ class AddonsEvaluationRow(BaseModel):
     """
     AddonsEvaluationRow
     """ # noqa: E501
-    indicator_text: Optional[StrictStr] = None
-    indicator_percentage: Optional[StrictInt] = None
     icon_name: Optional[DivarIconsIconName] = None
+    indicator_percentage: Optional[StrictInt] = None
+    indicator_text: Optional[StrictStr] = None
     left: Optional[AddonsEvaluationRowSection] = None
     middle: Optional[AddonsEvaluationRowSection] = None
     right: Optional[AddonsEvaluationRowSection] = None
-    __properties: ClassVar[List[str]] = ["indicator_text", "indicator_percentage", "icon_name", "left", "middle", "right"]
+    __properties: ClassVar[List[str]] = ["icon_name", "indicator_percentage", "indicator_text", "left", "middle", "right"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -96,9 +96,9 @@ class AddonsEvaluationRow(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "indicator_text": obj.get("indicator_text"),
-            "indicator_percentage": obj.get("indicator_percentage"),
             "icon_name": obj.get("icon_name"),
+            "indicator_percentage": obj.get("indicator_percentage"),
+            "indicator_text": obj.get("indicator_text"),
             "left": AddonsEvaluationRowSection.from_dict(obj["left"]) if obj.get("left") is not None else None,
             "middle": AddonsEvaluationRowSection.from_dict(obj["middle"]) if obj.get("middle") is not None else None,
             "right": AddonsEvaluationRowSection.from_dict(obj["right"]) if obj.get("right") is not None else None

@@ -35,17 +35,17 @@ class TestAddonsAddonSemantic(unittest.TestCase):
         model = AddonsAddonSemantic()
         if include_optional:
             return AddonsAddonSemantic(
-                payment_method = 'SECURE',
-                identity_verification_result = 'FACE_AND_ID_MATCHED',
-                post_verification_result = 'POST_INFORMATION_MATCHED',
-                status = 'SUCCEEDED',
-                identity_verification_last_successful_stage = 'IDENTITYVERIFICATIONSTAGE_NOT_STARTED',
-                identity_verification_failure_reason = 'IDENTITYVERIFICATIONSTAGE_NOT_STARTED',
-                car_verification_last_successful_stage = 'CARVERIFICATIONSTAGE_NOT_STARTED',
                 car_verification_failure_reason = 'CARVERIFICATIONSTAGE_NOT_STARTED',
-                ownership_result = 'OWNERSHIP_CONFIRMED',
+                car_verification_last_successful_stage = 'CARVERIFICATIONSTAGE_NOT_STARTED',
+                identity_verification_failure_reason = 'IDENTITYVERIFICATIONSTAGE_NOT_STARTED',
+                identity_verification_last_successful_stage = 'IDENTITYVERIFICATIONSTAGE_NOT_STARTED',
+                identity_verification_result = 'FACE_AND_ID_MATCHED',
                 inspection_result = 'INSPECTION_APPROVED',
-                new_face_verification_result = 'NEW_FACE_VERIFICATION_FAILED'
+                new_face_verification_result = 'NEW_FACE_VERIFICATION_FAILED',
+                ownership_result = 'OWNERSHIP_CONFIRMED',
+                payment_method = 'SECURE',
+                post_verification_result = 'POST_INFORMATION_MATCHED',
+                status = 'SUCCEEDED'
             )
         else:
             return AddonsAddonSemantic(

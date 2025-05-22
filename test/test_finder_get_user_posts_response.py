@@ -37,12 +37,12 @@ class TestFinderGetUserPostsResponse(unittest.TestCase):
             return FinderGetUserPostsResponse(
                 posts = [
                     kenar_api_client.models.finder_get_user_posts_response_post.finderGetUserPostsResponsePost(
-                        token = '', 
-                        title = '', 
+                        category = '', 
                         images = [
                             ''
                             ], 
-                        category = '', )
+                        title = '', 
+                        token = '', )
                     ]
             )
         else:

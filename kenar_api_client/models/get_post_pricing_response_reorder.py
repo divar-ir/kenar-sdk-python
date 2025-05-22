@@ -26,9 +26,9 @@ class GetPostPricingResponseReorder(BaseModel):
     """
     GetPostPricingResponseReorder
     """ # noqa: E501
-    cost_rials: Optional[StrictStr] = Field(default=None, description="The cost of reordering in rials")
     available: Optional[StrictBool] = Field(default=None, description="Indicates if the post can be reordered. If false, the reorder API will return an error")
-    __properties: ClassVar[List[str]] = ["cost_rials", "available"]
+    cost_rials: Optional[StrictStr] = Field(default=None, description="The cost of reordering in rials")
+    __properties: ClassVar[List[str]] = ["available", "cost_rials"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,8 +81,8 @@ class GetPostPricingResponseReorder(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "cost_rials": obj.get("cost_rials"),
-            "available": obj.get("available")
+            "available": obj.get("available"),
+            "cost_rials": obj.get("cost_rials")
         })
         return _obj
 

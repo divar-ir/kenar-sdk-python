@@ -35,15 +35,15 @@ class TestAppsApp(unittest.TestCase):
         model = AppsApp()
         if include_optional:
             return AppsApp(
-                slug = '',
-                display = '',
                 avatar = '',
+                display = '',
                 divar_identification_key = '',
-                status = kenar_api_client.models.apps_app_status.appsAppStatus(),
-                service_type = 'FUNC_CLICK_AND_COLLECT',
                 service_tags = [
                     'VERIFIED'
-                    ]
+                    ],
+                service_type = 'FUNC_CLICK_AND_COLLECT',
+                slug = '',
+                status = kenar_api_client.models.apps_app_status.appsAppStatus()
             )
         else:
             return AppsApp(

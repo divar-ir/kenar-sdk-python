@@ -26,10 +26,10 @@ class SearchPostItemVehiclesFields(BaseModel):
     """
     SearchPostItemVehiclesFields
     """ # noqa: E501
-    usage: Optional[StrictStr] = None
-    installment_sale: Optional[StrictStr] = None
     custom_post_subtitle: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["usage", "installment_sale", "custom_post_subtitle"]
+    installment_sale: Optional[StrictStr] = None
+    usage: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["custom_post_subtitle", "installment_sale", "usage"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,9 +82,9 @@ class SearchPostItemVehiclesFields(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "usage": obj.get("usage"),
+            "custom_post_subtitle": obj.get("custom_post_subtitle"),
             "installment_sale": obj.get("installment_sale"),
-            "custom_post_subtitle": obj.get("custom_post_subtitle")
+            "usage": obj.get("usage")
         })
         return _obj
 

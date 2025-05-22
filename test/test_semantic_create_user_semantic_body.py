@@ -35,12 +35,12 @@ class TestSemanticCreateUserSemanticBody(unittest.TestCase):
         model = SemanticCreateUserSemanticBody()
         if include_optional:
             return SemanticCreateUserSemanticBody(
+                cost = 56,
                 phone = '',
                 semantic = {
                     'key' : ''
                     },
-                ticket_uuid = '',
-                cost = 56
+                ticket_uuid = ''
             )
         else:
             return SemanticCreateUserSemanticBody(

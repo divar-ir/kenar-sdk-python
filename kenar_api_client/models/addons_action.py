@@ -28,10 +28,10 @@ class AddonsAction(BaseModel):
     """
     Represents an action that can be performed
     """ # noqa: E501
+    get_dynamic_action: Optional[AddonsGetDynamicAction] = None
     open_direct_link: Optional[StrictStr] = Field(default=None, description="An action to send user to your URL directly with just a resource id (if applicable)")
     open_server_link: Optional[AddonsOpenServerLink] = None
-    get_dynamic_action: Optional[AddonsGetDynamicAction] = None
-    __properties: ClassVar[List[str]] = ["open_direct_link", "open_server_link", "get_dynamic_action"]
+    __properties: ClassVar[List[str]] = ["get_dynamic_action", "open_direct_link", "open_server_link"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -72,12 +72,12 @@ class AddonsAction(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of open_server_link
-        if self.open_server_link:
-            _dict['open_server_link'] = self.open_server_link.to_dict()
         # override the default output from pydantic by calling `to_dict()` of get_dynamic_action
         if self.get_dynamic_action:
             _dict['get_dynamic_action'] = self.get_dynamic_action.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of open_server_link
+        if self.open_server_link:
+            _dict['open_server_link'] = self.open_server_link.to_dict()
         return _dict
 
     @classmethod
@@ -90,9 +90,9 @@ class AddonsAction(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "get_dynamic_action": AddonsGetDynamicAction.from_dict(obj["get_dynamic_action"]) if obj.get("get_dynamic_action") is not None else None,
             "open_direct_link": obj.get("open_direct_link"),
-            "open_server_link": AddonsOpenServerLink.from_dict(obj["open_server_link"]) if obj.get("open_server_link") is not None else None,
-            "get_dynamic_action": AddonsGetDynamicAction.from_dict(obj["get_dynamic_action"]) if obj.get("get_dynamic_action") is not None else None
+            "open_server_link": AddonsOpenServerLink.from_dict(obj["open_server_link"]) if obj.get("open_server_link") is not None else None
         })
         return _obj
 

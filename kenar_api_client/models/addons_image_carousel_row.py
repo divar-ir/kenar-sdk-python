@@ -27,9 +27,9 @@ class AddonsImageCarouselRow(BaseModel):
     """
     AddonsImageCarouselRow
     """ # noqa: E501
-    items: Optional[List[ImageCarouselRowImageItem]] = None
     has_divider: Optional[StrictBool] = None
-    __properties: ClassVar[List[str]] = ["items", "has_divider"]
+    items: Optional[List[ImageCarouselRowImageItem]] = None
+    __properties: ClassVar[List[str]] = ["has_divider", "items"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,8 +89,8 @@ class AddonsImageCarouselRow(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "items": [ImageCarouselRowImageItem.from_dict(_item) for _item in obj["items"]] if obj.get("items") is not None else None,
-            "has_divider": obj.get("has_divider")
+            "has_divider": obj.get("has_divider"),
+            "items": [ImageCarouselRowImageItem.from_dict(_item) for _item in obj["items"]] if obj.get("items") is not None else None
         })
         return _obj
 

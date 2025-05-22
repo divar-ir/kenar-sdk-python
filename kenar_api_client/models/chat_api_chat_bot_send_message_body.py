@@ -27,11 +27,11 @@ class ChatAPIChatBotSendMessageBody(BaseModel):
     """
     ChatAPIChatBotSendMessageBody
     """ # noqa: E501
-    user_id: Optional[StrictStr] = Field(default=None, description="Unique identifier for the user to start or continue a conversation with")
-    text_message: StrictStr = Field(description="Text message content to be sent by the bot")
-    media_token: Optional[StrictStr] = Field(default=None, description="Token for attached media (if any)")
     buttons: Optional[ChatapiChatButtonGrid] = None
-    __properties: ClassVar[List[str]] = ["user_id", "text_message", "media_token", "buttons"]
+    media_token: Optional[StrictStr] = Field(default=None, description="Token for attached media (if any)")
+    text_message: StrictStr = Field(description="Text message content to be sent by the bot")
+    user_id: Optional[StrictStr] = Field(default=None, description="Unique identifier for the user to start or continue a conversation with")
+    __properties: ClassVar[List[str]] = ["buttons", "media_token", "text_message", "user_id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -87,10 +87,10 @@ class ChatAPIChatBotSendMessageBody(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "user_id": obj.get("user_id"),
-            "text_message": obj.get("text_message"),
+            "buttons": ChatapiChatButtonGrid.from_dict(obj["buttons"]) if obj.get("buttons") is not None else None,
             "media_token": obj.get("media_token"),
-            "buttons": ChatapiChatButtonGrid.from_dict(obj["buttons"]) if obj.get("buttons") is not None else None
+            "text_message": obj.get("text_message"),
+            "user_id": obj.get("user_id")
         })
         return _obj
 

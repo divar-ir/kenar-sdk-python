@@ -38,16 +38,16 @@ class TestSearchPostItemRealEstateFields(unittest.TestCase):
                 credit = kenar_api_client.models.search_post_item_price.SearchPostItemPrice(
                     mode = '', 
                     value = '', ),
+                daily_rent = '',
+                floor = 56,
+                has_elevator = True,
+                has_parking = True,
                 rent = kenar_api_client.models.search_post_item_price.SearchPostItemPrice(
                     mode = '', 
                     value = '', ),
-                daily_rent = '',
-                size = 56,
-                year = 56,
-                has_parking = True,
-                has_elevator = True,
                 rooms = '',
-                floor = 56
+                size = 56,
+                year = 56
             )
         else:
             return SearchPostItemRealEstateFields(

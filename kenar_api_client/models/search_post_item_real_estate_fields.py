@@ -28,15 +28,15 @@ class SearchPostItemRealEstateFields(BaseModel):
     SearchPostItemRealEstateFields
     """ # noqa: E501
     credit: Optional[SearchPostItemPrice] = None
-    rent: Optional[SearchPostItemPrice] = None
     daily_rent: Optional[StrictStr] = None
+    floor: Optional[StrictInt] = None
+    has_elevator: Optional[StrictBool] = None
+    has_parking: Optional[StrictBool] = None
+    rent: Optional[SearchPostItemPrice] = None
+    rooms: Optional[StrictStr] = None
     size: Optional[StrictInt] = None
     year: Optional[StrictInt] = None
-    has_parking: Optional[StrictBool] = None
-    has_elevator: Optional[StrictBool] = None
-    rooms: Optional[StrictStr] = None
-    floor: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["credit", "rent", "daily_rent", "size", "year", "has_parking", "has_elevator", "rooms", "floor"]
+    __properties: ClassVar[List[str]] = ["credit", "daily_rent", "floor", "has_elevator", "has_parking", "rent", "rooms", "size", "year"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -96,14 +96,14 @@ class SearchPostItemRealEstateFields(BaseModel):
 
         _obj = cls.model_validate({
             "credit": SearchPostItemPrice.from_dict(obj["credit"]) if obj.get("credit") is not None else None,
-            "rent": SearchPostItemPrice.from_dict(obj["rent"]) if obj.get("rent") is not None else None,
             "daily_rent": obj.get("daily_rent"),
-            "size": obj.get("size"),
-            "year": obj.get("year"),
-            "has_parking": obj.get("has_parking"),
+            "floor": obj.get("floor"),
             "has_elevator": obj.get("has_elevator"),
+            "has_parking": obj.get("has_parking"),
+            "rent": SearchPostItemPrice.from_dict(obj["rent"]) if obj.get("rent") is not None else None,
             "rooms": obj.get("rooms"),
-            "floor": obj.get("floor")
+            "size": obj.get("size"),
+            "year": obj.get("year")
         })
         return _obj
 

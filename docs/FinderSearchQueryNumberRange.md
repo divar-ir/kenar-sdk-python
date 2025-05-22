@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**min** | **str** |  | [optional] 
 **max** | **str** |  | [optional] 
+**min** | **str** |  | [optional] 
 
 ## Example
 

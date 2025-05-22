@@ -35,12 +35,12 @@ class TestAddonsEventRow(unittest.TestCase):
         model = AddonsEventRow()
         if include_optional:
             return AddonsEventRow(
-                title = '',
-                subtitle = '',
-                label = '',
-                image_id = '',
                 has_divider = True,
-                icon_name = 'KEYBOARD_ARROW_RIGHT'
+                icon_name = 'KEYBOARD_ARROW_RIGHT',
+                image_id = '',
+                label = '',
+                subtitle = '',
+                title = ''
             )
         else:
             return AddonsEventRow(

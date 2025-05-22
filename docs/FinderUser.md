@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phone_numbers** | **List[str]** | deprecated | [optional] 
 **phone_number** | **str** |  | [optional] 
+**phone_numbers** | **List[str]** | deprecated | [optional] 
 **user_id** | **str** |  | [optional] 
 
 ## Example

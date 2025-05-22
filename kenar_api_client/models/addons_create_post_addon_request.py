@@ -27,14 +27,14 @@ class AddonsCreatePostAddonRequest(BaseModel):
     """
     AddonsCreatePostAddonRequest
     """ # noqa: E501
-    token: Optional[StrictStr] = None
-    widgets: Optional[Dict[str, Any]] = None
-    selector: Optional[AddonsAddonSelector] = None
     link_in_spec: Optional[StrictStr] = None
     notes: Optional[StrictStr] = None
+    selector: Optional[AddonsAddonSelector] = None
     semantic: Optional[Dict[str, StrictStr]] = None
     semantic_sensitives: Optional[List[StrictStr]] = None
-    __properties: ClassVar[List[str]] = ["token", "widgets", "selector", "link_in_spec", "notes", "semantic", "semantic_sensitives"]
+    token: Optional[StrictStr] = None
+    widgets: Optional[Dict[str, Any]] = None
+    __properties: ClassVar[List[str]] = ["link_in_spec", "notes", "selector", "semantic", "semantic_sensitives", "token", "widgets"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,13 +90,13 @@ class AddonsCreatePostAddonRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "token": obj.get("token"),
-            "widgets": obj.get("widgets"),
-            "selector": AddonsAddonSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None,
             "link_in_spec": obj.get("link_in_spec"),
             "notes": obj.get("notes"),
+            "selector": AddonsAddonSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None,
             "semantic": obj.get("semantic"),
-            "semantic_sensitives": obj.get("semantic_sensitives")
+            "semantic_sensitives": obj.get("semantic_sensitives"),
+            "token": obj.get("token"),
+            "widgets": obj.get("widgets")
         })
         return _obj
 

@@ -35,8 +35,8 @@ class TestFinderSearchQueryNumberRange(unittest.TestCase):
         model = FinderSearchQueryNumberRange()
         if include_optional:
             return FinderSearchQueryNumberRange(
-                min = '',
-                max = ''
+                max = '',
+                min = ''
             )
         else:
             return FinderSearchQueryNumberRange(

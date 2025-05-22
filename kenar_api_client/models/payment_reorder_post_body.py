@@ -26,9 +26,9 @@ class PaymentReorderPostBody(BaseModel):
     """
     PaymentReorderPostBody
     """ # noqa: E501
-    id: Optional[StrictStr] = Field(default=None, description="A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.")
     extra_details: Optional[StrictStr] = Field(default=None, description="Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.")
-    __properties: ClassVar[List[str]] = ["id", "extra_details"]
+    id: Optional[StrictStr] = Field(default=None, description="A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.")
+    __properties: ClassVar[List[str]] = ["extra_details", "id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,8 +81,8 @@ class PaymentReorderPostBody(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "extra_details": obj.get("extra_details")
+            "extra_details": obj.get("extra_details"),
+            "id": obj.get("id")
         })
         return _obj
 

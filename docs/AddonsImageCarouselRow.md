@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**List[ImageCarouselRowImageItem]**](ImageCarouselRowImageItem.md) |  | [optional] 
 **has_divider** | **bool** |  | [optional] 
+**items** | [**List[ImageCarouselRowImageItem]**](ImageCarouselRowImageItem.md) |  | [optional] 
 
 ## Example
 

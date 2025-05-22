@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**cost** | **int** |  | [optional] 
 **phone** | **str** |  | [optional] 
 **semantic** | **Dict[str, str]** |  | [optional] 
 **ticket_uuid** | **str** |  | [optional] 
-**cost** | **int** |  | [optional] 
 
 ## Example
 

@@ -26,9 +26,9 @@ class PaymentReorderPostResponse(BaseModel):
     """
     PaymentReorderPostResponse
     """ # noqa: E501
-    id: Optional[StrictStr] = Field(default=None, description="Same uuid when creating transaction")
     cost_rials: Optional[StrictStr] = Field(default=None, description="The cost of the transaction in rials for your application")
-    __properties: ClassVar[List[str]] = ["id", "cost_rials"]
+    id: Optional[StrictStr] = Field(default=None, description="Same uuid when creating transaction")
+    __properties: ClassVar[List[str]] = ["cost_rials", "id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,8 +81,8 @@ class PaymentReorderPostResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
-            "cost_rials": obj.get("cost_rials")
+            "cost_rials": obj.get("cost_rials"),
+            "id": obj.get("id")
         })
         return _obj
 

@@ -35,8 +35,8 @@ class TestGetPostPricingResponseReorder(unittest.TestCase):
         model = GetPostPricingResponseReorder()
         if include_optional:
             return GetPostPricingResponseReorder(
-                cost_rials = '',
-                available = True
+                available = True,
+                cost_rials = ''
             )
         else:
             return GetPostPricingResponseReorder(

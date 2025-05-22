@@ -35,7 +35,7 @@ class TestAddonsAddonSelector(unittest.TestCase):
         model = AddonsAddonSelector()
         if include_optional:
             return AddonsAddonSelector(
-                tokens = [
+                brand_models = [
                     ''
                     ],
                 categories = [
@@ -47,7 +47,7 @@ class TestAddonsAddonSelector(unittest.TestCase):
                 districts = [
                     ''
                     ],
-                brand_models = [
+                tokens = [
                     ''
                     ]
             )

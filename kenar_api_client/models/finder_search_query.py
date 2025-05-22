@@ -28,14 +28,14 @@ class FinderSearchQuery(BaseModel):
     FinderSearchQuery
     """ # noqa: E501
     brand_model: Optional[List[StrictStr]] = None
-    production_year: Optional[FinderSearchQueryNumberRange] = None
-    usage: Optional[FinderSearchQueryNumberRange] = None
-    rooms: Optional[List[StrictStr]] = None
-    rent: Optional[FinderSearchQueryNumberRange] = None
     credit: Optional[FinderSearchQueryNumberRange] = None
-    size: Optional[FinderSearchQueryNumberRange] = None
     only_with_parking: Optional[StrictBool] = None
-    __properties: ClassVar[List[str]] = ["brand_model", "production_year", "usage", "rooms", "rent", "credit", "size", "only_with_parking"]
+    production_year: Optional[FinderSearchQueryNumberRange] = None
+    rent: Optional[FinderSearchQueryNumberRange] = None
+    rooms: Optional[List[StrictStr]] = None
+    size: Optional[FinderSearchQueryNumberRange] = None
+    usage: Optional[FinderSearchQueryNumberRange] = None
+    __properties: ClassVar[List[str]] = ["brand_model", "credit", "only_with_parking", "production_year", "rent", "rooms", "size", "usage"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -76,21 +76,21 @@ class FinderSearchQuery(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of production_year
-        if self.production_year:
-            _dict['production_year'] = self.production_year.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of usage
-        if self.usage:
-            _dict['usage'] = self.usage.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of rent
-        if self.rent:
-            _dict['rent'] = self.rent.to_dict()
         # override the default output from pydantic by calling `to_dict()` of credit
         if self.credit:
             _dict['credit'] = self.credit.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of production_year
+        if self.production_year:
+            _dict['production_year'] = self.production_year.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of rent
+        if self.rent:
+            _dict['rent'] = self.rent.to_dict()
         # override the default output from pydantic by calling `to_dict()` of size
         if self.size:
             _dict['size'] = self.size.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of usage
+        if self.usage:
+            _dict['usage'] = self.usage.to_dict()
         return _dict
 
     @classmethod
@@ -104,13 +104,13 @@ class FinderSearchQuery(BaseModel):
 
         _obj = cls.model_validate({
             "brand_model": obj.get("brand_model"),
-            "production_year": FinderSearchQueryNumberRange.from_dict(obj["production_year"]) if obj.get("production_year") is not None else None,
-            "usage": FinderSearchQueryNumberRange.from_dict(obj["usage"]) if obj.get("usage") is not None else None,
-            "rooms": obj.get("rooms"),
-            "rent": FinderSearchQueryNumberRange.from_dict(obj["rent"]) if obj.get("rent") is not None else None,
             "credit": FinderSearchQueryNumberRange.from_dict(obj["credit"]) if obj.get("credit") is not None else None,
+            "only_with_parking": obj.get("only_with_parking"),
+            "production_year": FinderSearchQueryNumberRange.from_dict(obj["production_year"]) if obj.get("production_year") is not None else None,
+            "rent": FinderSearchQueryNumberRange.from_dict(obj["rent"]) if obj.get("rent") is not None else None,
+            "rooms": obj.get("rooms"),
             "size": FinderSearchQueryNumberRange.from_dict(obj["size"]) if obj.get("size") is not None else None,
-            "only_with_parking": obj.get("only_with_parking")
+            "usage": FinderSearchQueryNumberRange.from_dict(obj["usage"]) if obj.get("usage") is not None else None
         })
         return _obj
 

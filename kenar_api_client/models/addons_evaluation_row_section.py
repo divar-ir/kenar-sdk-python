@@ -27,9 +27,9 @@ class AddonsEvaluationRowSection(BaseModel):
     """
     AddonsEvaluationRowSection
     """ # noqa: E501
-    text: Optional[StrictStr] = None
     section_color: Optional[AddonsWidgetColor] = None
-    __properties: ClassVar[List[str]] = ["text", "section_color"]
+    text: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["section_color", "text"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,8 +82,8 @@ class AddonsEvaluationRowSection(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "text": obj.get("text"),
-            "section_color": obj.get("section_color")
+            "section_color": obj.get("section_color"),
+            "text": obj.get("text")
         })
         return _obj
 

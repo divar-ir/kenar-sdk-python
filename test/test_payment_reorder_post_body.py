@@ -35,8 +35,8 @@ class TestPaymentReorderPostBody(unittest.TestCase):
         model = PaymentReorderPostBody()
         if include_optional:
             return PaymentReorderPostBody(
-                id = '',
-                extra_details = ''
+                extra_details = '',
+                id = ''
             )
         else:
             return PaymentReorderPostBody(

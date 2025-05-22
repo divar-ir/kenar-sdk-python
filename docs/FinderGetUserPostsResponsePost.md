@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **str** |  | [optional] 
-**title** | **str** |  | [optional] 
-**images** | **List[str]** |  | [optional] 
 **category** | **str** |  | [optional] 
+**images** | **List[str]** |  | [optional] 
+**title** | **str** |  | [optional] 
+**token** | **str** |  | [optional] 
 
 ## Example
 

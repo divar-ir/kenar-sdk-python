@@ -44,19 +44,19 @@ class TestFinderSearchPostsV2Request(unittest.TestCase):
                     brand_model = [
                         ''
                         ], 
+                    credit = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
+                        max = '', 
+                        min = '', ), 
+                    only_with_parking = True, 
                     production_year = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
-                        min = '', 
-                        max = '', ), 
-                    usage = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
-                        min = '', 
-                        max = '', ), 
+                        max = '', 
+                        min = '', ), 
+                    rent = , 
                     rooms = [
                         ''
                         ], 
-                    rent = , 
-                    credit = , 
                     size = , 
-                    only_with_parking = True, )
+                    usage = , )
             )
         else:
             return FinderSearchPostsV2Request(

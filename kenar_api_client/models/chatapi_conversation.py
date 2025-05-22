@@ -28,9 +28,9 @@ class ChatapiConversation(BaseModel):
     ChatapiConversation
     """ # noqa: E501
     id: Optional[StrictStr] = None
-    type: Optional[ChatapiConversationType] = None
     post_token: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["id", "type", "post_token"]
+    type: Optional[ChatapiConversationType] = None
+    __properties: ClassVar[List[str]] = ["id", "post_token", "type"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -84,8 +84,8 @@ class ChatapiConversation(BaseModel):
 
         _obj = cls.model_validate({
             "id": obj.get("id"),
-            "type": obj.get("type"),
-            "post_token": obj.get("post_token")
+            "post_token": obj.get("post_token"),
+            "type": obj.get("type")
         })
         return _obj
 

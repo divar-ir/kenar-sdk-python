@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**slug** | [**AppsServiceType**](AppsServiceType.md) |  | [optional] 
 **display** | **str** |  | [optional] 
+**slug** | [**AppsServiceType**](AppsServiceType.md) |  | [optional] 
 
 ## Example
 

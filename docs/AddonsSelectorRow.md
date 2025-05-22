@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | **str** |  | [optional] 
-**image_id** | **str** |  | [optional] 
+**action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
 **has_divider** | **bool** |  | [optional] 
 **icon_name** | [**DivarIconsIconName**](DivarIconsIconName.md) |  | [optional] 
-**action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
+**image_id** | **str** |  | [optional] 
+**title** | **str** |  | [optional] 
 
 ## Example
 

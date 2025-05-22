@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**image_id** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**image_id** | **str** |  | [optional] 
 
 ## Example
 

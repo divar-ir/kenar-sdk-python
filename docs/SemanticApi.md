@@ -22,6 +22,7 @@ This API expects access token having `POST_SEMANTIC_CREATE` scope.
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -35,6 +36,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -68,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -96,6 +107,7 @@ Use the User Semantic APIs for this purpose.This service allows sending semantic
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -110,6 +122,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -143,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -171,6 +193,7 @@ Use the User Semantic APIs for this purpose.This service allows sending semantic
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -185,6 +208,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -218,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -243,6 +276,7 @@ You can delete the semantic information of a user by calling this API.
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -255,6 +289,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -288,7 +332,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -313,6 +357,7 @@ You can delete the semantic information of a user by calling this API.
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -325,6 +370,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -358,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 

@@ -27,9 +27,9 @@ class GetServiceTypesResponseServiceTypeData(BaseModel):
     """
     GetServiceTypesResponseServiceTypeData
     """ # noqa: E501
-    slug: Optional[AppsServiceType] = None
     display: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["slug", "display"]
+    slug: Optional[AppsServiceType] = None
+    __properties: ClassVar[List[str]] = ["display", "slug"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,8 +82,8 @@ class GetServiceTypesResponseServiceTypeData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "slug": obj.get("slug"),
-            "display": obj.get("display")
+            "display": obj.get("display"),
+            "slug": obj.get("slug")
         })
         return _obj
 

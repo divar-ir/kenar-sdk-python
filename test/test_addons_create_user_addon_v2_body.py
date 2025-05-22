@@ -35,74 +35,74 @@ class TestAddonsCreateUserAddonV2Body(unittest.TestCase):
         model = AddonsCreateUserAddonV2Body()
         if include_optional:
             return AddonsCreateUserAddonV2Body(
-                widgets = [
-                    kenar_api_client.models.addons_widget.addonsWidget(
-                        event_row = kenar_api_client.models.addons_event_row.addonsEventRow(
-                            title = '', 
-                            subtitle = '', 
-                            label = '', 
-                            image_id = '', 
-                            has_divider = True, 
-                            icon_name = 'KEYBOARD_ARROW_RIGHT', ), 
-                        button_bar = kenar_api_client.models.addons_button_bar.addonsButtonBar(
-                            title = '', 
-                            action = kenar_api_client.models.action.Action(
-                                open_direct_link = 'https://your-site.com/some-path', 
-                                open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
-                                    data = {"your-internal-id":"something"}, ), 
-                                get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
-                                    data = {"your-internal-id":"something"}, ), ), ), 
-                        title_row = kenar_api_client.models.addons_title_row.addonsTitleRow(
-                            text = '', 
-                            has_divider = True, ), 
-                        subtitle_row = kenar_api_client.models.addons_subtitle_row.addonsSubtitleRow(
-                            text = '', 
-                            has_divider = True, ), 
-                        selector_row = kenar_api_client.models.addons_selector_row.addonsSelectorRow(
-                            title = '', 
-                            image_id = '', 
-                            has_divider = True, ), 
-                        score_row = kenar_api_client.models.addons_score_row.addonsScoreRow(
-                            title = '', 
-                            descriptive_score = '', 
-                            percentage_score = 56, 
-                            score_color = 'WARNING_SECONDARY', 
-                            has_divider = True, ), 
-                        image_carousel_row = kenar_api_client.models.addons_image_carousel_row.addonsImageCarouselRow(
-                            items = [
-                                kenar_api_client.models.image_carousel_row_image_item.ImageCarouselRowImageItem(
-                                    image_id = '', 
-                                    description = '', )
-                                ], 
-                            has_divider = True, ), 
-                        group_info_row = kenar_api_client.models.addons_group_info_row.addonsGroupInfoRow(
-                            has_divider = True, ), 
-                        evaluation_row = kenar_api_client.models.addons_evaluation_row.addonsEvaluationRow(
-                            indicator_text = '', 
-                            indicator_percentage = 56, 
-                            left = kenar_api_client.models.addons_evaluation_row_section.addonsEvaluationRowSection(
-                                text = '', 
-                                section_color = 'WARNING_SECONDARY', ), 
-                            middle = kenar_api_client.models.addons_evaluation_row_section.addonsEvaluationRowSection(
-                                text = '', ), 
-                            right = , ), 
-                        description_row = kenar_api_client.models.addons_description_row.addonsDescriptionRow(
-                            text = '', 
-                            has_divider = True, 
-                            expandable = True, ), 
-                        semantic_paths = {
-                            'key' : ''
-                            }, )
-                    ],
-                semantic = {
-                    'key' : ''
-                    },
-                phone = '',
                 categories = [
                     ''
                     ],
+                cost = 56,
+                phone = '',
+                semantic = {
+                    'key' : ''
+                    },
                 ticket_uuid = '',
-                cost = 56
+                widgets = [
+                    kenar_api_client.models.addons_widget.addonsWidget(
+                        button_bar = kenar_api_client.models.addons_button_bar.addonsButtonBar(
+                            action = kenar_api_client.models.action.Action(
+                                get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
+                                    data = {"your-internal-id":"something"}, ), 
+                                open_direct_link = 'https://your-site.com/some-path', 
+                                open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
+                                    data = {"your-internal-id":"something"}, ), ), 
+                            title = '', ), 
+                        description_row = kenar_api_client.models.addons_description_row.addonsDescriptionRow(
+                            expandable = True, 
+                            has_divider = True, 
+                            text = '', ), 
+                        evaluation_row = kenar_api_client.models.addons_evaluation_row.addonsEvaluationRow(
+                            icon_name = 'KEYBOARD_ARROW_RIGHT', 
+                            indicator_percentage = 56, 
+                            indicator_text = '', 
+                            left = kenar_api_client.models.addons_evaluation_row_section.addonsEvaluationRowSection(
+                                section_color = 'WARNING_SECONDARY', 
+                                text = '', ), 
+                            middle = kenar_api_client.models.addons_evaluation_row_section.addonsEvaluationRowSection(
+                                text = '', ), 
+                            right = , ), 
+                        event_row = kenar_api_client.models.addons_event_row.addonsEventRow(
+                            has_divider = True, 
+                            image_id = '', 
+                            label = '', 
+                            subtitle = '', 
+                            title = '', ), 
+                        group_info_row = kenar_api_client.models.addons_group_info_row.addonsGroupInfoRow(
+                            has_divider = True, 
+                            items = [
+                                kenar_api_client.models.addons_group_info_row_group_info_item.addonsGroupInfoRowGroupInfoItem(
+                                    title = '', 
+                                    value = '', )
+                                ], ), 
+                        image_carousel_row = kenar_api_client.models.addons_image_carousel_row.addonsImageCarouselRow(
+                            has_divider = True, ), 
+                        score_row = kenar_api_client.models.addons_score_row.addonsScoreRow(
+                            descriptive_score = '', 
+                            has_divider = True, 
+                            percentage_score = 56, 
+                            score_color = 'WARNING_SECONDARY', 
+                            title = '', ), 
+                        selector_row = kenar_api_client.models.addons_selector_row.addonsSelectorRow(
+                            has_divider = True, 
+                            image_id = '', 
+                            title = '', ), 
+                        semantic_paths = {
+                            'key' : ''
+                            }, 
+                        subtitle_row = kenar_api_client.models.addons_subtitle_row.addonsSubtitleRow(
+                            has_divider = True, 
+                            text = '', ), 
+                        title_row = kenar_api_client.models.addons_title_row.addonsTitleRow(
+                            has_divider = True, 
+                            text = '', ), )
+                    ]
             )
         else:
             return AddonsCreateUserAddonV2Body(

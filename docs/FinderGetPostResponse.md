@@ -5,15 +5,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**state** | [**FinderPostExtState**](FinderPostExtState.md) |  | [optional] 
-**first_published_at** | **datetime** |  | [optional] 
-**token** | **str** |  | [optional] 
-**category** | **str** |  | [optional] 
-**city** | **str** |  | [optional] 
-**district** | **str** |  | [optional] 
-**data** | **object** |  | [optional] 
-**chat_enabled** | **bool** |  | [optional] 
 **business_data** | [**GetPostResponseBusinessData**](GetPostResponseBusinessData.md) |  | [optional] 
+**category** | **str** |  | [optional] 
+**chat_enabled** | **bool** |  | [optional] 
+**city** | **str** |  | [optional] 
+**data** | **object** |  | [optional] 
+**district** | **str** |  | [optional] 
+**first_published_at** | **datetime** |  | [optional] 
+**state** | [**FinderPostExtState**](FinderPostExtState.md) |  | [optional] 
+**token** | **str** |  | [optional] 
 
 ## Example
 

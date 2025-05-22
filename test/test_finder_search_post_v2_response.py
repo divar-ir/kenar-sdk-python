@@ -37,11 +37,15 @@ class TestFinderSearchPostV2Response(unittest.TestCase):
             return FinderSearchPostV2Response(
                 posts = [
                     kenar_api_client.models.finder_search_post_item.finderSearchPostItem(
-                        token = '', 
                         category = '', 
-                        last_modified_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         city = '', 
-                        title = '', 
+                        community_fields = kenar_api_client.models.community_fields.community_fields(), 
+                        electronic_devices_fields = kenar_api_client.models.electronic_devices_fields.electronic_devices_fields(), 
+                        home_kitchen_fields = kenar_api_client.models.home_kitchen_fields.home_kitchen_fields(), 
+                        jobs_fields = kenar_api_client.models.jobs_fields.jobs_fields(), 
+                        last_modified_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                        leisure_hobbies_fields = kenar_api_client.models.leisure_hobbies_fields.leisure_hobbies_fields(), 
+                        personal_goods_fields = kenar_api_client.models.personal_goods_fields.personal_goods_fields(), 
                         price = kenar_api_client.models.search_post_item_price.SearchPostItemPrice(
                             mode = '', 
                             value = '', ), 
@@ -49,26 +53,22 @@ class TestFinderSearchPostV2Response(unittest.TestCase):
                             credit = kenar_api_client.models.search_post_item_price.SearchPostItemPrice(
                                 mode = '', 
                                 value = '', ), 
-                            rent = , 
                             daily_rent = '', 
-                            size = 56, 
-                            year = 56, 
-                            has_parking = True, 
+                            floor = 56, 
                             has_elevator = True, 
+                            has_parking = True, 
+                            rent = , 
                             rooms = '', 
-                            floor = 56, ), 
-                        vehicles_fields = kenar_api_client.models.search_post_item_vehicles_fields.SearchPostItemVehiclesFields(
-                            usage = '', 
-                            installment_sale = '', 
-                            custom_post_subtitle = '', ), 
-                        electronic_devices_fields = kenar_api_client.models.electronic_devices_fields.electronic_devices_fields(), 
-                        home_kitchen_fields = kenar_api_client.models.home_kitchen_fields.home_kitchen_fields(), 
+                            size = 56, 
+                            year = 56, ), 
                         services_fields = kenar_api_client.models.services_fields.services_fields(), 
-                        personal_goods_fields = kenar_api_client.models.personal_goods_fields.personal_goods_fields(), 
-                        leisure_hobbies_fields = kenar_api_client.models.leisure_hobbies_fields.leisure_hobbies_fields(), 
-                        community_fields = kenar_api_client.models.community_fields.community_fields(), 
+                        title = '', 
+                        token = '', 
                         tools_materials_equipment_fields = kenar_api_client.models.tools_materials_equipment_fields.tools_materials_equipment_fields(), 
-                        jobs_fields = kenar_api_client.models.jobs_fields.jobs_fields(), )
+                        vehicles_fields = kenar_api_client.models.search_post_item_vehicles_fields.SearchPostItemVehiclesFields(
+                            custom_post_subtitle = '', 
+                            installment_sale = '', 
+                            usage = '', ), )
                     ]
             )
         else:

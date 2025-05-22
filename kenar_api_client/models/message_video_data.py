@@ -27,9 +27,9 @@ class MessageVideoData(BaseModel):
     MessageVideoData
     """ # noqa: E501
     link: Optional[StrictStr] = None
-    thumbnail_link: Optional[StrictStr] = None
     size_bytes: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["link", "thumbnail_link", "size_bytes"]
+    thumbnail_link: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["link", "size_bytes", "thumbnail_link"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -83,8 +83,8 @@ class MessageVideoData(BaseModel):
 
         _obj = cls.model_validate({
             "link": obj.get("link"),
-            "thumbnail_link": obj.get("thumbnail_link"),
-            "size_bytes": obj.get("size_bytes")
+            "size_bytes": obj.get("size_bytes"),
+            "thumbnail_link": obj.get("thumbnail_link")
         })
         return _obj
 

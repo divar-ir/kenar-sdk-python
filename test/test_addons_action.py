@@ -35,10 +35,10 @@ class TestAddonsAction(unittest.TestCase):
         model = AddonsAction()
         if include_optional:
             return AddonsAction(
+                get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
+                    data = {"your-internal-id":"something"}, ),
                 open_direct_link = 'https://your-site.com/some-path',
                 open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
-                    data = {"your-internal-id":"something"}, ),
-                get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
                     data = {"your-internal-id":"something"}, )
             )
         else:

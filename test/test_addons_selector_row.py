@@ -35,16 +35,16 @@ class TestAddonsSelectorRow(unittest.TestCase):
         model = AddonsSelectorRow()
         if include_optional:
             return AddonsSelectorRow(
-                title = '',
-                image_id = '',
-                has_divider = True,
-                icon_name = 'KEYBOARD_ARROW_RIGHT',
                 action = kenar_api_client.models.action.Action(
+                    get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
+                        data = {"your-internal-id":"something"}, ), 
                     open_direct_link = 'https://your-site.com/some-path', 
                     open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
-                        data = {"your-internal-id":"something"}, ), 
-                    get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
-                        data = {"your-internal-id":"something"}, ), )
+                        data = {"your-internal-id":"something"}, ), ),
+                has_divider = True,
+                icon_name = 'KEYBOARD_ARROW_RIGHT',
+                image_id = '',
+                title = ''
             )
         else:
             return AddonsSelectorRow(

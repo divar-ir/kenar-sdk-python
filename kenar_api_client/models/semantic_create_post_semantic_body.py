@@ -26,10 +26,10 @@ class SemanticCreatePostSemanticBody(BaseModel):
     """
     SemanticCreatePostSemanticBody
     """ # noqa: E501
+    cost: Optional[StrictInt] = None
     semantic: Optional[Dict[str, StrictStr]] = None
     ticket_uuid: Optional[StrictStr] = None
-    cost: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["semantic", "ticket_uuid", "cost"]
+    __properties: ClassVar[List[str]] = ["cost", "semantic", "ticket_uuid"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,9 +82,9 @@ class SemanticCreatePostSemanticBody(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "cost": obj.get("cost"),
             "semantic": obj.get("semantic"),
-            "ticket_uuid": obj.get("ticket_uuid"),
-            "cost": obj.get("cost")
+            "ticket_uuid": obj.get("ticket_uuid")
         })
         return _obj
 

@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**usage** | **str** |  | [optional] 
-**installment_sale** | **str** |  | [optional] 
 **custom_post_subtitle** | **str** |  | [optional] 
+**installment_sale** | **str** |  | [optional] 
+**usage** | **str** |  | [optional] 
 
 ## Example
 

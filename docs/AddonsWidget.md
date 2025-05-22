@@ -5,17 +5,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**event_row** | [**AddonsEventRow**](AddonsEventRow.md) |  | [optional] 
 **button_bar** | [**AddonsButtonBar**](AddonsButtonBar.md) |  | [optional] 
-**title_row** | [**AddonsTitleRow**](AddonsTitleRow.md) |  | [optional] 
-**subtitle_row** | [**AddonsSubtitleRow**](AddonsSubtitleRow.md) |  | [optional] 
-**selector_row** | [**AddonsSelectorRow**](AddonsSelectorRow.md) |  | [optional] 
-**score_row** | [**AddonsScoreRow**](AddonsScoreRow.md) |  | [optional] 
-**image_carousel_row** | [**AddonsImageCarouselRow**](AddonsImageCarouselRow.md) |  | [optional] 
-**group_info_row** | [**AddonsGroupInfoRow**](AddonsGroupInfoRow.md) |  | [optional] 
-**evaluation_row** | [**AddonsEvaluationRow**](AddonsEvaluationRow.md) |  | [optional] 
 **description_row** | [**AddonsDescriptionRow**](AddonsDescriptionRow.md) |  | [optional] 
+**evaluation_row** | [**AddonsEvaluationRow**](AddonsEvaluationRow.md) |  | [optional] 
+**event_row** | [**AddonsEventRow**](AddonsEventRow.md) |  | [optional] 
+**group_info_row** | [**AddonsGroupInfoRow**](AddonsGroupInfoRow.md) |  | [optional] 
+**image_carousel_row** | [**AddonsImageCarouselRow**](AddonsImageCarouselRow.md) |  | [optional] 
+**score_row** | [**AddonsScoreRow**](AddonsScoreRow.md) |  | [optional] 
+**selector_row** | [**AddonsSelectorRow**](AddonsSelectorRow.md) |  | [optional] 
 **semantic_paths** | **Dict[str, str]** |  | [optional] 
+**subtitle_row** | [**AddonsSubtitleRow**](AddonsSubtitleRow.md) |  | [optional] 
+**title_row** | [**AddonsTitleRow**](AddonsTitleRow.md) |  | [optional] 
 
 ## Example
 

@@ -29,10 +29,10 @@ class AuthorizationAPICallerInfo(BaseModel):
     AuthorizationAPICallerInfo
     """ # noqa: E501
     api_key_id: Optional[StrictInt] = None
+    api_key_id_v2: Optional[StrictStr] = None
     app: Optional[AppsApp] = None
     scopes: Optional[List[AuthorizationOAuthScope]] = None
-    api_key_id_v2: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["api_key_id", "app", "scopes", "api_key_id_v2"]
+    __properties: ClassVar[List[str]] = ["api_key_id", "api_key_id_v2", "app", "scopes"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -96,9 +96,9 @@ class AuthorizationAPICallerInfo(BaseModel):
 
         _obj = cls.model_validate({
             "api_key_id": obj.get("api_key_id"),
+            "api_key_id_v2": obj.get("api_key_id_v2"),
             "app": AppsApp.from_dict(obj["app"]) if obj.get("app") is not None else None,
-            "scopes": [AuthorizationOAuthScope.from_dict(_item) for _item in obj["scopes"]] if obj.get("scopes") is not None else None,
-            "api_key_id_v2": obj.get("api_key_id_v2")
+            "scopes": [AuthorizationOAuthScope.from_dict(_item) for _item in obj["scopes"]] if obj.get("scopes") is not None else None
         })
         return _obj
 

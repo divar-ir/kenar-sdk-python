@@ -28,12 +28,12 @@ class AddonsSelectorRow(BaseModel):
     """
     AddonsSelectorRow
     """ # noqa: E501
-    title: Optional[StrictStr] = None
-    image_id: Optional[StrictStr] = None
+    action: Optional[AddonsAction] = None
     has_divider: Optional[StrictBool] = None
     icon_name: Optional[DivarIconsIconName] = None
-    action: Optional[AddonsAction] = None
-    __properties: ClassVar[List[str]] = ["title", "image_id", "has_divider", "icon_name", "action"]
+    image_id: Optional[StrictStr] = None
+    title: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["action", "has_divider", "icon_name", "image_id", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,11 +89,11 @@ class AddonsSelectorRow(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "title": obj.get("title"),
-            "image_id": obj.get("image_id"),
+            "action": AddonsAction.from_dict(obj["action"]) if obj.get("action") is not None else None,
             "has_divider": obj.get("has_divider"),
             "icon_name": obj.get("icon_name"),
-            "action": AddonsAction.from_dict(obj["action"]) if obj.get("action") is not None else None
+            "image_id": obj.get("image_id"),
+            "title": obj.get("title")
         })
         return _obj
 

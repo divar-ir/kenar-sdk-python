@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**preset** | [**ManagementPreset**](ManagementPreset.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
-**token** | **str** |  | [optional] 
 **mng_token** | **str** |  | [optional] 
+**preset** | [**ManagementPreset**](ManagementPreset.md) |  | [optional] 
+**token** | **str** |  | [optional] 
 
 ## Example
 

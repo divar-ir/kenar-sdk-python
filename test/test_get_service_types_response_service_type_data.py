@@ -35,8 +35,8 @@ class TestGetServiceTypesResponseServiceTypeData(unittest.TestCase):
         model = GetServiceTypesResponseServiceTypeData()
         if include_optional:
             return GetServiceTypesResponseServiceTypeData(
-                slug = 'FUNC_CLICK_AND_COLLECT',
-                display = ''
+                display = '',
+                slug = 'FUNC_CLICK_AND_COLLECT'
             )
         else:
             return GetServiceTypesResponseServiceTypeData(

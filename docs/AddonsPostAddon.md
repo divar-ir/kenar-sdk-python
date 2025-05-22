@@ -5,19 +5,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**meta_data** | [**AddonsAddonMetaData**](AddonsAddonMetaData.md) |  | [optional] 
-**token** | **str** |  | [optional] 
 **app** | [**AppsApp**](AppsApp.md) |  | [optional] 
-**widgets** | **object** |  | [optional] 
-**score** | **str** |  | [optional] 
-**selector** | [**AddonsAddonSelector**](AddonsAddonSelector.md) |  | [optional] 
 **linkage** | [**AddonsAddonLinkage**](AddonsAddonLinkage.md) |  | [optional] 
+**meta_data** | [**AddonsAddonMetaData**](AddonsAddonMetaData.md) |  | [optional] 
+**score** | **str** |  | [optional] 
 **secondary_links** | [**AddonsAddonSecondaryLinks**](AddonsAddonSecondaryLinks.md) |  | [optional] 
+**selector** | [**AddonsAddonSelector**](AddonsAddonSelector.md) |  | [optional] 
 **semantic** | **Dict[str, str]** |  | [optional] 
 **semantic_data** | [**AddonsAddonSemantic**](AddonsAddonSemantic.md) |  | [optional] 
-**sensitive_semantic** | **Dict[str, str]** |  | [optional] 
-**widgets_semantic** | **object** |  | [optional] 
 **semantic_sensitives** | **List[str]** |  | [optional] 
+**sensitive_semantic** | **Dict[str, str]** |  | [optional] 
+**token** | **str** |  | [optional] 
+**widgets** | **object** |  | [optional] 
+**widgets_semantic** | **object** |  | [optional] 
 
 ## Example
 

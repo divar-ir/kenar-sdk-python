@@ -26,9 +26,9 @@ class FinderSearchQueryNumberRange(BaseModel):
     """
     FinderSearchQueryNumberRange
     """ # noqa: E501
-    min: Optional[StrictStr] = None
     max: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["min", "max"]
+    min: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["max", "min"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,8 +81,8 @@ class FinderSearchQueryNumberRange(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "min": obj.get("min"),
-            "max": obj.get("max")
+            "max": obj.get("max"),
+            "min": obj.get("min")
         })
         return _obj
 

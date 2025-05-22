@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | **str** |  | [optional] 
-**subtitle** | **str** |  | [optional] 
-**label** | **str** |  | [optional] 
-**image_id** | **str** |  | [optional] 
 **has_divider** | **bool** |  | [optional] 
 **icon_name** | [**DivarIconsIconName**](DivarIconsIconName.md) |  | [optional] 
+**image_id** | **str** |  | [optional] 
+**label** | **str** |  | [optional] 
+**subtitle** | **str** |  | [optional] 
+**title** | **str** |  | [optional] 
 
 ## Example
 

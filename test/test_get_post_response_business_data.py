@@ -35,8 +35,8 @@ class TestGetPostResponseBusinessData(unittest.TestCase):
         model = GetPostResponseBusinessData()
         if include_optional:
             return GetPostResponseBusinessData(
-                business_type = 'CAR',
-                business_name = ''
+                business_name = '',
+                business_type = 'CAR'
             )
         else:
             return GetPostResponseBusinessData(

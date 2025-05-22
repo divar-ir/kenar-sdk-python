@@ -35,10 +35,10 @@ class TestAssetsGetOAuthScopesResponseAppOauthScope(unittest.TestCase):
         model = AssetsGetOAuthScopesResponseAppOauthScope()
         if include_optional:
             return AssetsGetOAuthScopesResponseAppOauthScope(
-                slug = 'POST_ADDON_CREATE',
-                display = '',
                 description = '',
-                lifecycle_state = 'EXPERIMENTAL'
+                display = '',
+                lifecycle_state = 'EXPERIMENTAL',
+                slug = 'POST_ADDON_CREATE'
             )
         else:
             return AssetsGetOAuthScopesResponseAppOauthScope(

@@ -35,8 +35,8 @@ class TestAddonsEvaluationRowSection(unittest.TestCase):
         model = AddonsEvaluationRowSection()
         if include_optional:
             return AddonsEvaluationRowSection(
-                text = '',
-                section_color = 'WARNING_SECONDARY'
+                section_color = 'WARNING_SECONDARY',
+                text = ''
             )
         else:
             return AddonsEvaluationRowSection(

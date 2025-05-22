@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**slug** | **str** |  | [optional] 
-**display** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**display** | **str** |  | [optional] 
 **lifecycle_state** | [**AssetsGetPermissionsResponseLifeCycleState**](AssetsGetPermissionsResponseLifeCycleState.md) |  | [optional] 
+**slug** | **str** |  | [optional] 
 
 ## Example
 

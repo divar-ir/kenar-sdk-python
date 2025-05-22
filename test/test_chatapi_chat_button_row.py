@@ -38,14 +38,14 @@ class TestChatapiChatButtonRow(unittest.TestCase):
                 buttons = [
                     kenar_api_client.models.chatapi_chat_button.chatapiChatButton(
                         action = kenar_api_client.models.action.Action(
+                            get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
+                                data = {"your-internal-id":"something"}, ), 
                             open_direct_link = 'https://your-site.com/some-path', 
                             open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
-                                data = {"your-internal-id":"something"}, ), 
-                            get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
                                 data = {"your-internal-id":"something"}, ), ), 
-                        icon_name = '', 
                         caption = '', 
-                        icon = 'KEYBOARD_ARROW_RIGHT', )
+                        icon = 'KEYBOARD_ARROW_RIGHT', 
+                        icon_name = '', )
                     ]
             )
         else:

@@ -5,13 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**slug** | **str** |  | [optional] 
-**display** | **str** |  | [optional] 
 **avatar** | **str** |  | [optional] 
+**display** | **str** |  | [optional] 
 **divar_identification_key** | **str** |  | [optional] 
-**status** | [**AppsAppStatus**](AppsAppStatus.md) |  | [optional] 
-**service_type** | [**AppsServiceType**](AppsServiceType.md) |  | [optional] 
 **service_tags** | [**List[AppsServiceTag]**](AppsServiceTag.md) |  | [optional] 
+**service_type** | [**AppsServiceType**](AppsServiceType.md) |  | [optional] 
+**slug** | **str** |  | [optional] 
+**status** | [**AppsAppStatus**](AppsAppStatus.md) |  | [optional] 
 
 ## Example
 

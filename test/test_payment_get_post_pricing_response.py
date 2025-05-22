@@ -36,8 +36,8 @@ class TestPaymentGetPostPricingResponse(unittest.TestCase):
         if include_optional:
             return PaymentGetPostPricingResponse(
                 reorder = kenar_api_client.models.get_post_pricing_response_reorder.GetPostPricingResponseReorder(
-                    cost_rials = '', 
-                    available = True, )
+                    available = True, 
+                    cost_rials = '', )
             )
         else:
             return PaymentGetPostPricingResponse(

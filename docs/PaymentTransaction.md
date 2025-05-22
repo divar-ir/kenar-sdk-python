@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Same uuid when creating transaction | [optional] 
 **cost_rials** | **str** | The cost of the transaction in rials for your application | [optional] 
 **extra_details** | **str** | Same Additional details which you sent in the request | [optional] 
+**id** | **str** | Same uuid when creating transaction | [optional] 
 **state** | [**PaymentTransactionState**](PaymentTransactionState.md) |  | [optional] 
 **type** | [**PaymentTransactionType**](PaymentTransactionType.md) |  | [optional] 
 

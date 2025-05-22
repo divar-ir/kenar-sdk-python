@@ -38,25 +38,25 @@ class TestFinderSearchQuery(unittest.TestCase):
                 brand_model = [
                     ''
                     ],
+                credit = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
+                    max = '', 
+                    min = '', ),
+                only_with_parking = True,
                 production_year = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
-                    min = '', 
-                    max = '', ),
-                usage = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
-                    min = '', 
-                    max = '', ),
+                    max = '', 
+                    min = '', ),
+                rent = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
+                    max = '', 
+                    min = '', ),
                 rooms = [
                     ''
                     ],
-                rent = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
-                    min = '', 
-                    max = '', ),
-                credit = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
-                    min = '', 
-                    max = '', ),
                 size = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
-                    min = '', 
-                    max = '', ),
-                only_with_parking = True
+                    max = '', 
+                    min = '', ),
+                usage = kenar_api_client.models.finder_search_query_number_range.finderSearchQueryNumberRange(
+                    max = '', 
+                    min = '', )
             )
         else:
             return FinderSearchQuery(

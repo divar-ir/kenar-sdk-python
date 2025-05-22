@@ -26,11 +26,11 @@ class MessageImageData(BaseModel):
     """
     MessageImageData
     """ # noqa: E501
+    height_px: Optional[StrictInt] = None
     link: Optional[StrictStr] = None
     size_bytes: Optional[StrictStr] = None
-    height_px: Optional[StrictInt] = None
     width_px: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["link", "size_bytes", "height_px", "width_px"]
+    __properties: ClassVar[List[str]] = ["height_px", "link", "size_bytes", "width_px"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -83,9 +83,9 @@ class MessageImageData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "height_px": obj.get("height_px"),
             "link": obj.get("link"),
             "size_bytes": obj.get("size_bytes"),
-            "height_px": obj.get("height_px"),
             "width_px": obj.get("width_px")
         })
         return _obj

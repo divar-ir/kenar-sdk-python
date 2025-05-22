@@ -35,11 +35,11 @@ class TestSemanticCreatePostSemanticBody(unittest.TestCase):
         model = SemanticCreatePostSemanticBody()
         if include_optional:
             return SemanticCreatePostSemanticBody(
+                cost = 56,
                 semantic = {
                     'key' : ''
                     },
-                ticket_uuid = '',
-                cost = 56
+                ticket_uuid = ''
             )
         else:
             return SemanticCreatePostSemanticBody(

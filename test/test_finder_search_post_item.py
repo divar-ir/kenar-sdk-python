@@ -35,11 +35,15 @@ class TestFinderSearchPostItem(unittest.TestCase):
         model = FinderSearchPostItem()
         if include_optional:
             return FinderSearchPostItem(
-                token = '',
                 category = '',
-                last_modified_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 city = '',
-                title = '',
+                community_fields = None,
+                electronic_devices_fields = None,
+                home_kitchen_fields = None,
+                jobs_fields = None,
+                last_modified_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                leisure_hobbies_fields = None,
+                personal_goods_fields = None,
                 price = kenar_api_client.models.search_post_item_price.SearchPostItemPrice(
                     mode = '', 
                     value = '', ),
@@ -47,28 +51,24 @@ class TestFinderSearchPostItem(unittest.TestCase):
                     credit = kenar_api_client.models.search_post_item_price.SearchPostItemPrice(
                         mode = '', 
                         value = '', ), 
+                    daily_rent = '', 
+                    floor = 56, 
+                    has_elevator = True, 
+                    has_parking = True, 
                     rent = kenar_api_client.models.search_post_item_price.SearchPostItemPrice(
                         mode = '', 
                         value = '', ), 
-                    daily_rent = '', 
-                    size = 56, 
-                    year = 56, 
-                    has_parking = True, 
-                    has_elevator = True, 
                     rooms = '', 
-                    floor = 56, ),
-                vehicles_fields = kenar_api_client.models.search_post_item_vehicles_fields.SearchPostItemVehiclesFields(
-                    usage = '', 
-                    installment_sale = '', 
-                    custom_post_subtitle = '', ),
-                electronic_devices_fields = None,
-                home_kitchen_fields = None,
+                    size = 56, 
+                    year = 56, ),
                 services_fields = None,
-                personal_goods_fields = None,
-                leisure_hobbies_fields = None,
-                community_fields = None,
+                title = '',
+                token = '',
                 tools_materials_equipment_fields = None,
-                jobs_fields = None
+                vehicles_fields = kenar_api_client.models.search_post_item_vehicles_fields.SearchPostItemVehiclesFields(
+                    custom_post_subtitle = '', 
+                    installment_sale = '', 
+                    usage = '', )
             )
         else:
             return FinderSearchPostItem(

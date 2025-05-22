@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | Same uuid when creating transaction | [optional] 
 **cost_rials** | **str** | The cost of the transaction in rials for your application | [optional] 
+**id** | **str** | Same uuid when creating transaction | [optional] 
 
 ## Example
 

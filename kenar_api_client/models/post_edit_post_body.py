@@ -26,10 +26,10 @@ class PostEditPostBody(BaseModel):
     """
     PostEditPostBody
     """ # noqa: E501
-    title: Optional[StrictStr] = None
     description: Optional[StrictStr] = None
     image_paths: Optional[List[StrictStr]] = None
-    __properties: ClassVar[List[str]] = ["title", "description", "image_paths"]
+    title: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["description", "image_paths", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,9 +82,9 @@ class PostEditPostBody(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "title": obj.get("title"),
             "description": obj.get("description"),
-            "image_paths": obj.get("image_paths")
+            "image_paths": obj.get("image_paths"),
+            "title": obj.get("title")
         })
         return _obj
 

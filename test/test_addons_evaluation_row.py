@@ -35,18 +35,18 @@ class TestAddonsEvaluationRow(unittest.TestCase):
         model = AddonsEvaluationRow()
         if include_optional:
             return AddonsEvaluationRow(
-                indicator_text = '',
-                indicator_percentage = 56,
                 icon_name = 'KEYBOARD_ARROW_RIGHT',
+                indicator_percentage = 56,
+                indicator_text = '',
                 left = kenar_api_client.models.addons_evaluation_row_section.addonsEvaluationRowSection(
-                    text = '', 
-                    section_color = 'WARNING_SECONDARY', ),
+                    section_color = 'WARNING_SECONDARY', 
+                    text = '', ),
                 middle = kenar_api_client.models.addons_evaluation_row_section.addonsEvaluationRowSection(
-                    text = '', 
-                    section_color = 'WARNING_SECONDARY', ),
+                    section_color = 'WARNING_SECONDARY', 
+                    text = '', ),
                 right = kenar_api_client.models.addons_evaluation_row_section.addonsEvaluationRowSection(
-                    text = '', 
-                    section_color = 'WARNING_SECONDARY', )
+                    section_color = 'WARNING_SECONDARY', 
+                    text = '', )
             )
         else:
             return AddonsEvaluationRow(

@@ -35,8 +35,8 @@ class TestChatapiConversationSendMessageResponse(unittest.TestCase):
         model = ChatapiConversationSendMessageResponse()
         if include_optional:
             return ChatapiConversationSendMessageResponse(
-                status = 56,
-                message = ''
+                message = '',
+                status = 56
             )
         else:
             return ChatapiConversationSendMessageResponse(

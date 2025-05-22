@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**event_type** | [**EventsRegisterEventSubscriptionRequestEventType**](EventsRegisterEventSubscriptionRequestEventType.md) |  | [optional] 
 **event_resource_id** | **str** |  | [optional] 
+**event_type** | [**EventsRegisterEventSubscriptionRequestEventType**](EventsRegisterEventSubscriptionRequestEventType.md) |  | [optional] 
 **metadata** | **object** |  | [optional] 
 
 ## Example

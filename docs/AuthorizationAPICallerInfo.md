@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_key_id** | **int** |  | [optional] 
+**api_key_id_v2** | **str** |  | [optional] 
 **app** | [**AppsApp**](AppsApp.md) |  | [optional] 
 **scopes** | [**List[AuthorizationOAuthScope]**](AuthorizationOAuthScope.md) |  | [optional] 
-**api_key_id_v2** | **str** |  | [optional] 
 
 ## Example
 

@@ -29,14 +29,14 @@ class AddonsScoreRow(BaseModel):
     """
     AddonsScoreRow
     """ # noqa: E501
-    title: Optional[StrictStr] = None
+    action: Optional[AddonsAction] = None
     descriptive_score: Optional[StrictStr] = None
-    percentage_score: Optional[StrictInt] = None
-    score_color: Optional[AddonsWidgetColor] = None
     has_divider: Optional[StrictBool] = None
     icon_name: Optional[DivarIconsIconName] = None
-    action: Optional[AddonsAction] = None
-    __properties: ClassVar[List[str]] = ["title", "descriptive_score", "percentage_score", "score_color", "has_divider", "icon_name", "action"]
+    percentage_score: Optional[StrictInt] = None
+    score_color: Optional[AddonsWidgetColor] = None
+    title: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["action", "descriptive_score", "has_divider", "icon_name", "percentage_score", "score_color", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,13 +92,13 @@ class AddonsScoreRow(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "title": obj.get("title"),
+            "action": AddonsAction.from_dict(obj["action"]) if obj.get("action") is not None else None,
             "descriptive_score": obj.get("descriptive_score"),
-            "percentage_score": obj.get("percentage_score"),
-            "score_color": obj.get("score_color"),
             "has_divider": obj.get("has_divider"),
             "icon_name": obj.get("icon_name"),
-            "action": AddonsAction.from_dict(obj["action"]) if obj.get("action") is not None else None
+            "percentage_score": obj.get("percentage_score"),
+            "score_color": obj.get("score_color"),
+            "title": obj.get("title")
         })
         return _obj
 

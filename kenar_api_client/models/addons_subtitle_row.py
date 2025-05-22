@@ -26,9 +26,9 @@ class AddonsSubtitleRow(BaseModel):
     """
     AddonsSubtitleRow
     """ # noqa: E501
-    text: Optional[StrictStr] = None
     has_divider: Optional[StrictBool] = None
-    __properties: ClassVar[List[str]] = ["text", "has_divider"]
+    text: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["has_divider", "text"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,8 +81,8 @@ class AddonsSubtitleRow(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "text": obj.get("text"),
-            "has_divider": obj.get("has_divider")
+            "has_divider": obj.get("has_divider"),
+            "text": obj.get("text")
         })
         return _obj
 

@@ -27,10 +27,10 @@ class AddonsCreatePostAddonV2Body(BaseModel):
     """
     AddonsCreatePostAddonV2Body
     """ # noqa: E501
-    widgets: Optional[List[AddonsWidget]] = None
-    semantic: Optional[Dict[str, StrictStr]] = None
     notes: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["widgets", "semantic", "notes"]
+    semantic: Optional[Dict[str, StrictStr]] = None
+    widgets: Optional[List[AddonsWidget]] = None
+    __properties: ClassVar[List[str]] = ["notes", "semantic", "widgets"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,9 +90,9 @@ class AddonsCreatePostAddonV2Body(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "widgets": [AddonsWidget.from_dict(_item) for _item in obj["widgets"]] if obj.get("widgets") is not None else None,
+            "notes": obj.get("notes"),
             "semantic": obj.get("semantic"),
-            "notes": obj.get("notes")
+            "widgets": [AddonsWidget.from_dict(_item) for _item in obj["widgets"]] if obj.get("widgets") is not None else None
         })
         return _obj
 

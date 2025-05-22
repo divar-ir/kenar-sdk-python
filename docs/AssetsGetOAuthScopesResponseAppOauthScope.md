@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**slug** | [**OAuthScopeScope**](OAuthScopeScope.md) |  | [optional] 
-**display** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**display** | **str** |  | [optional] 
 **lifecycle_state** | [**AssetsGetOAuthScopesResponseLifeCycleState**](AssetsGetOAuthScopesResponseLifeCycleState.md) |  | [optional] 
+**slug** | [**OAuthScopeScope**](OAuthScopeScope.md) |  | [optional] 
 
 ## Example
 

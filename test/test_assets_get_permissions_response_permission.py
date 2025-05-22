@@ -35,10 +35,10 @@ class TestAssetsGetPermissionsResponsePermission(unittest.TestCase):
         model = AssetsGetPermissionsResponsePermission()
         if include_optional:
             return AssetsGetPermissionsResponsePermission(
-                slug = '',
-                display = '',
                 description = '',
-                lifecycle_state = 'EXPERIMENTAL'
+                display = '',
+                lifecycle_state = 'EXPERIMENTAL',
+                slug = ''
             )
         else:
             return AssetsGetPermissionsResponsePermission(

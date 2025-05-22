@@ -6,13 +6,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **brand_model** | **List[str]** |  | [optional] 
-**production_year** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
-**usage** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
-**rooms** | **List[str]** |  | [optional] 
-**rent** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
 **credit** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
-**size** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
 **only_with_parking** | **bool** |  | [optional] 
+**production_year** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
+**rent** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
+**rooms** | **List[str]** |  | [optional] 
+**size** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
+**usage** | [**FinderSearchQueryNumberRange**](FinderSearchQueryNumberRange.md) |  | [optional] 
 
 ## Example
 

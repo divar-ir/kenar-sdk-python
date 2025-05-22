@@ -32,20 +32,20 @@ class AddonsPostAddon(BaseModel):
     """
     AddonsPostAddon
     """ # noqa: E501
-    meta_data: Optional[AddonsAddonMetaData] = None
-    token: Optional[StrictStr] = None
     app: Optional[AppsApp] = None
-    widgets: Optional[Dict[str, Any]] = None
-    score: Optional[StrictStr] = None
-    selector: Optional[AddonsAddonSelector] = None
     linkage: Optional[AddonsAddonLinkage] = None
+    meta_data: Optional[AddonsAddonMetaData] = None
+    score: Optional[StrictStr] = None
     secondary_links: Optional[AddonsAddonSecondaryLinks] = None
+    selector: Optional[AddonsAddonSelector] = None
     semantic: Optional[Dict[str, StrictStr]] = None
     semantic_data: Optional[AddonsAddonSemantic] = None
-    sensitive_semantic: Optional[Dict[str, StrictStr]] = None
-    widgets_semantic: Optional[Dict[str, Any]] = None
     semantic_sensitives: Optional[List[StrictStr]] = None
-    __properties: ClassVar[List[str]] = ["meta_data", "token", "app", "widgets", "score", "selector", "linkage", "secondary_links", "semantic", "semantic_data", "sensitive_semantic", "widgets_semantic", "semantic_sensitives"]
+    sensitive_semantic: Optional[Dict[str, StrictStr]] = None
+    token: Optional[StrictStr] = None
+    widgets: Optional[Dict[str, Any]] = None
+    widgets_semantic: Optional[Dict[str, Any]] = None
+    __properties: ClassVar[List[str]] = ["app", "linkage", "meta_data", "score", "secondary_links", "selector", "semantic", "semantic_data", "semantic_sensitives", "sensitive_semantic", "token", "widgets", "widgets_semantic"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -86,18 +86,18 @@ class AddonsPostAddon(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of meta_data
-        if self.meta_data:
-            _dict['meta_data'] = self.meta_data.to_dict()
         # override the default output from pydantic by calling `to_dict()` of app
         if self.app:
             _dict['app'] = self.app.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of selector
-        if self.selector:
-            _dict['selector'] = self.selector.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of meta_data
+        if self.meta_data:
+            _dict['meta_data'] = self.meta_data.to_dict()
         # override the default output from pydantic by calling `to_dict()` of secondary_links
         if self.secondary_links:
             _dict['secondary_links'] = self.secondary_links.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of selector
+        if self.selector:
+            _dict['selector'] = self.selector.to_dict()
         # override the default output from pydantic by calling `to_dict()` of semantic_data
         if self.semantic_data:
             _dict['semantic_data'] = self.semantic_data.to_dict()
@@ -113,19 +113,19 @@ class AddonsPostAddon(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "meta_data": AddonsAddonMetaData.from_dict(obj["meta_data"]) if obj.get("meta_data") is not None else None,
-            "token": obj.get("token"),
             "app": AppsApp.from_dict(obj["app"]) if obj.get("app") is not None else None,
-            "widgets": obj.get("widgets"),
-            "score": obj.get("score"),
-            "selector": AddonsAddonSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None,
             "linkage": obj.get("linkage"),
+            "meta_data": AddonsAddonMetaData.from_dict(obj["meta_data"]) if obj.get("meta_data") is not None else None,
+            "score": obj.get("score"),
             "secondary_links": AddonsAddonSecondaryLinks.from_dict(obj["secondary_links"]) if obj.get("secondary_links") is not None else None,
+            "selector": AddonsAddonSelector.from_dict(obj["selector"]) if obj.get("selector") is not None else None,
             "semantic": obj.get("semantic"),
             "semantic_data": AddonsAddonSemantic.from_dict(obj["semantic_data"]) if obj.get("semantic_data") is not None else None,
+            "semantic_sensitives": obj.get("semantic_sensitives"),
             "sensitive_semantic": obj.get("sensitive_semantic"),
-            "widgets_semantic": obj.get("widgets_semantic"),
-            "semantic_sensitives": obj.get("semantic_sensitives")
+            "token": obj.get("token"),
+            "widgets": obj.get("widgets"),
+            "widgets_semantic": obj.get("widgets_semantic")
         })
         return _obj
 

@@ -35,18 +35,18 @@ class ChatapiMessage(BaseModel):
     """
     ChatapiMessage
     """ # noqa: E501
-    id: Optional[StrictStr] = None
     conversation: Optional[ChatapiConversation] = None
+    file_data: Optional[MessageFileData] = None
+    id: Optional[StrictStr] = None
+    image_data: Optional[MessageImageData] = None
+    location_data: Optional[MessageLocationData] = None
     sender: Optional[MessageSender] = None
-    type: Optional[ChatapiMessageType] = None
     sent_at: Optional[datetime] = None
     text: Optional[StrictStr] = None
-    image_data: Optional[MessageImageData] = None
-    file_data: Optional[MessageFileData] = None
-    voice_data: Optional[MessageVoiceData] = None
-    location_data: Optional[MessageLocationData] = None
+    type: Optional[ChatapiMessageType] = None
     video_data: Optional[MessageVideoData] = None
-    __properties: ClassVar[List[str]] = ["id", "conversation", "sender", "type", "sent_at", "text", "image_data", "file_data", "voice_data", "location_data", "video_data"]
+    voice_data: Optional[MessageVoiceData] = None
+    __properties: ClassVar[List[str]] = ["conversation", "file_data", "id", "image_data", "location_data", "sender", "sent_at", "text", "type", "video_data", "voice_data"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -90,24 +90,24 @@ class ChatapiMessage(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of conversation
         if self.conversation:
             _dict['conversation'] = self.conversation.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of sender
-        if self.sender:
-            _dict['sender'] = self.sender.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of image_data
-        if self.image_data:
-            _dict['image_data'] = self.image_data.to_dict()
         # override the default output from pydantic by calling `to_dict()` of file_data
         if self.file_data:
             _dict['file_data'] = self.file_data.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of voice_data
-        if self.voice_data:
-            _dict['voice_data'] = self.voice_data.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of image_data
+        if self.image_data:
+            _dict['image_data'] = self.image_data.to_dict()
         # override the default output from pydantic by calling `to_dict()` of location_data
         if self.location_data:
             _dict['location_data'] = self.location_data.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of sender
+        if self.sender:
+            _dict['sender'] = self.sender.to_dict()
         # override the default output from pydantic by calling `to_dict()` of video_data
         if self.video_data:
             _dict['video_data'] = self.video_data.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of voice_data
+        if self.voice_data:
+            _dict['voice_data'] = self.voice_data.to_dict()
         return _dict
 
     @classmethod
@@ -120,17 +120,17 @@ class ChatapiMessage(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
             "conversation": ChatapiConversation.from_dict(obj["conversation"]) if obj.get("conversation") is not None else None,
+            "file_data": MessageFileData.from_dict(obj["file_data"]) if obj.get("file_data") is not None else None,
+            "id": obj.get("id"),
+            "image_data": MessageImageData.from_dict(obj["image_data"]) if obj.get("image_data") is not None else None,
+            "location_data": MessageLocationData.from_dict(obj["location_data"]) if obj.get("location_data") is not None else None,
             "sender": MessageSender.from_dict(obj["sender"]) if obj.get("sender") is not None else None,
-            "type": obj.get("type"),
             "sent_at": obj.get("sent_at"),
             "text": obj.get("text"),
-            "image_data": MessageImageData.from_dict(obj["image_data"]) if obj.get("image_data") is not None else None,
-            "file_data": MessageFileData.from_dict(obj["file_data"]) if obj.get("file_data") is not None else None,
-            "voice_data": MessageVoiceData.from_dict(obj["voice_data"]) if obj.get("voice_data") is not None else None,
-            "location_data": MessageLocationData.from_dict(obj["location_data"]) if obj.get("location_data") is not None else None,
-            "video_data": MessageVideoData.from_dict(obj["video_data"]) if obj.get("video_data") is not None else None
+            "type": obj.get("type"),
+            "video_data": MessageVideoData.from_dict(obj["video_data"]) if obj.get("video_data") is not None else None,
+            "voice_data": MessageVoiceData.from_dict(obj["voice_data"]) if obj.get("voice_data") is not None else None
         })
         return _obj
 

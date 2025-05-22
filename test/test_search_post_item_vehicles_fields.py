@@ -35,9 +35,9 @@ class TestSearchPostItemVehiclesFields(unittest.TestCase):
         model = SearchPostItemVehiclesFields()
         if include_optional:
             return SearchPostItemVehiclesFields(
-                usage = '',
+                custom_post_subtitle = '',
                 installment_sale = '',
-                custom_post_subtitle = ''
+                usage = ''
             )
         else:
             return SearchPostItemVehiclesFields(

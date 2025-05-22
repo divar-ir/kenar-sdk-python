@@ -35,12 +35,12 @@ class TestFinderGetUserPostsResponsePost(unittest.TestCase):
         model = FinderGetUserPostsResponsePost()
         if include_optional:
             return FinderGetUserPostsResponsePost(
-                token = '',
-                title = '',
+                category = '',
                 images = [
                     ''
                     ],
-                category = ''
+                title = '',
+                token = ''
             )
         else:
             return FinderGetUserPostsResponsePost(

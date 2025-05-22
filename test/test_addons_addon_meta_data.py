@@ -35,23 +35,23 @@ class TestAddonsAddonMetaData(unittest.TestCase):
         model = AddonsAddonMetaData()
         if include_optional:
             return AddonsAddonMetaData(
-                id = '',
                 app = kenar_api_client.models.apps_app.appsApp(
-                    slug = '', 
-                    display = '', 
                     avatar = '', 
+                    display = '', 
                     divar_identification_key = '', 
-                    status = kenar_api_client.models.apps_app_status.appsAppStatus(), 
-                    service_type = 'FUNC_CLICK_AND_COLLECT', 
                     service_tags = [
                         'VERIFIED'
-                        ], ),
+                        ], 
+                    service_type = 'FUNC_CLICK_AND_COLLECT', 
+                    slug = '', 
+                    status = kenar_api_client.models.apps_app_status.appsAppStatus(), ),
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
+                id = '',
                 last_modified = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                status = 'ACTIVE',
                 service_tags = [
                     'VERIFIED'
-                    ]
+                    ],
+                status = 'ACTIVE'
             )
         else:
             return AddonsAddonMetaData(

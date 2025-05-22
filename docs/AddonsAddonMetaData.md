@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
 **app** | [**AppsApp**](AppsApp.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
+**id** | **str** |  | [optional] 
 **last_modified** | **datetime** |  | [optional] 
-**status** | [**AddonsStatus**](AddonsStatus.md) |  | [optional] 
 **service_tags** | [**List[AppsServiceTag]**](AppsServiceTag.md) |  | [optional] 
+**status** | [**AddonsStatus**](AddonsStatus.md) |  | [optional] 
 
 ## Example
 

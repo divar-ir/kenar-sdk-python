@@ -30,23 +30,23 @@ class FinderSearchPostItem(BaseModel):
     """
     FinderSearchPostItem
     """ # noqa: E501
-    token: Optional[StrictStr] = None
     category: Optional[StrictStr] = None
-    last_modified_at: Optional[datetime] = None
     city: Optional[StrictStr] = None
-    title: Optional[StrictStr] = None
-    price: Optional[SearchPostItemPrice] = None
-    real_estate_fields: Optional[SearchPostItemRealEstateFields] = None
-    vehicles_fields: Optional[SearchPostItemVehiclesFields] = None
+    community_fields: Optional[Dict[str, Any]] = None
     electronic_devices_fields: Optional[Dict[str, Any]] = None
     home_kitchen_fields: Optional[Dict[str, Any]] = None
-    services_fields: Optional[Dict[str, Any]] = None
-    personal_goods_fields: Optional[Dict[str, Any]] = None
-    leisure_hobbies_fields: Optional[Dict[str, Any]] = None
-    community_fields: Optional[Dict[str, Any]] = None
-    tools_materials_equipment_fields: Optional[Dict[str, Any]] = None
     jobs_fields: Optional[Dict[str, Any]] = None
-    __properties: ClassVar[List[str]] = ["token", "category", "last_modified_at", "city", "title", "price", "real_estate_fields", "vehicles_fields", "electronic_devices_fields", "home_kitchen_fields", "services_fields", "personal_goods_fields", "leisure_hobbies_fields", "community_fields", "tools_materials_equipment_fields", "jobs_fields"]
+    last_modified_at: Optional[datetime] = None
+    leisure_hobbies_fields: Optional[Dict[str, Any]] = None
+    personal_goods_fields: Optional[Dict[str, Any]] = None
+    price: Optional[SearchPostItemPrice] = None
+    real_estate_fields: Optional[SearchPostItemRealEstateFields] = None
+    services_fields: Optional[Dict[str, Any]] = None
+    title: Optional[StrictStr] = None
+    token: Optional[StrictStr] = None
+    tools_materials_equipment_fields: Optional[Dict[str, Any]] = None
+    vehicles_fields: Optional[SearchPostItemVehiclesFields] = None
+    __properties: ClassVar[List[str]] = ["category", "city", "community_fields", "electronic_devices_fields", "home_kitchen_fields", "jobs_fields", "last_modified_at", "leisure_hobbies_fields", "personal_goods_fields", "price", "real_estate_fields", "services_fields", "title", "token", "tools_materials_equipment_fields", "vehicles_fields"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -108,22 +108,22 @@ class FinderSearchPostItem(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "token": obj.get("token"),
             "category": obj.get("category"),
-            "last_modified_at": obj.get("last_modified_at"),
             "city": obj.get("city"),
-            "title": obj.get("title"),
-            "price": SearchPostItemPrice.from_dict(obj["price"]) if obj.get("price") is not None else None,
-            "real_estate_fields": SearchPostItemRealEstateFields.from_dict(obj["real_estate_fields"]) if obj.get("real_estate_fields") is not None else None,
-            "vehicles_fields": SearchPostItemVehiclesFields.from_dict(obj["vehicles_fields"]) if obj.get("vehicles_fields") is not None else None,
+            "community_fields": obj.get("community_fields"),
             "electronic_devices_fields": obj.get("electronic_devices_fields"),
             "home_kitchen_fields": obj.get("home_kitchen_fields"),
-            "services_fields": obj.get("services_fields"),
-            "personal_goods_fields": obj.get("personal_goods_fields"),
+            "jobs_fields": obj.get("jobs_fields"),
+            "last_modified_at": obj.get("last_modified_at"),
             "leisure_hobbies_fields": obj.get("leisure_hobbies_fields"),
-            "community_fields": obj.get("community_fields"),
+            "personal_goods_fields": obj.get("personal_goods_fields"),
+            "price": SearchPostItemPrice.from_dict(obj["price"]) if obj.get("price") is not None else None,
+            "real_estate_fields": SearchPostItemRealEstateFields.from_dict(obj["real_estate_fields"]) if obj.get("real_estate_fields") is not None else None,
+            "services_fields": obj.get("services_fields"),
+            "title": obj.get("title"),
+            "token": obj.get("token"),
             "tools_materials_equipment_fields": obj.get("tools_materials_equipment_fields"),
-            "jobs_fields": obj.get("jobs_fields")
+            "vehicles_fields": SearchPostItemVehiclesFields.from_dict(obj["vehicles_fields"]) if obj.get("vehicles_fields") is not None else None
         })
         return _obj
 

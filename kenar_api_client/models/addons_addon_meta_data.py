@@ -30,13 +30,13 @@ class AddonsAddonMetaData(BaseModel):
     """
     AddonsAddonMetaData
     """ # noqa: E501
-    id: Optional[StrictStr] = None
     app: Optional[AppsApp] = None
     created_at: Optional[datetime] = None
+    id: Optional[StrictStr] = None
     last_modified: Optional[datetime] = None
-    status: Optional[AddonsStatus] = None
     service_tags: Optional[List[AppsServiceTag]] = None
-    __properties: ClassVar[List[str]] = ["id", "app", "created_at", "last_modified", "status", "service_tags"]
+    status: Optional[AddonsStatus] = None
+    __properties: ClassVar[List[str]] = ["app", "created_at", "id", "last_modified", "service_tags", "status"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -92,12 +92,12 @@ class AddonsAddonMetaData(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "id": obj.get("id"),
             "app": AppsApp.from_dict(obj["app"]) if obj.get("app") is not None else None,
             "created_at": obj.get("created_at"),
+            "id": obj.get("id"),
             "last_modified": obj.get("last_modified"),
-            "status": obj.get("status"),
-            "service_tags": obj.get("service_tags")
+            "service_tags": obj.get("service_tags"),
+            "status": obj.get("status")
         })
         return _obj
 

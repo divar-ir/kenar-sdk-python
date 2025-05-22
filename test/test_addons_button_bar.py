@@ -35,13 +35,13 @@ class TestAddonsButtonBar(unittest.TestCase):
         model = AddonsButtonBar()
         if include_optional:
             return AddonsButtonBar(
-                title = '',
                 action = kenar_api_client.models.action.Action(
+                    get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
+                        data = {"your-internal-id":"something"}, ), 
                     open_direct_link = 'https://your-site.com/some-path', 
                     open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
-                        data = {"your-internal-id":"something"}, ), 
-                    get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
-                        data = {"your-internal-id":"something"}, ), )
+                        data = {"your-internal-id":"something"}, ), ),
+                title = ''
             )
         else:
             return AddonsButtonBar(

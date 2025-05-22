@@ -27,10 +27,10 @@ class EventsRegisterEventSubscriptionRequest(BaseModel):
     """
     EventsRegisterEventSubscriptionRequest
     """ # noqa: E501
-    event_type: Optional[EventsRegisterEventSubscriptionRequestEventType] = None
     event_resource_id: Optional[StrictStr] = None
+    event_type: Optional[EventsRegisterEventSubscriptionRequestEventType] = None
     metadata: Optional[Dict[str, Any]] = None
-    __properties: ClassVar[List[str]] = ["event_type", "event_resource_id", "metadata"]
+    __properties: ClassVar[List[str]] = ["event_resource_id", "event_type", "metadata"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -83,8 +83,8 @@ class EventsRegisterEventSubscriptionRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "event_type": obj.get("event_type"),
             "event_resource_id": obj.get("event_resource_id"),
+            "event_type": obj.get("event_type"),
             "metadata": obj.get("metadata")
         })
         return _obj

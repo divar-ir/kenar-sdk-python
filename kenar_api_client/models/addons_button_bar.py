@@ -27,9 +27,9 @@ class AddonsButtonBar(BaseModel):
     """
     AddonsButtonBar
     """ # noqa: E501
-    title: Optional[StrictStr] = None
     action: Optional[AddonsAction] = None
-    __properties: ClassVar[List[str]] = ["title", "action"]
+    title: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["action", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -85,8 +85,8 @@ class AddonsButtonBar(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "title": obj.get("title"),
-            "action": AddonsAction.from_dict(obj["action"]) if obj.get("action") is not None else None
+            "action": AddonsAction.from_dict(obj["action"]) if obj.get("action") is not None else None,
+            "title": obj.get("title")
         })
         return _obj
 

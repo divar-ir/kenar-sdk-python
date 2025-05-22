@@ -27,6 +27,7 @@ Get all available body-status options in Divar vehicle categories.This provides 
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -40,6 +41,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -67,7 +78,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -92,6 +103,7 @@ Get all Divar brand models in specified category.This provides persian translati
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -105,6 +117,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -136,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -161,6 +183,7 @@ Get all Divar categories. This provides persian translations for each category w
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -174,6 +197,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -201,7 +234,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -226,6 +259,7 @@ Get all Divar cities. This provides persian translations for each city which use
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -239,6 +273,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -266,7 +310,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -291,6 +335,7 @@ Get all Divar colors in specified category.This provides persian translations fo
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -304,6 +349,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -335,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -360,6 +415,7 @@ Get all Divar districts. This provides persian translations for each district wh
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -373,6 +429,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -404,7 +470,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -429,6 +495,7 @@ Get all Divar districts. This provides persian translations for each district wh
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -442,6 +509,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -473,7 +550,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -498,6 +575,7 @@ Get all available internal-storage options in Divar mobile categories.This provi
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -511,6 +589,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -538,7 +626,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -564,6 +652,7 @@ Use scopes in OAuth flow to request access to user data or perform actions on th
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -577,6 +666,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -604,7 +703,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -630,6 +729,7 @@ It's expected that apps be blind about these permissions.These are created for i
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -643,6 +743,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -670,7 +780,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -695,6 +805,7 @@ Get all available ram-memory options in Divar mobile/tablet/laptop categories.Th
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -708,6 +819,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -735,7 +856,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -761,6 +882,7 @@ Any new idea with new service types are welcome. Feel free to request them as ne
 
 ### Example
 
+* Api Key Authentication (APIKey):
 
 ```python
 import kenar_api_client
@@ -774,6 +896,16 @@ configuration = kenar_api_client.Configuration(
     host = "https://open-api.divar.ir"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -801,7 +933,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../README.md#APIKey)
 
 ### HTTP request headers
 

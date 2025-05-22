@@ -37,10 +37,10 @@ class TestAssetsGetPermissionsResponse(unittest.TestCase):
             return AssetsGetPermissionsResponse(
                 permissions = [
                     kenar_api_client.models.assets_get_permissions_response_permission.assetsGetPermissionsResponsePermission(
-                        slug = '', 
-                        display = '', 
                         description = '', 
-                        lifecycle_state = 'EXPERIMENTAL', )
+                        display = '', 
+                        lifecycle_state = 'EXPERIMENTAL', 
+                        slug = '', )
                     ]
             )
         else:

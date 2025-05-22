@@ -28,9 +28,9 @@ class GooglerpcStatus(BaseModel):
     GooglerpcStatus
     """ # noqa: E501
     code: Optional[StrictInt] = None
-    message: Optional[StrictStr] = None
     details: Optional[List[ProtobufAny]] = None
-    __properties: ClassVar[List[str]] = ["code", "message", "details"]
+    message: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["code", "details", "message"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -91,8 +91,8 @@ class GooglerpcStatus(BaseModel):
 
         _obj = cls.model_validate({
             "code": obj.get("code"),
-            "message": obj.get("message"),
-            "details": [ProtobufAny.from_dict(_item) for _item in obj["details"]] if obj.get("details") is not None else None
+            "details": [ProtobufAny.from_dict(_item) for _item in obj["details"]] if obj.get("details") is not None else None,
+            "message": obj.get("message")
         })
         return _obj
 

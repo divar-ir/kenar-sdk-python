@@ -29,10 +29,10 @@ class ChatapiChatButton(BaseModel):
     ChatapiChatButton
     """ # noqa: E501
     action: Optional[AddonsAction] = None
-    icon_name: Optional[StrictStr] = None
     caption: Optional[StrictStr] = None
     icon: Optional[DivarIconsIconName] = None
-    __properties: ClassVar[List[str]] = ["action", "icon_name", "caption", "icon"]
+    icon_name: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["action", "caption", "icon", "icon_name"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,9 +89,9 @@ class ChatapiChatButton(BaseModel):
 
         _obj = cls.model_validate({
             "action": AddonsAction.from_dict(obj["action"]) if obj.get("action") is not None else None,
-            "icon_name": obj.get("icon_name"),
             "caption": obj.get("caption"),
-            "icon": obj.get("icon")
+            "icon": obj.get("icon"),
+            "icon_name": obj.get("icon_name")
         })
         return _obj
 

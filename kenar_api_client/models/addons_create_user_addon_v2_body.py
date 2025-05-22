@@ -27,13 +27,13 @@ class AddonsCreateUserAddonV2Body(BaseModel):
     """
     AddonsCreateUserAddonV2Body
     """ # noqa: E501
-    widgets: Optional[List[AddonsWidget]] = None
-    semantic: Optional[Dict[str, StrictStr]] = None
-    phone: Optional[StrictStr] = None
     categories: Optional[List[StrictStr]] = None
-    ticket_uuid: Optional[StrictStr] = None
     cost: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["widgets", "semantic", "phone", "categories", "ticket_uuid", "cost"]
+    phone: Optional[StrictStr] = None
+    semantic: Optional[Dict[str, StrictStr]] = None
+    ticket_uuid: Optional[StrictStr] = None
+    widgets: Optional[List[AddonsWidget]] = None
+    __properties: ClassVar[List[str]] = ["categories", "cost", "phone", "semantic", "ticket_uuid", "widgets"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -93,12 +93,12 @@ class AddonsCreateUserAddonV2Body(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "widgets": [AddonsWidget.from_dict(_item) for _item in obj["widgets"]] if obj.get("widgets") is not None else None,
-            "semantic": obj.get("semantic"),
-            "phone": obj.get("phone"),
             "categories": obj.get("categories"),
+            "cost": obj.get("cost"),
+            "phone": obj.get("phone"),
+            "semantic": obj.get("semantic"),
             "ticket_uuid": obj.get("ticket_uuid"),
-            "cost": obj.get("cost")
+            "widgets": [AddonsWidget.from_dict(_item) for _item in obj["widgets"]] if obj.get("widgets") is not None else None
         })
         return _obj
 

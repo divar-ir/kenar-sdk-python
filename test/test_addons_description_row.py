@@ -35,9 +35,9 @@ class TestAddonsDescriptionRow(unittest.TestCase):
         model = AddonsDescriptionRow()
         if include_optional:
             return AddonsDescriptionRow(
-                text = '',
+                expandable = True,
                 has_divider = True,
-                expandable = True
+                text = ''
             )
         else:
             return AddonsDescriptionRow(

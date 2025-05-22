@@ -37,8 +37,8 @@ class TestAssetsGetServiceTypesResponse(unittest.TestCase):
             return AssetsGetServiceTypesResponse(
                 service_types = [
                     kenar_api_client.models.get_service_types_response_service_type_data.GetServiceTypesResponseServiceTypeData(
-                        slug = 'FUNC_CLICK_AND_COLLECT', 
-                        display = '', )
+                        display = '', 
+                        slug = 'FUNC_CLICK_AND_COLLECT', )
                     ]
             )
         else:

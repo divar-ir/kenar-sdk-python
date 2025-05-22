@@ -35,12 +35,12 @@ class TestAddonsCreatePostAddonRequest(unittest.TestCase):
         model = AddonsCreatePostAddonRequest()
         if include_optional:
             return AddonsCreatePostAddonRequest(
-                token = '',
-                widgets = kenar_api_client.models.widgets.widgets(),
+                link_in_spec = '',
+                notes = '',
                 selector = kenar_api_client.models.(and)_post_is_selected_by_this_selector_if_all_of_the_following_conditions
 matches.(AND) post is selected by this selector if all of the following conditions
 matches(
-                    tokens = [
+                    brand_models = [
                         ''
                         ], 
                     categories = [
@@ -52,17 +52,17 @@ matches(
                     districts = [
                         ''
                         ], 
-                    brand_models = [
+                    tokens = [
                         ''
                         ], ),
-                link_in_spec = '',
-                notes = '',
                 semantic = {
                     'key' : ''
                     },
                 semantic_sensitives = [
                     ''
-                    ]
+                    ],
+                token = '',
+                widgets = kenar_api_client.models.widgets.widgets()
             )
         else:
             return AddonsCreatePostAddonRequest(

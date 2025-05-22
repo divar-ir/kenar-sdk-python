@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cost_rials** | **str** | The cost of reordering in rials | [optional] 
 **available** | **bool** | Indicates if the post can be reordered. If false, the reorder API will return an error | [optional] 
+**cost_rials** | **str** | The cost of reordering in rials | [optional] 
 
 ## Example
 

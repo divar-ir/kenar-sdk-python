@@ -26,12 +26,12 @@ class AddonsAddonSelector(BaseModel):
     """
     AddonsAddonSelector
     """ # noqa: E501
-    tokens: Optional[List[StrictStr]] = None
+    brand_models: Optional[List[StrictStr]] = None
     categories: Optional[List[StrictStr]] = None
     cities: Optional[List[StrictStr]] = None
     districts: Optional[List[StrictStr]] = None
-    brand_models: Optional[List[StrictStr]] = None
-    __properties: ClassVar[List[str]] = ["tokens", "categories", "cities", "districts", "brand_models"]
+    tokens: Optional[List[StrictStr]] = None
+    __properties: ClassVar[List[str]] = ["brand_models", "categories", "cities", "districts", "tokens"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -84,11 +84,11 @@ class AddonsAddonSelector(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "tokens": obj.get("tokens"),
+            "brand_models": obj.get("brand_models"),
             "categories": obj.get("categories"),
             "cities": obj.get("cities"),
             "districts": obj.get("districts"),
-            "brand_models": obj.get("brand_models")
+            "tokens": obj.get("tokens")
         })
         return _obj
 

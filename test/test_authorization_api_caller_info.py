@@ -36,24 +36,24 @@ class TestAuthorizationAPICallerInfo(unittest.TestCase):
         if include_optional:
             return AuthorizationAPICallerInfo(
                 api_key_id = 56,
+                api_key_id_v2 = '',
                 app = kenar_api_client.models.apps_app.appsApp(
-                    slug = '', 
-                    display = '', 
                     avatar = '', 
+                    display = '', 
                     divar_identification_key = '', 
-                    status = kenar_api_client.models.apps_app_status.appsAppStatus(), 
-                    service_type = 'FUNC_CLICK_AND_COLLECT', 
                     service_tags = [
                         'VERIFIED'
-                        ], ),
+                        ], 
+                    service_type = 'FUNC_CLICK_AND_COLLECT', 
+                    slug = '', 
+                    status = kenar_api_client.models.apps_app_status.appsAppStatus(), ),
                 scopes = [
                     kenar_api_client.models.represents_standard_oauth_scope_parsed_using_`permission_enum__{resource_id}`
 format_string/_e/g/_edit_post__azr_oi1e_l.Represents standard oauth scope parsed using `PERMISSION_ENUM__{resource_id}`
 format string. e.g. EDIT_POST__AZrOi1eL(
                         resource_id = '', 
                         scope = 'POST_ADDON_CREATE', )
-                    ],
-                api_key_id_v2 = ''
+                    ]
             )
         else:
             return AuthorizationAPICallerInfo(

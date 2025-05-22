@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**text** | **str** |  | [optional] 
-**has_divider** | **bool** |  | [optional] 
 **expandable** | **bool** |  | [optional] 
+**has_divider** | **bool** |  | [optional] 
+**text** | **str** |  | [optional] 
 
 ## Example
 

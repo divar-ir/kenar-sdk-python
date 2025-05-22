@@ -36,18 +36,18 @@ class AddonsWidget(BaseModel):
     """
     AddonsWidget
     """ # noqa: E501
-    event_row: Optional[AddonsEventRow] = None
     button_bar: Optional[AddonsButtonBar] = None
-    title_row: Optional[AddonsTitleRow] = None
-    subtitle_row: Optional[AddonsSubtitleRow] = None
-    selector_row: Optional[AddonsSelectorRow] = None
-    score_row: Optional[AddonsScoreRow] = None
-    image_carousel_row: Optional[AddonsImageCarouselRow] = None
-    group_info_row: Optional[AddonsGroupInfoRow] = None
-    evaluation_row: Optional[AddonsEvaluationRow] = None
     description_row: Optional[AddonsDescriptionRow] = None
+    evaluation_row: Optional[AddonsEvaluationRow] = None
+    event_row: Optional[AddonsEventRow] = None
+    group_info_row: Optional[AddonsGroupInfoRow] = None
+    image_carousel_row: Optional[AddonsImageCarouselRow] = None
+    score_row: Optional[AddonsScoreRow] = None
+    selector_row: Optional[AddonsSelectorRow] = None
     semantic_paths: Optional[Dict[str, StrictStr]] = None
-    __properties: ClassVar[List[str]] = ["event_row", "button_bar", "title_row", "subtitle_row", "selector_row", "score_row", "image_carousel_row", "group_info_row", "evaluation_row", "description_row", "semantic_paths"]
+    subtitle_row: Optional[AddonsSubtitleRow] = None
+    title_row: Optional[AddonsTitleRow] = None
+    __properties: ClassVar[List[str]] = ["button_bar", "description_row", "evaluation_row", "event_row", "group_info_row", "image_carousel_row", "score_row", "selector_row", "semantic_paths", "subtitle_row", "title_row"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -88,36 +88,36 @@ class AddonsWidget(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of event_row
-        if self.event_row:
-            _dict['event_row'] = self.event_row.to_dict()
         # override the default output from pydantic by calling `to_dict()` of button_bar
         if self.button_bar:
             _dict['button_bar'] = self.button_bar.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of title_row
-        if self.title_row:
-            _dict['title_row'] = self.title_row.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of subtitle_row
-        if self.subtitle_row:
-            _dict['subtitle_row'] = self.subtitle_row.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of selector_row
-        if self.selector_row:
-            _dict['selector_row'] = self.selector_row.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of score_row
-        if self.score_row:
-            _dict['score_row'] = self.score_row.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of image_carousel_row
-        if self.image_carousel_row:
-            _dict['image_carousel_row'] = self.image_carousel_row.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of group_info_row
-        if self.group_info_row:
-            _dict['group_info_row'] = self.group_info_row.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of evaluation_row
-        if self.evaluation_row:
-            _dict['evaluation_row'] = self.evaluation_row.to_dict()
         # override the default output from pydantic by calling `to_dict()` of description_row
         if self.description_row:
             _dict['description_row'] = self.description_row.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of evaluation_row
+        if self.evaluation_row:
+            _dict['evaluation_row'] = self.evaluation_row.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of event_row
+        if self.event_row:
+            _dict['event_row'] = self.event_row.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of group_info_row
+        if self.group_info_row:
+            _dict['group_info_row'] = self.group_info_row.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of image_carousel_row
+        if self.image_carousel_row:
+            _dict['image_carousel_row'] = self.image_carousel_row.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of score_row
+        if self.score_row:
+            _dict['score_row'] = self.score_row.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of selector_row
+        if self.selector_row:
+            _dict['selector_row'] = self.selector_row.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of subtitle_row
+        if self.subtitle_row:
+            _dict['subtitle_row'] = self.subtitle_row.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of title_row
+        if self.title_row:
+            _dict['title_row'] = self.title_row.to_dict()
         return _dict
 
     @classmethod
@@ -130,17 +130,17 @@ class AddonsWidget(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "event_row": AddonsEventRow.from_dict(obj["event_row"]) if obj.get("event_row") is not None else None,
             "button_bar": AddonsButtonBar.from_dict(obj["button_bar"]) if obj.get("button_bar") is not None else None,
-            "title_row": AddonsTitleRow.from_dict(obj["title_row"]) if obj.get("title_row") is not None else None,
-            "subtitle_row": AddonsSubtitleRow.from_dict(obj["subtitle_row"]) if obj.get("subtitle_row") is not None else None,
-            "selector_row": AddonsSelectorRow.from_dict(obj["selector_row"]) if obj.get("selector_row") is not None else None,
-            "score_row": AddonsScoreRow.from_dict(obj["score_row"]) if obj.get("score_row") is not None else None,
-            "image_carousel_row": AddonsImageCarouselRow.from_dict(obj["image_carousel_row"]) if obj.get("image_carousel_row") is not None else None,
-            "group_info_row": AddonsGroupInfoRow.from_dict(obj["group_info_row"]) if obj.get("group_info_row") is not None else None,
-            "evaluation_row": AddonsEvaluationRow.from_dict(obj["evaluation_row"]) if obj.get("evaluation_row") is not None else None,
             "description_row": AddonsDescriptionRow.from_dict(obj["description_row"]) if obj.get("description_row") is not None else None,
-            "semantic_paths": obj.get("semantic_paths")
+            "evaluation_row": AddonsEvaluationRow.from_dict(obj["evaluation_row"]) if obj.get("evaluation_row") is not None else None,
+            "event_row": AddonsEventRow.from_dict(obj["event_row"]) if obj.get("event_row") is not None else None,
+            "group_info_row": AddonsGroupInfoRow.from_dict(obj["group_info_row"]) if obj.get("group_info_row") is not None else None,
+            "image_carousel_row": AddonsImageCarouselRow.from_dict(obj["image_carousel_row"]) if obj.get("image_carousel_row") is not None else None,
+            "score_row": AddonsScoreRow.from_dict(obj["score_row"]) if obj.get("score_row") is not None else None,
+            "selector_row": AddonsSelectorRow.from_dict(obj["selector_row"]) if obj.get("selector_row") is not None else None,
+            "semantic_paths": obj.get("semantic_paths"),
+            "subtitle_row": AddonsSubtitleRow.from_dict(obj["subtitle_row"]) if obj.get("subtitle_row") is not None else None,
+            "title_row": AddonsTitleRow.from_dict(obj["title_row"]) if obj.get("title_row") is not None else None
         })
         return _obj
 

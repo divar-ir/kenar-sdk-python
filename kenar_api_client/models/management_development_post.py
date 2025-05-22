@@ -28,11 +28,11 @@ class ManagementDevelopmentPost(BaseModel):
     """
     ManagementDevelopmentPost
     """ # noqa: E501
-    preset: Optional[ManagementPreset] = None
     created_at: Optional[datetime] = None
-    token: Optional[StrictStr] = None
     mng_token: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["preset", "created_at", "token", "mng_token"]
+    preset: Optional[ManagementPreset] = None
+    token: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["created_at", "mng_token", "preset", "token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -85,10 +85,10 @@ class ManagementDevelopmentPost(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "preset": obj.get("preset"),
             "created_at": obj.get("created_at"),
-            "token": obj.get("token"),
-            "mng_token": obj.get("mng_token")
+            "mng_token": obj.get("mng_token"),
+            "preset": obj.get("preset"),
+            "token": obj.get("token")
         })
         return _obj
 

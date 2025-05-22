@@ -5,11 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tokens** | **List[str]** |  | [optional] 
+**brand_models** | **List[str]** |  | [optional] 
 **categories** | **List[str]** |  | [optional] 
 **cities** | **List[str]** |  | [optional] 
 **districts** | **List[str]** |  | [optional] 
-**brand_models** | **List[str]** |  | [optional] 
+**tokens** | **List[str]** |  | [optional] 
 
 ## Example
 

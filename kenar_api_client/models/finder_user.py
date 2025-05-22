@@ -26,10 +26,10 @@ class FinderUser(BaseModel):
     """
     FinderUser
     """ # noqa: E501
-    phone_numbers: Optional[List[StrictStr]] = Field(default=None, description="deprecated")
     phone_number: Optional[StrictStr] = None
+    phone_numbers: Optional[List[StrictStr]] = Field(default=None, description="deprecated")
     user_id: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["phone_numbers", "phone_number", "user_id"]
+    __properties: ClassVar[List[str]] = ["phone_number", "phone_numbers", "user_id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -82,8 +82,8 @@ class FinderUser(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "phone_numbers": obj.get("phone_numbers"),
             "phone_number": obj.get("phone_number"),
+            "phone_numbers": obj.get("phone_numbers"),
             "user_id": obj.get("user_id")
         })
         return _obj

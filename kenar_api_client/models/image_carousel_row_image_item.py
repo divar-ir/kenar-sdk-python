@@ -26,9 +26,9 @@ class ImageCarouselRowImageItem(BaseModel):
     """
     ImageCarouselRowImageItem
     """ # noqa: E501
-    image_id: Optional[StrictStr] = None
     description: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["image_id", "description"]
+    image_id: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["description", "image_id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -81,8 +81,8 @@ class ImageCarouselRowImageItem(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "image_id": obj.get("image_id"),
-            "description": obj.get("description")
+            "description": obj.get("description"),
+            "image_id": obj.get("image_id")
         })
         return _obj
 

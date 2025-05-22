@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**widgets** | [**List[AddonsWidget]**](AddonsWidget.md) |  | [optional] 
-**semantic** | **Dict[str, str]** |  | [optional] 
 **notes** | **str** |  | [optional] 
+**semantic** | **Dict[str, str]** |  | [optional] 
+**widgets** | [**List[AddonsWidget]**](AddonsWidget.md) |  | [optional] 
 
 ## Example
 

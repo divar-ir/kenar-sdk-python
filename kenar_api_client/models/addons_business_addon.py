@@ -27,10 +27,10 @@ class AddonsBusinessAddon(BaseModel):
     """
     AddonsBusinessAddon
     """ # noqa: E501
-    meta_data: Optional[AddonsAddonMetaData] = None
     business_ref: Optional[StrictStr] = None
+    meta_data: Optional[AddonsAddonMetaData] = None
     widgets: Optional[Dict[str, Any]] = None
-    __properties: ClassVar[List[str]] = ["meta_data", "business_ref", "widgets"]
+    __properties: ClassVar[List[str]] = ["business_ref", "meta_data", "widgets"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -86,8 +86,8 @@ class AddonsBusinessAddon(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "meta_data": AddonsAddonMetaData.from_dict(obj["meta_data"]) if obj.get("meta_data") is not None else None,
             "business_ref": obj.get("business_ref"),
+            "meta_data": AddonsAddonMetaData.from_dict(obj["meta_data"]) if obj.get("meta_data") is not None else None,
             "widgets": obj.get("widgets")
         })
         return _obj

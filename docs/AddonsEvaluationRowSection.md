@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**text** | **str** |  | [optional] 
 **section_color** | [**AddonsWidgetColor**](AddonsWidgetColor.md) |  | [optional] 
+**text** | **str** |  | [optional] 
 
 ## Example
 

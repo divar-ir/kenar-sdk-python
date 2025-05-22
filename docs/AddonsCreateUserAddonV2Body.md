@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**widgets** | [**List[AddonsWidget]**](AddonsWidget.md) |  | [optional] 
-**semantic** | **Dict[str, str]** |  | [optional] 
-**phone** | **str** |  | [optional] 
 **categories** | **List[str]** |  | [optional] 
-**ticket_uuid** | **str** |  | [optional] 
 **cost** | **int** |  | [optional] 
+**phone** | **str** |  | [optional] 
+**semantic** | **Dict[str, str]** |  | [optional] 
+**ticket_uuid** | **str** |  | [optional] 
+**widgets** | [**List[AddonsWidget]**](AddonsWidget.md) |  | [optional] 
 
 ## Example
 

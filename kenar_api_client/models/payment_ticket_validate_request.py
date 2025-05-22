@@ -26,11 +26,11 @@ class PaymentTicketValidateRequest(BaseModel):
     """
     PaymentTicketValidateRequest
     """ # noqa: E501
-    ticket_uuid: Optional[StrictStr] = None
     phone_number: Optional[StrictStr] = Field(default=None, description="Deprecated. Use divar_user_id.")
-    user_id: Optional[StrictStr] = None
     service_cost: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["ticket_uuid", "phone_number", "user_id", "service_cost"]
+    ticket_uuid: Optional[StrictStr] = None
+    user_id: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["phone_number", "service_cost", "ticket_uuid", "user_id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -83,10 +83,10 @@ class PaymentTicketValidateRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "ticket_uuid": obj.get("ticket_uuid"),
             "phone_number": obj.get("phone_number"),
-            "user_id": obj.get("user_id"),
-            "service_cost": obj.get("service_cost")
+            "service_cost": obj.get("service_cost"),
+            "ticket_uuid": obj.get("ticket_uuid"),
+            "user_id": obj.get("user_id")
         })
         return _obj
 

@@ -35,9 +35,9 @@ class TestPaymentTransaction(unittest.TestCase):
         model = PaymentTransaction()
         if include_optional:
             return PaymentTransaction(
-                id = '',
                 cost_rials = '',
                 extra_details = '',
+                id = '',
                 state = 'TRANSACTION_STATE_PENDING',
                 type = 'TRANSACTION_TYPE_REORDER'
             )

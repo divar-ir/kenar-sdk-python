@@ -37,36 +37,35 @@ class TestAddonsGetUserPostAddonsResponse(unittest.TestCase):
             return AddonsGetUserPostAddonsResponse(
                 addons = [
                     kenar_api_client.models.addons_post_addon.addonsPostAddon(
+                        app = kenar_api_client.models.apps_app.appsApp(
+                            avatar = '', 
+                            display = '', 
+                            divar_identification_key = '', 
+                            service_tags = [
+                                'VERIFIED'
+                                ], 
+                            service_type = 'FUNC_CLICK_AND_COLLECT', 
+                            slug = '', 
+                            status = kenar_api_client.models.apps_app_status.appsAppStatus(), ), 
+                        linkage = 'POST_DETAILS', 
                         meta_data = kenar_api_client.models.addons_addon_meta_data.addonsAddonMetaData(
-                            id = '', 
-                            app = kenar_api_client.models.apps_app.appsApp(
-                                slug = '', 
-                                display = '', 
-                                avatar = '', 
-                                divar_identification_key = '', 
-                                status = kenar_api_client.models.apps_app_status.appsAppStatus(), 
-                                service_type = 'FUNC_CLICK_AND_COLLECT', 
-                                service_tags = [
-                                    'VERIFIED'
-                                    ], ), 
                             created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                            id = '', 
                             last_modified = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                            status = 'ACTIVE', 
                             service_tags = [
                                 'VERIFIED'
                                 ], ), 
-                        token = '', 
-                        app = kenar_api_client.models.apps_app.appsApp(
-                            slug = '', 
-                            display = '', 
-                            avatar = '', 
-                            divar_identification_key = '', ), 
-                        widgets = kenar_api_client.models.widgets.widgets(), 
                         score = '', 
+                        secondary_links = kenar_api_client.models.addons_addon_secondary_links.addonsAddonSecondaryLinks(
+                            secondary_linkages = [
+                                kenar_api_client.models.addons_addon_secondary_linkage.addonsAddonSecondaryLinkage(
+                                    position = 'POST_SPEC_HEAD', 
+                                    widgets = kenar_api_client.models.widgets.widgets(), )
+                                ], ), 
                         selector = kenar_api_client.models.(and)_post_is_selected_by_this_selector_if_all_of_the_following_conditions
 matches.(AND) post is selected by this selector if all of the following conditions
 matches(
-                            tokens = [
+                            brand_models = [
                                 ''
                                 ], 
                             categories = [
@@ -78,36 +77,32 @@ matches(
                             districts = [
                                 ''
                                 ], 
-                            brand_models = [
+                            tokens = [
                                 ''
-                                ], ), 
-                        linkage = 'POST_DETAILS', 
-                        secondary_links = kenar_api_client.models.addons_addon_secondary_links.addonsAddonSecondaryLinks(
-                            secondary_linkages = [
-                                kenar_api_client.models.addons_addon_secondary_linkage.addonsAddonSecondaryLinkage(
-                                    position = 'POST_SPEC_HEAD', )
                                 ], ), 
                         semantic = {
                             'key' : ''
                             }, 
                         semantic_data = kenar_api_client.models.addons_addon_semantic.addonsAddonSemantic(
-                            payment_method = 'SECURE', 
-                            identity_verification_result = 'FACE_AND_ID_MATCHED', 
-                            post_verification_result = 'POST_INFORMATION_MATCHED', 
-                            identity_verification_last_successful_stage = 'IDENTITYVERIFICATIONSTAGE_NOT_STARTED', 
-                            identity_verification_failure_reason = 'IDENTITYVERIFICATIONSTAGE_NOT_STARTED', 
-                            car_verification_last_successful_stage = 'CARVERIFICATIONSTAGE_NOT_STARTED', 
                             car_verification_failure_reason = 'CARVERIFICATIONSTAGE_NOT_STARTED', 
-                            ownership_result = 'OWNERSHIP_CONFIRMED', 
+                            car_verification_last_successful_stage = 'CARVERIFICATIONSTAGE_NOT_STARTED', 
+                            identity_verification_failure_reason = 'IDENTITYVERIFICATIONSTAGE_NOT_STARTED', 
+                            identity_verification_last_successful_stage = 'IDENTITYVERIFICATIONSTAGE_NOT_STARTED', 
+                            identity_verification_result = 'FACE_AND_ID_MATCHED', 
                             inspection_result = 'INSPECTION_APPROVED', 
-                            new_face_verification_result = 'NEW_FACE_VERIFICATION_FAILED', ), 
+                            new_face_verification_result = 'NEW_FACE_VERIFICATION_FAILED', 
+                            ownership_result = 'OWNERSHIP_CONFIRMED', 
+                            payment_method = 'SECURE', 
+                            post_verification_result = 'POST_INFORMATION_MATCHED', ), 
+                        semantic_sensitives = [
+                            ''
+                            ], 
                         sensitive_semantic = {
                             'key' : ''
                             }, 
-                        widgets_semantic = kenar_api_client.models.widgets_semantic.widgets_semantic(), 
-                        semantic_sensitives = [
-                            ''
-                            ], )
+                        token = '', 
+                        widgets = kenar_api_client.models.widgets.widgets(), 
+                        widgets_semantic = kenar_api_client.models.widgets_semantic.widgets_semantic(), )
                     ]
             )
         else:

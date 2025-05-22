@@ -27,13 +27,13 @@ class AddonsEventRow(BaseModel):
     """
     AddonsEventRow
     """ # noqa: E501
-    title: Optional[StrictStr] = None
-    subtitle: Optional[StrictStr] = None
-    label: Optional[StrictStr] = None
-    image_id: Optional[StrictStr] = None
     has_divider: Optional[StrictBool] = None
     icon_name: Optional[DivarIconsIconName] = None
-    __properties: ClassVar[List[str]] = ["title", "subtitle", "label", "image_id", "has_divider", "icon_name"]
+    image_id: Optional[StrictStr] = None
+    label: Optional[StrictStr] = None
+    subtitle: Optional[StrictStr] = None
+    title: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["has_divider", "icon_name", "image_id", "label", "subtitle", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -86,12 +86,12 @@ class AddonsEventRow(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "title": obj.get("title"),
-            "subtitle": obj.get("subtitle"),
-            "label": obj.get("label"),
-            "image_id": obj.get("image_id"),
             "has_divider": obj.get("has_divider"),
-            "icon_name": obj.get("icon_name")
+            "icon_name": obj.get("icon_name"),
+            "image_id": obj.get("image_id"),
+            "label": obj.get("label"),
+            "subtitle": obj.get("subtitle"),
+            "title": obj.get("title")
         })
         return _obj
 
