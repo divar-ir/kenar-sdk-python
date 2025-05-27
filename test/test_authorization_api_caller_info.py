@@ -48,9 +48,9 @@ class TestAuthorizationAPICallerInfo(unittest.TestCase):
                     slug = '', 
                     status = kenar_api_client.models.apps_app_status.appsAppStatus(), ),
                 scopes = [
-                    kenar_api_client.models.represents_standard_oauth_scope_parsed_using_`permission_enum__{resource_id}`
-format_string/_e/g/_edit_post__azr_oi1e_l.Represents standard oauth scope parsed using `PERMISSION_ENUM__{resource_id}`
-format string. e.g. EDIT_POST__AZrOi1eL(
+                    kenar_api_client.models.دامنه_oauth_استاندارد_تجزیه_شده_با_استفاده_از_رشته_فرمت
+`permission_enum__{resource_id}`_را_نمایش_می‌دهد/_مثال:_edit_post__azr_oi1e_l.دامنه oauth استاندارد تجزیه شده با استفاده از رشته فرمت
+`PERMISSION_ENUM__{resource_id}` را نمایش می‌دهد. مثال: EDIT_POST__AZrOi1eL(
                         resource_id = '', 
                         scope = 'POST_ADDON_CREATE', )
                     ]

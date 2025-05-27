@@ -16,11 +16,13 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import Field, StrictStr
+from pydantic import Field, StrictInt, StrictStr
+from typing import Optional
 from typing_extensions import Annotated
 from kenar_api_client.models.payment_get_balance_response import PaymentGetBalanceResponse
 from kenar_api_client.models.payment_get_post_pricing_response import PaymentGetPostPricingResponse
 from kenar_api_client.models.payment_get_transaction_response import PaymentGetTransactionResponse
+from kenar_api_client.models.payment_list_transactions_response import PaymentListTransactionsResponse
 from kenar_api_client.models.payment_reorder_post_body import PaymentReorderPostBody
 from kenar_api_client.models.payment_reorder_post_response import PaymentReorderPostResponse
 
@@ -60,7 +62,7 @@ class LimitedApi:
     ) -> PaymentGetBalanceResponse:
         """payment_get_balance
 
-        Using this API you can retrieve current balance of your app.
+        با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -123,7 +125,7 @@ class LimitedApi:
     ) -> ApiResponse[PaymentGetBalanceResponse]:
         """payment_get_balance
 
-        Using this API you can retrieve current balance of your app.
+        با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -186,7 +188,7 @@ class LimitedApi:
     ) -> RESTResponseType:
         """payment_get_balance
 
-        Using this API you can retrieve current balance of your app.
+        با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -291,7 +293,7 @@ class LimitedApi:
     @validate_call
     def payment_get_post_pricing(
         self,
-        post_token: Annotated[StrictStr, Field(description="An 8-9 character unique identifier for the post")],
+        post_token: Annotated[StrictStr, Field(description="شناسه منحصر به فرد 8-9 کاراکتری برای آگهی")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -305,11 +307,11 @@ class LimitedApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PaymentGetPostPricingResponse:
-        """Retrieve the cost of the service
+        """دریافت هزینه سرویس
 
-        Using this API and with user permission, you can get the price of various services like Reorder.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post).
+        با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان را دریافت کنید. قیمت این API لزوماً با قیمت روی دیوار یکسان نیست و قیمت‌گذاری ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی) استفاده کنید.
 
-        :param post_token: An 8-9 character unique identifier for the post (required)
+        :param post_token: شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -358,7 +360,7 @@ class LimitedApi:
     @validate_call
     def payment_get_post_pricing_with_http_info(
         self,
-        post_token: Annotated[StrictStr, Field(description="An 8-9 character unique identifier for the post")],
+        post_token: Annotated[StrictStr, Field(description="شناسه منحصر به فرد 8-9 کاراکتری برای آگهی")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -372,11 +374,11 @@ class LimitedApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PaymentGetPostPricingResponse]:
-        """Retrieve the cost of the service
+        """دریافت هزینه سرویس
 
-        Using this API and with user permission, you can get the price of various services like Reorder.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post).
+        با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان را دریافت کنید. قیمت این API لزوماً با قیمت روی دیوار یکسان نیست و قیمت‌گذاری ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی) استفاده کنید.
 
-        :param post_token: An 8-9 character unique identifier for the post (required)
+        :param post_token: شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -425,7 +427,7 @@ class LimitedApi:
     @validate_call
     def payment_get_post_pricing_without_preload_content(
         self,
-        post_token: Annotated[StrictStr, Field(description="An 8-9 character unique identifier for the post")],
+        post_token: Annotated[StrictStr, Field(description="شناسه منحصر به فرد 8-9 کاراکتری برای آگهی")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -439,11 +441,11 @@ class LimitedApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Retrieve the cost of the service
+        """دریافت هزینه سرویس
 
-        Using this API and with user permission, you can get the price of various services like Reorder.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post).
+        با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان را دریافت کنید. قیمت این API لزوماً با قیمت روی دیوار یکسان نیست و قیمت‌گذاری ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی) استفاده کنید.
 
-        :param post_token: An 8-9 character unique identifier for the post (required)
+        :param post_token: شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -552,7 +554,7 @@ class LimitedApi:
     @validate_call
     def payment_get_transaction(
         self,
-        id: Annotated[StrictStr, Field(description="The unique identifier for the transaction, same as the id in the request")],
+        id: Annotated[StrictStr, Field(description="شناسه منحصر به فرد برای تراکنش، همان id در درخواست")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -568,9 +570,9 @@ class LimitedApi:
     ) -> PaymentGetTransactionResponse:
         """payment_get_transaction
 
-        Using this API you can retrieve transaction details.
+        با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
 
-        :param id: The unique identifier for the transaction, same as the id in the request (required)
+        :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -619,7 +621,7 @@ class LimitedApi:
     @validate_call
     def payment_get_transaction_with_http_info(
         self,
-        id: Annotated[StrictStr, Field(description="The unique identifier for the transaction, same as the id in the request")],
+        id: Annotated[StrictStr, Field(description="شناسه منحصر به فرد برای تراکنش، همان id در درخواست")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -635,9 +637,9 @@ class LimitedApi:
     ) -> ApiResponse[PaymentGetTransactionResponse]:
         """payment_get_transaction
 
-        Using this API you can retrieve transaction details.
+        با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
 
-        :param id: The unique identifier for the transaction, same as the id in the request (required)
+        :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -686,7 +688,7 @@ class LimitedApi:
     @validate_call
     def payment_get_transaction_without_preload_content(
         self,
-        id: Annotated[StrictStr, Field(description="The unique identifier for the transaction, same as the id in the request")],
+        id: Annotated[StrictStr, Field(description="شناسه منحصر به فرد برای تراکنش، همان id در درخواست")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -702,9 +704,9 @@ class LimitedApi:
     ) -> RESTResponseType:
         """payment_get_transaction
 
-        Using this API you can retrieve transaction details.
+        با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
 
-        :param id: The unique identifier for the transaction, same as the id in the request (required)
+        :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -811,6 +813,286 @@ class LimitedApi:
 
 
     @validate_call
+    def payment_list_transactions(
+        self,
+        page_size: Annotated[Optional[StrictInt], Field(description="Number of transactions to return per page")] = None,
+        page_token: Annotated[Optional[StrictStr], Field(description="Token for the next page of results")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> PaymentListTransactionsResponse:
+        """payment_list_transactions
+
+        Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+
+        :param page_size: Number of transactions to return per page
+        :type page_size: int
+        :param page_token: Token for the next page of results
+        :type page_token: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._payment_list_transactions_serialize(
+            page_size=page_size,
+            page_token=page_token,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "PaymentListTransactionsResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    def payment_list_transactions_with_http_info(
+        self,
+        page_size: Annotated[Optional[StrictInt], Field(description="Number of transactions to return per page")] = None,
+        page_token: Annotated[Optional[StrictStr], Field(description="Token for the next page of results")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[PaymentListTransactionsResponse]:
+        """payment_list_transactions
+
+        Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+
+        :param page_size: Number of transactions to return per page
+        :type page_size: int
+        :param page_token: Token for the next page of results
+        :type page_token: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._payment_list_transactions_serialize(
+            page_size=page_size,
+            page_token=page_token,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "PaymentListTransactionsResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def payment_list_transactions_without_preload_content(
+        self,
+        page_size: Annotated[Optional[StrictInt], Field(description="Number of transactions to return per page")] = None,
+        page_token: Annotated[Optional[StrictStr], Field(description="Token for the next page of results")] = None,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """payment_list_transactions
+
+        Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+
+        :param page_size: Number of transactions to return per page
+        :type page_size: int
+        :param page_token: Token for the next page of results
+        :type page_token: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._payment_list_transactions_serialize(
+            page_size=page_size,
+            page_token=page_token,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "PaymentListTransactionsResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _payment_list_transactions_serialize(
+        self,
+        page_size,
+        page_token,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        # process the query parameters
+        if page_size is not None:
+            
+            _query_params.append(('page_size', page_size))
+            
+        if page_token is not None:
+            
+            _query_params.append(('page_token', page_token))
+            
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+            'APIKey'
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/experimental/open-platform/transactions',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
     def payment_reorder_post(
         self,
         post_token: StrictStr,
@@ -830,7 +1112,7 @@ class LimitedApi:
     ) -> PaymentReorderPostResponse:
         """payment_reorder_post
 
-        Use GetPostPricing API to get the cost of the service before calling this API.
+        قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
 
         :param post_token: (required)
         :type post_token: str
@@ -901,7 +1183,7 @@ class LimitedApi:
     ) -> ApiResponse[PaymentReorderPostResponse]:
         """payment_reorder_post
 
-        Use GetPostPricing API to get the cost of the service before calling this API.
+        قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
 
         :param post_token: (required)
         :type post_token: str
@@ -972,7 +1254,7 @@ class LimitedApi:
     ) -> RESTResponseType:
         """payment_reorder_post
 
-        Use GetPostPricing API to get the cost of the service before calling this API.
+        قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
 
         :param post_token: (required)
         :type post_token: str

@@ -59,9 +59,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Attach a new Addon to a post
+        """افزودن افزونه جدید به آگهی
 
-        Using this API and with user permission, you can attach a new AD to a post. You can use available widgets to design your Addon. This API need access token having one of the following scopes: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
 
         :param token: (required)
         :type token: str
@@ -130,9 +130,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Attach a new Addon to a post
+        """افزودن افزونه جدید به آگهی
 
-        Using this API and with user permission, you can attach a new AD to a post. You can use available widgets to design your Addon. This API need access token having one of the following scopes: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
 
         :param token: (required)
         :type token: str
@@ -201,9 +201,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Attach a new Addon to a post
+        """افزودن افزونه جدید به آگهی
 
-        Using this API and with user permission, you can attach a new AD to a post. You can use available widgets to design your Addon. This API need access token having one of the following scopes: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
 
         :param token: (required)
         :type token: str
@@ -348,9 +348,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AddonsCreateUserAddonResponseV2:
-        """Attach a new Addon to a user
+        """افزودن افزونه جدید به کاربر
 
-        Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
         :param phone: (required)
         :type phone: str
@@ -419,9 +419,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AddonsCreateUserAddonResponseV2]:
-        """Attach a new Addon to a user
+        """افزودن افزونه جدید به کاربر
 
-        Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
         :param phone: (required)
         :type phone: str
@@ -490,9 +490,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Attach a new Addon to a user
+        """افزودن افزونه جدید به کاربر
 
-        Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
         :param phone: (required)
         :type phone: str
@@ -637,9 +637,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AddonsCreateUserAddonResponseV2:
-        """Attach a new Addon to a user
+        """افزودن افزونه جدید به کاربر
 
-        Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -708,9 +708,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AddonsCreateUserAddonResponseV2]:
-        """Attach a new Addon to a user
+        """افزودن افزونه جدید به کاربر
 
-        Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -779,9 +779,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Attach a new Addon to a user
+        """افزودن افزونه جدید به کاربر
 
-        Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -925,9 +925,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Delete an Addon from a post
+        """حذف افزونه از آگهی
 
-        You can only delete addons which are created by your app.
+        فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param token: (required)
         :type token: str
@@ -992,9 +992,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Delete an Addon from a post
+        """حذف افزونه از آگهی
 
-        You can only delete addons which are created by your app.
+        فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param token: (required)
         :type token: str
@@ -1059,9 +1059,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Delete an Addon from a post
+        """حذف افزونه از آگهی
 
-        You can only delete addons which are created by your app.
+        فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param token: (required)
         :type token: str
@@ -1186,9 +1186,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Delete an Addon from a post
+        """حذف افزونه از آگهی
 
-        You can only delete addons which are created by your app.
+        فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param token: (required)
         :type token: str
@@ -1253,9 +1253,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Delete an Addon from a post
+        """حذف افزونه از آگهی
 
-        You can only delete addons which are created by your app.
+        فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param token: (required)
         :type token: str
@@ -1320,9 +1320,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Delete an Addon from a post
+        """حذف افزونه از آگهی
 
-        You can only delete addons which are created by your app.
+        فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param token: (required)
         :type token: str
@@ -1447,9 +1447,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Delete an UserAddon
+        """حذف افزونه کاربر
 
-        This will delete all correlated Addons to all user posts. You can only delete Addons which are created by your app.
+        این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند. فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param id: (required)
         :type id: str
@@ -1514,9 +1514,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Delete an UserAddon
+        """حذف افزونه کاربر
 
-        This will delete all correlated Addons to all user posts. You can only delete Addons which are created by your app.
+        این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند. فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param id: (required)
         :type id: str
@@ -1581,9 +1581,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Delete an UserAddon
+        """حذف افزونه کاربر
 
-        This will delete all correlated Addons to all user posts. You can only delete Addons which are created by your app.
+        این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند. فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
         :param id: (required)
         :type id: str
@@ -1709,9 +1709,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AddonsGetUserAddonsResponse:
-        """Retrieve all UserAddons
+        """دریافت تمام افزونه‌های کاربر
 
-        Retrieve all UserAddons of a user.
+        دریافت تمام افزونه‌های کاربر یک کاربر.
 
         :param phone: (required)
         :type phone: str
@@ -1780,9 +1780,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AddonsGetUserAddonsResponse]:
-        """Retrieve all UserAddons
+        """دریافت تمام افزونه‌های کاربر
 
-        Retrieve all UserAddons of a user.
+        دریافت تمام افزونه‌های کاربر یک کاربر.
 
         :param phone: (required)
         :type phone: str
@@ -1851,9 +1851,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Retrieve all UserAddons
+        """دریافت تمام افزونه‌های کاربر
 
-        Retrieve all UserAddons of a user.
+        دریافت تمام افزونه‌های کاربر یک کاربر.
 
         :param phone: (required)
         :type phone: str
@@ -1987,9 +1987,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AddonsGetUserAddonsResponse:
-        """Retrieve all UserAddons
+        """دریافت تمام افزونه‌های کاربر
 
-        Retrieve all UserAddons of a user.
+        دریافت تمام افزونه‌های کاربر یک کاربر.
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -2058,9 +2058,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AddonsGetUserAddonsResponse]:
-        """Retrieve all UserAddons
+        """دریافت تمام افزونه‌های کاربر
 
-        Retrieve all UserAddons of a user.
+        دریافت تمام افزونه‌های کاربر یک کاربر.
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -2129,9 +2129,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Retrieve all UserAddons
+        """دریافت تمام افزونه‌های کاربر
 
-        Retrieve all UserAddons of a user.
+        دریافت تمام افزونه‌های کاربر یک کاربر.
 
         :param divar_user_id: (required)
         :type divar_user_id: str

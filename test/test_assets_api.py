@@ -29,84 +29,84 @@ class TestAssetsApi(unittest.TestCase):
     def test_assets_get_body_statuses(self) -> None:
         """Test case for assets_get_body_statuses
 
-        Get available body-status options in Divar vehicle categories
+        دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
         """
         pass
 
     def test_assets_get_brand_models(self) -> None:
         """Test case for assets_get_brand_models
 
-        Get brand models in a Divar category
+        دریافت مدل‌های برند در دسته‌بندی دیوار
         """
         pass
 
     def test_assets_get_categories(self) -> None:
         """Test case for assets_get_categories
 
-        Get Divar categories
+        دریافت دسته‌بندی‌های دیوار
         """
         pass
 
     def test_assets_get_cities(self) -> None:
         """Test case for assets_get_cities
 
-        Get Divar cities
+        دریافت شهرهای دیوار
         """
         pass
 
     def test_assets_get_colors(self) -> None:
         """Test case for assets_get_colors
 
-        Get colors in a Divar category
+        دریافت رنگ‌ها در دسته‌بندی دیوار
         """
         pass
 
     def test_assets_get_districts(self) -> None:
         """Test case for assets_get_districts
 
-        Get Divar districts
+        دریافت مناطق دیوار
         """
         pass
 
     def test_assets_get_districts2(self) -> None:
         """Test case for assets_get_districts2
 
-        Get Divar districts
+        دریافت مناطق دیوار
         """
         pass
 
     def test_assets_get_internal_storages(self) -> None:
         """Test case for assets_get_internal_storages
 
-        Get available internal-storage options in Divar mobile/tablet/laptop categories
+        دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
         """
         pass
 
     def test_assets_get_o_auth_scopes(self) -> None:
         """Test case for assets_get_o_auth_scopes
 
-        Get KenarDivar OAuth scopes
+        دریافت دامنه‌های OAuth کنار دیوار
         """
         pass
 
     def test_assets_get_permissions(self) -> None:
         """Test case for assets_get_permissions
 
-        Get KenarDivar permissions
+        دریافت مجوزهای کنار دیوار
         """
         pass
 
     def test_assets_get_ram_memories(self) -> None:
         """Test case for assets_get_ram_memories
 
-        Get available ram-memory options in Divar mobile/tablet/laptop categories
+        دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
         """
         pass
 
     def test_assets_get_service_types(self) -> None:
         """Test case for assets_get_service_types
 
-        Get available service types in KenarDivar
+        دریافت انواع سرویس موجود در کنار دیوار
         """
         pass
 

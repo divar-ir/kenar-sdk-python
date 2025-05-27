@@ -26,8 +26,8 @@ class GetPostPricingResponseReorder(BaseModel):
     """
     GetPostPricingResponseReorder
     """ # noqa: E501
-    available: Optional[StrictBool] = Field(default=None, description="Indicates if the post can be reordered. If false, the reorder API will return an error")
-    cost_rials: Optional[StrictStr] = Field(default=None, description="The cost of reordering in rials")
+    available: Optional[StrictBool] = Field(default=None, description="نشان می‌دهد که آیا آگهی قابل نردبان است. اگر false باشد، API نردبان خطا برمی‌گرداند")
+    cost_rials: Optional[StrictStr] = Field(default=None, description="هزینه نردبان به ریال")
     __properties: ClassVar[List[str]] = ["available", "cost_rials"]
 
     model_config = ConfigDict(

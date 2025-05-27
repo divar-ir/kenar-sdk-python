@@ -29,35 +29,35 @@ class TestSemanticApi(unittest.TestCase):
     def test_semantic_create_post_semantic(self) -> None:
         """Test case for semantic_create_post_semantic
 
-        Create Post Semantic
+        ایجاد اطلاعات معنایی آگهی
         """
         pass
 
     def test_semantic_create_user_semantic(self) -> None:
         """Test case for semantic_create_user_semantic
 
-        Create User Semantic
+        ایجاد اطلاعات معنایی کاربر
         """
         pass
 
     def test_semantic_create_user_semantic2(self) -> None:
         """Test case for semantic_create_user_semantic2
 
-        Create User Semantic
+        ایجاد اطلاعات معنایی کاربر
         """
         pass
 
     def test_semantic_delete_user_semantic(self) -> None:
         """Test case for semantic_delete_user_semantic
 
-        Delete User Semantic
+        حذف اطلاعات معنایی کاربر
         """
         pass
 
     def test_semantic_delete_user_semantic2(self) -> None:
         """Test case for semantic_delete_user_semantic2
 
-        Delete User Semantic
+        حذف اطلاعات معنایی کاربر
         """
         pass
 

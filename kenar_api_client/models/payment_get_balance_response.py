@@ -26,7 +26,7 @@ class PaymentGetBalanceResponse(BaseModel):
     """
     PaymentGetBalanceResponse
     """ # noqa: E501
-    balance_rials: Optional[StrictStr] = Field(default=None, description="The balance of the app in rials")
+    balance_rials: Optional[StrictStr] = Field(default=None, description="موجودی اپلیکیشن به ریال")
     __properties: ClassVar[List[str]] = ["balance_rials"]
 
     model_config = ConfigDict(

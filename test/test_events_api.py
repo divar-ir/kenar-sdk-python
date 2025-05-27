@@ -29,7 +29,7 @@ class TestEventsApi(unittest.TestCase):
     def test_events_register_event_subscription(self) -> None:
         """Test case for events_register_event_subscription
 
-        Subscribe to an event
+        اشتراک در رویداد
         """
         pass
 

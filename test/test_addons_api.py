@@ -29,56 +29,56 @@ class TestAddonsApi(unittest.TestCase):
     def test_addons_create_post_addon_v2(self) -> None:
         """Test case for addons_create_post_addon_v2
 
-        Attach a new Addon to a post
+        افزودن افزونه جدید به آگهی
         """
         pass
 
     def test_addons_create_user_addon_v2(self) -> None:
         """Test case for addons_create_user_addon_v2
 
-        Attach a new Addon to a user
+        افزودن افزونه جدید به کاربر
         """
         pass
 
     def test_addons_create_user_addon_v22(self) -> None:
         """Test case for addons_create_user_addon_v22
 
-        Attach a new Addon to a user
+        افزودن افزونه جدید به کاربر
         """
         pass
 
     def test_addons_delete_post_addon(self) -> None:
         """Test case for addons_delete_post_addon
 
-        Delete an Addon from a post
+        حذف افزونه از آگهی
         """
         pass
 
     def test_addons_delete_post_addon2(self) -> None:
         """Test case for addons_delete_post_addon2
 
-        Delete an Addon from a post
+        حذف افزونه از آگهی
         """
         pass
 
     def test_addons_delete_user_addon(self) -> None:
         """Test case for addons_delete_user_addon
 
-        Delete an UserAddon
+        حذف افزونه کاربر
         """
         pass
 
     def test_addons_get_user_addons(self) -> None:
         """Test case for addons_get_user_addons
 
-        Retrieve all UserAddons
+        دریافت تمام افزونه‌های کاربر
         """
         pass
 
     def test_addons_get_user_addons2(self) -> None:
         """Test case for addons_get_user_addons2
 
-        Retrieve all UserAddons
+        دریافت تمام افزونه‌های کاربر
         """
         pass
 

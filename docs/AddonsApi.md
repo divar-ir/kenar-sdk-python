@@ -4,24 +4,24 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addons_create_post_addon_v2**](AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | Attach a new Addon to a post
-[**addons_create_user_addon_v2**](AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | Attach a new Addon to a user
-[**addons_create_user_addon_v22**](AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | Attach a new Addon to a user
-[**addons_delete_post_addon**](AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | Delete an Addon from a post
-[**addons_delete_post_addon2**](AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | Delete an Addon from a post
-[**addons_delete_user_addon**](AddonsApi.md#addons_delete_user_addon) | **DELETE** /v1/open-platform/addons/user/{id} | Delete an UserAddon
-[**addons_get_user_addons**](AddonsApi.md#addons_get_user_addons) | **GET** /v1/open-platform/addons/user/{phone} | Retrieve all UserAddons
-[**addons_get_user_addons2**](AddonsApi.md#addons_get_user_addons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | Retrieve all UserAddons
+[**addons_create_post_addon_v2**](AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
+[**addons_create_user_addon_v2**](AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
+[**addons_create_user_addon_v22**](AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
+[**addons_delete_post_addon**](AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
+[**addons_delete_post_addon2**](AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
+[**addons_delete_user_addon**](AddonsApi.md#addons_delete_user_addon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
+[**addons_get_user_addons**](AddonsApi.md#addons_get_user_addons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر
+[**addons_get_user_addons2**](AddonsApi.md#addons_get_user_addons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر
 
 
 # **addons_create_post_addon_v2**
 > object addons_create_post_addon_v2(token, addons_create_post_addon_v2_body)
 
-Attach a new Addon to a post
+افزودن افزونه جدید به آگهی
 
-Using this API and with user permission, you can attach a new AD to a post.
-You can use available widgets to design your Addon.
-This API need access token having one of the following scopes:
+با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید.
+می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید.
+این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد:
 - USER_POSTS_ADDON_CREATE
 - POST_ADDON_CREATE.{post_token}
 
@@ -60,7 +60,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_post_addon_v2_body = kenar_api_client.AddonsCreatePostAddonV2Body() # AddonsCreatePostAddonV2Body | 
 
     try:
-        # Attach a new Addon to a post
+        # افزودن افزونه جدید به آگهی
         api_response = api_instance.addons_create_post_addon_v2(token, addons_create_post_addon_v2_body)
         print("The response of AddonsApi->addons_create_post_addon_v2:\n")
         pprint(api_response)
@@ -95,20 +95,20 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addons_create_user_addon_v2**
 > AddonsCreateUserAddonResponseV2 addons_create_user_addon_v2(phone, addons_create_user_addon_v2_body)
 
-Attach a new Addon to a user
+افزودن افزونه جدید به کاربر
 
-Using this API and with user permission, you can create a UserAddon.
-UserAddon will attach to all user posts in future and also back fills last 30 posts in the past.
-You can use available widgets to design your UserAddon.
-This API need access token having `USER_ADDON_CREATE` scope
+با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید.
+افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند.
+می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید.
+این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
 ### Example
 
@@ -146,7 +146,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_user_addon_v2_body = kenar_api_client.AddonsCreateUserAddonV2Body() # AddonsCreateUserAddonV2Body | 
 
     try:
-        # Attach a new Addon to a user
+        # افزودن افزونه جدید به کاربر
         api_response = api_instance.addons_create_user_addon_v2(phone, addons_create_user_addon_v2_body)
         print("The response of AddonsApi->addons_create_user_addon_v2:\n")
         pprint(api_response)
@@ -181,20 +181,20 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addons_create_user_addon_v22**
 > AddonsCreateUserAddonResponseV2 addons_create_user_addon_v22(divar_user_id, addons_create_user_addon_v2_body)
 
-Attach a new Addon to a user
+افزودن افزونه جدید به کاربر
 
-Using this API and with user permission, you can create a UserAddon.
-UserAddon will attach to all user posts in future and also back fills last 30 posts in the past.
-You can use available widgets to design your UserAddon.
-This API need access token having `USER_ADDON_CREATE` scope
+با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید.
+افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند.
+می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید.
+این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
 ### Example
 
@@ -232,7 +232,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_user_addon_v2_body = kenar_api_client.AddonsCreateUserAddonV2Body() # AddonsCreateUserAddonV2Body | 
 
     try:
-        # Attach a new Addon to a user
+        # افزودن افزونه جدید به کاربر
         api_response = api_instance.addons_create_user_addon_v22(divar_user_id, addons_create_user_addon_v2_body)
         print("The response of AddonsApi->addons_create_user_addon_v22:\n")
         pprint(api_response)
@@ -267,17 +267,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addons_delete_post_addon**
 > object addons_delete_post_addon(token)
 
-Delete an Addon from a post
+حذف افزونه از آگهی
 
-You can only delete addons which are created by your app.
+فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
 ### Example
 
@@ -312,7 +312,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     token = 'token_example' # str | 
 
     try:
-        # Delete an Addon from a post
+        # حذف افزونه از آگهی
         api_response = api_instance.addons_delete_post_addon(token)
         print("The response of AddonsApi->addons_delete_post_addon:\n")
         pprint(api_response)
@@ -346,17 +346,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addons_delete_post_addon2**
 > object addons_delete_post_addon2(token)
 
-Delete an Addon from a post
+حذف افزونه از آگهی
 
-You can only delete addons which are created by your app.
+فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
 ### Example
 
@@ -391,7 +391,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     token = 'token_example' # str | 
 
     try:
-        # Delete an Addon from a post
+        # حذف افزونه از آگهی
         api_response = api_instance.addons_delete_post_addon2(token)
         print("The response of AddonsApi->addons_delete_post_addon2:\n")
         pprint(api_response)
@@ -425,18 +425,18 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addons_delete_user_addon**
 > object addons_delete_user_addon(id)
 
-Delete an UserAddon
+حذف افزونه کاربر
 
-This will delete all correlated Addons to all user posts.
-You can only delete Addons which are created by your app.
+این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند.
+فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
 ### Example
 
@@ -471,7 +471,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     id = 'id_example' # str | 
 
     try:
-        # Delete an UserAddon
+        # حذف افزونه کاربر
         api_response = api_instance.addons_delete_user_addon(id)
         print("The response of AddonsApi->addons_delete_user_addon:\n")
         pprint(api_response)
@@ -505,17 +505,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addons_get_user_addons**
 > AddonsGetUserAddonsResponse addons_get_user_addons(phone, divar_user_id=divar_user_id)
 
-Retrieve all UserAddons
+دریافت تمام افزونه‌های کاربر
 
-Retrieve all UserAddons of a user.
+دریافت تمام افزونه‌های کاربر یک کاربر.
 
 ### Example
 
@@ -552,7 +552,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     divar_user_id = 'divar_user_id_example' # str |  (optional)
 
     try:
-        # Retrieve all UserAddons
+        # دریافت تمام افزونه‌های کاربر
         api_response = api_instance.addons_get_user_addons(phone, divar_user_id=divar_user_id)
         print("The response of AddonsApi->addons_get_user_addons:\n")
         pprint(api_response)
@@ -587,17 +587,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addons_get_user_addons2**
 > AddonsGetUserAddonsResponse addons_get_user_addons2(divar_user_id, phone=phone)
 
-Retrieve all UserAddons
+دریافت تمام افزونه‌های کاربر
 
-Retrieve all UserAddons of a user.
+دریافت تمام افزونه‌های کاربر یک کاربر.
 
 ### Example
 
@@ -634,7 +634,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     phone = 'phone_example' # str |  (optional)
 
     try:
-        # Retrieve all UserAddons
+        # دریافت تمام افزونه‌های کاربر
         api_response = api_instance.addons_get_user_addons2(divar_user_id, phone=phone)
         print("The response of AddonsApi->addons_get_user_addons2:\n")
         pprint(api_response)
@@ -669,8 +669,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

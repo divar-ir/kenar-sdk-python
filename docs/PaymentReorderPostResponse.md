@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cost_rials** | **str** | The cost of the transaction in rials for your application | [optional] 
-**id** | **str** | Same uuid when creating transaction | [optional] 
+**cost_rials** | **str** | هزینه تراکنش به ریال برای اپلیکیشن شما | [optional] 
+**id** | **str** | همان uuid هنگام ایجاد تراکنش | [optional] 
 
 ## Example
 

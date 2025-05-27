@@ -37,8 +37,9 @@ class FinderGetPostResponse(BaseModel):
     district: Optional[StrictStr] = None
     first_published_at: Optional[datetime] = None
     state: Optional[FinderPostExtState] = None
+    supplier_chat_assistant_enabled: Optional[StrictBool] = None
     token: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["business_data", "category", "chat_enabled", "city", "data", "district", "first_published_at", "state", "token"]
+    __properties: ClassVar[List[str]] = ["business_data", "category", "chat_enabled", "city", "data", "district", "first_published_at", "state", "supplier_chat_assistant_enabled", "token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -102,6 +103,7 @@ class FinderGetPostResponse(BaseModel):
             "district": obj.get("district"),
             "first_published_at": obj.get("first_published_at"),
             "state": obj.get("state"),
+            "supplier_chat_assistant_enabled": obj.get("supplier_chat_assistant_enabled"),
             "token": obj.get("token")
         })
         return _obj

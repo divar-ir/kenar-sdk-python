@@ -4,26 +4,26 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**assets_get_body_statuses**](AssetsApi.md#assets_get_body_statuses) | **GET** /v1/open-platform/assets/body-status | Get available body-status options in Divar vehicle categories
-[**assets_get_brand_models**](AssetsApi.md#assets_get_brand_models) | **GET** /v1/open-platform/assets/brand-model/{category} | Get brand models in a Divar category
-[**assets_get_categories**](AssetsApi.md#assets_get_categories) | **GET** /v1/open-platform/assets/category | Get Divar categories
-[**assets_get_cities**](AssetsApi.md#assets_get_cities) | **GET** /v1/open-platform/assets/city | Get Divar cities
-[**assets_get_colors**](AssetsApi.md#assets_get_colors) | **GET** /v1/open-platform/assets/color/{category} | Get colors in a Divar category
-[**assets_get_districts**](AssetsApi.md#assets_get_districts) | **GET** /v1/open-platform/assets/district | Get Divar districts
-[**assets_get_districts2**](AssetsApi.md#assets_get_districts2) | **GET** /v1/open-platform/assets/district/{city_slug} | Get Divar districts
-[**assets_get_internal_storages**](AssetsApi.md#assets_get_internal_storages) | **GET** /v1/open-platform/assets/internal-storage | Get available internal-storage options in Divar mobile/tablet/laptop categories
-[**assets_get_o_auth_scopes**](AssetsApi.md#assets_get_o_auth_scopes) | **GET** /v1/open-platform/assets/oauth-scope | Get KenarDivar OAuth scopes
-[**assets_get_permissions**](AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | Get KenarDivar permissions
-[**assets_get_ram_memories**](AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | Get available ram-memory options in Divar mobile/tablet/laptop categories
-[**assets_get_service_types**](AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | Get available service types in KenarDivar
+[**assets_get_body_statuses**](AssetsApi.md#assets_get_body_statuses) | **GET** /v1/open-platform/assets/body-status | دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+[**assets_get_brand_models**](AssetsApi.md#assets_get_brand_models) | **GET** /v1/open-platform/assets/brand-model/{category} | دریافت مدل‌های برند در دسته‌بندی دیوار
+[**assets_get_categories**](AssetsApi.md#assets_get_categories) | **GET** /v1/open-platform/assets/category | دریافت دسته‌بندی‌های دیوار
+[**assets_get_cities**](AssetsApi.md#assets_get_cities) | **GET** /v1/open-platform/assets/city | دریافت شهرهای دیوار
+[**assets_get_colors**](AssetsApi.md#assets_get_colors) | **GET** /v1/open-platform/assets/color/{category} | دریافت رنگ‌ها در دسته‌بندی دیوار
+[**assets_get_districts**](AssetsApi.md#assets_get_districts) | **GET** /v1/open-platform/assets/district | دریافت مناطق دیوار
+[**assets_get_districts2**](AssetsApi.md#assets_get_districts2) | **GET** /v1/open-platform/assets/district/{city_slug} | دریافت مناطق دیوار
+[**assets_get_internal_storages**](AssetsApi.md#assets_get_internal_storages) | **GET** /v1/open-platform/assets/internal-storage | دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+[**assets_get_o_auth_scopes**](AssetsApi.md#assets_get_o_auth_scopes) | **GET** /v1/open-platform/assets/oauth-scope | دریافت دامنه‌های OAuth کنار دیوار
+[**assets_get_permissions**](AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
+[**assets_get_ram_memories**](AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+[**assets_get_service_types**](AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
 
 
 # **assets_get_body_statuses**
 > AssetsGetBodyStatusesResponse assets_get_body_statuses()
 
-Get available body-status options in Divar vehicle categories
+دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
 
-Get all available body-status options in Divar vehicle categories.This provides persian translations for each body-status options which used in posts.
+دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -58,7 +58,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.AssetsApi(api_client)
 
     try:
-        # Get available body-status options in Divar vehicle categories
+        # دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
         api_response = api_instance.assets_get_body_statuses()
         print("The response of AssetsApi->assets_get_body_statuses:\n")
         pprint(api_response)
@@ -89,17 +89,17 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_brand_models**
 > AssetsGetBrandModelsResponse assets_get_brand_models(category)
 
-Get brand models in a Divar category
+دریافت مدل‌های برند در دسته‌بندی دیوار
 
-Get all Divar brand models in specified category.This provides persian translations for each brand models which used in posts.
+دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -135,7 +135,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     category = 'category_example' # str | 
 
     try:
-        # Get brand models in a Divar category
+        # دریافت مدل‌های برند در دسته‌بندی دیوار
         api_response = api_instance.assets_get_brand_models(category)
         print("The response of AssetsApi->assets_get_brand_models:\n")
         pprint(api_response)
@@ -169,17 +169,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_categories**
 > AssetsGetCategoriesResponse assets_get_categories()
 
-Get Divar categories
+دریافت دسته‌بندی‌های دیوار
 
-Get all Divar categories. This provides persian translations for each category which used in posts.
+دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -214,7 +214,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.AssetsApi(api_client)
 
     try:
-        # Get Divar categories
+        # دریافت دسته‌بندی‌های دیوار
         api_response = api_instance.assets_get_categories()
         print("The response of AssetsApi->assets_get_categories:\n")
         pprint(api_response)
@@ -245,17 +245,17 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_cities**
 > AssetsGetCitiesResponse assets_get_cities()
 
-Get Divar cities
+دریافت شهرهای دیوار
 
-Get all Divar cities. This provides persian translations for each city which used in posts.
+دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -290,7 +290,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.AssetsApi(api_client)
 
     try:
-        # Get Divar cities
+        # دریافت شهرهای دیوار
         api_response = api_instance.assets_get_cities()
         print("The response of AssetsApi->assets_get_cities:\n")
         pprint(api_response)
@@ -321,17 +321,17 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_colors**
 > AssetsGetColorsResponse assets_get_colors(category)
 
-Get colors in a Divar category
+دریافت رنگ‌ها در دسته‌بندی دیوار
 
-Get all Divar colors in specified category.This provides persian translations for each color which used in posts.
+دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -367,7 +367,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     category = 'category_example' # str | 
 
     try:
-        # Get colors in a Divar category
+        # دریافت رنگ‌ها در دسته‌بندی دیوار
         api_response = api_instance.assets_get_colors(category)
         print("The response of AssetsApi->assets_get_colors:\n")
         pprint(api_response)
@@ -401,17 +401,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_districts**
 > AssetsGetDistrictsResponse assets_get_districts(city_slug=city_slug)
 
-Get Divar districts
+دریافت مناطق دیوار
 
-Get all Divar districts. This provides persian translations for each district which used in posts.
+دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -447,7 +447,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     city_slug = 'city_slug_example' # str |  (optional)
 
     try:
-        # Get Divar districts
+        # دریافت مناطق دیوار
         api_response = api_instance.assets_get_districts(city_slug=city_slug)
         print("The response of AssetsApi->assets_get_districts:\n")
         pprint(api_response)
@@ -481,17 +481,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_districts2**
 > AssetsGetDistrictsResponse assets_get_districts2(city_slug)
 
-Get Divar districts
+دریافت مناطق دیوار
 
-Get all Divar districts. This provides persian translations for each district which used in posts.
+دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -527,7 +527,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     city_slug = 'city_slug_example' # str | 
 
     try:
-        # Get Divar districts
+        # دریافت مناطق دیوار
         api_response = api_instance.assets_get_districts2(city_slug)
         print("The response of AssetsApi->assets_get_districts2:\n")
         pprint(api_response)
@@ -561,17 +561,17 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_internal_storages**
 > AssetsGetInternalStoragesResponse assets_get_internal_storages()
 
-Get available internal-storage options in Divar mobile/tablet/laptop categories
+دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-Get all available internal-storage options in Divar mobile categories.This provides persian translations for each internal-storage options which used in posts.
+دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -606,7 +606,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.AssetsApi(api_client)
 
     try:
-        # Get available internal-storage options in Divar mobile/tablet/laptop categories
+        # دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
         api_response = api_instance.assets_get_internal_storages()
         print("The response of AssetsApi->assets_get_internal_storages:\n")
         pprint(api_response)
@@ -637,18 +637,18 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_o_auth_scopes**
 > AssetsGetOAuthScopesResponse assets_get_o_auth_scopes()
 
-Get KenarDivar OAuth scopes
+دریافت دامنه‌های OAuth کنار دیوار
 
-These are available scopes for KenarDivar OAuth2.0.
-Use scopes in OAuth flow to request access to user data or perform actions on their behalf.
+اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند.
+از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
 
 ### Example
 
@@ -683,7 +683,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.AssetsApi(api_client)
 
     try:
-        # Get KenarDivar OAuth scopes
+        # دریافت دامنه‌های OAuth کنار دیوار
         api_response = api_instance.assets_get_o_auth_scopes()
         print("The response of AssetsApi->assets_get_o_auth_scopes:\n")
         pprint(api_response)
@@ -714,18 +714,18 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_permissions**
 > AssetsGetPermissionsResponse assets_get_permissions()
 
-Get KenarDivar permissions
+دریافت مجوزهای کنار دیوار
 
-These permission are used to control access in KenarDivar Apps. Don't mistake them with OAuth scopes.
-It's expected that apps be blind about these permissions.These are created for internal usages only, but feel free to request to be enabled for you app as needed.
+این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید.
+انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
 
 ### Example
 
@@ -760,7 +760,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.AssetsApi(api_client)
 
     try:
-        # Get KenarDivar permissions
+        # دریافت مجوزهای کنار دیوار
         api_response = api_instance.assets_get_permissions()
         print("The response of AssetsApi->assets_get_permissions:\n")
         pprint(api_response)
@@ -791,17 +791,17 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_ram_memories**
 > AssetsGetRamMemoriesResponse assets_get_ram_memories()
 
-Get available ram-memory options in Divar mobile/tablet/laptop categories
+دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-Get all available ram-memory options in Divar mobile/tablet/laptop categories.This provides persian translations for each ram-memory options which used in posts.
+دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
 ### Example
 
@@ -836,7 +836,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.AssetsApi(api_client)
 
     try:
-        # Get available ram-memory options in Divar mobile/tablet/laptop categories
+        # دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
         api_response = api_instance.assets_get_ram_memories()
         print("The response of AssetsApi->assets_get_ram_memories:\n")
         pprint(api_response)
@@ -867,18 +867,18 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assets_get_service_types**
 > AssetsGetServiceTypesResponse assets_get_service_types()
 
-Get available service types in KenarDivar
+دریافت انواع سرویس موجود در کنار دیوار
 
-These service types is used to group similar services in KenarDivar.
-Any new idea with new service types are welcome. Feel free to request them as needed.
+این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود.
+هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
 
 ### Example
 
@@ -913,7 +913,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.AssetsApi(api_client)
 
     try:
-        # Get available service types in KenarDivar
+        # دریافت انواع سرویس موجود در کنار دیوار
         api_response = api_instance.assets_get_service_types()
         print("The response of AssetsApi->assets_get_service_types:\n")
         pprint(api_response)
@@ -944,8 +944,8 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

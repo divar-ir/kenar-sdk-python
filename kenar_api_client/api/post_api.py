@@ -57,9 +57,9 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Edit a post
+        """ویرایش آگهی
 
-        This API allows you to edit a post. This needs `POST_EDIT.{post_token}` OAuth scope. By now you can only edit title, description, and images of a post.
+        این API به شما امکان ویرایش آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_EDIT.{post_token}` دارد. در حال حاضر فقط می‌توانید عنوان، توضیحات و تصاویر آگهی را ویرایش کنید.
 
         :param post_token: (required)
         :type post_token: str
@@ -128,9 +128,9 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Edit a post
+        """ویرایش آگهی
 
-        This API allows you to edit a post. This needs `POST_EDIT.{post_token}` OAuth scope. By now you can only edit title, description, and images of a post.
+        این API به شما امکان ویرایش آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_EDIT.{post_token}` دارد. در حال حاضر فقط می‌توانید عنوان، توضیحات و تصاویر آگهی را ویرایش کنید.
 
         :param post_token: (required)
         :type post_token: str
@@ -199,9 +199,9 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Edit a post
+        """ویرایش آگهی
 
-        This API allows you to edit a post. This needs `POST_EDIT.{post_token}` OAuth scope. By now you can only edit title, description, and images of a post.
+        این API به شما امکان ویرایش آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_EDIT.{post_token}` دارد. در حال حاضر فقط می‌توانید عنوان، توضیحات و تصاویر آگهی را ویرایش کنید.
 
         :param post_token: (required)
         :type post_token: str
@@ -344,9 +344,9 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PostGetImageUploadURLResponse:
-        """Get image upload URL
+        """دریافت URL آپلود تصویر
 
-        This API allows you to get an upload URL for uploading images of a post. You can upload images to the returned URL using a POST request with binary encoding.
+        این API به شما امکان دریافت URL آپلود برای آپلود تصاویر آگهی را می‌دهد. می‌توانید تصاویر را با استفاده از درخواست POST با کدگذاری باینری به URL برگشتی آپلود کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -407,9 +407,9 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PostGetImageUploadURLResponse]:
-        """Get image upload URL
+        """دریافت URL آپلود تصویر
 
-        This API allows you to get an upload URL for uploading images of a post. You can upload images to the returned URL using a POST request with binary encoding.
+        این API به شما امکان دریافت URL آپلود برای آپلود تصاویر آگهی را می‌دهد. می‌توانید تصاویر را با استفاده از درخواست POST با کدگذاری باینری به URL برگشتی آپلود کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -470,9 +470,9 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get image upload URL
+        """دریافت URL آپلود تصویر
 
-        This API allows you to get an upload URL for uploading images of a post. You can upload images to the returned URL using a POST request with binary encoding.
+        این API به شما امکان دریافت URL آپلود برای آپلود تصاویر آگهی را می‌دهد. می‌توانید تصاویر را با استفاده از درخواست POST با کدگذاری باینری به URL برگشتی آپلود کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

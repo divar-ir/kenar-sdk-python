@@ -19,17 +19,17 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from kenar_api_client.models.payment_transaction import PaymentTransaction
 from typing import Optional, Set
 from typing_extensions import Self
 
-class FinderUser(BaseModel):
+class PaymentListTransactionsResponse(BaseModel):
     """
-    FinderUser
+    PaymentListTransactionsResponse
     """ # noqa: E501
-    phone_number: Optional[StrictStr] = None
-    phone_numbers: Optional[List[StrictStr]] = Field(default=None, description="منسوخ شده")
-    user_id: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["phone_number", "phone_numbers", "user_id"]
+    next_page_token: Optional[StrictStr] = Field(default=None, description="Token for the next page of results.")
+    transactions: Optional[List[PaymentTransaction]] = Field(default=None, description="List of transactions matching the request")
+    __properties: ClassVar[List[str]] = ["next_page_token", "transactions"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -49,7 +49,7 @@ class FinderUser(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of FinderUser from a JSON string"""
+        """Create an instance of PaymentListTransactionsResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -70,11 +70,18 @@ class FinderUser(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in transactions (list)
+        _items = []
+        if self.transactions:
+            for _item_transactions in self.transactions:
+                if _item_transactions:
+                    _items.append(_item_transactions.to_dict())
+            _dict['transactions'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of FinderUser from a dict"""
+        """Create an instance of PaymentListTransactionsResponse from a dict"""
         if obj is None:
             return None
 
@@ -82,9 +89,8 @@ class FinderUser(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "phone_number": obj.get("phone_number"),
-            "phone_numbers": obj.get("phone_numbers"),
-            "user_id": obj.get("user_id")
+            "next_page_token": obj.get("next_page_token"),
+            "transactions": [PaymentTransaction.from_dict(_item) for _item in obj["transactions"]] if obj.get("transactions") is not None else None
         })
         return _obj
 

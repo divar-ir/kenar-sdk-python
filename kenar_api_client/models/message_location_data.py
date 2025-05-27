@@ -26,8 +26,8 @@ class MessageLocationData(BaseModel):
     """
     MessageLocationData
     """ # noqa: E501
-    latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The latitude in degrees. It must be in the range [-90.0, +90.0].")
-    longitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="The longitude in degrees. It must be in the range [-180.0, +180.0].")
+    latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="عرض جغرافیایی به درجه. باید در محدوده [-90.0, +90.0] باشد.")
+    longitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="طول جغرافیایی به درجه. باید در محدوده [-180.0, +180.0] باشد.")
     __properties: ClassVar[List[str]] = ["latitude", "longitude"]
 
     model_config = ConfigDict(

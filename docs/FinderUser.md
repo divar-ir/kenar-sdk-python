@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **phone_number** | **str** |  | [optional] 
-**phone_numbers** | **List[str]** | deprecated | [optional] 
+**phone_numbers** | **List[str]** | منسوخ شده | [optional] 
 **user_id** | **str** |  | [optional] 
 
 ## Example

@@ -4,17 +4,17 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**finder_get_post**](FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | Get a Divar post
-[**finder_get_user**](FinderApi.md#finder_get_user) | **POST** /v1/open-platform/users | Get user information
-[**finder_get_user2**](FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | Get user information
-[**finder_get_user_posts**](FinderApi.md#finder_get_user_posts) | **GET** /v1/open-platform/finder/user-posts | Get user posts
-[**finder_search_post_v2**](FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | Search Divar posts with some filters
+[**finder_get_post**](FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
+[**finder_get_user**](FinderApi.md#finder_get_user) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
+[**finder_get_user2**](FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
+[**finder_get_user_posts**](FinderApi.md#finder_get_user_posts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
+[**finder_search_post_v2**](FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
 
 
 # **finder_get_post**
 > FinderGetPostResponse finder_get_post(token)
 
-Get a Divar post
+دریافت آگهی دیوار
 
 This API allows you to get details about Divar post by its token.
 You can use the token to get the post data and its state 
@@ -53,7 +53,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     token = 'token_example' # str | 
 
     try:
-        # Get a Divar post
+        # دریافت آگهی دیوار
         api_response = api_instance.finder_get_post(token)
         print("The response of FinderApi->finder_get_post:\n")
         pprint(api_response)
@@ -87,19 +87,19 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **finder_get_user**
 > FinderUser finder_get_user(body)
 
-Get user information
+دریافت اطلاعات کاربر
 
-After gaining an access token, you can use this API to get user information.
-With scope `USER_PHONE` you can get user phone number.
-With scope `USER_ID` you can get user id and you can rely on uniqueness of this id.
+پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید.
+با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید.
+با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید.
 
 
 ### Example
@@ -136,7 +136,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     body = None # object | 
 
     try:
-        # Get user information
+        # دریافت اطلاعات کاربر
         api_response = api_instance.finder_get_user(body)
         print("The response of FinderApi->finder_get_user:\n")
         pprint(api_response)
@@ -170,19 +170,19 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **finder_get_user2**
 > FinderUser finder_get_user2()
 
-Get user information
+دریافت اطلاعات کاربر
 
-After gaining an access token, you can use this API to get user information.
-With scope `USER_PHONE` you can get user phone number.
-With scope `USER_ID` you can get user id and you can rely on uniqueness of this id.
+پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید.
+با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید.
+با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید.
 
 
 ### Example
@@ -218,7 +218,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.FinderApi(api_client)
 
     try:
-        # Get user information
+        # دریافت اطلاعات کاربر
         api_response = api_instance.finder_get_user2()
         print("The response of FinderApi->finder_get_user2:\n")
         pprint(api_response)
@@ -249,18 +249,18 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **finder_get_user_posts**
 > FinderGetUserPostsResponse finder_get_user_posts()
 
-Get user posts
+دریافت آگهی‌های کاربر
 
-This API allows you to get all posts of a user.
-You can use this API to show user posts in your service.
+این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد.
+می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
 
 ### Example
 
@@ -295,7 +295,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.FinderApi(api_client)
 
     try:
-        # Get user posts
+        # دریافت آگهی‌های کاربر
         api_response = api_instance.finder_get_user_posts()
         print("The response of FinderApi->finder_get_user_posts:\n")
         pprint(api_response)
@@ -326,19 +326,19 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **finder_search_post_v2**
 > FinderSearchPostV2Response finder_search_post_v2(finder_search_posts_v2_request)
 
-Search Divar posts with some filters
+جستجو آگهی‌های دیوار با فیلترهایی
 
-This API allows you to search Divar posts with some filters.
-You can search posts by category, city, district, and some other filters.
-Posts will be sorted by their timestamp.
+این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد.
+می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید.
+آگهی‌ها بر اساس زمان آنها مرتب می‌شوند.
 
 
 ### Example
@@ -376,7 +376,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     finder_search_posts_v2_request = kenar_api_client.FinderSearchPostsV2Request() # FinderSearchPostsV2Request | 
 
     try:
-        # Search Divar posts with some filters
+        # جستجو آگهی‌های دیوار با فیلترهایی
         api_response = api_instance.finder_search_post_v2(finder_search_posts_v2_request)
         print("The response of FinderApi->finder_search_post_v2:\n")
         pprint(api_response)
@@ -410,8 +410,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

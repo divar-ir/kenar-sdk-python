@@ -64,9 +64,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetBodyStatusesResponse:
-        """Get available body-status options in Divar vehicle categories
+        """دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
 
-        Get all available body-status options in Divar vehicle categories.This provides persian translations for each body-status options which used in posts.
+        دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -127,9 +127,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetBodyStatusesResponse]:
-        """Get available body-status options in Divar vehicle categories
+        """دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
 
-        Get all available body-status options in Divar vehicle categories.This provides persian translations for each body-status options which used in posts.
+        دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -190,9 +190,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get available body-status options in Divar vehicle categories
+        """دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
 
-        Get all available body-status options in Divar vehicle categories.This provides persian translations for each body-status options which used in posts.
+        دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -311,9 +311,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetBrandModelsResponse:
-        """Get brand models in a Divar category
+        """دریافت مدل‌های برند در دسته‌بندی دیوار
 
-        Get all Divar brand models in specified category.This provides persian translations for each brand models which used in posts.
+        دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param category: (required)
         :type category: str
@@ -378,9 +378,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetBrandModelsResponse]:
-        """Get brand models in a Divar category
+        """دریافت مدل‌های برند در دسته‌بندی دیوار
 
-        Get all Divar brand models in specified category.This provides persian translations for each brand models which used in posts.
+        دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param category: (required)
         :type category: str
@@ -445,9 +445,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get brand models in a Divar category
+        """دریافت مدل‌های برند در دسته‌بندی دیوار
 
-        Get all Divar brand models in specified category.This provides persian translations for each brand models which used in posts.
+        دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param category: (required)
         :type category: str
@@ -571,9 +571,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetCategoriesResponse:
-        """Get Divar categories
+        """دریافت دسته‌بندی‌های دیوار
 
-        Get all Divar categories. This provides persian translations for each category which used in posts.
+        دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -634,9 +634,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetCategoriesResponse]:
-        """Get Divar categories
+        """دریافت دسته‌بندی‌های دیوار
 
-        Get all Divar categories. This provides persian translations for each category which used in posts.
+        دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -697,9 +697,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get Divar categories
+        """دریافت دسته‌بندی‌های دیوار
 
-        Get all Divar categories. This provides persian translations for each category which used in posts.
+        دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -817,9 +817,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetCitiesResponse:
-        """Get Divar cities
+        """دریافت شهرهای دیوار
 
-        Get all Divar cities. This provides persian translations for each city which used in posts.
+        دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -880,9 +880,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetCitiesResponse]:
-        """Get Divar cities
+        """دریافت شهرهای دیوار
 
-        Get all Divar cities. This provides persian translations for each city which used in posts.
+        دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -943,9 +943,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get Divar cities
+        """دریافت شهرهای دیوار
 
-        Get all Divar cities. This provides persian translations for each city which used in posts.
+        دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1064,9 +1064,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetColorsResponse:
-        """Get colors in a Divar category
+        """دریافت رنگ‌ها در دسته‌بندی دیوار
 
-        Get all Divar colors in specified category.This provides persian translations for each color which used in posts.
+        دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param category: (required)
         :type category: str
@@ -1131,9 +1131,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetColorsResponse]:
-        """Get colors in a Divar category
+        """دریافت رنگ‌ها در دسته‌بندی دیوار
 
-        Get all Divar colors in specified category.This provides persian translations for each color which used in posts.
+        دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param category: (required)
         :type category: str
@@ -1198,9 +1198,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get colors in a Divar category
+        """دریافت رنگ‌ها در دسته‌بندی دیوار
 
-        Get all Divar colors in specified category.This provides persian translations for each color which used in posts.
+        دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param category: (required)
         :type category: str
@@ -1325,9 +1325,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetDistrictsResponse:
-        """Get Divar districts
+        """دریافت مناطق دیوار
 
-        Get all Divar districts. This provides persian translations for each district which used in posts.
+        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param city_slug:
         :type city_slug: str
@@ -1392,9 +1392,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetDistrictsResponse]:
-        """Get Divar districts
+        """دریافت مناطق دیوار
 
-        Get all Divar districts. This provides persian translations for each district which used in posts.
+        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param city_slug:
         :type city_slug: str
@@ -1459,9 +1459,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get Divar districts
+        """دریافت مناطق دیوار
 
-        Get all Divar districts. This provides persian translations for each district which used in posts.
+        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param city_slug:
         :type city_slug: str
@@ -1588,9 +1588,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetDistrictsResponse:
-        """Get Divar districts
+        """دریافت مناطق دیوار
 
-        Get all Divar districts. This provides persian translations for each district which used in posts.
+        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param city_slug: (required)
         :type city_slug: str
@@ -1655,9 +1655,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetDistrictsResponse]:
-        """Get Divar districts
+        """دریافت مناطق دیوار
 
-        Get all Divar districts. This provides persian translations for each district which used in posts.
+        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param city_slug: (required)
         :type city_slug: str
@@ -1722,9 +1722,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get Divar districts
+        """دریافت مناطق دیوار
 
-        Get all Divar districts. This provides persian translations for each district which used in posts.
+        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param city_slug: (required)
         :type city_slug: str
@@ -1848,9 +1848,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetInternalStoragesResponse:
-        """Get available internal-storage options in Divar mobile/tablet/laptop categories
+        """دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-        Get all available internal-storage options in Divar mobile categories.This provides persian translations for each internal-storage options which used in posts.
+        دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1911,9 +1911,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetInternalStoragesResponse]:
-        """Get available internal-storage options in Divar mobile/tablet/laptop categories
+        """دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-        Get all available internal-storage options in Divar mobile categories.This provides persian translations for each internal-storage options which used in posts.
+        دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1974,9 +1974,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get available internal-storage options in Divar mobile/tablet/laptop categories
+        """دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-        Get all available internal-storage options in Divar mobile categories.This provides persian translations for each internal-storage options which used in posts.
+        دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2094,9 +2094,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetOAuthScopesResponse:
-        """Get KenarDivar OAuth scopes
+        """دریافت دامنه‌های OAuth کنار دیوار
 
-        These are available scopes for KenarDivar OAuth2.0. Use scopes in OAuth flow to request access to user data or perform actions on their behalf.
+        اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2157,9 +2157,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetOAuthScopesResponse]:
-        """Get KenarDivar OAuth scopes
+        """دریافت دامنه‌های OAuth کنار دیوار
 
-        These are available scopes for KenarDivar OAuth2.0. Use scopes in OAuth flow to request access to user data or perform actions on their behalf.
+        اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2220,9 +2220,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get KenarDivar OAuth scopes
+        """دریافت دامنه‌های OAuth کنار دیوار
 
-        These are available scopes for KenarDivar OAuth2.0. Use scopes in OAuth flow to request access to user data or perform actions on their behalf.
+        اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2340,9 +2340,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetPermissionsResponse:
-        """Get KenarDivar permissions
+        """دریافت مجوزهای کنار دیوار
 
-        These permission are used to control access in KenarDivar Apps. Don't mistake them with OAuth scopes. It's expected that apps be blind about these permissions.These are created for internal usages only, but feel free to request to be enabled for you app as needed.
+        این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2403,9 +2403,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetPermissionsResponse]:
-        """Get KenarDivar permissions
+        """دریافت مجوزهای کنار دیوار
 
-        These permission are used to control access in KenarDivar Apps. Don't mistake them with OAuth scopes. It's expected that apps be blind about these permissions.These are created for internal usages only, but feel free to request to be enabled for you app as needed.
+        این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2466,9 +2466,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get KenarDivar permissions
+        """دریافت مجوزهای کنار دیوار
 
-        These permission are used to control access in KenarDivar Apps. Don't mistake them with OAuth scopes. It's expected that apps be blind about these permissions.These are created for internal usages only, but feel free to request to be enabled for you app as needed.
+        این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2586,9 +2586,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetRamMemoriesResponse:
-        """Get available ram-memory options in Divar mobile/tablet/laptop categories
+        """دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-        Get all available ram-memory options in Divar mobile/tablet/laptop categories.This provides persian translations for each ram-memory options which used in posts.
+        دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2649,9 +2649,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetRamMemoriesResponse]:
-        """Get available ram-memory options in Divar mobile/tablet/laptop categories
+        """دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-        Get all available ram-memory options in Divar mobile/tablet/laptop categories.This provides persian translations for each ram-memory options which used in posts.
+        دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2712,9 +2712,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get available ram-memory options in Divar mobile/tablet/laptop categories
+        """دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 
-        Get all available ram-memory options in Divar mobile/tablet/laptop categories.This provides persian translations for each ram-memory options which used in posts.
+        دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2832,9 +2832,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetServiceTypesResponse:
-        """Get available service types in KenarDivar
+        """دریافت انواع سرویس موجود در کنار دیوار
 
-        These service types is used to group similar services in KenarDivar. Any new idea with new service types are welcome. Feel free to request them as needed.
+        این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2895,9 +2895,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetServiceTypesResponse]:
-        """Get available service types in KenarDivar
+        """دریافت انواع سرویس موجود در کنار دیوار
 
-        These service types is used to group similar services in KenarDivar. Any new idea with new service types are welcome. Feel free to request them as needed.
+        این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2958,9 +2958,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get available service types in KenarDivar
+        """دریافت انواع سرویس موجود در کنار دیوار
 
-        These service types is used to group similar services in KenarDivar. Any new idea with new service types are welcome. Feel free to request them as needed.
+        این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

@@ -4,23 +4,23 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**events_register_event_subscription**](EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | Subscribe to an event
+[**events_register_event_subscription**](EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
 
 
 # **events_register_event_subscription**
 > object events_register_event_subscription(events_register_event_subscription_request)
 
-Subscribe to an event
+اشتراک در رویداد
 
-This requests allows you to subscribe to an event.
-You need to send access-token in this API to check your access.
-For subscribing on `NEW_MESSAGE_ON_POST` you need one of these scopes:
+این درخواست به شما امکان اشتراک در رویداد را می‌دهد.
+باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود.
+برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید:
 - CHAT_POST_CONVERSATIONS_READ.{post_token}
 - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ
-For subscribing on `POST_UPDATE` you need `USER_POSTS_GET` scope.
-After calling this API, You'll be notified in your webhook when corresponding event occurs.
-Make sure webhook URL is set on providers panel for your app.
-Some events are enabled by default and no subscription is needed for them(e.g chatbot messages).
+برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید.
+پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد.
+مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است.
+برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).
 
 ### Example
 
@@ -56,7 +56,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     events_register_event_subscription_request = kenar_api_client.EventsRegisterEventSubscriptionRequest() # EventsRegisterEventSubscriptionRequest | 
 
     try:
-        # Subscribe to an event
+        # اشتراک در رویداد
         api_response = api_instance.events_register_event_subscription(events_register_event_subscription_request)
         print("The response of EventsApi->events_register_event_subscription:\n")
         pprint(api_response)
@@ -90,8 +90,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**latitude** | **float** | The latitude in degrees. It must be in the range [-90.0, +90.0]. | [optional] 
-**longitude** | **float** | The longitude in degrees. It must be in the range [-180.0, +180.0]. | [optional] 
+**latitude** | **float** | عرض جغرافیایی به درجه. باید در محدوده [-90.0, +90.0] باشد. | [optional] 
+**longitude** | **float** | طول جغرافیایی به درجه. باید در محدوده [-180.0, +180.0] باشد. | [optional] 
 
 ## Example
 

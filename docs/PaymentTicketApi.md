@@ -4,16 +4,16 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payment_ticket_validate**](PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | Validate a payment ticket
+[**payment_ticket_validate**](PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 
 
 # **payment_ticket_validate**
 > PaymentTicketValidateResponse payment_ticket_validate(payment_ticket_validate_request)
 
-Validate a payment ticket
+اعتبارسنجی بلیط پرداخت
 
-Payment tickets are designed to integrate Kenar apps with Divar internal teams.
-Using this API you can validate a payment ticket and get the issuer payload.
+بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند.
+با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
 
 ### Example
 
@@ -50,7 +50,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     payment_ticket_validate_request = kenar_api_client.PaymentTicketValidateRequest() # PaymentTicketValidateRequest | 
 
     try:
-        # Validate a payment ticket
+        # اعتبارسنجی بلیط پرداخت
         api_response = api_instance.payment_ticket_validate(payment_ticket_validate_request)
         print("The response of PaymentTicketApi->payment_ticket_validate:\n")
         pprint(api_response)
@@ -84,8 +84,8 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

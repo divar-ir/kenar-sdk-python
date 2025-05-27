@@ -35,12 +35,18 @@ class TestLimitedApi(unittest.TestCase):
     def test_payment_get_post_pricing(self) -> None:
         """Test case for payment_get_post_pricing
 
-        Retrieve the cost of the service
+        دریافت هزینه سرویس
         """
         pass
 
     def test_payment_get_transaction(self) -> None:
         """Test case for payment_get_transaction
+
+        """
+        pass
+
+    def test_payment_list_transactions(self) -> None:
+        """Test case for payment_list_transactions
 
         """
         pass

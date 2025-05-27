@@ -29,7 +29,7 @@ class TestPaymentTicketApi(unittest.TestCase):
     def test_payment_ticket_validate(self) -> None:
         """Test case for payment_ticket_validate
 
-        Validate a payment ticket
+        اعتبارسنجی بلیط پرداخت
         """
         pass
 

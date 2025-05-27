@@ -4,17 +4,17 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**post_edit_post**](PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | Edit a post
-[**post_get_image_upload_url**](PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | Get image upload URL
+[**post_edit_post**](PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
+[**post_get_image_upload_url**](PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 
 
 # **post_edit_post**
 > object post_edit_post(post_token, post_edit_post_body)
 
-Edit a post
+ویرایش آگهی
 
-This API allows you to edit a post. This needs `POST_EDIT.{post_token}` OAuth scope.
-By now you can only edit title, description, and images of a post.
+این API به شما امکان ویرایش آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_EDIT.{post_token}` دارد.
+در حال حاضر فقط می‌توانید عنوان، توضیحات و تصاویر آگهی را ویرایش کنید.
 
 ### Example
 
@@ -51,7 +51,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     post_edit_post_body = kenar_api_client.PostEditPostBody() # PostEditPostBody | 
 
     try:
-        # Edit a post
+        # ویرایش آگهی
         api_response = api_instance.post_edit_post(post_token, post_edit_post_body)
         print("The response of PostApi->post_edit_post:\n")
         pprint(api_response)
@@ -86,18 +86,18 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_get_image_upload_url**
 > PostGetImageUploadURLResponse post_get_image_upload_url()
 
-Get image upload URL
+دریافت URL آپلود تصویر
 
-This API allows you to get an upload URL for uploading images of a post.
-You can upload images to the returned URL using a POST request with binary encoding.
+این API به شما امکان دریافت URL آپلود برای آپلود تصاویر آگهی را می‌دهد.
+می‌توانید تصاویر را با استفاده از درخواست POST با کدگذاری باینری به URL برگشتی آپلود کنید.
 
 ### Example
 
@@ -132,7 +132,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.PostApi(api_client)
 
     try:
-        # Get image upload URL
+        # دریافت URL آپلود تصویر
         api_response = api_instance.post_get_image_upload_url()
         print("The response of PostApi->post_get_image_upload_url:\n")
         pprint(api_response)
@@ -163,8 +163,8 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -26,8 +26,8 @@ class PaymentReorderPostResponse(BaseModel):
     """
     PaymentReorderPostResponse
     """ # noqa: E501
-    cost_rials: Optional[StrictStr] = Field(default=None, description="The cost of the transaction in rials for your application")
-    id: Optional[StrictStr] = Field(default=None, description="Same uuid when creating transaction")
+    cost_rials: Optional[StrictStr] = Field(default=None, description="هزینه تراکنش به ریال برای اپلیکیشن شما")
+    id: Optional[StrictStr] = Field(default=None, description="همان uuid هنگام ایجاد تراکنش")
     __properties: ClassVar[List[str]] = ["cost_rials", "id"]
 
     model_config = ConfigDict(

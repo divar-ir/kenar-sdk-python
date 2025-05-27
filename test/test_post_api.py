@@ -29,14 +29,14 @@ class TestPostApi(unittest.TestCase):
     def test_post_edit_post(self) -> None:
         """Test case for post_edit_post
 
-        Edit a post
+        ویرایش آگهی
         """
         pass
 
     def test_post_get_image_upload_url(self) -> None:
         """Test case for post_get_image_upload_url
 
-        Get image upload URL
+        دریافت URL آپلود تصویر
         """
         pass
 

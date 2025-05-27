@@ -26,7 +26,7 @@ class PaymentTicketValidateRequest(BaseModel):
     """
     PaymentTicketValidateRequest
     """ # noqa: E501
-    phone_number: Optional[StrictStr] = Field(default=None, description="Deprecated. Use divar_user_id.")
+    phone_number: Optional[StrictStr] = Field(default=None, description="منسوخ شده. از divar_user_id استفاده کنید.")
     service_cost: Optional[StrictInt] = None
     ticket_uuid: Optional[StrictStr] = None
     user_id: Optional[StrictStr] = None

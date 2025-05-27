@@ -54,9 +54,9 @@ class PaymentTicketApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PaymentTicketValidateResponse:
-        """Validate a payment ticket
+        """اعتبارسنجی بلیط پرداخت
 
-        Payment tickets are designed to integrate Kenar apps with Divar internal teams. Using this API you can validate a payment ticket and get the issuer payload.
+        بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
 
         :param payment_ticket_validate_request: (required)
         :type payment_ticket_validate_request: PaymentTicketValidateRequest
@@ -121,9 +121,9 @@ class PaymentTicketApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PaymentTicketValidateResponse]:
-        """Validate a payment ticket
+        """اعتبارسنجی بلیط پرداخت
 
-        Payment tickets are designed to integrate Kenar apps with Divar internal teams. Using this API you can validate a payment ticket and get the issuer payload.
+        بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
 
         :param payment_ticket_validate_request: (required)
         :type payment_ticket_validate_request: PaymentTicketValidateRequest
@@ -188,9 +188,9 @@ class PaymentTicketApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Validate a payment ticket
+        """اعتبارسنجی بلیط پرداخت
 
-        Payment tickets are designed to integrate Kenar apps with Divar internal teams. Using this API you can validate a payment ticket and get the issuer payload.
+        بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
 
         :param payment_ticket_validate_request: (required)
         :type payment_ticket_validate_request: PaymentTicketValidateRequest

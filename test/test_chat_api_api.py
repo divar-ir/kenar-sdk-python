@@ -29,42 +29,42 @@ class TestChatAPIApi(unittest.TestCase):
     def test_chat_api_chat_bot_send_message(self) -> None:
         """Test case for chat_api_chat_bot_send_message
 
-        Send a message to a ChatBot conversation
+        ارسال پیام به مکالمه ChatBot
         """
         pass
 
     def test_chat_api_chat_bot_send_message2(self) -> None:
         """Test case for chat_api_chat_bot_send_message2
 
-        Send a message to a ChatBot conversation
+        ارسال پیام به مکالمه ChatBot
         """
         pass
 
     def test_chat_api_chat_bot_send_message3(self) -> None:
         """Test case for chat_api_chat_bot_send_message3
 
-        Send a message to a ChatBot conversation
+        ارسال پیام به مکالمه ChatBot
         """
         pass
 
     def test_chat_api_conversation_send_message(self) -> None:
         """Test case for chat_api_conversation_send_message
 
-        Send a message to a conversation
+        ارسال پیام به مکالمه
         """
         pass
 
     def test_chat_api_generate_upload_token(self) -> None:
         """Test case for chat_api_generate_upload_token
 
-        Generate an upload token
+        تولید توکن آپلود
         """
         pass
 
     def test_chat_api_get_conversation(self) -> None:
         """Test case for chat_api_get_conversation
 
-        Get Conversation by it's ID
+        دریافت مکالمه با شناسه آن
         """
         pass
 

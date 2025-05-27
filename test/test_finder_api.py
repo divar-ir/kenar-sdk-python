@@ -29,35 +29,35 @@ class TestFinderApi(unittest.TestCase):
     def test_finder_get_post(self) -> None:
         """Test case for finder_get_post
 
-        Get a Divar post
+        دریافت آگهی دیوار
         """
         pass
 
     def test_finder_get_user(self) -> None:
         """Test case for finder_get_user
 
-        Get user information
+        دریافت اطلاعات کاربر
         """
         pass
 
     def test_finder_get_user2(self) -> None:
         """Test case for finder_get_user2
 
-        Get user information
+        دریافت اطلاعات کاربر
         """
         pass
 
     def test_finder_get_user_posts(self) -> None:
         """Test case for finder_get_user_posts
 
-        Get user posts
+        دریافت آگهی‌های کاربر
         """
         pass
 
     def test_finder_search_post_v2(self) -> None:
         """Test case for finder_search_post_v2
 
-        Search Divar posts with some filters
+        جستجو آگهی‌های دیوار با فیلترهایی
         """
         pass
 

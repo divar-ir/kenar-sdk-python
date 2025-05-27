@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **district** | **str** |  | [optional] 
 **first_published_at** | **datetime** |  | [optional] 
 **state** | [**FinderPostExtState**](FinderPostExtState.md) |  | [optional] 
+**supplier_chat_assistant_enabled** | **bool** |  | [optional] 
 **token** | **str** |  | [optional] 
 
 ## Example

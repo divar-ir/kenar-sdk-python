@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**balance_rials** | **str** | The balance of the app in rials | [optional] 
+**balance_rials** | **str** | موجودی اپلیکیشن به ریال | [optional] 
 
 ## Example
 

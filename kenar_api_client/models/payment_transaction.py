@@ -28,9 +28,9 @@ class PaymentTransaction(BaseModel):
     """
     PaymentTransaction
     """ # noqa: E501
-    cost_rials: Optional[StrictStr] = Field(default=None, description="The cost of the transaction in rials for your application")
-    extra_details: Optional[StrictStr] = Field(default=None, description="Same Additional details which you sent in the request")
-    id: Optional[StrictStr] = Field(default=None, description="Same uuid when creating transaction")
+    cost_rials: Optional[StrictStr] = Field(default=None, description="هزینه تراکنش به ریال برای اپلیکیشن شما")
+    extra_details: Optional[StrictStr] = Field(default=None, description="همان جزئیات اضافی که در درخواست ارسال کردید")
+    id: Optional[StrictStr] = Field(default=None, description="همان uuid هنگام ایجاد تراکنش")
     state: Optional[PaymentTransactionState] = None
     type: Optional[PaymentTransactionType] = None
     __properties: ClassVar[List[str]] = ["cost_rials", "extra_details", "id", "state", "type"]

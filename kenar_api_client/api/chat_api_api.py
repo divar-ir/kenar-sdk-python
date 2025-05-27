@@ -62,9 +62,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ChatapiChatBotSendMessageResponse:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -133,9 +133,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[ChatapiChatBotSendMessageResponse]:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -204,9 +204,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -351,9 +351,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ChatapiChatBotSendMessageResponse:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param user_id: Unique identifier for the user to start or continue a conversation with (required)
         :type user_id: str
@@ -422,9 +422,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[ChatapiChatBotSendMessageResponse]:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param user_id: Unique identifier for the user to start or continue a conversation with (required)
         :type user_id: str
@@ -493,9 +493,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param user_id: Unique identifier for the user to start or continue a conversation with (required)
         :type user_id: str
@@ -640,9 +640,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ChatapiChatBotSendMessageResponse:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -711,9 +711,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[ChatapiChatBotSendMessageResponse]:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -782,9 +782,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Send a message to a ChatBot conversation
+        """ارسال پیام به مکالمه ChatBot
 
-        You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -929,9 +929,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ChatapiConversationSendMessageResponse:
-        """Send a message to a conversation
+        """ارسال پیام به مکالمه
 
-        This API is used to send a message to a conversation. You need one of the following scopes to call this API: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
+        این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -1000,9 +1000,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[ChatapiConversationSendMessageResponse]:
-        """Send a message to a conversation
+        """ارسال پیام به مکالمه
 
-        This API is used to send a message to a conversation. You need one of the following scopes to call this API: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
+        این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -1071,9 +1071,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Send a message to a conversation
+        """ارسال پیام به مکالمه
 
-        This API is used to send a message to a conversation. You need one of the following scopes to call this API: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
+        این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token} 
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -1217,9 +1217,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ChatapiGenerateUploadTokenResponse:
-        """Generate an upload token
+        """تولید توکن آپلود
 
-        This API is used to generate an upload token for uploading media files.
+        این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.
 
         :param body: (required)
         :type body: object
@@ -1284,9 +1284,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[ChatapiGenerateUploadTokenResponse]:
-        """Generate an upload token
+        """تولید توکن آپلود
 
-        This API is used to generate an upload token for uploading media files.
+        این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.
 
         :param body: (required)
         :type body: object
@@ -1351,9 +1351,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Generate an upload token
+        """تولید توکن آپلود
 
-        This API is used to generate an upload token for uploading media files.
+        این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.
 
         :param body: (required)
         :type body: object
@@ -1491,9 +1491,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ChatapiGetConversationResponse:
-        """Get Conversation by it's ID
+        """دریافت مکالمه با شناسه آن
 
-        This API is used to get the conversation and messages of a conversation by it's ID.This API expects access token with `CHAT_CONVERSATION_READ` scope.
+        این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -1558,9 +1558,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[ChatapiGetConversationResponse]:
-        """Get Conversation by it's ID
+        """دریافت مکالمه با شناسه آن
 
-        This API is used to get the conversation and messages of a conversation by it's ID.This API expects access token with `CHAT_CONVERSATION_READ` scope.
+        این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str
@@ -1625,9 +1625,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get Conversation by it's ID
+        """دریافت مکالمه با شناسه آن
 
-        This API is used to get the conversation and messages of a conversation by it's ID.This API expects access token with `CHAT_CONVERSATION_READ` scope.
+        این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.
 
         :param conversation_id: Unique identifier for the conversation (required)
         :type conversation_id: str

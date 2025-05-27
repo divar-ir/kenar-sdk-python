@@ -58,9 +58,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Create Post Semantic
+        """ایجاد اطلاعات معنایی آگهی
 
-        In some cases, it is necessary to store information about the post in Divar without adding an addon. This API expects access token having `POST_SEMANTIC_CREATE` scope. 
+        در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد. 
 
         :param token: (required)
         :type token: str
@@ -129,9 +129,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Create Post Semantic
+        """ایجاد اطلاعات معنایی آگهی
 
-        In some cases, it is necessary to store information about the post in Divar without adding an addon. This API expects access token having `POST_SEMANTIC_CREATE` scope. 
+        در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد. 
 
         :param token: (required)
         :type token: str
@@ -200,9 +200,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Create Post Semantic
+        """ایجاد اطلاعات معنایی آگهی
 
-        In some cases, it is necessary to store information about the post in Divar without adding an addon. This API expects access token having `POST_SEMANTIC_CREATE` scope. 
+        در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد. 
 
         :param token: (required)
         :type token: str
@@ -347,9 +347,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> SemanticCreateUserSemanticResponse:
-        """Create User Semantic
+        """ایجاد اطلاعات معنایی کاربر
 
-        In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
 
         :param phone: (required)
         :type phone: str
@@ -418,9 +418,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[SemanticCreateUserSemanticResponse]:
-        """Create User Semantic
+        """ایجاد اطلاعات معنایی کاربر
 
-        In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
 
         :param phone: (required)
         :type phone: str
@@ -489,9 +489,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Create User Semantic
+        """ایجاد اطلاعات معنایی کاربر
 
-        In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
 
         :param phone: (required)
         :type phone: str
@@ -636,9 +636,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> SemanticCreateUserSemanticResponse:
-        """Create User Semantic
+        """ایجاد اطلاعات معنایی کاربر
 
-        In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -707,9 +707,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[SemanticCreateUserSemanticResponse]:
-        """Create User Semantic
+        """ایجاد اطلاعات معنایی کاربر
 
-        In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -778,9 +778,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Create User Semantic
+        """ایجاد اطلاعات معنایی کاربر
 
-        In some cases, it is necessary to store information about the user in Divar without adding an addon. The username in Divar is the same as the mobile number. This API expects access token having `USER_VERIFICATION_CREATE` scope. Use the User Semantic APIs for this purpose.This service allows sending semantic information and an optional payment ticket.
+        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -925,9 +925,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Delete User Semantic
+        """حذف اطلاعات معنایی کاربر
 
-        You can delete the semantic information of a user by calling this API.
+        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
 
         :param phone: (required)
         :type phone: str
@@ -996,9 +996,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Delete User Semantic
+        """حذف اطلاعات معنایی کاربر
 
-        You can delete the semantic information of a user by calling this API.
+        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
 
         :param phone: (required)
         :type phone: str
@@ -1067,9 +1067,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Delete User Semantic
+        """حذف اطلاعات معنایی کاربر
 
-        You can delete the semantic information of a user by calling this API.
+        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
 
         :param phone: (required)
         :type phone: str
@@ -1203,9 +1203,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Delete User Semantic
+        """حذف اطلاعات معنایی کاربر
 
-        You can delete the semantic information of a user by calling this API.
+        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -1274,9 +1274,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Delete User Semantic
+        """حذف اطلاعات معنایی کاربر
 
-        You can delete the semantic information of a user by calling this API.
+        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
 
         :param divar_user_id: (required)
         :type divar_user_id: str
@@ -1345,9 +1345,9 @@ class SemanticApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Delete User Semantic
+        """حذف اطلاعات معنایی کاربر
 
-        You can delete the semantic information of a user by calling this API.
+        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
 
         :param divar_user_id: (required)
         :type divar_user_id: str

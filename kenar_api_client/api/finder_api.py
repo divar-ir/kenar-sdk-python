@@ -59,7 +59,7 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> FinderGetPostResponse:
-        """Get a Divar post
+        """دریافت آگهی دیوار
 
         This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state 
 
@@ -126,7 +126,7 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[FinderGetPostResponse]:
-        """Get a Divar post
+        """دریافت آگهی دیوار
 
         This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state 
 
@@ -193,7 +193,7 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get a Divar post
+        """دریافت آگهی دیوار
 
         This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state 
 
@@ -320,9 +320,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> FinderUser:
-        """Get user information
+        """دریافت اطلاعات کاربر
 
-        After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+        پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
 
         :param body: (required)
         :type body: object
@@ -387,9 +387,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[FinderUser]:
-        """Get user information
+        """دریافت اطلاعات کاربر
 
-        After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+        پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
 
         :param body: (required)
         :type body: object
@@ -454,9 +454,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get user information
+        """دریافت اطلاعات کاربر
 
-        After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+        پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
 
         :param body: (required)
         :type body: object
@@ -593,9 +593,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> FinderUser:
-        """Get user information
+        """دریافت اطلاعات کاربر
 
-        After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+        پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -656,9 +656,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[FinderUser]:
-        """Get user information
+        """دریافت اطلاعات کاربر
 
-        After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+        پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -719,9 +719,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get user information
+        """دریافت اطلاعات کاربر
 
-        After gaining an access token, you can use this API to get user information. With scope `USER_PHONE` you can get user phone number. With scope `USER_ID` you can get user id and you can rely on uniqueness of this id. 
+        پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید. با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید. با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید. 
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -839,9 +839,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> FinderGetUserPostsResponse:
-        """Get user posts
+        """دریافت آگهی‌های کاربر
 
-        This API allows you to get all posts of a user. You can use this API to show user posts in your service.
+        این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -902,9 +902,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[FinderGetUserPostsResponse]:
-        """Get user posts
+        """دریافت آگهی‌های کاربر
 
-        This API allows you to get all posts of a user. You can use this API to show user posts in your service.
+        این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -965,9 +965,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get user posts
+        """دریافت آگهی‌های کاربر
 
-        This API allows you to get all posts of a user. You can use this API to show user posts in your service.
+        این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد. می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1086,9 +1086,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> FinderSearchPostV2Response:
-        """Search Divar posts with some filters
+        """جستجو آگهی‌های دیوار با فیلترهایی
 
-        This API allows you to search Divar posts with some filters. You can search posts by category, city, district, and some other filters. Posts will be sorted by their timestamp. 
+        این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند. 
 
         :param finder_search_posts_v2_request: (required)
         :type finder_search_posts_v2_request: FinderSearchPostsV2Request
@@ -1153,9 +1153,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[FinderSearchPostV2Response]:
-        """Search Divar posts with some filters
+        """جستجو آگهی‌های دیوار با فیلترهایی
 
-        This API allows you to search Divar posts with some filters. You can search posts by category, city, district, and some other filters. Posts will be sorted by their timestamp. 
+        این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند. 
 
         :param finder_search_posts_v2_request: (required)
         :type finder_search_posts_v2_request: FinderSearchPostsV2Request
@@ -1220,9 +1220,9 @@ class FinderApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Search Divar posts with some filters
+        """جستجو آگهی‌های دیوار با فیلترهایی
 
-        This API allows you to search Divar posts with some filters. You can search posts by category, city, district, and some other filters. Posts will be sorted by their timestamp. 
+        این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد. می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید. آگهی‌ها بر اساس زمان آنها مرتب می‌شوند. 
 
         :param finder_search_posts_v2_request: (required)
         :type finder_search_posts_v2_request: FinderSearchPostsV2Request

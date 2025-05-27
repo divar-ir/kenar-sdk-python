@@ -81,7 +81,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_post_addon_v2_body = kenar_api_client.AddonsCreatePostAddonV2Body() # AddonsCreatePostAddonV2Body | 
 
     try:
-        # Attach a new Addon to a post
+        # افزودن افزونه جدید به آگهی
         api_response = api_instance.addons_create_post_addon_v2(token, addons_create_post_addon_v2_body)
         print("The response of AddonsApi->addons_create_post_addon_v2:\n")
         pprint(api_response)
@@ -96,49 +96,50 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AddonsApi* | [**addons_create_post_addon_v2**](docs/AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | Attach a new Addon to a post
-*AddonsApi* | [**addons_create_user_addon_v2**](docs/AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | Attach a new Addon to a user
-*AddonsApi* | [**addons_create_user_addon_v22**](docs/AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | Attach a new Addon to a user
-*AddonsApi* | [**addons_delete_post_addon**](docs/AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | Delete an Addon from a post
-*AddonsApi* | [**addons_delete_post_addon2**](docs/AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | Delete an Addon from a post
-*AddonsApi* | [**addons_delete_user_addon**](docs/AddonsApi.md#addons_delete_user_addon) | **DELETE** /v1/open-platform/addons/user/{id} | Delete an UserAddon
-*AddonsApi* | [**addons_get_user_addons**](docs/AddonsApi.md#addons_get_user_addons) | **GET** /v1/open-platform/addons/user/{phone} | Retrieve all UserAddons
-*AddonsApi* | [**addons_get_user_addons2**](docs/AddonsApi.md#addons_get_user_addons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | Retrieve all UserAddons
-*AssetsApi* | [**assets_get_body_statuses**](docs/AssetsApi.md#assets_get_body_statuses) | **GET** /v1/open-platform/assets/body-status | Get available body-status options in Divar vehicle categories
-*AssetsApi* | [**assets_get_brand_models**](docs/AssetsApi.md#assets_get_brand_models) | **GET** /v1/open-platform/assets/brand-model/{category} | Get brand models in a Divar category
-*AssetsApi* | [**assets_get_categories**](docs/AssetsApi.md#assets_get_categories) | **GET** /v1/open-platform/assets/category | Get Divar categories
-*AssetsApi* | [**assets_get_cities**](docs/AssetsApi.md#assets_get_cities) | **GET** /v1/open-platform/assets/city | Get Divar cities
-*AssetsApi* | [**assets_get_colors**](docs/AssetsApi.md#assets_get_colors) | **GET** /v1/open-platform/assets/color/{category} | Get colors in a Divar category
-*AssetsApi* | [**assets_get_districts**](docs/AssetsApi.md#assets_get_districts) | **GET** /v1/open-platform/assets/district | Get Divar districts
-*AssetsApi* | [**assets_get_districts2**](docs/AssetsApi.md#assets_get_districts2) | **GET** /v1/open-platform/assets/district/{city_slug} | Get Divar districts
-*AssetsApi* | [**assets_get_internal_storages**](docs/AssetsApi.md#assets_get_internal_storages) | **GET** /v1/open-platform/assets/internal-storage | Get available internal-storage options in Divar mobile/tablet/laptop categories
-*AssetsApi* | [**assets_get_o_auth_scopes**](docs/AssetsApi.md#assets_get_o_auth_scopes) | **GET** /v1/open-platform/assets/oauth-scope | Get KenarDivar OAuth scopes
-*AssetsApi* | [**assets_get_permissions**](docs/AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | Get KenarDivar permissions
-*AssetsApi* | [**assets_get_ram_memories**](docs/AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | Get available ram-memory options in Divar mobile/tablet/laptop categories
-*AssetsApi* | [**assets_get_service_types**](docs/AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | Get available service types in KenarDivar
-*ChatAPIApi* | [**chat_api_chat_bot_send_message**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | Send a message to a ChatBot conversation
-*ChatAPIApi* | [**chat_api_chat_bot_send_message2**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message2) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | Send a message to a ChatBot conversation
-*ChatAPIApi* | [**chat_api_chat_bot_send_message3**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message3) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | Send a message to a ChatBot conversation
-*ChatAPIApi* | [**chat_api_conversation_send_message**](docs/ChatAPIApi.md#chat_api_conversation_send_message) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | Send a message to a conversation
-*ChatAPIApi* | [**chat_api_generate_upload_token**](docs/ChatAPIApi.md#chat_api_generate_upload_token) | **POST** /experimental/open-platform/chat/upload | Generate an upload token
-*ChatAPIApi* | [**chat_api_get_conversation**](docs/ChatAPIApi.md#chat_api_get_conversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | Get Conversation by it&#39;s ID
-*EventsApi* | [**events_register_event_subscription**](docs/EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | Subscribe to an event
-*FinderApi* | [**finder_get_post**](docs/FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | Get a Divar post
-*FinderApi* | [**finder_get_user**](docs/FinderApi.md#finder_get_user) | **POST** /v1/open-platform/users | Get user information
-*FinderApi* | [**finder_get_user2**](docs/FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | Get user information
-*FinderApi* | [**finder_get_user_posts**](docs/FinderApi.md#finder_get_user_posts) | **GET** /v1/open-platform/finder/user-posts | Get user posts
-*FinderApi* | [**finder_search_post_v2**](docs/FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | Search Divar posts with some filters
-*PaymentTicketApi* | [**payment_ticket_validate**](docs/PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | Validate a payment ticket
-*PostApi* | [**post_edit_post**](docs/PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | Edit a post
-*PostApi* | [**post_get_image_upload_url**](docs/PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | Get image upload URL
-*SemanticApi* | [**semantic_create_post_semantic**](docs/SemanticApi.md#semantic_create_post_semantic) | **POST** /experimental/open-platform/semantic/post/{token} | Create Post Semantic
-*SemanticApi* | [**semantic_create_user_semantic**](docs/SemanticApi.md#semantic_create_user_semantic) | **POST** /v1/open-platform/semantic/user/{phone} | Create User Semantic
-*SemanticApi* | [**semantic_create_user_semantic2**](docs/SemanticApi.md#semantic_create_user_semantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | Create User Semantic
-*SemanticApi* | [**semantic_delete_user_semantic**](docs/SemanticApi.md#semantic_delete_user_semantic) | **DELETE** /v1/open-platform/semantic/user/{phone} | Delete User Semantic
-*SemanticApi* | [**semantic_delete_user_semantic2**](docs/SemanticApi.md#semantic_delete_user_semantic2) | **DELETE** /v1/open-platform/semantic/users/{divar_user_id} | Delete User Semantic
+*AddonsApi* | [**addons_create_post_addon_v2**](docs/AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
+*AddonsApi* | [**addons_create_user_addon_v2**](docs/AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
+*AddonsApi* | [**addons_create_user_addon_v22**](docs/AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
+*AddonsApi* | [**addons_delete_post_addon**](docs/AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
+*AddonsApi* | [**addons_delete_post_addon2**](docs/AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
+*AddonsApi* | [**addons_delete_user_addon**](docs/AddonsApi.md#addons_delete_user_addon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
+*AddonsApi* | [**addons_get_user_addons**](docs/AddonsApi.md#addons_get_user_addons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر
+*AddonsApi* | [**addons_get_user_addons2**](docs/AddonsApi.md#addons_get_user_addons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر
+*AssetsApi* | [**assets_get_body_statuses**](docs/AssetsApi.md#assets_get_body_statuses) | **GET** /v1/open-platform/assets/body-status | دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+*AssetsApi* | [**assets_get_brand_models**](docs/AssetsApi.md#assets_get_brand_models) | **GET** /v1/open-platform/assets/brand-model/{category} | دریافت مدل‌های برند در دسته‌بندی دیوار
+*AssetsApi* | [**assets_get_categories**](docs/AssetsApi.md#assets_get_categories) | **GET** /v1/open-platform/assets/category | دریافت دسته‌بندی‌های دیوار
+*AssetsApi* | [**assets_get_cities**](docs/AssetsApi.md#assets_get_cities) | **GET** /v1/open-platform/assets/city | دریافت شهرهای دیوار
+*AssetsApi* | [**assets_get_colors**](docs/AssetsApi.md#assets_get_colors) | **GET** /v1/open-platform/assets/color/{category} | دریافت رنگ‌ها در دسته‌بندی دیوار
+*AssetsApi* | [**assets_get_districts**](docs/AssetsApi.md#assets_get_districts) | **GET** /v1/open-platform/assets/district | دریافت مناطق دیوار
+*AssetsApi* | [**assets_get_districts2**](docs/AssetsApi.md#assets_get_districts2) | **GET** /v1/open-platform/assets/district/{city_slug} | دریافت مناطق دیوار
+*AssetsApi* | [**assets_get_internal_storages**](docs/AssetsApi.md#assets_get_internal_storages) | **GET** /v1/open-platform/assets/internal-storage | دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+*AssetsApi* | [**assets_get_o_auth_scopes**](docs/AssetsApi.md#assets_get_o_auth_scopes) | **GET** /v1/open-platform/assets/oauth-scope | دریافت دامنه‌های OAuth کنار دیوار
+*AssetsApi* | [**assets_get_permissions**](docs/AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
+*AssetsApi* | [**assets_get_ram_memories**](docs/AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+*AssetsApi* | [**assets_get_service_types**](docs/AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
+*ChatAPIApi* | [**chat_api_chat_bot_send_message**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+*ChatAPIApi* | [**chat_api_chat_bot_send_message2**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message2) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
+*ChatAPIApi* | [**chat_api_chat_bot_send_message3**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message3) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+*ChatAPIApi* | [**chat_api_conversation_send_message**](docs/ChatAPIApi.md#chat_api_conversation_send_message) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
+*ChatAPIApi* | [**chat_api_generate_upload_token**](docs/ChatAPIApi.md#chat_api_generate_upload_token) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
+*ChatAPIApi* | [**chat_api_get_conversation**](docs/ChatAPIApi.md#chat_api_get_conversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
+*EventsApi* | [**events_register_event_subscription**](docs/EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
+*FinderApi* | [**finder_get_post**](docs/FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
+*FinderApi* | [**finder_get_user**](docs/FinderApi.md#finder_get_user) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
+*FinderApi* | [**finder_get_user2**](docs/FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
+*FinderApi* | [**finder_get_user_posts**](docs/FinderApi.md#finder_get_user_posts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
+*FinderApi* | [**finder_search_post_v2**](docs/FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
+*PaymentTicketApi* | [**payment_ticket_validate**](docs/PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
+*PostApi* | [**post_edit_post**](docs/PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
+*PostApi* | [**post_get_image_upload_url**](docs/PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
+*SemanticApi* | [**semantic_create_post_semantic**](docs/SemanticApi.md#semantic_create_post_semantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
+*SemanticApi* | [**semantic_create_user_semantic**](docs/SemanticApi.md#semantic_create_user_semantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
+*SemanticApi* | [**semantic_create_user_semantic2**](docs/SemanticApi.md#semantic_create_user_semantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
+*SemanticApi* | [**semantic_delete_user_semantic**](docs/SemanticApi.md#semantic_delete_user_semantic) | **DELETE** /v1/open-platform/semantic/user/{phone} | حذف اطلاعات معنایی کاربر
+*SemanticApi* | [**semantic_delete_user_semantic2**](docs/SemanticApi.md#semantic_delete_user_semantic2) | **DELETE** /v1/open-platform/semantic/users/{divar_user_id} | حذف اطلاعات معنایی کاربر
 *LimitedApi* | [**payment_get_balance**](docs/LimitedApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | 
-*LimitedApi* | [**payment_get_post_pricing**](docs/LimitedApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
+*LimitedApi* | [**payment_get_post_pricing**](docs/LimitedApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
 *LimitedApi* | [**payment_get_transaction**](docs/LimitedApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | 
+*LimitedApi* | [**payment_list_transactions**](docs/LimitedApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | 
 *LimitedApi* | [**payment_reorder_post**](docs/LimitedApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
 
 
@@ -259,6 +260,7 @@ Class | Method | HTTP request | Description
  - [PaymentGetBalanceResponse](docs/PaymentGetBalanceResponse.md)
  - [PaymentGetPostPricingResponse](docs/PaymentGetPostPricingResponse.md)
  - [PaymentGetTransactionResponse](docs/PaymentGetTransactionResponse.md)
+ - [PaymentListTransactionsResponse](docs/PaymentListTransactionsResponse.md)
  - [PaymentReorderPostBody](docs/PaymentReorderPostBody.md)
  - [PaymentReorderPostResponse](docs/PaymentReorderPostResponse.md)
  - [PaymentTicketGenerateResponse](docs/PaymentTicketGenerateResponse.md)
@@ -277,6 +279,8 @@ Class | Method | HTTP request | Description
  - [SemanticCreatePostSemanticBody](docs/SemanticCreatePostSemanticBody.md)
  - [SemanticCreateUserSemanticBody](docs/SemanticCreateUserSemanticBody.md)
  - [SemanticCreateUserSemanticResponse](docs/SemanticCreateUserSemanticResponse.md)
+ - [SemanticPostSemanticDeleted](docs/SemanticPostSemanticDeleted.md)
+ - [SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
 
 
 <a id="documentation-for-authorization"></a>
