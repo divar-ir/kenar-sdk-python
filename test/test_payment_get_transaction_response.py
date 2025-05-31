@@ -37,6 +37,7 @@ class TestPaymentGetTransactionResponse(unittest.TestCase):
             return PaymentGetTransactionResponse(
                 transaction = kenar_api_client.models.payment_transaction.paymentTransaction(
                     cost_rials = '', 
+                    created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     extra_details = '', 
                     id = '', 
                     state = 'TRANSACTION_STATE_PENDING', 

@@ -14,10 +14,10 @@
 
 import unittest
 
-from kenar_api_client.models.payment_transaction import PaymentTransaction
+from kenar_api_client.models.get_post_stats_response_daily_stats import GetPostStatsResponseDailyStats
 
-class TestPaymentTransaction(unittest.TestCase):
-    """PaymentTransaction unit test stubs"""
+class TestGetPostStatsResponseDailyStats(unittest.TestCase):
+    """GetPostStatsResponseDailyStats unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,30 +25,26 @@ class TestPaymentTransaction(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> PaymentTransaction:
-        """Test PaymentTransaction
+    def make_instance(self, include_optional) -> GetPostStatsResponseDailyStats:
+        """Test GetPostStatsResponseDailyStats
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `PaymentTransaction`
+        # uncomment below to create an instance of `GetPostStatsResponseDailyStats`
         """
-        model = PaymentTransaction()
+        model = GetPostStatsResponseDailyStats()
         if include_optional:
-            return PaymentTransaction(
-                cost_rials = '',
-                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                extra_details = '',
-                id = '',
-                state = 'TRANSACTION_STATE_PENDING',
-                type = 'TRANSACTION_TYPE_REORDER'
+            return GetPostStatsResponseDailyStats(
+                count = 56,
+                var_date = ''
             )
         else:
-            return PaymentTransaction(
+            return GetPostStatsResponseDailyStats(
         )
         """
 
-    def testPaymentTransaction(self):
-        """Test PaymentTransaction"""
+    def testGetPostStatsResponseDailyStats(self):
+        """Test GetPostStatsResponseDailyStats"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -40,6 +40,13 @@ class TestPostApi(unittest.TestCase):
         """
         pass
 
+    def test_post_get_post_stats(self) -> None:
+        """Test case for post_get_post_stats
+
+        Get post statistics
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

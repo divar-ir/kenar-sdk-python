@@ -17,25 +17,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from kenar_api_client.models.payment_transaction_state import PaymentTransactionState
-from kenar_api_client.models.payment_transaction_type import PaymentTransactionType
+from kenar_api_client.models.get_post_stats_response_daily_stats import GetPostStatsResponseDailyStats
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PaymentTransaction(BaseModel):
+class GetPostStatsResponsePostStats(BaseModel):
     """
-    PaymentTransaction
+    GetPostStatsResponsePostStats
     """ # noqa: E501
-    cost_rials: Optional[StrictStr] = Field(default=None, description="هزینه تراکنش به ریال برای اپلیکیشن شما")
-    created_at: Optional[datetime] = Field(default=None, description="The time when the transaction was created")
-    extra_details: Optional[StrictStr] = Field(default=None, description="همان جزئیات اضافی که در درخواست ارسال کردید")
-    id: Optional[StrictStr] = Field(default=None, description="همان uuid هنگام ایجاد تراکنش")
-    state: Optional[PaymentTransactionState] = None
-    type: Optional[PaymentTransactionType] = None
-    __properties: ClassVar[List[str]] = ["cost_rials", "created_at", "extra_details", "id", "state", "type"]
+    daily: Optional[List[GetPostStatsResponseDailyStats]] = None
+    total: Optional[StrictInt] = None
+    __properties: ClassVar[List[str]] = ["daily", "total"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -55,7 +49,7 @@ class PaymentTransaction(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PaymentTransaction from a JSON string"""
+        """Create an instance of GetPostStatsResponsePostStats from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -76,11 +70,18 @@ class PaymentTransaction(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in daily (list)
+        _items = []
+        if self.daily:
+            for _item_daily in self.daily:
+                if _item_daily:
+                    _items.append(_item_daily.to_dict())
+            _dict['daily'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PaymentTransaction from a dict"""
+        """Create an instance of GetPostStatsResponsePostStats from a dict"""
         if obj is None:
             return None
 
@@ -88,12 +89,8 @@ class PaymentTransaction(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "cost_rials": obj.get("cost_rials"),
-            "created_at": obj.get("created_at"),
-            "extra_details": obj.get("extra_details"),
-            "id": obj.get("id"),
-            "state": obj.get("state"),
-            "type": obj.get("type")
+            "daily": [GetPostStatsResponseDailyStats.from_dict(_item) for _item in obj["daily"]] if obj.get("daily") is not None else None,
+            "total": obj.get("total")
         })
         return _obj
 
