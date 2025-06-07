@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**daily** | [**List[GetPostStatsResponseDailyStats]**](GetPostStatsResponseDailyStats.md) |  | [optional] 
-**total** | **int** |  | [optional] 
+**daily** | [**List[GetPostStatsResponseDailyStats]**](GetPostStatsResponseDailyStats.md) | Daily value the metric over the last seven days | [optional] 
+**total** | **int** | Total number of the metric (e.g. view) | [optional] 
 
 ## Example
 

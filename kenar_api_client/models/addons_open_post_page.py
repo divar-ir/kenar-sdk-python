@@ -17,18 +17,17 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
-class GetPostStatsResponseDailyStats(BaseModel):
+class AddonsOpenPostPage(BaseModel):
     """
-    GetPostStatsResponseDailyStats
+    An action to open a post page in the app
     """ # noqa: E501
-    count: Optional[StrictInt] = Field(default=None, description="Number of the daily metric (e.g. view)")
-    var_date: Optional[StrictStr] = Field(default=None, description="Date in YYYY-MM-DD format", alias="date")
-    __properties: ClassVar[List[str]] = ["count", "date"]
+    post_token: StrictStr = Field(description="Token of the post to open")
+    __properties: ClassVar[List[str]] = ["post_token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +47,7 @@ class GetPostStatsResponseDailyStats(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of GetPostStatsResponseDailyStats from a JSON string"""
+        """Create an instance of AddonsOpenPostPage from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -73,7 +72,7 @@ class GetPostStatsResponseDailyStats(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of GetPostStatsResponseDailyStats from a dict"""
+        """Create an instance of AddonsOpenPostPage from a dict"""
         if obj is None:
             return None
 
@@ -81,8 +80,7 @@ class GetPostStatsResponseDailyStats(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "count": obj.get("count"),
-            "date": obj.get("date")
+            "post_token": obj.get("post_token")
         })
         return _obj
 

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kenar_api_client"
-version = "0.31.0"
+version = "0.32.0"
 description = "Kenar API"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"

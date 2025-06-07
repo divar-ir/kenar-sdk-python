@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** |  | [optional] 
-**var_date** | **str** |  | [optional] 
+**count** | **int** | Number of the daily metric (e.g. view) | [optional] 
+**var_date** | **str** | Date in YYYY-MM-DD format | [optional] 
 
 ## Example
 

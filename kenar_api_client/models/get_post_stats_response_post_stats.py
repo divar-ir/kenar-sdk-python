@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from kenar_api_client.models.get_post_stats_response_daily_stats import GetPostStatsResponseDailyStats
 from typing import Optional, Set
@@ -27,8 +27,8 @@ class GetPostStatsResponsePostStats(BaseModel):
     """
     GetPostStatsResponsePostStats
     """ # noqa: E501
-    daily: Optional[List[GetPostStatsResponseDailyStats]] = None
-    total: Optional[StrictInt] = None
+    daily: Optional[List[GetPostStatsResponseDailyStats]] = Field(default=None, description="Daily value the metric over the last seven days")
+    total: Optional[StrictInt] = Field(default=None, description="Total number of the metric (e.g. view)")
     __properties: ClassVar[List[str]] = ["daily", "total"]
 
     model_config = ConfigDict(

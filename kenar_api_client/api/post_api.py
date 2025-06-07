@@ -16,8 +16,9 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import StrictStr
+from pydantic import Field, StrictStr
 from typing import Any, Dict
+from typing_extensions import Annotated
 from kenar_api_client.models.post_edit_post_body import PostEditPostBody
 from kenar_api_client.models.post_get_image_upload_url_response import PostGetImageUploadURLResponse
 from kenar_api_client.models.post_get_post_stats_response import PostGetPostStatsResponse
@@ -578,7 +579,7 @@ class PostApi:
     @validate_call
     def post_get_post_stats(
         self,
-        post_token: StrictStr,
+        post_token: Annotated[StrictStr, Field(description="Post token")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -596,7 +597,7 @@ class PostApi:
 
         This API allows you to retrieve the statistics associated with a single post (e.g. views).
 
-        :param post_token: (required)
+        :param post_token: Post token (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -645,7 +646,7 @@ class PostApi:
     @validate_call
     def post_get_post_stats_with_http_info(
         self,
-        post_token: StrictStr,
+        post_token: Annotated[StrictStr, Field(description="Post token")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -663,7 +664,7 @@ class PostApi:
 
         This API allows you to retrieve the statistics associated with a single post (e.g. views).
 
-        :param post_token: (required)
+        :param post_token: Post token (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -712,7 +713,7 @@ class PostApi:
     @validate_call
     def post_get_post_stats_without_preload_content(
         self,
-        post_token: StrictStr,
+        post_token: Annotated[StrictStr, Field(description="Post token")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -730,7 +731,7 @@ class PostApi:
 
         This API allows you to retrieve the statistics associated with a single post (e.g. views).
 
-        :param post_token: (required)
+        :param post_token: Post token (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

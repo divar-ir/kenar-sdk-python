@@ -20,6 +20,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from kenar_api_client.models.addons_get_dynamic_action import AddonsGetDynamicAction
+from kenar_api_client.models.addons_open_post_manage_page import AddonsOpenPostManagePage
+from kenar_api_client.models.addons_open_post_page import AddonsOpenPostPage
 from kenar_api_client.models.addons_open_server_link import AddonsOpenServerLink
 from typing import Optional, Set
 from typing_extensions import Self
@@ -30,8 +32,10 @@ class AddonsAction(BaseModel):
     """ # noqa: E501
     get_dynamic_action: Optional[AddonsGetDynamicAction] = None
     open_direct_link: Optional[StrictStr] = Field(default=None, description="An action to send user to your URL directly with just a resource id (if applicable)")
+    open_post_manage_page: Optional[AddonsOpenPostManagePage] = None
+    open_post_page: Optional[AddonsOpenPostPage] = None
     open_server_link: Optional[AddonsOpenServerLink] = None
-    __properties: ClassVar[List[str]] = ["get_dynamic_action", "open_direct_link", "open_server_link"]
+    __properties: ClassVar[List[str]] = ["get_dynamic_action", "open_direct_link", "open_post_manage_page", "open_post_page", "open_server_link"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -75,6 +79,12 @@ class AddonsAction(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of get_dynamic_action
         if self.get_dynamic_action:
             _dict['get_dynamic_action'] = self.get_dynamic_action.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of open_post_manage_page
+        if self.open_post_manage_page:
+            _dict['open_post_manage_page'] = self.open_post_manage_page.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of open_post_page
+        if self.open_post_page:
+            _dict['open_post_page'] = self.open_post_page.to_dict()
         # override the default output from pydantic by calling `to_dict()` of open_server_link
         if self.open_server_link:
             _dict['open_server_link'] = self.open_server_link.to_dict()
@@ -92,6 +102,8 @@ class AddonsAction(BaseModel):
         _obj = cls.model_validate({
             "get_dynamic_action": AddonsGetDynamicAction.from_dict(obj["get_dynamic_action"]) if obj.get("get_dynamic_action") is not None else None,
             "open_direct_link": obj.get("open_direct_link"),
+            "open_post_manage_page": AddonsOpenPostManagePage.from_dict(obj["open_post_manage_page"]) if obj.get("open_post_manage_page") is not None else None,
+            "open_post_page": AddonsOpenPostPage.from_dict(obj["open_post_page"]) if obj.get("open_post_page") is not None else None,
             "open_server_link": AddonsOpenServerLink.from_dict(obj["open_server_link"]) if obj.get("open_server_link") is not None else None
         })
         return _obj

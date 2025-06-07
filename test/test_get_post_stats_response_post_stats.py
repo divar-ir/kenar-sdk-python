@@ -37,10 +37,10 @@ class TestGetPostStatsResponsePostStats(unittest.TestCase):
             return GetPostStatsResponsePostStats(
                 daily = [
                     kenar_api_client.models.get_post_stats_response_daily_stats.GetPostStatsResponseDailyStats(
-                        count = 56, 
-                        date = '', )
+                        count = 239, 
+                        date = '2025-06-03T00:00:00Z', )
                     ],
-                total = 56
+                total = 239
             )
         else:
             return GetPostStatsResponsePostStats(

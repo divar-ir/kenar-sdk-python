@@ -39,6 +39,10 @@ class TestAddonsScoreRow(unittest.TestCase):
                     get_dynamic_action = kenar_api_client.models.get_dynamic_action.Get Dynamic Action(
                         data = {"your-internal-id":"something"}, ), 
                     open_direct_link = 'https://your-site.com/some-path', 
+                    open_post_manage_page = kenar_api_client.models.open_post_manage_page.Open Post Manage Page(
+                        post_token = 'AJIEWcw', ), 
+                    open_post_page = kenar_api_client.models.open_post_page.Open Post Page(
+                        post_token = 'AJIEWcw', ), 
                     open_server_link = kenar_api_client.models.open_server_link.Open Server Link(
                         data = {"your-internal-id":"something"}, ), ),
                 descriptive_score = '',

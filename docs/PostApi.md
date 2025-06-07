@@ -207,7 +207,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.PostApi(api_client)
-    post_token = 'post_token_example' # str | 
+    post_token = 'post_token_example' # str | Post token
 
     try:
         # Get post statistics
@@ -225,7 +225,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **post_token** | **str**|  | 
+ **post_token** | **str**| Post token | 
 
 ### Return type
 

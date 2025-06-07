@@ -14,10 +14,10 @@
 
 import unittest
 
-from kenar_api_client.models.get_post_stats_response_daily_stats import GetPostStatsResponseDailyStats
+from kenar_api_client.models.addons_open_post_manage_page import AddonsOpenPostManagePage
 
-class TestGetPostStatsResponseDailyStats(unittest.TestCase):
-    """GetPostStatsResponseDailyStats unit test stubs"""
+class TestAddonsOpenPostManagePage(unittest.TestCase):
+    """AddonsOpenPostManagePage unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,26 +25,26 @@ class TestGetPostStatsResponseDailyStats(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> GetPostStatsResponseDailyStats:
-        """Test GetPostStatsResponseDailyStats
+    def make_instance(self, include_optional) -> AddonsOpenPostManagePage:
+        """Test AddonsOpenPostManagePage
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `GetPostStatsResponseDailyStats`
+        # uncomment below to create an instance of `AddonsOpenPostManagePage`
         """
-        model = GetPostStatsResponseDailyStats()
+        model = AddonsOpenPostManagePage()
         if include_optional:
-            return GetPostStatsResponseDailyStats(
-                count = 239,
-                var_date = '2025-06-03T00:00:00Z'
+            return AddonsOpenPostManagePage(
+                post_token = 'AJIEWcw'
             )
         else:
-            return GetPostStatsResponseDailyStats(
+            return AddonsOpenPostManagePage(
+                post_token = 'AJIEWcw',
         )
         """
 
-    def testGetPostStatsResponseDailyStats(self):
-        """Test GetPostStatsResponseDailyStats"""
+    def testAddonsOpenPostManagePage(self):
+        """Test AddonsOpenPostManagePage"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 
