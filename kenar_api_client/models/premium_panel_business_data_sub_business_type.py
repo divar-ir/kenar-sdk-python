@@ -31,6 +31,7 @@ class PremiumPanelBusinessDataSubBusinessType(str, Enum):
     JOBS = 'JOBS'
     MARKETPLACE = 'MARKETPLACE'
     SERVICES = 'SERVICES'
+    PERSONAL = 'PERSONAL'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

@@ -47,6 +47,20 @@ class TestChatAPIApi(unittest.TestCase):
         """
         pass
 
+    def test_chat_api_chat_bot_send_message4(self) -> None:
+        """Test case for chat_api_chat_bot_send_message4
+
+        ارسال پیام به مکالمه ChatBot
+        """
+        pass
+
+    def test_chat_api_chat_bot_send_message5(self) -> None:
+        """Test case for chat_api_chat_bot_send_message5
+
+        ارسال پیام به مکالمه ChatBot
+        """
+        pass
+
     def test_chat_api_conversation_send_message(self) -> None:
         """Test case for chat_api_conversation_send_message
 

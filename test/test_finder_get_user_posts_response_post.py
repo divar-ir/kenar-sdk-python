@@ -39,6 +39,7 @@ class TestFinderGetUserPostsResponsePost(unittest.TestCase):
                 images = [
                     ''
                     ],
+                is_phone_hidden = True,
                 title = '',
                 token = ''
             )

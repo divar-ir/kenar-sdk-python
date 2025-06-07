@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -28,9 +28,10 @@ class FinderGetUserPostsResponsePost(BaseModel):
     """ # noqa: E501
     category: Optional[StrictStr] = None
     images: Optional[List[StrictStr]] = None
+    is_phone_hidden: Optional[StrictBool] = None
     title: Optional[StrictStr] = None
     token: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["category", "images", "title", "token"]
+    __properties: ClassVar[List[str]] = ["category", "images", "is_phone_hidden", "title", "token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -85,6 +86,7 @@ class FinderGetUserPostsResponsePost(BaseModel):
         _obj = cls.model_validate({
             "category": obj.get("category"),
             "images": obj.get("images"),
+            "is_phone_hidden": obj.get("is_phone_hidden"),
             "title": obj.get("title"),
             "token": obj.get("token")
         })

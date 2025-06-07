@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **category** | **str** |  | [optional] 
 **images** | **List[str]** |  | [optional] 
+**is_phone_hidden** | **bool** |  | [optional] 
 **title** | **str** |  | [optional] 
 **token** | **str** |  | [optional] 
 

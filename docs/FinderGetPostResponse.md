@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **data** | **object** |  | [optional] 
 **district** | **str** |  | [optional] 
 **first_published_at** | **datetime** |  | [optional] 
+**is_phone_hidden** | **bool** |  | [optional] 
 **state** | [**FinderPostExtState**](FinderPostExtState.md) |  | [optional] 
 **supplier_chat_assistant_enabled** | **bool** |  | [optional] 
 **token** | **str** |  | [optional] 

@@ -116,9 +116,11 @@ Class | Method | HTTP request | Description
 *AssetsApi* | [**assets_get_permissions**](docs/AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
 *AssetsApi* | [**assets_get_ram_memories**](docs/AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 *AssetsApi* | [**assets_get_service_types**](docs/AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
-*ChatAPIApi* | [**chat_api_chat_bot_send_message**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
-*ChatAPIApi* | [**chat_api_chat_bot_send_message2**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message2) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
-*ChatAPIApi* | [**chat_api_chat_bot_send_message3**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message3) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+*ChatAPIApi* | [**chat_api_chat_bot_send_message**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+*ChatAPIApi* | [**chat_api_chat_bot_send_message2**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
+*ChatAPIApi* | [**chat_api_chat_bot_send_message3**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
+*ChatAPIApi* | [**chat_api_chat_bot_send_message4**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message4) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
+*ChatAPIApi* | [**chat_api_chat_bot_send_message5**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message5) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
 *ChatAPIApi* | [**chat_api_conversation_send_message**](docs/ChatAPIApi.md#chat_api_conversation_send_message) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
 *ChatAPIApi* | [**chat_api_generate_upload_token**](docs/ChatAPIApi.md#chat_api_generate_upload_token) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
 *ChatAPIApi* | [**chat_api_get_conversation**](docs/ChatAPIApi.md#chat_api_get_conversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
