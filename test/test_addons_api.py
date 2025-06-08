@@ -26,6 +26,13 @@ class TestAddonsApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    def test_addons_create_business_addon(self) -> None:
+        """Test case for addons_create_business_addon
+
+        Create a BusinessAddon
+        """
+        pass
+
     def test_addons_create_post_addon_v2(self) -> None:
         """Test case for addons_create_post_addon_v2
 

@@ -579,7 +579,7 @@ class PostApi:
     @validate_call
     def post_get_post_stats(
         self,
-        post_token: Annotated[StrictStr, Field(description="Post token")],
+        post_token: Annotated[StrictStr, Field(description="توکن آگهی")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -593,11 +593,11 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PostGetPostStatsResponse:
-        """Get post statistics
+        """دریافت آمارهای آگهی
 
-        This API allows you to retrieve the statistics associated with a single post (e.g. views).
+        از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید. 
 
-        :param post_token: Post token (required)
+        :param post_token: توکن آگهی (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -646,7 +646,7 @@ class PostApi:
     @validate_call
     def post_get_post_stats_with_http_info(
         self,
-        post_token: Annotated[StrictStr, Field(description="Post token")],
+        post_token: Annotated[StrictStr, Field(description="توکن آگهی")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -660,11 +660,11 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PostGetPostStatsResponse]:
-        """Get post statistics
+        """دریافت آمارهای آگهی
 
-        This API allows you to retrieve the statistics associated with a single post (e.g. views).
+        از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید. 
 
-        :param post_token: Post token (required)
+        :param post_token: توکن آگهی (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -713,7 +713,7 @@ class PostApi:
     @validate_call
     def post_get_post_stats_without_preload_content(
         self,
-        post_token: Annotated[StrictStr, Field(description="Post token")],
+        post_token: Annotated[StrictStr, Field(description="توکن آگهی")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -727,11 +727,11 @@ class PostApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get post statistics
+        """دریافت آمارهای آگهی
 
-        This API allows you to retrieve the statistics associated with a single post (e.g. views).
+        از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید. 
 
-        :param post_token: Post token (required)
+        :param post_token: توکن آگهی (required)
         :type post_token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

@@ -4,6 +4,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**addons_create_business_addon**](AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon
 [**addons_create_post_addon_v2**](AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
 [**addons_create_user_addon_v2**](AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
 [**addons_create_user_addon_v22**](AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
@@ -13,6 +14,90 @@ Method | HTTP request | Description
 [**addons_get_user_addons**](AddonsApi.md#addons_get_user_addons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر
 [**addons_get_user_addons2**](AddonsApi.md#addons_get_user_addons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر
 
+
+# **addons_create_business_addon**
+> AddonsCreateBusinessAddonResponse addons_create_business_addon(business_token, addons_create_business_addon_body)
+
+Create a BusinessAddon
+
+This will create a BusinessAddon on published posts of a business.
+You can only create Addons which are created by your app.
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.models.addons_create_business_addon_body import AddonsCreateBusinessAddonBody
+from kenar_api_client.models.addons_create_business_addon_response import AddonsCreateBusinessAddonResponse
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.AddonsApi(api_client)
+    business_token = 'business_token_example' # str | 
+    addons_create_business_addon_body = kenar_api_client.AddonsCreateBusinessAddonBody() # AddonsCreateBusinessAddonBody | 
+
+    try:
+        # Create a BusinessAddon
+        api_response = api_instance.addons_create_business_addon(business_token, addons_create_business_addon_body)
+        print("The response of AddonsApi->addons_create_business_addon:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AddonsApi->addons_create_business_addon: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **business_token** | **str**|  | 
+ **addons_create_business_addon_body** | [**AddonsCreateBusinessAddonBody**](AddonsCreateBusinessAddonBody.md)|  | 
+
+### Return type
+
+[**AddonsCreateBusinessAddonResponse**](AddonsCreateBusinessAddonResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **addons_create_post_addon_v2**
 > object addons_create_post_addon_v2(token, addons_create_post_addon_v2_body)

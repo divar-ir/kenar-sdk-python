@@ -77,16 +77,16 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.AddonsApi(api_client)
-    token = 'token_example' # str | 
-    addons_create_post_addon_v2_body = kenar_api_client.AddonsCreatePostAddonV2Body() # AddonsCreatePostAddonV2Body | 
+    business_token = 'business_token_example' # str | 
+    addons_create_business_addon_body = kenar_api_client.AddonsCreateBusinessAddonBody() # AddonsCreateBusinessAddonBody | 
 
     try:
-        # افزودن افزونه جدید به آگهی
-        api_response = api_instance.addons_create_post_addon_v2(token, addons_create_post_addon_v2_body)
-        print("The response of AddonsApi->addons_create_post_addon_v2:\n")
+        # Create a BusinessAddon
+        api_response = api_instance.addons_create_business_addon(business_token, addons_create_business_addon_body)
+        print("The response of AddonsApi->addons_create_business_addon:\n")
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling AddonsApi->addons_create_post_addon_v2: %s\n" % e)
+        print("Exception when calling AddonsApi->addons_create_business_addon: %s\n" % e)
 
 ```
 
@@ -96,6 +96,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AddonsApi* | [**addons_create_business_addon**](docs/AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon
 *AddonsApi* | [**addons_create_post_addon_v2**](docs/AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
 *AddonsApi* | [**addons_create_user_addon_v2**](docs/AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
 *AddonsApi* | [**addons_create_user_addon_v22**](docs/AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
@@ -133,7 +134,7 @@ Class | Method | HTTP request | Description
 *PaymentTicketApi* | [**payment_ticket_validate**](docs/PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *PostApi* | [**post_edit_post**](docs/PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *PostApi* | [**post_get_image_upload_url**](docs/PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
-*PostApi* | [**post_get_post_stats**](docs/PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics
+*PostApi* | [**post_get_post_stats**](docs/PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 *SemanticApi* | [**semantic_create_post_semantic**](docs/SemanticApi.md#semantic_create_post_semantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *SemanticApi* | [**semantic_create_user_semantic**](docs/SemanticApi.md#semantic_create_user_semantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
 *SemanticApi* | [**semantic_create_user_semantic2**](docs/SemanticApi.md#semantic_create_user_semantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
@@ -167,6 +168,8 @@ Class | Method | HTTP request | Description
  - [AddonsAddonSemanticStatus](docs/AddonsAddonSemanticStatus.md)
  - [AddonsBusinessAddon](docs/AddonsBusinessAddon.md)
  - [AddonsButtonBar](docs/AddonsButtonBar.md)
+ - [AddonsCreateBusinessAddonBody](docs/AddonsCreateBusinessAddonBody.md)
+ - [AddonsCreateBusinessAddonResponse](docs/AddonsCreateBusinessAddonResponse.md)
  - [AddonsCreatePostAddonRequest](docs/AddonsCreatePostAddonRequest.md)
  - [AddonsCreatePostAddonV2Body](docs/AddonsCreatePostAddonV2Body.md)
  - [AddonsCreateUserAddonResponseV2](docs/AddonsCreateUserAddonResponseV2.md)

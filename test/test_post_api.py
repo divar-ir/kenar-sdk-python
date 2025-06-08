@@ -43,7 +43,7 @@ class TestPostApi(unittest.TestCase):
     def test_post_get_post_stats(self) -> None:
         """Test case for post_get_post_stats
 
-        Get post statistics
+        دریافت آمارهای آگهی
         """
         pass
 

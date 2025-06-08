@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 # **payment_list_transactions**
 > PaymentListTransactionsResponse payment_list_transactions(page_size=page_size, page_token=page_token)
 
-Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
 
 ### Example
 

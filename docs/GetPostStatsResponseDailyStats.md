@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** | Number of the daily metric (e.g. view) | [optional] 
-**var_date** | **str** | Date in YYYY-MM-DD format | [optional] 
+**count** | **int** | تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید) | [optional] 
+**var_date** | **str** | تاریخ به فرمت YYYY-MM-DD | [optional] 
 
 ## Example
 

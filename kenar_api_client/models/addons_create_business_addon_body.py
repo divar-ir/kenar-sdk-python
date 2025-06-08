@@ -17,19 +17,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt
+from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from kenar_api_client.models.get_post_stats_response_daily_stats import GetPostStatsResponseDailyStats
+from kenar_api_client.models.addons_widget import AddonsWidget
 from typing import Optional, Set
 from typing_extensions import Self
 
-class GetPostStatsResponsePostStats(BaseModel):
+class AddonsCreateBusinessAddonBody(BaseModel):
     """
-    GetPostStatsResponsePostStats
+    AddonsCreateBusinessAddonBody
     """ # noqa: E501
-    daily: Optional[List[GetPostStatsResponseDailyStats]] = Field(default=None, description="مقدار آمار مورد نظر در هفت روز اخیر")
-    total: Optional[StrictInt] = Field(default=None, description="تعداد کلی آمار (مثلا بازدید)")
-    __properties: ClassVar[List[str]] = ["daily", "total"]
+    widgets: Optional[List[AddonsWidget]] = None
+    __properties: ClassVar[List[str]] = ["widgets"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -49,7 +48,7 @@ class GetPostStatsResponsePostStats(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of GetPostStatsResponsePostStats from a JSON string"""
+        """Create an instance of AddonsCreateBusinessAddonBody from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -70,18 +69,18 @@ class GetPostStatsResponsePostStats(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in daily (list)
+        # override the default output from pydantic by calling `to_dict()` of each item in widgets (list)
         _items = []
-        if self.daily:
-            for _item_daily in self.daily:
-                if _item_daily:
-                    _items.append(_item_daily.to_dict())
-            _dict['daily'] = _items
+        if self.widgets:
+            for _item_widgets in self.widgets:
+                if _item_widgets:
+                    _items.append(_item_widgets.to_dict())
+            _dict['widgets'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of GetPostStatsResponsePostStats from a dict"""
+        """Create an instance of AddonsCreateBusinessAddonBody from a dict"""
         if obj is None:
             return None
 
@@ -89,8 +88,7 @@ class GetPostStatsResponsePostStats(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "daily": [GetPostStatsResponseDailyStats.from_dict(_item) for _item in obj["daily"]] if obj.get("daily") is not None else None,
-            "total": obj.get("total")
+            "widgets": [AddonsWidget.from_dict(_item) for _item in obj["widgets"]] if obj.get("widgets") is not None else None
         })
         return _obj
 

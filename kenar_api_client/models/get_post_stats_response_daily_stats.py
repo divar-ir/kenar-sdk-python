@@ -26,8 +26,8 @@ class GetPostStatsResponseDailyStats(BaseModel):
     """
     GetPostStatsResponseDailyStats
     """ # noqa: E501
-    count: Optional[StrictInt] = Field(default=None, description="Number of the daily metric (e.g. view)")
-    var_date: Optional[StrictStr] = Field(default=None, description="Date in YYYY-MM-DD format", alias="date")
+    count: Optional[StrictInt] = Field(default=None, description="تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)")
+    var_date: Optional[StrictStr] = Field(default=None, description="تاریخ به فرمت YYYY-MM-DD", alias="date")
     __properties: ClassVar[List[str]] = ["count", "date"]
 
     model_config = ConfigDict(

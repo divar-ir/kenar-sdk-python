@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**post_edit_post**](PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 [**post_get_image_upload_url**](PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
-[**post_get_post_stats**](PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics
+[**post_get_post_stats**](PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 
 
 # **post_edit_post**
@@ -172,9 +172,9 @@ This endpoint does not need any parameter.
 # **post_get_post_stats**
 > PostGetPostStatsResponse post_get_post_stats(post_token)
 
-Get post statistics
+دریافت آمارهای آگهی
 
-This API allows you to retrieve the statistics associated with a single post (e.g. views).
+از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید. 
 
 ### Example
 
@@ -207,10 +207,10 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.PostApi(api_client)
-    post_token = 'post_token_example' # str | Post token
+    post_token = 'post_token_example' # str | توکن آگهی
 
     try:
-        # Get post statistics
+        # دریافت آمارهای آگهی
         api_response = api_instance.post_get_post_stats(post_token)
         print("The response of PostApi->post_get_post_stats:\n")
         pprint(api_response)
@@ -225,7 +225,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **post_token** | **str**| Post token | 
+ **post_token** | **str**| توکن آگهی | 
 
 ### Return type
 

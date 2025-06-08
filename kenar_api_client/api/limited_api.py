@@ -832,7 +832,7 @@ class LimitedApi:
     ) -> PaymentListTransactionsResponse:
         """payment_list_transactions
 
-        Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+        با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
 
         :param page_size: Number of transactions to return per page
         :type page_size: int
@@ -903,7 +903,7 @@ class LimitedApi:
     ) -> ApiResponse[PaymentListTransactionsResponse]:
         """payment_list_transactions
 
-        Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+        با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
 
         :param page_size: Number of transactions to return per page
         :type page_size: int
@@ -974,7 +974,7 @@ class LimitedApi:
     ) -> RESTResponseType:
         """payment_list_transactions
 
-        Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+        با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
 
         :param page_size: Number of transactions to return per page
         :type page_size: int
