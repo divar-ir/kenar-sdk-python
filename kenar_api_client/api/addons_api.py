@@ -61,9 +61,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AddonsCreateBusinessAddonResponse:
-        """Create a BusinessAddon
+        """افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
 
-        This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - BUSINESS_ADDON_CREATE.{business_token}
 
         :param business_token: (required)
         :type business_token: str
@@ -132,9 +132,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AddonsCreateBusinessAddonResponse]:
-        """Create a BusinessAddon
+        """افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
 
-        This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - BUSINESS_ADDON_CREATE.{business_token}
 
         :param business_token: (required)
         :type business_token: str
@@ -203,9 +203,9 @@ class AddonsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Create a BusinessAddon
+        """افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
 
-        This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+        با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - BUSINESS_ADDON_CREATE.{business_token}
 
         :param business_token: (required)
         :type business_token: str

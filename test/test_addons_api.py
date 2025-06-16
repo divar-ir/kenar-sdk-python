@@ -29,7 +29,7 @@ class TestAddonsApi(unittest.TestCase):
     def test_addons_create_business_addon(self) -> None:
         """Test case for addons_create_business_addon
 
-        Create a BusinessAddon
+        افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
         """
         pass
 

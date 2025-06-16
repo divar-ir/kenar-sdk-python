@@ -4,7 +4,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addons_create_business_addon**](AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon
+[**addons_create_business_addon**](AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
 [**addons_create_post_addon_v2**](AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
 [**addons_create_user_addon_v2**](AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
 [**addons_create_user_addon_v22**](AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
@@ -18,10 +18,12 @@ Method | HTTP request | Description
 # **addons_create_business_addon**
 > AddonsCreateBusinessAddonResponse addons_create_business_addon(business_token, addons_create_business_addon_body)
 
-Create a BusinessAddon
+افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
 
-This will create a BusinessAddon on published posts of a business.
-You can only create Addons which are created by your app.
+با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید.
+می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید.
+این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد:
+- BUSINESS_ADDON_CREATE.{business_token}
 
 ### Example
 
@@ -59,7 +61,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_business_addon_body = kenar_api_client.AddonsCreateBusinessAddonBody() # AddonsCreateBusinessAddonBody | 
 
     try:
-        # Create a BusinessAddon
+        # افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
         api_response = api_instance.addons_create_business_addon(business_token, addons_create_business_addon_body)
         print("The response of AddonsApi->addons_create_business_addon:\n")
         pprint(api_response)

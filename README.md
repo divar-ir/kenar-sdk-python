@@ -81,7 +81,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_business_addon_body = kenar_api_client.AddonsCreateBusinessAddonBody() # AddonsCreateBusinessAddonBody | 
 
     try:
-        # Create a BusinessAddon
+        # افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
         api_response = api_instance.addons_create_business_addon(business_token, addons_create_business_addon_body)
         print("The response of AddonsApi->addons_create_business_addon:\n")
         pprint(api_response)
@@ -96,7 +96,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AddonsApi* | [**addons_create_business_addon**](docs/AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon
+*AddonsApi* | [**addons_create_business_addon**](docs/AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
 *AddonsApi* | [**addons_create_post_addon_v2**](docs/AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
 *AddonsApi* | [**addons_create_user_addon_v2**](docs/AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
 *AddonsApi* | [**addons_create_user_addon_v22**](docs/AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
