@@ -36,7 +36,7 @@ setup(
     description="Kenar API",
     author="OpenAPI Generator community",
     author_email="team@openapitools.org",
-    url="",
+    url="https://github.com/divar-ir/kenar-sdk-python",
     keywords=["OpenAPI", "OpenAPI-Generator", "Kenar API"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=["test", "tests"]),
