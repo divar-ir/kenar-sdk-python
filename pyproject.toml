@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "kenar_api_client"
-version = "0.48.0"
+version = "0.49.0"
 description = "Kenar API"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"
 readme = "README.md"
-repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+repository = "https://github.com/divar-ir/kenar-sdk-python"
 keywords = ["OpenAPI", "OpenAPI-Generator", "Kenar API"]
 include = ["kenar_api_client/py.typed"]
 
