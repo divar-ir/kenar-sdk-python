@@ -53,6 +53,7 @@ class OAuthScopeScope(str, Enum):
     BUSINESS_ADDON_CREATE = 'BUSINESS_ADDON_CREATE'
     POST_SEMANTIC_CREATE = 'POST_SEMANTIC_CREATE'
     NOTIFICATION_ACCESS_REVOCATION = 'NOTIFICATION_ACCESS_REVOCATION'
+    SEND_EVENT = 'SEND_EVENT'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

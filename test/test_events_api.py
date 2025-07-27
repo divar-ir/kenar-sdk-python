@@ -33,6 +33,13 @@ class TestEventsApi(unittest.TestCase):
         """
         pass
 
+    def test_events_send_event(self) -> None:
+        """Test case for events_send_event
+
+        Send an event to a user
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

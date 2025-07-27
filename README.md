@@ -126,6 +126,7 @@ Class | Method | HTTP request | Description
 *ChatAPIApi* | [**chat_api_generate_upload_token**](docs/ChatAPIApi.md#chat_api_generate_upload_token) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
 *ChatAPIApi* | [**chat_api_get_conversation**](docs/ChatAPIApi.md#chat_api_get_conversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
 *EventsApi* | [**events_register_event_subscription**](docs/EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
+*EventsApi* | [**events_send_event**](docs/EventsApi.md#events_send_event) | **POST** /experimental/open-platform/events/send | Send an event to a user
 *FinderApi* | [**finder_get_post**](docs/FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 *FinderApi* | [**finder_get_user**](docs/FinderApi.md#finder_get_user) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 *FinderApi* | [**finder_get_user2**](docs/FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
@@ -135,6 +136,8 @@ Class | Method | HTTP request | Description
 *PostApi* | [**post_edit_post**](docs/PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *PostApi* | [**post_get_image_upload_url**](docs/PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 *PostApi* | [**post_get_post_stats**](docs/PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
+*PostApi* | [**post_submit_emergency_residence_post**](docs/PostApi.md#post_submit_emergency_residence_post) | **POST** /experimental/open-platform/posts/emergency-residence | Submit an emergency residence post
+*PostApi* | [**post_submit_post**](docs/PostApi.md#post_submit_post) | **POST** /experimental/open-platform/posts/new | Submit a post
 *SemanticApi* | [**semantic_create_post_semantic**](docs/SemanticApi.md#semantic_create_post_semantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *SemanticApi* | [**semantic_create_user_semantic**](docs/SemanticApi.md#semantic_create_user_semantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
 *SemanticApi* | [**semantic_create_user_semantic2**](docs/SemanticApi.md#semantic_create_user_semantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
@@ -237,7 +240,17 @@ Class | Method | HTTP request | Description
  - [ChatapiMessageSenderSide](docs/ChatapiMessageSenderSide.md)
  - [ChatapiMessageSenderType](docs/ChatapiMessageSenderType.md)
  - [ChatapiMessageType](docs/ChatapiMessageType.md)
+ - [DarvazeGetCarOwnershipStatusResponse](docs/DarvazeGetCarOwnershipStatusResponse.md)
+ - [DarvazeGetCarOwnershipStatusResponseStatus](docs/DarvazeGetCarOwnershipStatusResponseStatus.md)
+ - [DarvazeIranianCarPlate](docs/DarvazeIranianCarPlate.md)
+ - [DarvazeRequestCarOwnershipDelegationResponse](docs/DarvazeRequestCarOwnershipDelegationResponse.md)
+ - [DarvazeRequestForPostCodeValidationResponse](docs/DarvazeRequestForPostCodeValidationResponse.md)
+ - [DarvazeVerifyCarOwnershipDelegationResponse](docs/DarvazeVerifyCarOwnershipDelegationResponse.md)
+ - [DarvazeVerifyCarOwnershipResponse](docs/DarvazeVerifyCarOwnershipResponse.md)
+ - [DarvazeVerifyPostCodeValidationResponse](docs/DarvazeVerifyPostCodeValidationResponse.md)
+ - [DarvazeVerifyPostCodeValidationResponseStatus](docs/DarvazeVerifyPostCodeValidationResponseStatus.md)
  - [DivarIconsIconName](docs/DivarIconsIconName.md)
+ - [EventsEventButton](docs/EventsEventButton.md)
  - [EventsRegisterEventSubscriptionRequest](docs/EventsRegisterEventSubscriptionRequest.md)
  - [EventsRegisterEventSubscriptionRequestEventType](docs/EventsRegisterEventSubscriptionRequestEventType.md)
  - [FinderGetAllDevelopmentPostsResponse](docs/FinderGetAllDevelopmentPostsResponse.md)
@@ -282,6 +295,11 @@ Class | Method | HTTP request | Description
  - [PostEditPostBody](docs/PostEditPostBody.md)
  - [PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
+ - [PostSubmitEmergencyResidencePostRequest](docs/PostSubmitEmergencyResidencePostRequest.md)
+ - [PostSubmitEmergencyResidencePostResponse](docs/PostSubmitEmergencyResidencePostResponse.md)
+ - [PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
+ - [PostSubmitPostResponse](docs/PostSubmitPostResponse.md)
+ - [PostTemporaryResidenceFields](docs/PostTemporaryResidenceFields.md)
  - [PremiumPanelBusinessDataSubBusinessType](docs/PremiumPanelBusinessDataSubBusinessType.md)
  - [ProtobufAny](docs/ProtobufAny.md)
  - [SearchPostItemPrice](docs/SearchPostItemPrice.md)
@@ -292,6 +310,8 @@ Class | Method | HTTP request | Description
  - [SemanticCreateUserSemanticResponse](docs/SemanticCreateUserSemanticResponse.md)
  - [SemanticPostSemanticDeleted](docs/SemanticPostSemanticDeleted.md)
  - [SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
+ - [SendEventRequestTargetType](docs/SendEventRequestTargetType.md)
+ - [TemporaryResidenceFieldsRoomsCount](docs/TemporaryResidenceFieldsRoomsCount.md)
 
 
 <a id="documentation-for-authorization"></a>

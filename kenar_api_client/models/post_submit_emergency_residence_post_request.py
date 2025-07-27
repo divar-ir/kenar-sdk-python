@@ -17,31 +17,23 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from kenar_api_client.models.finder_post_ext_state import FinderPostExtState
-from kenar_api_client.models.get_post_response_business_data import GetPostResponseBusinessData
 from typing import Optional, Set
 from typing_extensions import Self
 
-class FinderGetPostResponse(BaseModel):
+class PostSubmitEmergencyResidencePostRequest(BaseModel):
     """
-    FinderGetPostResponse
+    PostSubmitEmergencyResidencePostRequest
     """ # noqa: E501
-    business_data: Optional[GetPostResponseBusinessData] = None
-    category: Optional[StrictStr] = None
-    chat_enabled: Optional[StrictBool] = None
     city: Optional[StrictStr] = None
     data: Optional[Dict[str, Any]] = None
+    description: Optional[StrictStr] = None
     district: Optional[StrictStr] = None
-    first_published_at: Optional[datetime] = None
-    is_phone_hidden: Optional[StrictBool] = None
-    last_modified_at: Optional[datetime] = None
-    state: Optional[FinderPostExtState] = None
-    supplier_chat_assistant_enabled: Optional[StrictBool] = None
-    token: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["business_data", "category", "chat_enabled", "city", "data", "district", "first_published_at", "is_phone_hidden", "last_modified_at", "state", "supplier_chat_assistant_enabled", "token"]
+    images: Optional[List[StrictStr]] = None
+    phone_number: Optional[StrictStr] = None
+    title: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["city", "data", "description", "district", "images", "phone_number", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -61,7 +53,7 @@ class FinderGetPostResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of FinderGetPostResponse from a JSON string"""
+        """Create an instance of PostSubmitEmergencyResidencePostRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -82,14 +74,11 @@ class FinderGetPostResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of business_data
-        if self.business_data:
-            _dict['business_data'] = self.business_data.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of FinderGetPostResponse from a dict"""
+        """Create an instance of PostSubmitEmergencyResidencePostRequest from a dict"""
         if obj is None:
             return None
 
@@ -97,18 +86,13 @@ class FinderGetPostResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "business_data": GetPostResponseBusinessData.from_dict(obj["business_data"]) if obj.get("business_data") is not None else None,
-            "category": obj.get("category"),
-            "chat_enabled": obj.get("chat_enabled"),
             "city": obj.get("city"),
             "data": obj.get("data"),
+            "description": obj.get("description"),
             "district": obj.get("district"),
-            "first_published_at": obj.get("first_published_at"),
-            "is_phone_hidden": obj.get("is_phone_hidden"),
-            "last_modified_at": obj.get("last_modified_at"),
-            "state": obj.get("state"),
-            "supplier_chat_assistant_enabled": obj.get("supplier_chat_assistant_enabled"),
-            "token": obj.get("token")
+            "images": obj.get("images"),
+            "phone_number": obj.get("phone_number"),
+            "title": obj.get("title")
         })
         return _obj
 

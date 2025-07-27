@@ -47,6 +47,20 @@ class TestPostApi(unittest.TestCase):
         """
         pass
 
+    def test_post_submit_emergency_residence_post(self) -> None:
+        """Test case for post_submit_emergency_residence_post
+
+        Submit an emergency residence post
+        """
+        pass
+
+    def test_post_submit_post(self) -> None:
+        """Test case for post_submit_post
+
+        Submit a post
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

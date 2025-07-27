@@ -45,6 +45,7 @@ class TestFinderGetPostResponse(unittest.TestCase):
                 district = '',
                 first_published_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 is_phone_hidden = True,
+                last_modified_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 state = 'PUBLISHED',
                 supplier_chat_assistant_enabled = True,
                 token = ''
