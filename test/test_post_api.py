@@ -57,7 +57,7 @@ class TestPostApi(unittest.TestCase):
     def test_post_submit_post(self) -> None:
         """Test case for post_submit_post
 
-        Submit a post
+        ثبت آگهی
         """
         pass
 

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**post_get_image_upload_url**](PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 [**post_get_post_stats**](PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 [**post_submit_emergency_residence_post**](PostApi.md#post_submit_emergency_residence_post) | **POST** /experimental/open-platform/posts/emergency-residence | Submit an emergency residence post
-[**post_submit_post**](PostApi.md#post_submit_post) | **POST** /experimental/open-platform/posts/new | Submit a post
+[**post_submit_post**](PostApi.md#post_submit_post) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
 
 
 # **post_edit_post**
@@ -333,10 +333,10 @@ Name | Type | Description  | Notes
 # **post_submit_post**
 > PostSubmitPostResponse post_submit_post(post_submit_post_request)
 
-Submit a post
+ثبت آگهی
 
-This API allows you to submit a post. This needs `POST_SUBMIT` OAuth scope.
-You can submit a post with title, description, and images and other fields. There are general fields and category specific fields.
+این API به شما امکان ثبت آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_SUBMIT` دارد.
+می‌توانید آگهی را با عنوان، توضیحات، تصاویر و سایر فیلدها ثبت کنید. فیلدهای عمومی و فیلدهای مخصوص دسته‌بندی وجود دارند.
 
 ### Example
 
@@ -373,7 +373,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     post_submit_post_request = kenar_api_client.PostSubmitPostRequest() # PostSubmitPostRequest | 
 
     try:
-        # Submit a post
+        # ثبت آگهی
         api_response = api_instance.post_submit_post(post_submit_post_request)
         print("The response of PostApi->post_submit_post:\n")
         pprint(api_response)
