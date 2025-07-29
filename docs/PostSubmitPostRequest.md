@@ -5,16 +5,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chat_enabled** | **bool** | Whether to enable chat | [optional] 
-**city** | **str** | City of the post | [optional] 
-**description** | **str** | Description of the post | [optional] 
-**district** | **str** | District of the post | [optional] 
-**hide_phone** | **bool** | Whether to hide the phone number from demand users | [optional] 
+**chat_enabled** | **bool** | امکان چت فعال باشد | [optional] 
+**city** | **str** | شهر آگهی | [optional] 
+**description** | **str** | توضیحات آگهی | [optional] 
+**district** | **str** | محله آگهی | [optional] 
+**hide_phone** | **bool** | عدم نمایش شماره تماس به کاربران | [optional] 
 **images** | **List[str]** |  | [optional] 
-**latitude** | **float** | Latitude of the post | [optional] 
-**longitude** | **float** | Longitude of the post | [optional] 
+**latitude** | **float** | عرض جغرافیایی آگهی | [optional] 
+**longitude** | **float** | طول جغرافیایی آگهی | [optional] 
 **temporary_residence** | [**PostTemporaryResidenceFields**](PostTemporaryResidenceFields.md) |  | [optional] 
-**title** | **str** | Title of the post | [optional] 
+**title** | **str** | عنوان آگهی | [optional] 
 
 ## Example
 

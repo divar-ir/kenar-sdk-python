@@ -27,14 +27,14 @@ class PostTemporaryResidenceFields(BaseModel):
     """
     PostTemporaryResidenceFields
     """ # noqa: E501
-    area: Optional[StrictInt] = Field(default=None, description="Area of the residence in square meters")
-    extra_person_capacity: Optional[StrictInt] = Field(default=None, description="Number of allowed extra people that can stay in the residence")
-    has_own_image: Optional[StrictBool] = Field(default=None, description="Whether the images are of the property itself and not decorative/stock photos.")
-    price_cost_per_extra_person: Optional[StrictStr] = Field(default=None, description="Cost per extra person per night in Toman")
-    price_regular_days: Optional[StrictStr] = Field(default=None, description="Price of the residence for regular days (Saturday to Tuesday) in Toman")
-    price_special_days: Optional[StrictStr] = Field(default=None, description="Price of the residence for special days (holidays and occasions) in Toman")
-    price_weekends: Optional[StrictStr] = Field(default=None, description="Price of the residence for weekends (Wednesday to Friday) in Toman")
-    regular_person_capacity: Optional[StrictInt] = Field(default=None, description="Number of allowed regular people that can stay in the residence")
+    area: Optional[StrictInt] = Field(default=None, description="متراژ اقامتگاه به متر مربع")
+    extra_person_capacity: Optional[StrictInt] = Field(default=None, description="تعداد افراد اضافه مجاز در اقامتگاه")
+    has_own_image: Optional[StrictBool] = Field(default=None, description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
+    price_cost_per_extra_person: Optional[StrictStr] = Field(default=None, description="هزینه هر نفر اضافه به ازای هر شب به تومان")
+    price_regular_days: Optional[StrictStr] = Field(default=None, description="قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان")
+    price_special_days: Optional[StrictStr] = Field(default=None, description="قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان")
+    price_weekends: Optional[StrictStr] = Field(default=None, description="قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان")
+    regular_person_capacity: Optional[StrictInt] = Field(default=None, description="ظرفیت استاندارد افراد در اقامتگاه")
     rooms_count: Optional[TemporaryResidenceFieldsRoomsCount] = None
     __properties: ClassVar[List[str]] = ["area", "extra_person_capacity", "has_own_image", "price_cost_per_extra_person", "price_regular_days", "price_special_days", "price_weekends", "regular_person_capacity", "rooms_count"]
 

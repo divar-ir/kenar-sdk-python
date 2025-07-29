@@ -5,14 +5,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**area** | **int** | Area of the residence in square meters | [optional] 
-**extra_person_capacity** | **int** | Number of allowed extra people that can stay in the residence | [optional] 
-**has_own_image** | **bool** | Whether the images are of the property itself and not decorative/stock photos. | [optional] 
-**price_cost_per_extra_person** | **str** | Cost per extra person per night in Toman | [optional] 
-**price_regular_days** | **str** | Price of the residence for regular days (Saturday to Tuesday) in Toman | [optional] 
-**price_special_days** | **str** | Price of the residence for special days (holidays and occasions) in Toman | [optional] 
-**price_weekends** | **str** | Price of the residence for weekends (Wednesday to Friday) in Toman | [optional] 
-**regular_person_capacity** | **int** | Number of allowed regular people that can stay in the residence | [optional] 
+**area** | **int** | متراژ اقامتگاه به متر مربع | [optional] 
+**extra_person_capacity** | **int** | تعداد افراد اضافه مجاز در اقامتگاه | [optional] 
+**has_own_image** | **bool** | تصاویر مربوط به خود ملک بوده و تزئینی نیستند. | [optional] 
+**price_cost_per_extra_person** | **str** | هزینه هر نفر اضافه به ازای هر شب به تومان | [optional] 
+**price_regular_days** | **str** | قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان | [optional] 
+**price_special_days** | **str** | قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان | [optional] 
+**price_weekends** | **str** | قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان | [optional] 
+**regular_person_capacity** | **int** | ظرفیت استاندارد افراد در اقامتگاه | [optional] 
 **rooms_count** | [**TemporaryResidenceFieldsRoomsCount**](TemporaryResidenceFieldsRoomsCount.md) |  | [optional] 
 
 ## Example

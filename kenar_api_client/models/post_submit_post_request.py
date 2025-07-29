@@ -27,16 +27,16 @@ class PostSubmitPostRequest(BaseModel):
     """
     PostSubmitPostRequest
     """ # noqa: E501
-    chat_enabled: Optional[StrictBool] = Field(default=None, description="Whether to enable chat")
-    city: Optional[StrictStr] = Field(default=None, description="City of the post")
-    description: Optional[StrictStr] = Field(default=None, description="Description of the post")
-    district: Optional[StrictStr] = Field(default=None, description="District of the post")
-    hide_phone: Optional[StrictBool] = Field(default=None, description="Whether to hide the phone number from demand users")
+    chat_enabled: Optional[StrictBool] = Field(default=None, description="امکان چت فعال باشد")
+    city: Optional[StrictStr] = Field(default=None, description="شهر آگهی")
+    description: Optional[StrictStr] = Field(default=None, description="توضیحات آگهی")
+    district: Optional[StrictStr] = Field(default=None, description="محله آگهی")
+    hide_phone: Optional[StrictBool] = Field(default=None, description="عدم نمایش شماره تماس به کاربران")
     images: Optional[List[StrictStr]] = None
-    latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Latitude of the post")
-    longitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Longitude of the post")
+    latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="عرض جغرافیایی آگهی")
+    longitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="طول جغرافیایی آگهی")
     temporary_residence: Optional[PostTemporaryResidenceFields] = None
-    title: Optional[StrictStr] = Field(default=None, description="Title of the post")
+    title: Optional[StrictStr] = Field(default=None, description="عنوان آگهی")
     __properties: ClassVar[List[str]] = ["chat_enabled", "city", "description", "district", "hide_phone", "images", "latitude", "longitude", "temporary_residence", "title"]
 
     model_config = ConfigDict(
