@@ -30,10 +30,10 @@ class PostTemporaryResidenceFields(BaseModel):
     area: Optional[StrictInt] = Field(default=None, description="Area of the residence in square meters")
     extra_person_capacity: Optional[StrictInt] = Field(default=None, description="Number of allowed extra people that can stay in the residence")
     has_own_image: Optional[StrictBool] = Field(default=None, description="Whether the images are of the property itself and not decorative/stock photos.")
-    price_cost_per_extra_person: Optional[StrictStr] = Field(default=None, description="Cost per extra person per night in Rial")
-    price_regular_days: Optional[StrictStr] = Field(default=None, description="Price of the residence for regular days (Saturday to Tuesday) in Rial")
-    price_special_days: Optional[StrictStr] = Field(default=None, description="Price of the residence for special days (holidays and occasions) in Rial")
-    price_weekends: Optional[StrictStr] = Field(default=None, description="Price of the residence for weekends (Wednesday to Friday) in Rial")
+    price_cost_per_extra_person: Optional[StrictStr] = Field(default=None, description="Cost per extra person per night in Toman")
+    price_regular_days: Optional[StrictStr] = Field(default=None, description="Price of the residence for regular days (Saturday to Tuesday) in Toman")
+    price_special_days: Optional[StrictStr] = Field(default=None, description="Price of the residence for special days (holidays and occasions) in Toman")
+    price_weekends: Optional[StrictStr] = Field(default=None, description="Price of the residence for weekends (Wednesday to Friday) in Toman")
     regular_person_capacity: Optional[StrictInt] = Field(default=None, description="Number of allowed regular people that can stay in the residence")
     rooms_count: Optional[TemporaryResidenceFieldsRoomsCount] = None
     __properties: ClassVar[List[str]] = ["area", "extra_person_capacity", "has_own_image", "price_cost_per_extra_person", "price_regular_days", "price_special_days", "price_weekends", "regular_person_capacity", "rooms_count"]

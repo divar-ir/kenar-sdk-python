@@ -240,6 +240,8 @@ Class | Method | HTTP request | Description
  - [ChatapiMessageSenderSide](docs/ChatapiMessageSenderSide.md)
  - [ChatapiMessageSenderType](docs/ChatapiMessageSenderType.md)
  - [ChatapiMessageType](docs/ChatapiMessageType.md)
+ - [DarvazeGenerateOrderForPostCodeValidationResponse](docs/DarvazeGenerateOrderForPostCodeValidationResponse.md)
+ - [DarvazeGenerateOrderForPostCodeValidationResponseStatus](docs/DarvazeGenerateOrderForPostCodeValidationResponseStatus.md)
  - [DarvazeGetCarOwnershipStatusResponse](docs/DarvazeGetCarOwnershipStatusResponse.md)
  - [DarvazeGetCarOwnershipStatusResponseStatus](docs/DarvazeGetCarOwnershipStatusResponseStatus.md)
  - [DarvazeIranianCarPlate](docs/DarvazeIranianCarPlate.md)

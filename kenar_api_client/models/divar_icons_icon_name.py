@@ -831,6 +831,9 @@ class DivarIconsIconName(str, Enum):
     BELL = 'BELL'
     THUMB_DOWN_BORDER = 'THUMB_DOWN_BORDER'
     THUMB_UP_BORDER = 'THUMB_UP_BORDER'
+    CALL_MADE = 'CALL_MADE'
+    CALL_RECEIVED = 'CALL_RECEIVED'
+    CALL_O = 'CALL_O'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
