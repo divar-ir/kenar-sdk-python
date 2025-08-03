@@ -75,20 +75,6 @@ class TestAddonsApi(unittest.TestCase):
         """
         pass
 
-    def test_addons_get_user_addons(self) -> None:
-        """Test case for addons_get_user_addons
-
-        دریافت تمام افزونه‌های کاربر
-        """
-        pass
-
-    def test_addons_get_user_addons2(self) -> None:
-        """Test case for addons_get_user_addons2
-
-        دریافت تمام افزونه‌های کاربر
-        """
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()

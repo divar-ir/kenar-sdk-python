@@ -44,7 +44,15 @@ class TestPostSubmitPostRequest(unittest.TestCase):
                     ''
                     ],
                 latitude = 35.7152,
+                location_type = 'LOCATION_TYPE_EXACT',
                 longitude = 51.4043,
+                services = kenar_api_client.models.open_platformpost_services_fields.open_platformpostServicesFields(
+                    category = 'CATEGORY_CAR_AND_MOTOR', 
+                    expertise_ids = ["1","2"], 
+                    work_hours_end = 18, 
+                    work_hours_start = 9, 
+                    work_on_holidays = True, 
+                    works_24_7 = False, ),
                 temporary_residence = kenar_api_client.models.post_temporary_residence_fields.postTemporaryResidenceFields(
                     area = 100, 
                     extra_person_capacity = 2, 

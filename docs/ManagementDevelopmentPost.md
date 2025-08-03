@@ -5,6 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**category** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **mng_token** | **str** |  | [optional] 
 **preset** | [**ManagementPreset**](ManagementPreset.md) |  | [optional] 

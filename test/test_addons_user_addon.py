@@ -78,7 +78,7 @@ class TestAddonsUserAddon(unittest.TestCase):
                     'key' : ''
                     },
                 widgets = kenar_api_client.models.widgets.widgets(),
-                widgets_semantic = kenar_api_client.models.widgets_semantic.widgets_semantic()
+                widgets_semantic = None
             )
         else:
             return AddonsUserAddon(

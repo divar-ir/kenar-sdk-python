@@ -37,6 +37,7 @@ class TestFinderGetAllDevelopmentPostsResponse(unittest.TestCase):
             return FinderGetAllDevelopmentPostsResponse(
                 development_posts = [
                     kenar_api_client.models.management_development_post.managementDevelopmentPost(
+                        category = '', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         mng_token = '', 
                         preset = 'LIGHT', 

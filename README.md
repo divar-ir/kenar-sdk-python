@@ -103,8 +103,6 @@ Class | Method | HTTP request | Description
 *AddonsApi* | [**addons_delete_post_addon**](docs/AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
 *AddonsApi* | [**addons_delete_post_addon2**](docs/AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
 *AddonsApi* | [**addons_delete_user_addon**](docs/AddonsApi.md#addons_delete_user_addon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
-*AddonsApi* | [**addons_get_user_addons**](docs/AddonsApi.md#addons_get_user_addons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر
-*AddonsApi* | [**addons_get_user_addons2**](docs/AddonsApi.md#addons_get_user_addons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر
 *AssetsApi* | [**assets_get_body_statuses**](docs/AssetsApi.md#assets_get_body_statuses) | **GET** /v1/open-platform/assets/body-status | دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
 *AssetsApi* | [**assets_get_brand_models**](docs/AssetsApi.md#assets_get_brand_models) | **GET** /v1/open-platform/assets/brand-model/{category} | دریافت مدل‌های برند در دسته‌بندی دیوار
 *AssetsApi* | [**assets_get_categories**](docs/AssetsApi.md#assets_get_categories) | **GET** /v1/open-platform/assets/category | دریافت دسته‌بندی‌های دیوار
@@ -152,7 +150,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [AddonSecondaryLinkagePosition](docs/AddonSecondaryLinkagePosition.md)
  - [AddonSemanticCarVerificationStage](docs/AddonSemanticCarVerificationStage.md)
  - [AddonSemanticIdentityVerificationResult](docs/AddonSemanticIdentityVerificationResult.md)
  - [AddonSemanticIdentityVerificationStage](docs/AddonSemanticIdentityVerificationStage.md)
@@ -164,6 +161,7 @@ Class | Method | HTTP request | Description
  - [AddonsAddonLinkage](docs/AddonsAddonLinkage.md)
  - [AddonsAddonMetaData](docs/AddonsAddonMetaData.md)
  - [AddonsAddonSecondaryLinkage](docs/AddonsAddonSecondaryLinkage.md)
+ - [AddonsAddonSecondaryLinkagePosition](docs/AddonsAddonSecondaryLinkagePosition.md)
  - [AddonsAddonSecondaryLinks](docs/AddonsAddonSecondaryLinks.md)
  - [AddonsAddonSelector](docs/AddonsAddonSelector.md)
  - [AddonsAddonSemantic](docs/AddonsAddonSemantic.md)
@@ -184,7 +182,6 @@ Class | Method | HTTP request | Description
  - [AddonsGetBusinessAddonsResponse](docs/AddonsGetBusinessAddonsResponse.md)
  - [AddonsGetDynamicAction](docs/AddonsGetDynamicAction.md)
  - [AddonsGetPostAddonsResponse](docs/AddonsGetPostAddonsResponse.md)
- - [AddonsGetUserAddonsResponse](docs/AddonsGetUserAddonsResponse.md)
  - [AddonsGetUserPostAddonsResponse](docs/AddonsGetUserPostAddonsResponse.md)
  - [AddonsGroupInfoRow](docs/AddonsGroupInfoRow.md)
  - [AddonsGroupInfoRowGroupInfoItem](docs/AddonsGroupInfoRowGroupInfoItem.md)
@@ -240,17 +237,6 @@ Class | Method | HTTP request | Description
  - [ChatapiMessageSenderSide](docs/ChatapiMessageSenderSide.md)
  - [ChatapiMessageSenderType](docs/ChatapiMessageSenderType.md)
  - [ChatapiMessageType](docs/ChatapiMessageType.md)
- - [DarvazeGenerateOrderForPostCodeValidationResponse](docs/DarvazeGenerateOrderForPostCodeValidationResponse.md)
- - [DarvazeGenerateOrderForPostCodeValidationResponseStatus](docs/DarvazeGenerateOrderForPostCodeValidationResponseStatus.md)
- - [DarvazeGetCarOwnershipStatusResponse](docs/DarvazeGetCarOwnershipStatusResponse.md)
- - [DarvazeGetCarOwnershipStatusResponseStatus](docs/DarvazeGetCarOwnershipStatusResponseStatus.md)
- - [DarvazeIranianCarPlate](docs/DarvazeIranianCarPlate.md)
- - [DarvazeRequestCarOwnershipDelegationResponse](docs/DarvazeRequestCarOwnershipDelegationResponse.md)
- - [DarvazeRequestForPostCodeValidationResponse](docs/DarvazeRequestForPostCodeValidationResponse.md)
- - [DarvazeVerifyCarOwnershipDelegationResponse](docs/DarvazeVerifyCarOwnershipDelegationResponse.md)
- - [DarvazeVerifyCarOwnershipResponse](docs/DarvazeVerifyCarOwnershipResponse.md)
- - [DarvazeVerifyPostCodeValidationResponse](docs/DarvazeVerifyPostCodeValidationResponse.md)
- - [DarvazeVerifyPostCodeValidationResponseStatus](docs/DarvazeVerifyPostCodeValidationResponseStatus.md)
  - [DivarIconsIconName](docs/DivarIconsIconName.md)
  - [EventsEventButton](docs/EventsEventButton.md)
  - [EventsRegisterEventSubscriptionRequest](docs/EventsRegisterEventSubscriptionRequest.md)
@@ -282,6 +268,7 @@ Class | Method | HTTP request | Description
  - [MessageVideoData](docs/MessageVideoData.md)
  - [MessageVoiceData](docs/MessageVoiceData.md)
  - [OAuthScopeScope](docs/OAuthScopeScope.md)
+ - [OpenPlatformpostServicesFields](docs/OpenPlatformpostServicesFields.md)
  - [PaymentGetBalanceResponse](docs/PaymentGetBalanceResponse.md)
  - [PaymentGetPostPricingResponse](docs/PaymentGetPostPricingResponse.md)
  - [PaymentGetTransactionResponse](docs/PaymentGetTransactionResponse.md)
@@ -297,6 +284,7 @@ Class | Method | HTTP request | Description
  - [PostEditPostBody](docs/PostEditPostBody.md)
  - [PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
+ - [PostServicesFieldsCategory](docs/PostServicesFieldsCategory.md)
  - [PostSubmitEmergencyResidencePostRequest](docs/PostSubmitEmergencyResidencePostRequest.md)
  - [PostSubmitEmergencyResidencePostResponse](docs/PostSubmitEmergencyResidencePostResponse.md)
  - [PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
@@ -313,6 +301,7 @@ Class | Method | HTTP request | Description
  - [SemanticPostSemanticDeleted](docs/SemanticPostSemanticDeleted.md)
  - [SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
  - [SendEventRequestTargetType](docs/SendEventRequestTargetType.md)
+ - [SubmitPostRequestLocationType](docs/SubmitPostRequestLocationType.md)
  - [TemporaryResidenceFieldsRoomsCount](docs/TemporaryResidenceFieldsRoomsCount.md)
 
 

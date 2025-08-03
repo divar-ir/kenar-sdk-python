@@ -19,7 +19,9 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
+from kenar_api_client.models.open_platformpost_services_fields import OpenPlatformpostServicesFields
 from kenar_api_client.models.post_temporary_residence_fields import PostTemporaryResidenceFields
+from kenar_api_client.models.submit_post_request_location_type import SubmitPostRequestLocationType
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -34,10 +36,12 @@ class PostSubmitPostRequest(BaseModel):
     hide_phone: Optional[StrictBool] = Field(default=None, description="عدم نمایش شماره تماس به کاربران")
     images: Optional[List[StrictStr]] = None
     latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="عرض جغرافیایی آگهی")
+    location_type: Optional[SubmitPostRequestLocationType] = None
     longitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="طول جغرافیایی آگهی")
+    services: Optional[OpenPlatformpostServicesFields] = None
     temporary_residence: Optional[PostTemporaryResidenceFields] = None
     title: Optional[StrictStr] = Field(default=None, description="عنوان آگهی")
-    __properties: ClassVar[List[str]] = ["chat_enabled", "city", "description", "district", "hide_phone", "images", "latitude", "longitude", "temporary_residence", "title"]
+    __properties: ClassVar[List[str]] = ["chat_enabled", "city", "description", "district", "hide_phone", "images", "latitude", "location_type", "longitude", "services", "temporary_residence", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -78,6 +82,9 @@ class PostSubmitPostRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of services
+        if self.services:
+            _dict['services'] = self.services.to_dict()
         # override the default output from pydantic by calling `to_dict()` of temporary_residence
         if self.temporary_residence:
             _dict['temporary_residence'] = self.temporary_residence.to_dict()
@@ -100,7 +107,9 @@ class PostSubmitPostRequest(BaseModel):
             "hide_phone": obj.get("hide_phone"),
             "images": obj.get("images"),
             "latitude": obj.get("latitude"),
+            "location_type": obj.get("location_type"),
             "longitude": obj.get("longitude"),
+            "services": OpenPlatformpostServicesFields.from_dict(obj["services"]) if obj.get("services") is not None else None,
             "temporary_residence": PostTemporaryResidenceFields.from_dict(obj["temporary_residence"]) if obj.get("temporary_residence") is not None else None,
             "title": obj.get("title")
         })

@@ -17,19 +17,23 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from kenar_api_client.models.addons_addon_secondary_linkage_position import AddonsAddonSecondaryLinkagePosition
+from kenar_api_client.models.post_services_fields_category import PostServicesFieldsCategory
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AddonsAddonSecondaryLinkage(BaseModel):
+class OpenPlatformpostServicesFields(BaseModel):
     """
-    AddonsAddonSecondaryLinkage
+    OpenPlatformpostServicesFields
     """ # noqa: E501
-    position: Optional[AddonsAddonSecondaryLinkagePosition] = None
-    widgets: Optional[Dict[str, Any]] = None
-    __properties: ClassVar[List[str]] = ["position", "widgets"]
+    category: Optional[PostServicesFieldsCategory] = None
+    expertise_ids: Optional[List[StrictStr]] = Field(default=None, description="List of expertise ids")
+    work_hours_end: Optional[StrictInt] = Field(default=None, description="End hour of work in 24-hour format (e.g. 18 for 18:00). Only applicable if `works_24_7` is false.")
+    work_hours_start: Optional[StrictInt] = Field(default=None, description="Start hour of work in 24-hour format (e.g. 9 for 9:00). Only applicable if `works_24_7` is false.")
+    work_on_holidays: Optional[StrictBool] = Field(default=None, description="Whether the service provider works on holidays")
+    works_24_7: Optional[StrictBool] = Field(default=None, description="Whether the service provider is available 24/7. If true, `work_hours_start` and `work_hours_end` are ignored.")
+    __properties: ClassVar[List[str]] = ["category", "expertise_ids", "work_hours_end", "work_hours_start", "work_on_holidays", "works_24_7"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -49,7 +53,7 @@ class AddonsAddonSecondaryLinkage(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AddonsAddonSecondaryLinkage from a JSON string"""
+        """Create an instance of OpenPlatformpostServicesFields from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,7 +78,7 @@ class AddonsAddonSecondaryLinkage(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AddonsAddonSecondaryLinkage from a dict"""
+        """Create an instance of OpenPlatformpostServicesFields from a dict"""
         if obj is None:
             return None
 
@@ -82,8 +86,12 @@ class AddonsAddonSecondaryLinkage(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "position": obj.get("position"),
-            "widgets": obj.get("widgets")
+            "category": obj.get("category"),
+            "expertise_ids": obj.get("expertise_ids"),
+            "work_hours_end": obj.get("work_hours_end"),
+            "work_hours_start": obj.get("work_hours_start"),
+            "work_on_holidays": obj.get("work_on_holidays"),
+            "works_24_7": obj.get("works_24_7")
         })
         return _obj
 

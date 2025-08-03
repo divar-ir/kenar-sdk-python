@@ -12,7 +12,9 @@ Name | Type | Description | Notes
 **hide_phone** | **bool** | عدم نمایش شماره تماس به کاربران | [optional] 
 **images** | **List[str]** |  | [optional] 
 **latitude** | **float** | عرض جغرافیایی آگهی | [optional] 
+**location_type** | [**SubmitPostRequestLocationType**](SubmitPostRequestLocationType.md) |  | [optional] 
 **longitude** | **float** | طول جغرافیایی آگهی | [optional] 
+**services** | [**OpenPlatformpostServicesFields**](OpenPlatformpostServicesFields.md) |  | [optional] 
 **temporary_residence** | [**PostTemporaryResidenceFields**](PostTemporaryResidenceFields.md) |  | [optional] 
 **title** | **str** | عنوان آگهی | [optional] 
 
