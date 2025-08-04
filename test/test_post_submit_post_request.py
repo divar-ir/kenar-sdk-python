@@ -43,6 +43,7 @@ class TestPostSubmitPostRequest(unittest.TestCase):
                 images = [
                     ''
                     ],
+                landline_numbers = ["02188888888","02188888889"],
                 latitude = 35.7152,
                 location_type = 'LOCATION_TYPE_EMPTY',
                 longitude = 51.4043,

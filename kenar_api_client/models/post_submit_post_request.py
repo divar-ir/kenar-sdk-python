@@ -35,13 +35,14 @@ class PostSubmitPostRequest(BaseModel):
     district: Optional[StrictStr] = Field(default=None, description="محله آگهی")
     hide_phone: Optional[StrictBool] = Field(default=None, description="عدم نمایش شماره تماس به کاربران")
     images: Optional[List[StrictStr]] = None
+    landline_numbers: Optional[List[StrictStr]] = Field(default=None, description="Landline numbers to be added to the post")
     latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="عرض جغرافیایی آگهی")
     location_type: Optional[SubmitPostRequestLocationType] = None
     longitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="طول جغرافیایی آگهی")
     services: Optional[OpenPlatformpostServicesFields] = None
     temporary_residence: Optional[PostTemporaryResidenceFields] = None
     title: Optional[StrictStr] = Field(default=None, description="عنوان آگهی")
-    __properties: ClassVar[List[str]] = ["chat_enabled", "city", "description", "district", "hide_phone", "images", "latitude", "location_type", "longitude", "services", "temporary_residence", "title"]
+    __properties: ClassVar[List[str]] = ["chat_enabled", "city", "description", "district", "hide_phone", "images", "landline_numbers", "latitude", "location_type", "longitude", "services", "temporary_residence", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -106,6 +107,7 @@ class PostSubmitPostRequest(BaseModel):
             "district": obj.get("district"),
             "hide_phone": obj.get("hide_phone"),
             "images": obj.get("images"),
+            "landline_numbers": obj.get("landline_numbers"),
             "latitude": obj.get("latitude"),
             "location_type": obj.get("location_type"),
             "longitude": obj.get("longitude"),

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **district** | **str** | محله آگهی | [optional] 
 **hide_phone** | **bool** | عدم نمایش شماره تماس به کاربران | [optional] 
 **images** | **List[str]** |  | [optional] 
+**landline_numbers** | **List[str]** | Landline numbers to be added to the post | [optional] 
 **latitude** | **float** | عرض جغرافیایی آگهی | [optional] 
 **location_type** | [**SubmitPostRequestLocationType**](SubmitPostRequestLocationType.md) |  | [optional] 
 **longitude** | **float** | طول جغرافیایی آگهی | [optional] 
