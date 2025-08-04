@@ -26,6 +26,7 @@ class SubmitPostRequestLocationType(str, Enum):
     """
     allowed enum values
     """
+    LOCATION_TYPE_EMPTY = 'LOCATION_TYPE_EMPTY'
     LOCATION_TYPE_EXACT = 'LOCATION_TYPE_EXACT'
     LOCATION_TYPE_APPROXIMATE = 'LOCATION_TYPE_APPROXIMATE'
 

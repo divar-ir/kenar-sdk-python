@@ -44,7 +44,7 @@ class TestPostSubmitPostRequest(unittest.TestCase):
                     ''
                     ],
                 latitude = 35.7152,
-                location_type = 'LOCATION_TYPE_EXACT',
+                location_type = 'LOCATION_TYPE_EMPTY',
                 longitude = 51.4043,
                 services = kenar_api_client.models.open_platformpost_services_fields.open_platformpostServicesFields(
                     category = 'CATEGORY_CAR_AND_MOTOR', 
