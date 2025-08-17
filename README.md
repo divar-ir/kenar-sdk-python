@@ -123,6 +123,7 @@ Class | Method | HTTP request | Description
 *ChatAPIApi* | [**chat_api_conversation_send_message**](docs/ChatAPIApi.md#chat_api_conversation_send_message) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
 *ChatAPIApi* | [**chat_api_generate_upload_token**](docs/ChatAPIApi.md#chat_api_generate_upload_token) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
 *ChatAPIApi* | [**chat_api_get_conversation**](docs/ChatAPIApi.md#chat_api_get_conversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
+*EventsApi* | [**events_get_event_action**](docs/EventsApi.md#events_get_event_action) | **POST** /v1/open-platform/events/get-action | 
 *EventsApi* | [**events_register_event_subscription**](docs/EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
 *EventsApi* | [**events_send_event**](docs/EventsApi.md#events_send_event) | **POST** /experimental/open-platform/events/send | Send an event to a user
 *FinderApi* | [**finder_get_post**](docs/FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
@@ -239,6 +240,8 @@ Class | Method | HTTP request | Description
  - [ChatapiMessageType](docs/ChatapiMessageType.md)
  - [DivarIconsIconName](docs/DivarIconsIconName.md)
  - [EventsEventButton](docs/EventsEventButton.md)
+ - [EventsGetEventActionRequest](docs/EventsGetEventActionRequest.md)
+ - [EventsGetEventActionRequestRequestData](docs/EventsGetEventActionRequestRequestData.md)
  - [EventsRegisterEventSubscriptionRequest](docs/EventsRegisterEventSubscriptionRequest.md)
  - [EventsRegisterEventSubscriptionRequestEventType](docs/EventsRegisterEventSubscriptionRequestEventType.md)
  - [FinderGetAllDevelopmentPostsResponse](docs/FinderGetAllDevelopmentPostsResponse.md)
@@ -260,7 +263,7 @@ Class | Method | HTTP request | Description
  - [GooglerpcStatus](docs/GooglerpcStatus.md)
  - [ImageCarouselRowImageItem](docs/ImageCarouselRowImageItem.md)
  - [ManagementDevelopmentPost](docs/ManagementDevelopmentPost.md)
- - [ManagementPreset](docs/ManagementPreset.md)
+ - [MessageContactData](docs/MessageContactData.md)
  - [MessageFileData](docs/MessageFileData.md)
  - [MessageImageData](docs/MessageImageData.md)
  - [MessageLocationData](docs/MessageLocationData.md)
@@ -302,7 +305,14 @@ Class | Method | HTTP request | Description
  - [SemanticUserSemanticDeleted](docs/SemanticUserSemanticDeleted.md)
  - [SendEventRequestTargetType](docs/SendEventRequestTargetType.md)
  - [SubmitPostRequestLocationType](docs/SubmitPostRequestLocationType.md)
+ - [TemporaryResidenceFieldsComfortAmenity](docs/TemporaryResidenceFieldsComfortAmenity.md)
+ - [TemporaryResidenceFieldsHeatingCoolingSystem](docs/TemporaryResidenceFieldsHeatingCoolingSystem.md)
+ - [TemporaryResidenceFieldsPetsAllowed](docs/TemporaryResidenceFieldsPetsAllowed.md)
+ - [TemporaryResidenceFieldsRentalPeriod](docs/TemporaryResidenceFieldsRentalPeriod.md)
  - [TemporaryResidenceFieldsRoomsCount](docs/TemporaryResidenceFieldsRoomsCount.md)
+ - [WidgetsAction](docs/WidgetsAction.md)
+ - [WidgetsActionType](docs/WidgetsActionType.md)
+ - [WidgetsGeneralNetworkCallResponse](docs/WidgetsGeneralNetworkCallResponse.md)
 
 
 <a id="documentation-for-authorization"></a>

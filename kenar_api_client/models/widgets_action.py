@@ -17,20 +17,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
+from kenar_api_client.models.protobuf_any import ProtobufAny
+from kenar_api_client.models.widgets_action_type import WidgetsActionType
 from typing import Optional, Set
 from typing_extensions import Self
 
-class SemanticUserSemanticDeleted(BaseModel):
+class WidgetsAction(BaseModel):
     """
-    SemanticUserSemanticDeleted
+    WidgetsAction
     """ # noqa: E501
-    app_slug: Optional[StrictStr] = None
-    divar_user_id: Optional[StrictStr] = None
-    id: Optional[StrictStr] = None
-    phone: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["app_slug", "divar_user_id", "id", "phone"]
+    page_pop_link: Optional[StrictBool] = Field(default=None, description="deprecated; use is_new_flow = 1 in PagePresentation instead.")
+    payload: Optional[ProtobufAny] = None
+    type: Optional[WidgetsActionType] = None
+    __properties: ClassVar[List[str]] = ["page_pop_link", "payload", "type"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +51,7 @@ class SemanticUserSemanticDeleted(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of SemanticUserSemanticDeleted from a JSON string"""
+        """Create an instance of WidgetsAction from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,11 +72,14 @@ class SemanticUserSemanticDeleted(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of payload
+        if self.payload:
+            _dict['payload'] = self.payload.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of SemanticUserSemanticDeleted from a dict"""
+        """Create an instance of WidgetsAction from a dict"""
         if obj is None:
             return None
 
@@ -83,10 +87,9 @@ class SemanticUserSemanticDeleted(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "app_slug": obj.get("app_slug"),
-            "divar_user_id": obj.get("divar_user_id"),
-            "id": obj.get("id"),
-            "phone": obj.get("phone")
+            "page_pop_link": obj.get("page_pop_link"),
+            "payload": ProtobufAny.from_dict(obj["payload"]) if obj.get("payload") is not None else None,
+            "type": obj.get("type")
         })
         return _obj
 

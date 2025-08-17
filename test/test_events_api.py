@@ -26,6 +26,12 @@ class TestEventsApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    def test_events_get_event_action(self) -> None:
+        """Test case for events_get_event_action
+
+        """
+        pass
+
     def test_events_register_event_subscription(self) -> None:
         """Test case for events_register_event_subscription
 

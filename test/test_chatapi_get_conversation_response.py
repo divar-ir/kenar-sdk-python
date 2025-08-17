@@ -41,6 +41,9 @@ class TestChatapiGetConversationResponse(unittest.TestCase):
                     type = 'POST', ),
                 messages = [
                     kenar_api_client.models.chatapi_message.chatapiMessage(
+                        contact_data = kenar_api_client.models.message_contact_data.MessageContactData(
+                            name = '', 
+                            phone = '', ), 
                         conversation = kenar_api_client.models.chatapi_conversation.chatapiConversation(
                             id = '', 
                             post_token = '', 
@@ -80,6 +83,9 @@ class TestChatapiGetConversationResponse(unittest.TestCase):
                     type = 'POST', ),
                 messages = [
                     kenar_api_client.models.chatapi_message.chatapiMessage(
+                        contact_data = kenar_api_client.models.message_contact_data.MessageContactData(
+                            name = '', 
+                            phone = '', ), 
                         conversation = kenar_api_client.models.chatapi_conversation.chatapiConversation(
                             id = '', 
                             post_token = '', 

@@ -18,25 +18,21 @@ from enum import Enum
 from typing_extensions import Self
 
 
-class ChatapiMessageType(str, Enum):
+class TemporaryResidenceFieldsRentalPeriod(str, Enum):
     """
-    ChatapiMessageType
+    TemporaryResidenceFieldsRentalPeriod
     """
 
     """
     allowed enum values
     """
-    TEXT = 'TEXT'
-    IMAGE = 'IMAGE'
-    FILE = 'FILE'
-    VOICE = 'VOICE'
-    LOCATION = 'LOCATION'
-    VIDEO = 'VIDEO'
-    CONTACT = 'CONTACT'
+    RENTAL_PERIOD_DAILY = 'RENTAL_PERIOD_DAILY'
+    RENTAL_PERIOD_WEEKLY = 'RENTAL_PERIOD_WEEKLY'
+    RENTAL_PERIOD_MONTHLY = 'RENTAL_PERIOD_MONTHLY'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
-        """Create an instance of ChatapiMessageType from a JSON string"""
+        """Create an instance of TemporaryResidenceFieldsRentalPeriod from a JSON string"""
         return cls(json.loads(json_str))
 
 

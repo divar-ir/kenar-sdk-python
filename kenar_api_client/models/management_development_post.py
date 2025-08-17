@@ -20,7 +20,6 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from kenar_api_client.models.management_preset import ManagementPreset
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -31,9 +30,8 @@ class ManagementDevelopmentPost(BaseModel):
     category: Optional[StrictStr] = None
     created_at: Optional[datetime] = None
     mng_token: Optional[StrictStr] = None
-    preset: Optional[ManagementPreset] = None
     token: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["category", "created_at", "mng_token", "preset", "token"]
+    __properties: ClassVar[List[str]] = ["category", "created_at", "mng_token", "token"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -89,7 +87,6 @@ class ManagementDevelopmentPost(BaseModel):
             "category": obj.get("category"),
             "created_at": obj.get("created_at"),
             "mng_token": obj.get("mng_token"),
-            "preset": obj.get("preset"),
             "token": obj.get("token")
         })
         return _obj

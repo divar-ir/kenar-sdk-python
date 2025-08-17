@@ -22,15 +22,13 @@ from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
-class SemanticUserSemanticDeleted(BaseModel):
+class MessageContactData(BaseModel):
     """
-    SemanticUserSemanticDeleted
+    MessageContactData
     """ # noqa: E501
-    app_slug: Optional[StrictStr] = None
-    divar_user_id: Optional[StrictStr] = None
-    id: Optional[StrictStr] = None
+    name: Optional[StrictStr] = None
     phone: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["app_slug", "divar_user_id", "id", "phone"]
+    __properties: ClassVar[List[str]] = ["name", "phone"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +48,7 @@ class SemanticUserSemanticDeleted(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of SemanticUserSemanticDeleted from a JSON string"""
+        """Create an instance of MessageContactData from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -75,7 +73,7 @@ class SemanticUserSemanticDeleted(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of SemanticUserSemanticDeleted from a dict"""
+        """Create an instance of MessageContactData from a dict"""
         if obj is None:
             return None
 
@@ -83,9 +81,7 @@ class SemanticUserSemanticDeleted(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "app_slug": obj.get("app_slug"),
-            "divar_user_id": obj.get("divar_user_id"),
-            "id": obj.get("id"),
+            "name": obj.get("name"),
             "phone": obj.get("phone")
         })
         return _obj

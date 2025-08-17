@@ -19,18 +19,17 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from kenar_api_client.models.widgets_action import WidgetsAction
 from typing import Optional, Set
 from typing_extensions import Self
 
-class SemanticUserSemanticDeleted(BaseModel):
+class WidgetsGeneralNetworkCallResponse(BaseModel):
     """
-    SemanticUserSemanticDeleted
+    WidgetsGeneralNetworkCallResponse
     """ # noqa: E501
-    app_slug: Optional[StrictStr] = None
-    divar_user_id: Optional[StrictStr] = None
-    id: Optional[StrictStr] = None
-    phone: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["app_slug", "divar_user_id", "id", "phone"]
+    next_action: Optional[WidgetsAction] = None
+    toast_message: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["next_action", "toast_message"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +49,7 @@ class SemanticUserSemanticDeleted(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of SemanticUserSemanticDeleted from a JSON string"""
+        """Create an instance of WidgetsGeneralNetworkCallResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,11 +70,14 @@ class SemanticUserSemanticDeleted(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of next_action
+        if self.next_action:
+            _dict['next_action'] = self.next_action.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of SemanticUserSemanticDeleted from a dict"""
+        """Create an instance of WidgetsGeneralNetworkCallResponse from a dict"""
         if obj is None:
             return None
 
@@ -83,10 +85,8 @@ class SemanticUserSemanticDeleted(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "app_slug": obj.get("app_slug"),
-            "divar_user_id": obj.get("divar_user_id"),
-            "id": obj.get("id"),
-            "phone": obj.get("phone")
+            "next_action": WidgetsAction.from_dict(obj["next_action"]) if obj.get("next_action") is not None else None,
+            "toast_message": obj.get("toast_message")
         })
         return _obj
 

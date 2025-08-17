@@ -14,10 +14,10 @@
 
 import unittest
 
-from kenar_api_client.models.management_development_post import ManagementDevelopmentPost
+from kenar_api_client.models.events_get_event_action_request import EventsGetEventActionRequest
 
-class TestManagementDevelopmentPost(unittest.TestCase):
-    """ManagementDevelopmentPost unit test stubs"""
+class TestEventsGetEventActionRequest(unittest.TestCase):
+    """EventsGetEventActionRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,28 +25,26 @@ class TestManagementDevelopmentPost(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> ManagementDevelopmentPost:
-        """Test ManagementDevelopmentPost
+    def make_instance(self, include_optional) -> EventsGetEventActionRequest:
+        """Test EventsGetEventActionRequest
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ManagementDevelopmentPost`
+        # uncomment below to create an instance of `EventsGetEventActionRequest`
         """
-        model = ManagementDevelopmentPost()
+        model = EventsGetEventActionRequest()
         if include_optional:
-            return ManagementDevelopmentPost(
-                category = '',
-                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                mng_token = '',
-                token = ''
+            return EventsGetEventActionRequest(
+                request_data = kenar_api_client.models.events_get_event_action_request_request_data.eventsGetEventActionRequestRequestData(
+                    event_id = '', )
             )
         else:
-            return ManagementDevelopmentPost(
+            return EventsGetEventActionRequest(
         )
         """
 
-    def testManagementDevelopmentPost(self):
-        """Test ManagementDevelopmentPost"""
+    def testEventsGetEventActionRequest(self):
+        """Test EventsGetEventActionRequest"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

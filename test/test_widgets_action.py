@@ -14,10 +14,10 @@
 
 import unittest
 
-from kenar_api_client.models.management_development_post import ManagementDevelopmentPost
+from kenar_api_client.models.widgets_action import WidgetsAction
 
-class TestManagementDevelopmentPost(unittest.TestCase):
-    """ManagementDevelopmentPost unit test stubs"""
+class TestWidgetsAction(unittest.TestCase):
+    """WidgetsAction unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,28 +25,29 @@ class TestManagementDevelopmentPost(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> ManagementDevelopmentPost:
-        """Test ManagementDevelopmentPost
+    def make_instance(self, include_optional) -> WidgetsAction:
+        """Test WidgetsAction
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `ManagementDevelopmentPost`
+        # uncomment below to create an instance of `WidgetsAction`
         """
-        model = ManagementDevelopmentPost()
+        model = WidgetsAction()
         if include_optional:
-            return ManagementDevelopmentPost(
-                category = '',
-                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                mng_token = '',
-                token = ''
+            return WidgetsAction(
+                page_pop_link = True,
+                payload = {
+                    'key' : null
+                    },
+                type = 'MAP_PREVIEW'
             )
         else:
-            return ManagementDevelopmentPost(
+            return WidgetsAction(
         )
         """
 
-    def testManagementDevelopmentPost(self):
-        """Test ManagementDevelopmentPost"""
+    def testWidgetsAction(self):
+        """Test WidgetsAction"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

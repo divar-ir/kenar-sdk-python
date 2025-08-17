@@ -22,6 +22,7 @@ from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from kenar_api_client.models.chatapi_conversation import ChatapiConversation
 from kenar_api_client.models.chatapi_message_type import ChatapiMessageType
+from kenar_api_client.models.message_contact_data import MessageContactData
 from kenar_api_client.models.message_file_data import MessageFileData
 from kenar_api_client.models.message_image_data import MessageImageData
 from kenar_api_client.models.message_location_data import MessageLocationData
@@ -35,6 +36,7 @@ class ChatapiMessage(BaseModel):
     """
     ChatapiMessage
     """ # noqa: E501
+    contact_data: Optional[MessageContactData] = None
     conversation: Optional[ChatapiConversation] = None
     file_data: Optional[MessageFileData] = None
     id: Optional[StrictStr] = None
@@ -46,7 +48,7 @@ class ChatapiMessage(BaseModel):
     type: Optional[ChatapiMessageType] = None
     video_data: Optional[MessageVideoData] = None
     voice_data: Optional[MessageVoiceData] = None
-    __properties: ClassVar[List[str]] = ["conversation", "file_data", "id", "image_data", "location_data", "sender", "sent_at", "text", "type", "video_data", "voice_data"]
+    __properties: ClassVar[List[str]] = ["contact_data", "conversation", "file_data", "id", "image_data", "location_data", "sender", "sent_at", "text", "type", "video_data", "voice_data"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -87,6 +89,9 @@ class ChatapiMessage(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of contact_data
+        if self.contact_data:
+            _dict['contact_data'] = self.contact_data.to_dict()
         # override the default output from pydantic by calling `to_dict()` of conversation
         if self.conversation:
             _dict['conversation'] = self.conversation.to_dict()
@@ -120,6 +125,7 @@ class ChatapiMessage(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "contact_data": MessageContactData.from_dict(obj["contact_data"]) if obj.get("contact_data") is not None else None,
             "conversation": ChatapiConversation.from_dict(obj["conversation"]) if obj.get("conversation") is not None else None,
             "file_data": MessageFileData.from_dict(obj["file_data"]) if obj.get("file_data") is not None else None,
             "id": obj.get("id"),

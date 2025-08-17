@@ -17,20 +17,18 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictStr
+from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
+from kenar_api_client.models.events_get_event_action_request_request_data import EventsGetEventActionRequestRequestData
 from typing import Optional, Set
 from typing_extensions import Self
 
-class SemanticUserSemanticDeleted(BaseModel):
+class EventsGetEventActionRequest(BaseModel):
     """
-    SemanticUserSemanticDeleted
+    EventsGetEventActionRequest
     """ # noqa: E501
-    app_slug: Optional[StrictStr] = None
-    divar_user_id: Optional[StrictStr] = None
-    id: Optional[StrictStr] = None
-    phone: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["app_slug", "divar_user_id", "id", "phone"]
+    request_data: Optional[EventsGetEventActionRequestRequestData] = None
+    __properties: ClassVar[List[str]] = ["request_data"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +48,7 @@ class SemanticUserSemanticDeleted(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of SemanticUserSemanticDeleted from a JSON string"""
+        """Create an instance of EventsGetEventActionRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,11 +69,14 @@ class SemanticUserSemanticDeleted(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of request_data
+        if self.request_data:
+            _dict['request_data'] = self.request_data.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of SemanticUserSemanticDeleted from a dict"""
+        """Create an instance of EventsGetEventActionRequest from a dict"""
         if obj is None:
             return None
 
@@ -83,10 +84,7 @@ class SemanticUserSemanticDeleted(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "app_slug": obj.get("app_slug"),
-            "divar_user_id": obj.get("divar_user_id"),
-            "id": obj.get("id"),
-            "phone": obj.get("phone")
+            "request_data": EventsGetEventActionRequestRequestData.from_dict(obj["request_data"]) if obj.get("request_data") is not None else None
         })
         return _obj
 

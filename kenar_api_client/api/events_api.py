@@ -19,7 +19,9 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import Any, Dict, Optional
 from typing_extensions import Annotated
+from kenar_api_client.models.events_get_event_action_request import EventsGetEventActionRequest
 from kenar_api_client.models.events_register_event_subscription_request import EventsRegisterEventSubscriptionRequest
+from kenar_api_client.models.widgets_general_network_call_response import WidgetsGeneralNetworkCallResponse
 
 from kenar_api_client.api_client import ApiClient, RequestSerialized
 from kenar_api_client.api_response import ApiResponse
@@ -37,6 +39,277 @@ class EventsApi:
         if api_client is None:
             api_client = ApiClient.get_default()
         self.api_client = api_client
+
+
+    @validate_call
+    def events_get_event_action(
+        self,
+        events_get_event_action_request: EventsGetEventActionRequest,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> WidgetsGeneralNetworkCallResponse:
+        """events_get_event_action
+
+
+        :param events_get_event_action_request: (required)
+        :type events_get_event_action_request: EventsGetEventActionRequest
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._events_get_event_action_serialize(
+            events_get_event_action_request=events_get_event_action_request,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "WidgetsGeneralNetworkCallResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    def events_get_event_action_with_http_info(
+        self,
+        events_get_event_action_request: EventsGetEventActionRequest,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[WidgetsGeneralNetworkCallResponse]:
+        """events_get_event_action
+
+
+        :param events_get_event_action_request: (required)
+        :type events_get_event_action_request: EventsGetEventActionRequest
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._events_get_event_action_serialize(
+            events_get_event_action_request=events_get_event_action_request,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "WidgetsGeneralNetworkCallResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def events_get_event_action_without_preload_content(
+        self,
+        events_get_event_action_request: EventsGetEventActionRequest,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """events_get_event_action
+
+
+        :param events_get_event_action_request: (required)
+        :type events_get_event_action_request: EventsGetEventActionRequest
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._events_get_event_action_serialize(
+            events_get_event_action_request=events_get_event_action_request,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "WidgetsGeneralNetworkCallResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _events_get_event_action_serialize(
+        self,
+        events_get_event_action_request,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        # process the query parameters
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+        if events_get_event_action_request is not None:
+            _body_params = events_get_event_action_request
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
+
+        # authentication setting
+        _auth_settings: List[str] = [
+            'APIKey'
+        ]
+
+        return self.api_client.param_serialize(
+            method='POST',
+            resource_path='/v1/open-platform/events/get-action',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
 
 
     @validate_call
@@ -318,17 +591,11 @@ class EventsApi:
         self,
         primary_button_action_open_post_page_post_token: Annotated[StrictStr, Field(description="Token of the post to open")],
         primary_button_action_open_post_manage_page_post_token: Annotated[StrictStr, Field(description="Token of the post to redirect to its management page")],
-        secondary_button_action_open_post_page_post_token: Annotated[StrictStr, Field(description="Token of the post to open")],
-        secondary_button_action_open_post_manage_page_post_token: Annotated[StrictStr, Field(description="Token of the post to redirect to its management page")],
         message: Annotated[Optional[StrictStr], Field(description="The event message to display to the user")] = None,
         primary_button_title: Annotated[Optional[StrictStr], Field(description="The text to display on the button")] = None,
         primary_button_action_open_direct_link: Annotated[Optional[StrictStr], Field(description="An action to send user to your URL directly with just a resource id (if applicable)")] = None,
         primary_button_action_open_server_link_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
         primary_button_action_get_dynamic_action_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
-        secondary_button_title: Annotated[Optional[StrictStr], Field(description="The text to display on the button")] = None,
-        secondary_button_action_open_direct_link: Annotated[Optional[StrictStr], Field(description="An action to send user to your URL directly with just a resource id (if applicable)")] = None,
-        secondary_button_action_open_server_link_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
-        secondary_button_action_get_dynamic_action_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
         target_type: Annotated[Optional[StrictStr], Field(description="Target of the event; USER or POST")] = None,
         target_resource_id: Annotated[Optional[StrictStr], Field(description="id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. ")] = None,
         _request_timeout: Union[
@@ -352,10 +619,6 @@ class EventsApi:
         :type primary_button_action_open_post_page_post_token: str
         :param primary_button_action_open_post_manage_page_post_token: Token of the post to redirect to its management page (required)
         :type primary_button_action_open_post_manage_page_post_token: str
-        :param secondary_button_action_open_post_page_post_token: Token of the post to open (required)
-        :type secondary_button_action_open_post_page_post_token: str
-        :param secondary_button_action_open_post_manage_page_post_token: Token of the post to redirect to its management page (required)
-        :type secondary_button_action_open_post_manage_page_post_token: str
         :param message: The event message to display to the user
         :type message: str
         :param primary_button_title: The text to display on the button
@@ -366,14 +629,6 @@ class EventsApi:
         :type primary_button_action_open_server_link_data: object
         :param primary_button_action_get_dynamic_action_data: A data that you can set and will be returned to you upon user click to recognize the action
         :type primary_button_action_get_dynamic_action_data: object
-        :param secondary_button_title: The text to display on the button
-        :type secondary_button_title: str
-        :param secondary_button_action_open_direct_link: An action to send user to your URL directly with just a resource id (if applicable)
-        :type secondary_button_action_open_direct_link: str
-        :param secondary_button_action_open_server_link_data: A data that you can set and will be returned to you upon user click to recognize the action
-        :type secondary_button_action_open_server_link_data: object
-        :param secondary_button_action_get_dynamic_action_data: A data that you can set and will be returned to you upon user click to recognize the action
-        :type secondary_button_action_get_dynamic_action_data: object
         :param target_type: Target of the event; USER or POST
         :type target_type: str
         :param target_resource_id: id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. 
@@ -403,17 +658,11 @@ class EventsApi:
         _param = self._events_send_event_serialize(
             primary_button_action_open_post_page_post_token=primary_button_action_open_post_page_post_token,
             primary_button_action_open_post_manage_page_post_token=primary_button_action_open_post_manage_page_post_token,
-            secondary_button_action_open_post_page_post_token=secondary_button_action_open_post_page_post_token,
-            secondary_button_action_open_post_manage_page_post_token=secondary_button_action_open_post_manage_page_post_token,
             message=message,
             primary_button_title=primary_button_title,
             primary_button_action_open_direct_link=primary_button_action_open_direct_link,
             primary_button_action_open_server_link_data=primary_button_action_open_server_link_data,
             primary_button_action_get_dynamic_action_data=primary_button_action_get_dynamic_action_data,
-            secondary_button_title=secondary_button_title,
-            secondary_button_action_open_direct_link=secondary_button_action_open_direct_link,
-            secondary_button_action_open_server_link_data=secondary_button_action_open_server_link_data,
-            secondary_button_action_get_dynamic_action_data=secondary_button_action_get_dynamic_action_data,
             target_type=target_type,
             target_resource_id=target_resource_id,
             _request_auth=_request_auth,
@@ -441,17 +690,11 @@ class EventsApi:
         self,
         primary_button_action_open_post_page_post_token: Annotated[StrictStr, Field(description="Token of the post to open")],
         primary_button_action_open_post_manage_page_post_token: Annotated[StrictStr, Field(description="Token of the post to redirect to its management page")],
-        secondary_button_action_open_post_page_post_token: Annotated[StrictStr, Field(description="Token of the post to open")],
-        secondary_button_action_open_post_manage_page_post_token: Annotated[StrictStr, Field(description="Token of the post to redirect to its management page")],
         message: Annotated[Optional[StrictStr], Field(description="The event message to display to the user")] = None,
         primary_button_title: Annotated[Optional[StrictStr], Field(description="The text to display on the button")] = None,
         primary_button_action_open_direct_link: Annotated[Optional[StrictStr], Field(description="An action to send user to your URL directly with just a resource id (if applicable)")] = None,
         primary_button_action_open_server_link_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
         primary_button_action_get_dynamic_action_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
-        secondary_button_title: Annotated[Optional[StrictStr], Field(description="The text to display on the button")] = None,
-        secondary_button_action_open_direct_link: Annotated[Optional[StrictStr], Field(description="An action to send user to your URL directly with just a resource id (if applicable)")] = None,
-        secondary_button_action_open_server_link_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
-        secondary_button_action_get_dynamic_action_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
         target_type: Annotated[Optional[StrictStr], Field(description="Target of the event; USER or POST")] = None,
         target_resource_id: Annotated[Optional[StrictStr], Field(description="id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. ")] = None,
         _request_timeout: Union[
@@ -475,10 +718,6 @@ class EventsApi:
         :type primary_button_action_open_post_page_post_token: str
         :param primary_button_action_open_post_manage_page_post_token: Token of the post to redirect to its management page (required)
         :type primary_button_action_open_post_manage_page_post_token: str
-        :param secondary_button_action_open_post_page_post_token: Token of the post to open (required)
-        :type secondary_button_action_open_post_page_post_token: str
-        :param secondary_button_action_open_post_manage_page_post_token: Token of the post to redirect to its management page (required)
-        :type secondary_button_action_open_post_manage_page_post_token: str
         :param message: The event message to display to the user
         :type message: str
         :param primary_button_title: The text to display on the button
@@ -489,14 +728,6 @@ class EventsApi:
         :type primary_button_action_open_server_link_data: object
         :param primary_button_action_get_dynamic_action_data: A data that you can set and will be returned to you upon user click to recognize the action
         :type primary_button_action_get_dynamic_action_data: object
-        :param secondary_button_title: The text to display on the button
-        :type secondary_button_title: str
-        :param secondary_button_action_open_direct_link: An action to send user to your URL directly with just a resource id (if applicable)
-        :type secondary_button_action_open_direct_link: str
-        :param secondary_button_action_open_server_link_data: A data that you can set and will be returned to you upon user click to recognize the action
-        :type secondary_button_action_open_server_link_data: object
-        :param secondary_button_action_get_dynamic_action_data: A data that you can set and will be returned to you upon user click to recognize the action
-        :type secondary_button_action_get_dynamic_action_data: object
         :param target_type: Target of the event; USER or POST
         :type target_type: str
         :param target_resource_id: id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. 
@@ -526,17 +757,11 @@ class EventsApi:
         _param = self._events_send_event_serialize(
             primary_button_action_open_post_page_post_token=primary_button_action_open_post_page_post_token,
             primary_button_action_open_post_manage_page_post_token=primary_button_action_open_post_manage_page_post_token,
-            secondary_button_action_open_post_page_post_token=secondary_button_action_open_post_page_post_token,
-            secondary_button_action_open_post_manage_page_post_token=secondary_button_action_open_post_manage_page_post_token,
             message=message,
             primary_button_title=primary_button_title,
             primary_button_action_open_direct_link=primary_button_action_open_direct_link,
             primary_button_action_open_server_link_data=primary_button_action_open_server_link_data,
             primary_button_action_get_dynamic_action_data=primary_button_action_get_dynamic_action_data,
-            secondary_button_title=secondary_button_title,
-            secondary_button_action_open_direct_link=secondary_button_action_open_direct_link,
-            secondary_button_action_open_server_link_data=secondary_button_action_open_server_link_data,
-            secondary_button_action_get_dynamic_action_data=secondary_button_action_get_dynamic_action_data,
             target_type=target_type,
             target_resource_id=target_resource_id,
             _request_auth=_request_auth,
@@ -564,17 +789,11 @@ class EventsApi:
         self,
         primary_button_action_open_post_page_post_token: Annotated[StrictStr, Field(description="Token of the post to open")],
         primary_button_action_open_post_manage_page_post_token: Annotated[StrictStr, Field(description="Token of the post to redirect to its management page")],
-        secondary_button_action_open_post_page_post_token: Annotated[StrictStr, Field(description="Token of the post to open")],
-        secondary_button_action_open_post_manage_page_post_token: Annotated[StrictStr, Field(description="Token of the post to redirect to its management page")],
         message: Annotated[Optional[StrictStr], Field(description="The event message to display to the user")] = None,
         primary_button_title: Annotated[Optional[StrictStr], Field(description="The text to display on the button")] = None,
         primary_button_action_open_direct_link: Annotated[Optional[StrictStr], Field(description="An action to send user to your URL directly with just a resource id (if applicable)")] = None,
         primary_button_action_open_server_link_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
         primary_button_action_get_dynamic_action_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
-        secondary_button_title: Annotated[Optional[StrictStr], Field(description="The text to display on the button")] = None,
-        secondary_button_action_open_direct_link: Annotated[Optional[StrictStr], Field(description="An action to send user to your URL directly with just a resource id (if applicable)")] = None,
-        secondary_button_action_open_server_link_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
-        secondary_button_action_get_dynamic_action_data: Annotated[Optional[Dict[str, Any]], Field(description="A data that you can set and will be returned to you upon user click to recognize the action")] = None,
         target_type: Annotated[Optional[StrictStr], Field(description="Target of the event; USER or POST")] = None,
         target_resource_id: Annotated[Optional[StrictStr], Field(description="id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. ")] = None,
         _request_timeout: Union[
@@ -598,10 +817,6 @@ class EventsApi:
         :type primary_button_action_open_post_page_post_token: str
         :param primary_button_action_open_post_manage_page_post_token: Token of the post to redirect to its management page (required)
         :type primary_button_action_open_post_manage_page_post_token: str
-        :param secondary_button_action_open_post_page_post_token: Token of the post to open (required)
-        :type secondary_button_action_open_post_page_post_token: str
-        :param secondary_button_action_open_post_manage_page_post_token: Token of the post to redirect to its management page (required)
-        :type secondary_button_action_open_post_manage_page_post_token: str
         :param message: The event message to display to the user
         :type message: str
         :param primary_button_title: The text to display on the button
@@ -612,14 +827,6 @@ class EventsApi:
         :type primary_button_action_open_server_link_data: object
         :param primary_button_action_get_dynamic_action_data: A data that you can set and will be returned to you upon user click to recognize the action
         :type primary_button_action_get_dynamic_action_data: object
-        :param secondary_button_title: The text to display on the button
-        :type secondary_button_title: str
-        :param secondary_button_action_open_direct_link: An action to send user to your URL directly with just a resource id (if applicable)
-        :type secondary_button_action_open_direct_link: str
-        :param secondary_button_action_open_server_link_data: A data that you can set and will be returned to you upon user click to recognize the action
-        :type secondary_button_action_open_server_link_data: object
-        :param secondary_button_action_get_dynamic_action_data: A data that you can set and will be returned to you upon user click to recognize the action
-        :type secondary_button_action_get_dynamic_action_data: object
         :param target_type: Target of the event; USER or POST
         :type target_type: str
         :param target_resource_id: id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token. 
@@ -649,17 +856,11 @@ class EventsApi:
         _param = self._events_send_event_serialize(
             primary_button_action_open_post_page_post_token=primary_button_action_open_post_page_post_token,
             primary_button_action_open_post_manage_page_post_token=primary_button_action_open_post_manage_page_post_token,
-            secondary_button_action_open_post_page_post_token=secondary_button_action_open_post_page_post_token,
-            secondary_button_action_open_post_manage_page_post_token=secondary_button_action_open_post_manage_page_post_token,
             message=message,
             primary_button_title=primary_button_title,
             primary_button_action_open_direct_link=primary_button_action_open_direct_link,
             primary_button_action_open_server_link_data=primary_button_action_open_server_link_data,
             primary_button_action_get_dynamic_action_data=primary_button_action_get_dynamic_action_data,
-            secondary_button_title=secondary_button_title,
-            secondary_button_action_open_direct_link=secondary_button_action_open_direct_link,
-            secondary_button_action_open_server_link_data=secondary_button_action_open_server_link_data,
-            secondary_button_action_get_dynamic_action_data=secondary_button_action_get_dynamic_action_data,
             target_type=target_type,
             target_resource_id=target_resource_id,
             _request_auth=_request_auth,
@@ -682,17 +883,11 @@ class EventsApi:
         self,
         primary_button_action_open_post_page_post_token,
         primary_button_action_open_post_manage_page_post_token,
-        secondary_button_action_open_post_page_post_token,
-        secondary_button_action_open_post_manage_page_post_token,
         message,
         primary_button_title,
         primary_button_action_open_direct_link,
         primary_button_action_open_server_link_data,
         primary_button_action_get_dynamic_action_data,
-        secondary_button_title,
-        secondary_button_action_open_direct_link,
-        secondary_button_action_open_server_link_data,
-        secondary_button_action_get_dynamic_action_data,
         target_type,
         target_resource_id,
         _request_auth,
@@ -744,30 +939,6 @@ class EventsApi:
         if primary_button_action_open_post_manage_page_post_token is not None:
             
             _query_params.append(('primary_button.action.open_post_manage_page.post_token', primary_button_action_open_post_manage_page_post_token))
-            
-        if secondary_button_title is not None:
-            
-            _query_params.append(('secondary_button.title', secondary_button_title))
-            
-        if secondary_button_action_open_direct_link is not None:
-            
-            _query_params.append(('secondary_button.action.open_direct_link', secondary_button_action_open_direct_link))
-            
-        if secondary_button_action_open_server_link_data is not None:
-            
-            _query_params.append(('secondary_button.action.open_server_link.data', secondary_button_action_open_server_link_data))
-            
-        if secondary_button_action_get_dynamic_action_data is not None:
-            
-            _query_params.append(('secondary_button.action.get_dynamic_action.data', secondary_button_action_get_dynamic_action_data))
-            
-        if secondary_button_action_open_post_page_post_token is not None:
-            
-            _query_params.append(('secondary_button.action.open_post_page.post_token', secondary_button_action_open_post_page_post_token))
-            
-        if secondary_button_action_open_post_manage_page_post_token is not None:
-            
-            _query_params.append(('secondary_button.action.open_post_manage_page.post_token', secondary_button_action_open_post_manage_page_post_token))
             
         if target_type is not None:
             

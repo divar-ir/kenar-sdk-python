@@ -1,0 +1,417 @@
+# WidgetsActionType
+
+[my divar] open manage post from my divar tab  - CLOSE_PAGE: [global] Closes current page user is in  - POST_GET_CONTACT: [post-api] client only  - POST_VOIP_CALL: [post-api] client only  - OPEN_POST_REPORT: [post-api] open post-report page  - OPEN_POST_CHAT: [post-api] client only  - START_PAYMENT: [global] client starts payment  - MY_DIVAR_POSTS: [global] opens my posts in my divar  - MY_DIVAR_BOOKMARKS: [global] opens bookmarks in my divar web  - MY_DIVAR_RECENT_SEEN: [global] opens recently seen in my divar  - MY_DIVAR_NOTES: [global] opens my notes in my divar web  - OPEN_MAP: [global] open map in a separate page  - LOAD_MODAL_PAGE: [base] WEB ONLY load modal page provieded in payload  - ANGOOLAK_LOGIN: [DEBUG ONLY] logins user with the provided test  - LOAD_BOTTOM_SHEET: phone number; only works on debug versions  [global] Loads bottom sheet provided in payload  - CHAT_BLOCK_PEER: [chat] block peer in conversation  - CHAT_REPORT_PEER: [chat] report peer in conversation  - MY_DIVAR_BOOKMARKS_AND_NOTES: [my divar] open bookmarks and notes from my divar tab  - MY_DIVAR_SETTINGS: [my divar] open settings from my divar tab  - LOGIN: [my divar] open log in page  - SHOW_WIDE_BUTTON_ALERT: [global] show wide button alert  - IN_APP_UPDATE: [my divar] leads user to update app through source  - MY_PAYMENT_HISTORY: and link provided in payload  [payment] Open user payments history page  - SUBMIT_CALL_FEEDBACK: [real-estate] Submit feedback for post  - HISTORY_BACK: [global] Used in web to perform browser back action (Web Only)  - SERVICES_VIEW_PROFILE: [services] view profiles on web action  - BLACKLIST_APPEAL_OPEN_SUBMISSION_FORM_PAGE: [trust] Open blacklist appeal submission form page (web only)  - BLACKLIST_APPEAL_OPEN_STATUS_PAGE: [trust] Open blacklist appeal status page (web only)  - SERVICES_OPEN_REPORT: [services] open profile report modal on web  - DELETE_POST_NOTE: [yaad] Delete note  - DELETE_POST_BOOKMARK: [yaad] Delete bookmark  - OPEN_FORM_PAGE: [global] Open FormPage  - POP_SINGLE_PAGE_AND_PERFORM_ACTION: [global] pops a page and performs inside action.  - DISMISS_PAGES_AND_PERFORM_ACTION: [ios only] closes whole stack and performs inside action.  - OPEN_USER_VERIFICATION_PAGE: [user_profile] Used in web to open user verification schema page  - OPEN_BOTTOM_SHEET: [global] opens an arbitrary bottom sheet  - SHARE: [global] Shares a post given the token  - CHAT_SEND_IMAGE_WITH_CAMERA: [chat] Sends image in chat using camera  - CHAT_SEND_IMAGE_FROM_GALLERY: [global] Sends image in chat from gallery  - CHAT_SEND_VIDEO_WITH_CAMERA: [chat] Sends video in chat using camera  - CHAT_SEND_FILE: [chat] Sends file in chat  - CHAT_SHARE_CONTACT: [chat] Sends contact in chat  - CHAT_SHARE_LOCATION: [chat] Sends location in chat  - LOAD_WEB_VIEW_PAGE: [general] USE WITH THREAD LEADER AUTHORIZATION.  - POP_STACK_AND_GO_TO_BUSINESS_PANEL: Load web view page with navbar, etc.  [general] Pops pages of stack, moves user to business panel in  - CHAT_SEND_SUGGESTION: My Divar and deletes the post draft (conditionally)  [chat] Send suggestion in chat  - MAKE_NETWORK_CALL: [general] Makes a network call with request in payload  - OPEN_MAP_DISCOVERY: [Map Discovery] Open Map Discovery Page  - SERVICES_OPEN_PROFILE_SETTINGS_PAGE: [services] Open profile info page in web  - SERVICES_OPEN_PROFILE_PREVIEW_PAGE: [services] Open profile preview page in web  - SERVICES_OPEN_LADDER_PAGE: [services] Open ladder page in web  - SERVICES_OPEN_EDIT_NAME_AND_ABOUT_PAGE: [services] Open edit name and about page in web  - SERVICES_OPEN_EDIT_EXPERTISE_PAGE: [services] Open edit expertises page in web  - SERVICES_OPEN_EDIT_WORK_SAMPLES_PAGE: [services] Open edit work samples page in web  - SERVICES_OPEN_EDIT_WORKING_HOURS_PAGE: [services] Open edit working hours page in web  - SERVICES_OPEN_STATISTICS_PAGE: [services] Open statistics page in web  - SERVICES_OPEN_LADDER_CREDIT_PAGE: [services] Open ladder credit page in web  - SERVICES_OPEN_EDIT_GENERAL_INFO_PAGE: [services] Open edit general information page in web  - SERVICES_OPEN_EDIT_EXPERTISE_PRICING_PAGE: [services] Open edit expertise pricing page in web  - SERVICES_OPEN_EDIT_ACTIVITY_NEIGHBORHOODS_PAGE: [services] Open edit activity neighborhoods page in web  - SERVICES_OPEN_EDIT_CONTACT_INFO_PAGE: [services] Open edit contact info page in web  - SERVICES_OPEN_EDIT_WEBSITE_LINK_PAGE: [services] Open edit website link page in web  - SERVICES_OPEN_ADD_LANDLINE_PAGE: [services] Open add landline page in web  - SERVICES_OPEN_LIST_EXPERTISE_PRICING_PAGE: [services] Open list expertise pricing in web  - BLACKLIST_APPEAL_OPEN_CHANGE_OWNERSHIP_PAGE: [trust] Open appeal of changing ownership schema page (web only)  - OPEN_REVOKE_USER_VERIFICATION_PAGE: [user_profile] Open revoke user verification schema page (web  - OPEN_MY_WALLET_PAGE: only)  [wallet] Open my wallet page (web only)  - CHAT_SEND_RECENT_IMAGES: [chat] Sends images that were previously  - BULK_LADDER_WITH_PAYMENT: sent in other conversations of the same ad  ladder multiple posts in one click (using payment)  - CHAT_SPAM_CONVERSATION: [chat] spam/unspam conversation  - SERVICES_START_ACTIVATION_PAYMENT: [services] start activation payment in web  - SERVICES_OPEN_REMOVE_LANDLINE_PAGE: [services] Open remove landline page in web  - OPEN_HOME_PAGE: [global] open root category page and flush history  - PAYMENT_HISTORY_DETAILS: stack (client only)  [payment] open payment history details page  - PAYMENT_ISSUE_INVOICE: [payment] open issue invoice page in web  - OPEN_POSTLIST_PAGE_GRPC: [global] open post list page new  - SERVICES_OPEN_WEB_REGISTRATION: [services] open services profile registration page (web only)  - CAR_DEALERS_ALLOCATE_QUOTA: [engaged-user] open page for sharing  - MY_DIVAR_ACCESSIBILITY: auto-generated image of post (web only)  [engaged-user] open accessibility options  - OPEN_FILTERS_PAGE: in my-divar (android only)  [post-list] open filters page in post list.  - MARKETPLACE_PURCHASE_SUBSCRIPTION_PAGE: [marketplace] open purchase subscription page (web only)  - OPEN_WIDGET_LIST_BOTTOMSHEET: [client] opens a widget list bottom sheet  - PREMIUM_PANEL_SUBMIT_POST: [premium-panel] submit post action  - PREMIUM_PANEL_OPEN_PANEL: [premium-panel] opens premium user panel in web  - PREMIUM_PANEL_OPEN_REGISTRATION_FORM: [premium-panel] opens premium panel registration form in web  - CHAT_UNBLOCK_PEER: [chat] unblock peer in conversation  - REMOVE_WALLET_USAGE_QUOTA: [payment] Remove Wallet Usage Quota Web  - PREMIUM_PANEL_OPEN_POST_LIST_PAGE: [premium-panel] open post list page (web only)  - POP_FORM_PAGE_AND_PERFORM_ACTION: [client] Pop form  - RESUBMIT_POST: [submit] Resubmit post action  - PREMIUM_PANEL_OPEN_AGENT_MANAGEMENT: [premium-panel] open agents management page (web only)  - PREMIUM_PANEL_INVITE_AGENT: [premium-panel] invite agent (web only)  - PREMIUM_PANEL_OPEN_AGENT_INVITATION_DETAILS: [premium-panel] open agent invitation details page (web only)  - PREMIUM_PANEL_CANCEL_AGENT_INVITATION: [premium-panel] cancel agent invitation (web only)  - PREMIUM_PANEL_EDIT_AGENT_INVITATION: [premium-panel] edit agent invitation (web only)  - PREMIUM_PANEL_OPEN_RECEIVED_INVITATIONS_LIST: [premium-panel] open received invitations list (web only)  - PREMIUM_PANEL_ACTION_ON_INVITATION: [premium-panel] action on invitation (web only)  - OPEN_CATEGORY_SEARCH_BOTTOM_SHEET: [post-list] Open category bottom sheet component  - OPEN_WEB_CATEGORIES_MODAL: [post-list] open categories modal in web(web only)  - AFTER_SUBMIT: [client] open the manage and after submit and payment pages  - OPEN_RICH_WEB_VIEW: [client] USE WITH THREAD LEADER AUTHORIZATION. open a rich  - PREMIUM_PANEL_EDIT_AGENT: WebView that can interact with Divar JavaScript SDK and communicate with the client  [premium-panel] edit agent (web only)  - PREMIUM_PANEL_ALLOCATE_QUOTA: [premium-panel] allocate wallet quota (web only)  - PREMIUM_PANEL_REMOVE_QUOTA: [premium-panel] remove wallet quota (web only)  - PREMIUM_PANEL_REMOVE_AGENT: [premium-panel] remove agent (web only)  - PREMIUM_PANEL_VIEW_AGENT_POSTS: [premium-panel] view agent posts (web only)  - PREMIUM_PANEL_OPEN_USAGE_REPORT_PAGE: [premium-panel] open usage report page (web only)  - PREMIUM_PANEL_AGENT_DETAILS: [premium-panel] open agent details page (web only)  - PREMIUM_PANEL_BRAND_MANAGEMENT: [premium-panel] open brand management page (web only)  - PREMIUM_PANEL_EDIT_BRAND: [premium-panel] open brand management page (web only)  - PREMIUM_PANEL_BRAND_LANDING: [premium-panel] open brand landing page (web only)  - PREMIUM_PANEL_OPEN_HELP_AND_SUPPORT_PAGE: [premium-panel] open help and support page (web only)  - CLOSE_REPORT_AND_FEEDBACK_WEB_MODAL: [fariba] close report and feedback web modal (web only)  - OPEN_SELECT_SEARCH_AREA_MAP: [horizontal-location] open map for specific list filters  - AFTER_CALL_HISTORY_BUNDLE_ACTION_COMPLETED: [secure-call] close bundle actions modal after action completed  - AFTER_PREMIUM_PANEL_LEAVE_BRAND: (web only)  [premium-panel] Go to divar home page and remove the left brand  - PREMIUM_PANEL_OPEN_REGISTRATION_LANDING_PAGE: from list of brands (web only)  [premium-panel] Open premium panel registration landing page  - OPEN_MENU: (web only) Will be deprecated after Personal User Pro released. OPEN_MENU will open a bottom sheet in clients and a context menu in web  [general] open menu with the data returned by requesting  - LOAD_MENU: the given address LOAD_MENU will open a bottom sheet in clients and a context menu in web  [general] load menu provided in payload  - OPEN_MULTI_CHOICE_MENU: [general] Open multi choice bottom sheet in  - OPEN_CITY_SELECTOR: clients and a dialog in web  [global] open city selector page  - WALLET_OPEN_MY_PAYMENTS_HISTORY_PAGE: [wallet] open my wallet payments history page (web only)  - OPEN_MAP_POST_LIST: [Map Discovery, PostList] OpenMapPostListPayload open page with  - CHAT_SEND_TEXT: map and post-list together  [chat] Send text in chat  - CALL_PHONE: [global] opens dial page  - OPEN_SHOPPING_ASSISTANT: [shopping-assistant] opens shopping assistant page  - OPEN_SIMPLE_SUBMIT_PAGE: [simple-submit] opens simple submit page  - PREMIUM_PANEL_OPEN_USER_VERIFICATION_PAGE: [premium-panel] Go to user verification page (web only)  - PREMIUM_PANEL_OPEN_REFUND_PAGE: [premium-panel] Go to refund page (web only)  - PREMIUM_PANEL_OPEN_REFUND_DETAILS_PAGE: [premium-panel] Go to refund details page (web only)  - PREMIUM_PANEL_OPEN_REFUND_BAZAAR_PAY_PAGE: [premium-panel] Go to bazaar pay refund page (web only)  - PREMIUM_PANEL_OPEN_REFUND_IBAN_PAGE: [premium-panel] Go to iban form page (web only)  - WEB_FIRST_OPEN_CLIENT_WIDGET_BASE_ACTION: [global] execute widget base action in client from rich web view  - PREMIUM_PANEL_BUSINESS_ADDONS_PAGE: (web only)  [premium-panel] Go to business addons page (web only)  - OPEN_FILTER_RANGE_SELECTOR_BOTTOM_SHEET: [post-list] Open filter range selector bottom sheet component  - SUBMIT_POST: [submit] Submit post action (submit for both posts  - OPEN_FILTER_BOTTOM_SHEET: with personal and premium panel business types)  [post-list] OpenFilterBottomSheetPayload. opens filter bottom  - PREMIUM_PANEL_BUSINESS_ADDRESS_PAGE: sheet component and shows the widget_list provided in the payload.  [premium-panel] Go to business address page (web only)  - PAYMENT_OPEN_BAZAAR_PAY_SDK: [payment] Open BazaarPay SDK action  - PRICING_OPEN_MY_OVERUSAGE_PAGE: [pricing] Open my overusage page (web only)  - POP_MODAL_PAGE_AND_PERFORM_ACTION: [web only] pops a modal and performs inside action.  - PREMIUM_PANEL_CHANGE_POST_PRICE_SELECTOR_PAGE: [premium-panel] Change post price selector (web only)  - PREMIUM_PANEL_CHANGE_POST_PRICE_FORM_PAGE: [premium-panel] Change post price form (web only)  - PREMIUM_PANEL_EMAIL_ADDRESS_PAGE: [premium-panel] Go to email address page (web only)  - PREMIUM_PANEL_LANDLINE_PAGE: [premium-panel] Go to landline page (web only)  - PREMIUM_PANEL_INSIGHT_POST_LIST_PAGE: [premium-panel] Open insight post list page (web only)  - PREMIUM_PANEL_INSIGHT_POST_DETAIL_PAGE: [premium-panel] Open insight post list item (web only)  - PREMIUM_PANEL_OLD_OWNER_TRANSFER_OWNERSHIP_FORM_PAGE: [premium-panel] Open old owner transfer ownership form page (web only)  - PREMIUM_PANEL_OLD_OWNER_TRANSFER_OWNERSHIP_DETAILS_PAGE: [premium-panel] Open old owner transfer ownership details page (web only)  - PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_DETAILS_PAGE: [premium-panel] Open new owner transfer ownership details page (web only)  - PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_APPROVE_PAGE: [premium-panel] Open new owner transfer ownership approve page (web only)  - PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_CONFIRM_FORM_PAGE: [premium-panel] Open new owner transfer ownership confirm form page (web only)  - PREMIUM_PANEL_AUTO_PROMOTION_PAGE: [premium-panel] Open auto promotion page (web only)  - PREMIUM_PANEL_AUTO_PROMOTION_DETAILS_PAGE: [premium-panel] Open auto promotion details page (web only)  - PREMIUM_PANEL_AUTO_PROMOTION_CHOOSE_POST: [premium-panel] Open auto promotion choose post page (web only)  - PREMIUM_PANEL_AUTO_PROMOTION_REGISTER_FORM_PAGE: [premium-panel] Open auto promotion register form page (web only)  - PREMIUM_PANEL_USER_REGISTRATION_FORM: [premium-panel] Open user registration form page (web only)  - OPEN_LIVE_SESSION_PAGE: [global] opens live session page  - MY_DIVAR_PAYMENTS: [global] opens my payments in my divar  - PREMIUM_PANEL_REMOVE_BRAND_PAGE: [premium-panel] Go to remove brand page (web only)  - PREMIUM_PANEL_PERSONAL_PAYMENT: [only web] show personal payment in pro personal page  - REGISTER_PASSKEY: [Authenticate] register a new passkey with RegisterPasskeyBegin and RegisterPasskeyFinish RPCs  - LOGIN_WITH_PASSKEY: [Authenticate] login with passkey using LoginWithPasskeyBegin and LoginWithPasskeyFinish RPCs  - LOGIN_SEND_OTP: [Authenticate] call Authenticate RPC  - MY_DIVAR_PAGE: [global] opens my divar page  - OPEN_PROMOTION_FORM_PAGE: [Payment] opens promotion form page V2
+
+## Enum
+
+* `MAP_PREVIEW` (value: `'MAP_PREVIEW'`)
+
+* `CALL_SUPPORT` (value: `'CALL_SUPPORT'`)
+
+* `MANAGE_POST` (value: `'MANAGE_POST'`)
+
+* `VIEW_POST` (value: `'VIEW_POST'`)
+
+* `USER_AUTHENTICATION` (value: `'USER_AUTHENTICATION'`)
+
+* `PAYMENT_HISTORY` (value: `'PAYMENT_HISTORY'`)
+
+* `CLAIM_POST` (value: `'CLAIM_POST'`)
+
+* `ARCHIVE_POST` (value: `'ARCHIVE_POST'`)
+
+* `EDIT_POST` (value: `'EDIT_POST'`)
+
+* `PREVIEW_POST` (value: `'PREVIEW_POST'`)
+
+* `UPGRADE_POST` (value: `'UPGRADE_POST'`)
+
+* `LOAD_PAGE` (value: `'LOAD_PAGE'`)
+
+* `AUTH_NATIONAL_ID` (value: `'AUTH_NATIONAL_ID'`)
+
+* `PERSONAL_SUBMIT_POST` (value: `'PERSONAL_SUBMIT_POST'`)
+
+* `OPEN_WEB_PAGE` (value: `'OPEN_WEB_PAGE'`)
+
+* `LOAD_PAYMENT_DETAILS` (value: `'LOAD_PAYMENT_DETAILS'`)
+
+* `LANDLINE_VERIFICATION` (value: `'LANDLINE_VERIFICATION'`)
+
+* `LOGOUT` (value: `'LOGOUT'`)
+
+* `OPEN_SUPPORT_PAGE` (value: `'OPEN_SUPPORT_PAGE'`)
+
+* `USER_SUGGESTION_PAGE` (value: `'USER_SUGGESTION_PAGE'`)
+
+* `CATEGORY_SUGGESTION` (value: `'CATEGORY_SUGGESTION'`)
+
+* `WALLET_SETTINGS_PAGE` (value: `'WALLET_SETTINGS_PAGE'`)
+
+* `OPEN_POSTLIST_PAGE` (value: `'OPEN_POSTLIST_PAGE'`)
+
+* `WALLET_BALANCE_PAGE` (value: `'WALLET_BALANCE_PAGE'`)
+
+* `OPEN_PAGE` (value: `'OPEN_PAGE'`)
+
+* `WALLET_CALL_SUPPORT` (value: `'WALLET_CALL_SUPPORT'`)
+
+* `OPEN_SCHEMA_PAGE` (value: `'OPEN_SCHEMA_PAGE'`)
+
+* `COPY_TO_CLIPBOARD` (value: `'COPY_TO_CLIPBOARD'`)
+
+* `POP_PAGES_AND_PERFORM_ACTION` (value: `'POP_PAGES_AND_PERFORM_ACTION'`)
+
+* `MARKETPLACE_SHARE_STORE_LANDING` (value: `'MARKETPLACE_SHARE_STORE_LANDING'`)
+
+* `OPEN_POST_SUGGESTION_POST` (value: `'OPEN_POST_SUGGESTION_POST'`)
+
+* `MESSAGE` (value: `'MESSAGE'`)
+
+* `MY_DIVAR_MANAGE_POST` (value: `'MY_DIVAR_MANAGE_POST'`)
+
+* `CLOSE_PAGE` (value: `'CLOSE_PAGE'`)
+
+* `POST_GET_CONTACT` (value: `'POST_GET_CONTACT'`)
+
+* `POST_VOIP_CALL` (value: `'POST_VOIP_CALL'`)
+
+* `OPEN_POST_REPORT` (value: `'OPEN_POST_REPORT'`)
+
+* `OPEN_POST_CHAT` (value: `'OPEN_POST_CHAT'`)
+
+* `FILTERABLE_SEARCH_RESULT` (value: `'FILTERABLE_SEARCH_RESULT'`)
+
+* `OPEN_WEB_PAGE_ALERT` (value: `'OPEN_WEB_PAGE_ALERT'`)
+
+* `START_PAYMENT` (value: `'START_PAYMENT'`)
+
+* `NOTE` (value: `'NOTE'`)
+
+* `BOOKMARK` (value: `'BOOKMARK'`)
+
+* `MY_DIVAR_POSTS` (value: `'MY_DIVAR_POSTS'`)
+
+* `MY_DIVAR_BOOKMARKS` (value: `'MY_DIVAR_BOOKMARKS'`)
+
+* `MY_DIVAR_RECENT_SEEN` (value: `'MY_DIVAR_RECENT_SEEN'`)
+
+* `MY_DIVAR_NOTES` (value: `'MY_DIVAR_NOTES'`)
+
+* `OPEN_MAP` (value: `'OPEN_MAP'`)
+
+* `LOAD_MODAL_PAGE` (value: `'LOAD_MODAL_PAGE'`)
+
+* `ANGOOLAK_LOGIN` (value: `'ANGOOLAK_LOGIN'`)
+
+* `LOAD_BOTTOM_SHEET` (value: `'LOAD_BOTTOM_SHEET'`)
+
+* `CHAT_BLOCK_PEER` (value: `'CHAT_BLOCK_PEER'`)
+
+* `CHAT_REPORT_PEER` (value: `'CHAT_REPORT_PEER'`)
+
+* `MY_DIVAR_BOOKMARKS_AND_NOTES` (value: `'MY_DIVAR_BOOKMARKS_AND_NOTES'`)
+
+* `MY_DIVAR_SETTINGS` (value: `'MY_DIVAR_SETTINGS'`)
+
+* `LOGIN` (value: `'LOGIN'`)
+
+* `SHOW_WIDE_BUTTON_ALERT` (value: `'SHOW_WIDE_BUTTON_ALERT'`)
+
+* `IN_APP_UPDATE` (value: `'IN_APP_UPDATE'`)
+
+* `MY_PAYMENT_HISTORY` (value: `'MY_PAYMENT_HISTORY'`)
+
+* `SUBMIT_CALL_FEEDBACK` (value: `'SUBMIT_CALL_FEEDBACK'`)
+
+* `HISTORY_BACK` (value: `'HISTORY_BACK'`)
+
+* `SERVICES_VIEW_PROFILE` (value: `'SERVICES_VIEW_PROFILE'`)
+
+* `BLACKLIST_APPEAL_OPEN_SUBMISSION_FORM_PAGE` (value: `'BLACKLIST_APPEAL_OPEN_SUBMISSION_FORM_PAGE'`)
+
+* `BLACKLIST_APPEAL_OPEN_STATUS_PAGE` (value: `'BLACKLIST_APPEAL_OPEN_STATUS_PAGE'`)
+
+* `SERVICES_OPEN_REPORT` (value: `'SERVICES_OPEN_REPORT'`)
+
+* `DELETE_POST_NOTE` (value: `'DELETE_POST_NOTE'`)
+
+* `DELETE_POST_BOOKMARK` (value: `'DELETE_POST_BOOKMARK'`)
+
+* `OPEN_FORM_PAGE` (value: `'OPEN_FORM_PAGE'`)
+
+* `POP_SINGLE_PAGE_AND_PERFORM_ACTION` (value: `'POP_SINGLE_PAGE_AND_PERFORM_ACTION'`)
+
+* `DISMISS_PAGES_AND_PERFORM_ACTION` (value: `'DISMISS_PAGES_AND_PERFORM_ACTION'`)
+
+* `OPEN_USER_VERIFICATION_PAGE` (value: `'OPEN_USER_VERIFICATION_PAGE'`)
+
+* `OPEN_BOTTOM_SHEET` (value: `'OPEN_BOTTOM_SHEET'`)
+
+* `SHARE` (value: `'SHARE'`)
+
+* `CHAT_SEND_IMAGE_WITH_CAMERA` (value: `'CHAT_SEND_IMAGE_WITH_CAMERA'`)
+
+* `CHAT_SEND_IMAGE_FROM_GALLERY` (value: `'CHAT_SEND_IMAGE_FROM_GALLERY'`)
+
+* `CHAT_SEND_VIDEO_WITH_CAMERA` (value: `'CHAT_SEND_VIDEO_WITH_CAMERA'`)
+
+* `CHAT_SEND_FILE` (value: `'CHAT_SEND_FILE'`)
+
+* `CHAT_SHARE_CONTACT` (value: `'CHAT_SHARE_CONTACT'`)
+
+* `CHAT_SHARE_LOCATION` (value: `'CHAT_SHARE_LOCATION'`)
+
+* `LOAD_WEB_VIEW_PAGE` (value: `'LOAD_WEB_VIEW_PAGE'`)
+
+* `POP_STACK_AND_GO_TO_BUSINESS_PANEL` (value: `'POP_STACK_AND_GO_TO_BUSINESS_PANEL'`)
+
+* `CHAT_SEND_SUGGESTION` (value: `'CHAT_SEND_SUGGESTION'`)
+
+* `MAKE_NETWORK_CALL` (value: `'MAKE_NETWORK_CALL'`)
+
+* `OPEN_MAP_DISCOVERY` (value: `'OPEN_MAP_DISCOVERY'`)
+
+* `SERVICES_OPEN_PROFILE_SETTINGS_PAGE` (value: `'SERVICES_OPEN_PROFILE_SETTINGS_PAGE'`)
+
+* `SERVICES_OPEN_PROFILE_PREVIEW_PAGE` (value: `'SERVICES_OPEN_PROFILE_PREVIEW_PAGE'`)
+
+* `SERVICES_OPEN_LADDER_PAGE` (value: `'SERVICES_OPEN_LADDER_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_NAME_AND_ABOUT_PAGE` (value: `'SERVICES_OPEN_EDIT_NAME_AND_ABOUT_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_EXPERTISE_PAGE` (value: `'SERVICES_OPEN_EDIT_EXPERTISE_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_WORK_SAMPLES_PAGE` (value: `'SERVICES_OPEN_EDIT_WORK_SAMPLES_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_WORKING_HOURS_PAGE` (value: `'SERVICES_OPEN_EDIT_WORKING_HOURS_PAGE'`)
+
+* `SERVICES_OPEN_STATISTICS_PAGE` (value: `'SERVICES_OPEN_STATISTICS_PAGE'`)
+
+* `SERVICES_OPEN_LADDER_CREDIT_PAGE` (value: `'SERVICES_OPEN_LADDER_CREDIT_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_GENERAL_INFO_PAGE` (value: `'SERVICES_OPEN_EDIT_GENERAL_INFO_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_EXPERTISE_PRICING_PAGE` (value: `'SERVICES_OPEN_EDIT_EXPERTISE_PRICING_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_ACTIVITY_NEIGHBORHOODS_PAGE` (value: `'SERVICES_OPEN_EDIT_ACTIVITY_NEIGHBORHOODS_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_CONTACT_INFO_PAGE` (value: `'SERVICES_OPEN_EDIT_CONTACT_INFO_PAGE'`)
+
+* `SERVICES_OPEN_EDIT_WEBSITE_LINK_PAGE` (value: `'SERVICES_OPEN_EDIT_WEBSITE_LINK_PAGE'`)
+
+* `SERVICES_OPEN_ADD_LANDLINE_PAGE` (value: `'SERVICES_OPEN_ADD_LANDLINE_PAGE'`)
+
+* `SERVICES_OPEN_LIST_EXPERTISE_PRICING_PAGE` (value: `'SERVICES_OPEN_LIST_EXPERTISE_PRICING_PAGE'`)
+
+* `BLACKLIST_APPEAL_OPEN_CHANGE_OWNERSHIP_PAGE` (value: `'BLACKLIST_APPEAL_OPEN_CHANGE_OWNERSHIP_PAGE'`)
+
+* `OPEN_REVOKE_USER_VERIFICATION_PAGE` (value: `'OPEN_REVOKE_USER_VERIFICATION_PAGE'`)
+
+* `OPEN_MY_WALLET_PAGE` (value: `'OPEN_MY_WALLET_PAGE'`)
+
+* `CHAT_SEND_RECENT_IMAGES` (value: `'CHAT_SEND_RECENT_IMAGES'`)
+
+* `BULK_LADDER_WITH_PAYMENT` (value: `'BULK_LADDER_WITH_PAYMENT'`)
+
+* `CHAT_SPAM_CONVERSATION` (value: `'CHAT_SPAM_CONVERSATION'`)
+
+* `SERVICES_START_ACTIVATION_PAYMENT` (value: `'SERVICES_START_ACTIVATION_PAYMENT'`)
+
+* `SERVICES_OPEN_REMOVE_LANDLINE_PAGE` (value: `'SERVICES_OPEN_REMOVE_LANDLINE_PAGE'`)
+
+* `OPEN_HOME_PAGE` (value: `'OPEN_HOME_PAGE'`)
+
+* `PAYMENT_HISTORY_DETAILS` (value: `'PAYMENT_HISTORY_DETAILS'`)
+
+* `PAYMENT_ISSUE_INVOICE` (value: `'PAYMENT_ISSUE_INVOICE'`)
+
+* `OPEN_POSTLIST_PAGE_GRPC` (value: `'OPEN_POSTLIST_PAGE_GRPC'`)
+
+* `SERVICES_OPEN_WEB_REGISTRATION` (value: `'SERVICES_OPEN_WEB_REGISTRATION'`)
+
+* `CAR_DEALERS_ALLOCATE_QUOTA` (value: `'CAR_DEALERS_ALLOCATE_QUOTA'`)
+
+* `MY_DIVAR_ACCESSIBILITY` (value: `'MY_DIVAR_ACCESSIBILITY'`)
+
+* `OPEN_FILTERS_PAGE` (value: `'OPEN_FILTERS_PAGE'`)
+
+* `MARKETPLACE_PURCHASE_SUBSCRIPTION_PAGE` (value: `'MARKETPLACE_PURCHASE_SUBSCRIPTION_PAGE'`)
+
+* `OPEN_WIDGET_LIST_BOTTOMSHEET` (value: `'OPEN_WIDGET_LIST_BOTTOMSHEET'`)
+
+* `PREMIUM_PANEL_SUBMIT_POST` (value: `'PREMIUM_PANEL_SUBMIT_POST'`)
+
+* `PREMIUM_PANEL_OPEN_PANEL` (value: `'PREMIUM_PANEL_OPEN_PANEL'`)
+
+* `PREMIUM_PANEL_OPEN_REGISTRATION_FORM` (value: `'PREMIUM_PANEL_OPEN_REGISTRATION_FORM'`)
+
+* `CHAT_UNBLOCK_PEER` (value: `'CHAT_UNBLOCK_PEER'`)
+
+* `REMOVE_WALLET_USAGE_QUOTA` (value: `'REMOVE_WALLET_USAGE_QUOTA'`)
+
+* `PREMIUM_PANEL_OPEN_POST_LIST_PAGE` (value: `'PREMIUM_PANEL_OPEN_POST_LIST_PAGE'`)
+
+* `POP_FORM_PAGE_AND_PERFORM_ACTION` (value: `'POP_FORM_PAGE_AND_PERFORM_ACTION'`)
+
+* `RESUBMIT_POST` (value: `'RESUBMIT_POST'`)
+
+* `PREMIUM_PANEL_OPEN_AGENT_MANAGEMENT` (value: `'PREMIUM_PANEL_OPEN_AGENT_MANAGEMENT'`)
+
+* `PREMIUM_PANEL_INVITE_AGENT` (value: `'PREMIUM_PANEL_INVITE_AGENT'`)
+
+* `PREMIUM_PANEL_OPEN_AGENT_INVITATION_DETAILS` (value: `'PREMIUM_PANEL_OPEN_AGENT_INVITATION_DETAILS'`)
+
+* `PREMIUM_PANEL_CANCEL_AGENT_INVITATION` (value: `'PREMIUM_PANEL_CANCEL_AGENT_INVITATION'`)
+
+* `PREMIUM_PANEL_EDIT_AGENT_INVITATION` (value: `'PREMIUM_PANEL_EDIT_AGENT_INVITATION'`)
+
+* `PREMIUM_PANEL_OPEN_RECEIVED_INVITATIONS_LIST` (value: `'PREMIUM_PANEL_OPEN_RECEIVED_INVITATIONS_LIST'`)
+
+* `PREMIUM_PANEL_ACTION_ON_INVITATION` (value: `'PREMIUM_PANEL_ACTION_ON_INVITATION'`)
+
+* `OPEN_CATEGORY_SEARCH_BOTTOM_SHEET` (value: `'OPEN_CATEGORY_SEARCH_BOTTOM_SHEET'`)
+
+* `OPEN_WEB_CATEGORIES_MODAL` (value: `'OPEN_WEB_CATEGORIES_MODAL'`)
+
+* `AFTER_SUBMIT` (value: `'AFTER_SUBMIT'`)
+
+* `OPEN_RICH_WEB_VIEW` (value: `'OPEN_RICH_WEB_VIEW'`)
+
+* `PREMIUM_PANEL_EDIT_AGENT` (value: `'PREMIUM_PANEL_EDIT_AGENT'`)
+
+* `PREMIUM_PANEL_ALLOCATE_QUOTA` (value: `'PREMIUM_PANEL_ALLOCATE_QUOTA'`)
+
+* `PREMIUM_PANEL_REMOVE_QUOTA` (value: `'PREMIUM_PANEL_REMOVE_QUOTA'`)
+
+* `PREMIUM_PANEL_REMOVE_AGENT` (value: `'PREMIUM_PANEL_REMOVE_AGENT'`)
+
+* `PREMIUM_PANEL_VIEW_AGENT_POSTS` (value: `'PREMIUM_PANEL_VIEW_AGENT_POSTS'`)
+
+* `PREMIUM_PANEL_OPEN_USAGE_REPORT_PAGE` (value: `'PREMIUM_PANEL_OPEN_USAGE_REPORT_PAGE'`)
+
+* `PREMIUM_PANEL_AGENT_DETAILS` (value: `'PREMIUM_PANEL_AGENT_DETAILS'`)
+
+* `PREMIUM_PANEL_BRAND_MANAGEMENT` (value: `'PREMIUM_PANEL_BRAND_MANAGEMENT'`)
+
+* `PREMIUM_PANEL_EDIT_BRAND` (value: `'PREMIUM_PANEL_EDIT_BRAND'`)
+
+* `PREMIUM_PANEL_BRAND_LANDING` (value: `'PREMIUM_PANEL_BRAND_LANDING'`)
+
+* `PREMIUM_PANEL_OPEN_HELP_AND_SUPPORT_PAGE` (value: `'PREMIUM_PANEL_OPEN_HELP_AND_SUPPORT_PAGE'`)
+
+* `CLOSE_REPORT_AND_FEEDBACK_WEB_MODAL` (value: `'CLOSE_REPORT_AND_FEEDBACK_WEB_MODAL'`)
+
+* `PREMIUM_PANEL_OPEN_POST_MANAGE_PAGE` (value: `'PREMIUM_PANEL_OPEN_POST_MANAGE_PAGE'`)
+
+* `OPEN_SELECT_SEARCH_AREA_MAP` (value: `'OPEN_SELECT_SEARCH_AREA_MAP'`)
+
+* `AFTER_CALL_HISTORY_BUNDLE_ACTION_COMPLETED` (value: `'AFTER_CALL_HISTORY_BUNDLE_ACTION_COMPLETED'`)
+
+* `AFTER_PREMIUM_PANEL_LEAVE_BRAND` (value: `'AFTER_PREMIUM_PANEL_LEAVE_BRAND'`)
+
+* `PREMIUM_PANEL_OPEN_REGISTRATION_LANDING_PAGE` (value: `'PREMIUM_PANEL_OPEN_REGISTRATION_LANDING_PAGE'`)
+
+* `OPEN_MENU` (value: `'OPEN_MENU'`)
+
+* `LOAD_MENU` (value: `'LOAD_MENU'`)
+
+* `OPEN_MULTI_CHOICE_MENU` (value: `'OPEN_MULTI_CHOICE_MENU'`)
+
+* `OPEN_CITY_SELECTOR` (value: `'OPEN_CITY_SELECTOR'`)
+
+* `WALLET_OPEN_MY_PAYMENTS_HISTORY_PAGE` (value: `'WALLET_OPEN_MY_PAYMENTS_HISTORY_PAGE'`)
+
+* `OPEN_MAP_POST_LIST` (value: `'OPEN_MAP_POST_LIST'`)
+
+* `CHAT_SEND_TEXT` (value: `'CHAT_SEND_TEXT'`)
+
+* `CALL_PHONE` (value: `'CALL_PHONE'`)
+
+* `OPEN_SHOPPING_ASSISTANT` (value: `'OPEN_SHOPPING_ASSISTANT'`)
+
+* `OPEN_SIMPLE_SUBMIT_PAGE` (value: `'OPEN_SIMPLE_SUBMIT_PAGE'`)
+
+* `PREMIUM_PANEL_OPEN_USER_VERIFICATION_PAGE` (value: `'PREMIUM_PANEL_OPEN_USER_VERIFICATION_PAGE'`)
+
+* `PREMIUM_PANEL_OPEN_REFUND_PAGE` (value: `'PREMIUM_PANEL_OPEN_REFUND_PAGE'`)
+
+* `PREMIUM_PANEL_OPEN_REFUND_DETAILS_PAGE` (value: `'PREMIUM_PANEL_OPEN_REFUND_DETAILS_PAGE'`)
+
+* `PREMIUM_PANEL_OPEN_REFUND_BAZAAR_PAY_PAGE` (value: `'PREMIUM_PANEL_OPEN_REFUND_BAZAAR_PAY_PAGE'`)
+
+* `PREMIUM_PANEL_OPEN_REFUND_IBAN_PAGE` (value: `'PREMIUM_PANEL_OPEN_REFUND_IBAN_PAGE'`)
+
+* `WEB_FIRST_OPEN_CLIENT_WIDGET_BASE_ACTION` (value: `'WEB_FIRST_OPEN_CLIENT_WIDGET_BASE_ACTION'`)
+
+* `PREMIUM_PANEL_BUSINESS_ADDONS_PAGE` (value: `'PREMIUM_PANEL_BUSINESS_ADDONS_PAGE'`)
+
+* `OPEN_FILTER_RANGE_SELECTOR_BOTTOM_SHEET` (value: `'OPEN_FILTER_RANGE_SELECTOR_BOTTOM_SHEET'`)
+
+* `SUBMIT_POST` (value: `'SUBMIT_POST'`)
+
+* `OPEN_FILTER_BOTTOM_SHEET` (value: `'OPEN_FILTER_BOTTOM_SHEET'`)
+
+* `PREMIUM_PANEL_BUSINESS_ADDRESS_PAGE` (value: `'PREMIUM_PANEL_BUSINESS_ADDRESS_PAGE'`)
+
+* `PAYMENT_OPEN_BAZAAR_PAY_SDK` (value: `'PAYMENT_OPEN_BAZAAR_PAY_SDK'`)
+
+* `PRICING_OPEN_MY_OVERUSAGE_PAGE` (value: `'PRICING_OPEN_MY_OVERUSAGE_PAGE'`)
+
+* `POP_MODAL_PAGE_AND_PERFORM_ACTION` (value: `'POP_MODAL_PAGE_AND_PERFORM_ACTION'`)
+
+* `PREMIUM_PANEL_CHANGE_POST_PRICE_SELECTOR_PAGE` (value: `'PREMIUM_PANEL_CHANGE_POST_PRICE_SELECTOR_PAGE'`)
+
+* `PREMIUM_PANEL_CHANGE_POST_PRICE_FORM_PAGE` (value: `'PREMIUM_PANEL_CHANGE_POST_PRICE_FORM_PAGE'`)
+
+* `LOAD_GENERAL_OTP_PAGE` (value: `'LOAD_GENERAL_OTP_PAGE'`)
+
+* `PREMIUM_PANEL_EMAIL_ADDRESS_PAGE` (value: `'PREMIUM_PANEL_EMAIL_ADDRESS_PAGE'`)
+
+* `PREMIUM_PANEL_LANDLINE_PAGE` (value: `'PREMIUM_PANEL_LANDLINE_PAGE'`)
+
+* `PREMIUM_PANEL_INSIGHT_POST_LIST_PAGE` (value: `'PREMIUM_PANEL_INSIGHT_POST_LIST_PAGE'`)
+
+* `PREMIUM_PANEL_INSIGHT_POST_DETAIL_PAGE` (value: `'PREMIUM_PANEL_INSIGHT_POST_DETAIL_PAGE'`)
+
+* `PREMIUM_PANEL_OLD_OWNER_TRANSFER_OWNERSHIP_FORM_PAGE` (value: `'PREMIUM_PANEL_OLD_OWNER_TRANSFER_OWNERSHIP_FORM_PAGE'`)
+
+* `PREMIUM_PANEL_OLD_OWNER_TRANSFER_OWNERSHIP_DETAILS_PAGE` (value: `'PREMIUM_PANEL_OLD_OWNER_TRANSFER_OWNERSHIP_DETAILS_PAGE'`)
+
+* `PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_DETAILS_PAGE` (value: `'PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_DETAILS_PAGE'`)
+
+* `PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_APPROVE_PAGE` (value: `'PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_APPROVE_PAGE'`)
+
+* `PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_CONFIRM_FORM_PAGE` (value: `'PREMIUM_PANEL_NEW_OWNER_TRANSFER_OWNERSHIP_CONFIRM_FORM_PAGE'`)
+
+* `PREMIUM_PANEL_AUTO_PROMOTION_PAGE` (value: `'PREMIUM_PANEL_AUTO_PROMOTION_PAGE'`)
+
+* `PREMIUM_PANEL_AUTO_PROMOTION_DETAILS_PAGE` (value: `'PREMIUM_PANEL_AUTO_PROMOTION_DETAILS_PAGE'`)
+
+* `PREMIUM_PANEL_AUTO_PROMOTION_CHOOSE_POST` (value: `'PREMIUM_PANEL_AUTO_PROMOTION_CHOOSE_POST'`)
+
+* `PREMIUM_PANEL_AUTO_PROMOTION_REGISTER_FORM_PAGE` (value: `'PREMIUM_PANEL_AUTO_PROMOTION_REGISTER_FORM_PAGE'`)
+
+* `PREMIUM_PANEL_USER_REGISTRATION_FORM` (value: `'PREMIUM_PANEL_USER_REGISTRATION_FORM'`)
+
+* `OPEN_LIVE_SESSION_PAGE` (value: `'OPEN_LIVE_SESSION_PAGE'`)
+
+* `MY_DIVAR_PAYMENTS` (value: `'MY_DIVAR_PAYMENTS'`)
+
+* `PREMIUM_PANEL_REMOVE_BRAND_PAGE` (value: `'PREMIUM_PANEL_REMOVE_BRAND_PAGE'`)
+
+* `PREMIUM_PANEL_PERSONAL_PAYMENT` (value: `'PREMIUM_PANEL_PERSONAL_PAYMENT'`)
+
+* `REGISTER_PASSKEY` (value: `'REGISTER_PASSKEY'`)
+
+* `LOGIN_WITH_PASSKEY` (value: `'LOGIN_WITH_PASSKEY'`)
+
+* `LOGIN_SEND_OTP` (value: `'LOGIN_SEND_OTP'`)
+
+* `MY_DIVAR_PAGE` (value: `'MY_DIVAR_PAGE'`)
+
+* `OPEN_PROMOTION_FORM_PAGE` (value: `'OPEN_PROMOTION_FORM_PAGE'`)
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

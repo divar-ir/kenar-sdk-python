@@ -36,13 +36,27 @@ class TestPostTemporaryResidenceFields(unittest.TestCase):
         if include_optional:
             return PostTemporaryResidenceFields(
                 area = 100,
+                check_in_time = '08:00',
+                check_out_time = '20:00',
+                comfort_amenities = [
+                    'COMFORT_AMENITY_TV'
+                    ],
+                damage_deposit = '2000000',
                 extra_person_capacity = 2,
+                fully_furnished = True,
                 has_own_image = True,
+                heating_cooling_system = [
+                    'HEATING_COOLING_SYSTEM_EVAPORATIVE_COOLER'
+                    ],
+                house_rules = 'no smoking',
+                minimum_stay = 3,
+                pets_allowed = 'PETS_ALLOWED_YES',
                 price_cost_per_extra_person = '150000',
                 price_regular_days = '1000000',
                 price_special_days = '1500000',
                 price_weekends = '1200000',
                 regular_person_capacity = 4,
+                rental_period = 'RENTAL_PERIOD_DAILY',
                 rooms_count = 'ROOMS_COUNT_0'
             )
         else:

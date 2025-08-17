@@ -36,6 +36,7 @@ class TestSemanticUserSemanticDeleted(unittest.TestCase):
         if include_optional:
             return SemanticUserSemanticDeleted(
                 app_slug = '',
+                divar_user_id = '',
                 id = '',
                 phone = ''
             )

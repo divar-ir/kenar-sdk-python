@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **app_slug** | **str** |  | [optional] 
+**divar_user_id** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **phone** | **str** |  | [optional] 
 
