@@ -4,86 +4,9 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**events_get_event_action**](EventsApi.md#events_get_event_action) | **POST** /v1/open-platform/events/get-action | 
 [**events_register_event_subscription**](EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
 [**events_send_event**](EventsApi.md#events_send_event) | **POST** /experimental/open-platform/events/send | Send an event to a user
 
-
-# **events_get_event_action**
-> WidgetsGeneralNetworkCallResponse events_get_event_action(events_get_event_action_request)
-
-### Example
-
-* Api Key Authentication (APIKey):
-
-```python
-import kenar_api_client
-from kenar_api_client.models.events_get_event_action_request import EventsGetEventActionRequest
-from kenar_api_client.models.widgets_general_network_call_response import WidgetsGeneralNetworkCallResponse
-from kenar_api_client.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://open-api.divar.ir
-# See configuration.py for a list of all supported configuration parameters.
-configuration = kenar_api_client.Configuration(
-    host = "https://open-api.divar.ir"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: APIKey
-configuration.api_key['APIKey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['APIKey'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with kenar_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = kenar_api_client.EventsApi(api_client)
-    events_get_event_action_request = kenar_api_client.EventsGetEventActionRequest() # EventsGetEventActionRequest | 
-
-    try:
-        api_response = api_instance.events_get_event_action(events_get_event_action_request)
-        print("The response of EventsApi->events_get_event_action:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling EventsApi->events_get_event_action: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **events_get_event_action_request** | [**EventsGetEventActionRequest**](EventsGetEventActionRequest.md)|  | 
-
-### Return type
-
-[**WidgetsGeneralNetworkCallResponse**](WidgetsGeneralNetworkCallResponse.md)
-
-### Authorization
-
-[APIKey](../README.md#APIKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | پاسخ موفقیت‌آمیز. |  -  |
-**0** | پاسخ خطای غیرمنتظره. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **events_register_event_subscription**
 > object events_register_event_subscription(events_register_event_subscription_request)
