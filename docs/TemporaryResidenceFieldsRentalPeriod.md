@@ -1,5 +1,6 @@
 # TemporaryResidenceFieldsRentalPeriod
 
+Rental period type (daily, weekly, monthly)
 
 ## Enum
 

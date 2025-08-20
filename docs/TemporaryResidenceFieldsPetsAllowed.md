@@ -1,5 +1,6 @@
 # TemporaryResidenceFieldsPetsAllowed
 
+Pet policy for the residence
 
 ## Enum
 

@@ -1,5 +1,6 @@
 # PostServicesFieldsCategory
 
+The subcategory of the service
 
 ## Enum
 

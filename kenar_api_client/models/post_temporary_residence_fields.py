@@ -34,12 +34,12 @@ class PostTemporaryResidenceFields(BaseModel):
     area: Optional[StrictInt] = Field(default=None, description="متراژ اقامتگاه به متر مربع")
     check_in_time: Optional[StrictStr] = Field(default=None, description="Check-in time")
     check_out_time: Optional[StrictStr] = Field(default=None, description="Check-out time")
-    comfort_amenities: Optional[List[TemporaryResidenceFieldsComfortAmenity]] = Field(default=None, description="List of comfort amenities available in the residence")
+    comfort_amenities: Optional[List[TemporaryResidenceFieldsComfortAmenity]] = None
     damage_deposit: Optional[StrictStr] = Field(default=None, description="Damage deposit amount in Toman")
     extra_person_capacity: Optional[StrictInt] = Field(default=None, description="تعداد افراد اضافه مجاز در اقامتگاه")
     fully_furnished: Optional[StrictBool] = Field(default=None, description="Whether the residence is fully furnished")
     has_own_image: Optional[StrictBool] = Field(default=None, description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
-    heating_cooling_system: Optional[List[TemporaryResidenceFieldsHeatingCoolingSystem]] = Field(default=None, description="List of heating and cooling systems available")
+    heating_cooling_system: Optional[List[TemporaryResidenceFieldsHeatingCoolingSystem]] = None
     house_rules: Optional[StrictStr] = Field(default=None, description="House rules and regulations")
     minimum_stay: Optional[StrictInt] = Field(default=None, description="Minimum number of days required for stay")
     pets_allowed: Optional[TemporaryResidenceFieldsPetsAllowed] = None

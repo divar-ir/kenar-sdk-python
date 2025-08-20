@@ -1,5 +1,6 @@
 # TemporaryResidenceFieldsComfortAmenity
 
+List of comfort amenities available in the residence
 
 ## Enum
 

@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class TemporaryResidenceFieldsRoomsCount(str, Enum):
     """
-    TemporaryResidenceFieldsRoomsCount
+    Number of rooms in the residence
     """
 
     """

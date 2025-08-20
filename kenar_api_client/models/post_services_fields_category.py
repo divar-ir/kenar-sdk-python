@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class PostServicesFieldsCategory(str, Enum):
     """
-    PostServicesFieldsCategory
+    The subcategory of the service
     """
 
     """

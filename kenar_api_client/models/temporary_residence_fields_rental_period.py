@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class TemporaryResidenceFieldsRentalPeriod(str, Enum):
     """
-    TemporaryResidenceFieldsRentalPeriod
+    Rental period type (daily, weekly, monthly)
     """
 
     """

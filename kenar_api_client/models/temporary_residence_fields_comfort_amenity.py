@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class TemporaryResidenceFieldsComfortAmenity(str, Enum):
     """
-    TemporaryResidenceFieldsComfortAmenity
+    List of comfort amenities available in the residence
     """
 
     """

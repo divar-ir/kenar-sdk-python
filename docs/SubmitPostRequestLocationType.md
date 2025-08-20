@@ -1,5 +1,6 @@
 # SubmitPostRequestLocationType
 
+Type of the location
 
 ## Enum
 

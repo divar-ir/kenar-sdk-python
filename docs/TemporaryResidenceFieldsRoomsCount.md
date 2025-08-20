@@ -1,5 +1,6 @@
 # TemporaryResidenceFieldsRoomsCount
 
+Number of rooms in the residence
 
 ## Enum
 

@@ -1,5 +1,6 @@
 # TemporaryResidenceFieldsHeatingCoolingSystem
 
+List of heating and cooling systems available
 
 ## Enum
 

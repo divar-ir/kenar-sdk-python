@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class TemporaryResidenceFieldsPetsAllowed(str, Enum):
     """
-    TemporaryResidenceFieldsPetsAllowed
+    Pet policy for the residence
     """
 
     """
