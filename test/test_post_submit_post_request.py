@@ -78,6 +78,15 @@ class TestPostSubmitPostRequest(unittest.TestCase):
             )
         else:
             return PostSubmitPostRequest(
+                chat_enabled = True,
+                city = 'tehran',
+                description = 'I'm available only in chat.',
+                hide_phone = True,
+                images = [
+                    ''
+                    ],
+                location_type = 'LOCATION_TYPE_EXACT',
+                title = 'Temporary Residence for Rent in Tehran',
         )
         """
 

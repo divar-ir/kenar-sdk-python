@@ -43,6 +43,8 @@ class TestPostEditPostBody(unittest.TestCase):
             )
         else:
             return PostEditPostBody(
+                description = '',
+                title = '',
         )
         """
 

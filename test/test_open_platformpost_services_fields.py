@@ -44,6 +44,12 @@ class TestOpenPlatformpostServicesFields(unittest.TestCase):
             )
         else:
             return OpenPlatformpostServicesFields(
+                category = 'CATEGORY_CAR_AND_MOTOR',
+                expertise_ids = ["1","2"],
+                work_hours_end = 18,
+                work_hours_start = 9,
+                work_on_holidays = True,
+                works_24_7 = False,
         )
         """
 

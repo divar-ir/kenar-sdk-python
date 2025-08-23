@@ -26,9 +26,9 @@ class PostEditPostBody(BaseModel):
     """
     PostEditPostBody
     """ # noqa: E501
-    description: Optional[StrictStr] = None
+    description: StrictStr
     image_paths: Optional[List[StrictStr]] = None
-    title: Optional[StrictStr] = None
+    title: StrictStr
     __properties: ClassVar[List[str]] = ["description", "image_paths", "title"]
 
     model_config = ConfigDict(

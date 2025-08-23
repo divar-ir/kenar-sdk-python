@@ -5,19 +5,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chat_enabled** | **bool** | امکان چت فعال باشد | [optional] 
-**city** | **str** | شهر آگهی | [optional] 
-**description** | **str** | توضیحات آگهی | [optional] 
+**chat_enabled** | **bool** | امکان چت فعال باشد | 
+**city** | **str** | شهر آگهی | 
+**description** | **str** | توضیحات آگهی | 
 **district** | **str** | محله آگهی | [optional] 
-**hide_phone** | **bool** | عدم نمایش شماره تماس به کاربران | [optional] 
-**images** | **List[str]** |  | [optional] 
+**hide_phone** | **bool** | عدم نمایش شماره تماس به کاربران | 
+**images** | **List[str]** |  | 
 **landline_numbers** | **List[str]** | Landline numbers to be added to the post | [optional] 
 **latitude** | **float** | عرض جغرافیایی آگهی | [optional] 
-**location_type** | [**SubmitPostRequestLocationType**](SubmitPostRequestLocationType.md) |  | [optional] 
+**location_type** | [**SubmitPostRequestLocationType**](SubmitPostRequestLocationType.md) |  | 
 **longitude** | **float** | طول جغرافیایی آگهی | [optional] 
 **services** | [**OpenPlatformpostServicesFields**](OpenPlatformpostServicesFields.md) |  | [optional] 
 **temporary_residence** | [**PostTemporaryResidenceFields**](PostTemporaryResidenceFields.md) |  | [optional] 
-**title** | **str** | عنوان آگهی | [optional] 
+**title** | **str** | عنوان آگهی | 
 
 ## Example
 

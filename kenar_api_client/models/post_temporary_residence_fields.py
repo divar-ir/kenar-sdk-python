@@ -31,25 +31,25 @@ class PostTemporaryResidenceFields(BaseModel):
     """
     PostTemporaryResidenceFields
     """ # noqa: E501
-    area: Optional[StrictInt] = Field(default=None, description="متراژ اقامتگاه به متر مربع")
+    area: StrictInt = Field(description="متراژ اقامتگاه به متر مربع")
     check_in_time: Optional[StrictStr] = Field(default=None, description="Check-in time")
     check_out_time: Optional[StrictStr] = Field(default=None, description="Check-out time")
     comfort_amenities: Optional[List[TemporaryResidenceFieldsComfortAmenity]] = None
     damage_deposit: Optional[StrictStr] = Field(default=None, description="Damage deposit amount in Toman")
-    extra_person_capacity: Optional[StrictInt] = Field(default=None, description="تعداد افراد اضافه مجاز در اقامتگاه")
+    extra_person_capacity: StrictInt = Field(description="تعداد افراد اضافه مجاز در اقامتگاه")
     fully_furnished: Optional[StrictBool] = Field(default=None, description="Whether the residence is fully furnished")
-    has_own_image: Optional[StrictBool] = Field(default=None, description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
+    has_own_image: StrictBool = Field(description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
     heating_cooling_system: Optional[List[TemporaryResidenceFieldsHeatingCoolingSystem]] = None
     house_rules: Optional[StrictStr] = Field(default=None, description="House rules and regulations")
     minimum_stay: Optional[StrictInt] = Field(default=None, description="Minimum number of days required for stay")
     pets_allowed: Optional[TemporaryResidenceFieldsPetsAllowed] = None
-    price_cost_per_extra_person: Optional[StrictStr] = Field(default=None, description="هزینه هر نفر اضافه به ازای هر شب به تومان")
-    price_regular_days: Optional[StrictStr] = Field(default=None, description="قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان")
-    price_special_days: Optional[StrictStr] = Field(default=None, description="قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان")
-    price_weekends: Optional[StrictStr] = Field(default=None, description="قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان")
-    regular_person_capacity: Optional[StrictInt] = Field(default=None, description="ظرفیت استاندارد افراد در اقامتگاه")
+    price_cost_per_extra_person: StrictStr = Field(description="هزینه هر نفر اضافه به ازای هر شب به تومان")
+    price_regular_days: StrictStr = Field(description="قیمت اقامتگاه در روزهای عادی (شنبه تا سه‌شنبه) به تومان")
+    price_special_days: StrictStr = Field(description="قیمت اقامتگاه در روزهای خاص (تعطیلات و مناسبت‌ها) به تومان")
+    price_weekends: StrictStr = Field(description="قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان")
+    regular_person_capacity: StrictInt = Field(description="ظرفیت استاندارد افراد در اقامتگاه")
     rental_period: Optional[TemporaryResidenceFieldsRentalPeriod] = None
-    rooms_count: Optional[TemporaryResidenceFieldsRoomsCount] = None
+    rooms_count: TemporaryResidenceFieldsRoomsCount
     __properties: ClassVar[List[str]] = ["area", "check_in_time", "check_out_time", "comfort_amenities", "damage_deposit", "extra_person_capacity", "fully_furnished", "has_own_image", "heating_cooling_system", "house_rules", "minimum_stay", "pets_allowed", "price_cost_per_extra_person", "price_regular_days", "price_special_days", "price_weekends", "regular_person_capacity", "rental_period", "rooms_count"]
 
     model_config = ConfigDict(

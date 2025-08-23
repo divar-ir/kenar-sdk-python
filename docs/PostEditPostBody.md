@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **str** |  | [optional] 
+**description** | **str** |  | 
 **image_paths** | **List[str]** |  | [optional] 
-**title** | **str** |  | [optional] 
+**title** | **str** |  | 
 
 ## Example
 

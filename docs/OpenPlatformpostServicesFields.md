@@ -5,12 +5,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**category** | [**PostServicesFieldsCategory**](PostServicesFieldsCategory.md) |  | [optional] 
-**expertise_ids** | **List[str]** | List of expertise ids | [optional] 
-**work_hours_end** | **int** | End hour of work in 24-hour format (e.g. 18 for 18:00). Only applicable if &#x60;works_24_7&#x60; is false. | [optional] 
-**work_hours_start** | **int** | Start hour of work in 24-hour format (e.g. 9 for 9:00). Only applicable if &#x60;works_24_7&#x60; is false. | [optional] 
-**work_on_holidays** | **bool** | Whether the service provider works on holidays | [optional] 
-**works_24_7** | **bool** | Whether the service provider is available 24/7. If true, &#x60;work_hours_start&#x60; and &#x60;work_hours_end&#x60; are ignored. | [optional] 
+**category** | [**PostServicesFieldsCategory**](PostServicesFieldsCategory.md) |  | 
+**expertise_ids** | **List[str]** | List of expertise ids | 
+**work_hours_end** | **int** | End hour of work in 24-hour format (e.g. 18 for 18:00). Only applicable if &#x60;works_24_7&#x60; is false. | 
+**work_hours_start** | **int** | Start hour of work in 24-hour format (e.g. 9 for 9:00). Only applicable if &#x60;works_24_7&#x60; is false. | 
+**work_on_holidays** | **bool** | Whether the service provider works on holidays | 
+**works_24_7** | **bool** | Whether the service provider is available 24/7. If true, &#x60;work_hours_start&#x60; and &#x60;work_hours_end&#x60; are ignored. | 
 
 ## Example
 

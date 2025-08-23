@@ -57,6 +57,15 @@ class TestPostTemporaryResidenceFields(unittest.TestCase):
             )
         else:
             return PostTemporaryResidenceFields(
+                area = 100,
+                extra_person_capacity = 2,
+                has_own_image = True,
+                price_cost_per_extra_person = '150000',
+                price_regular_days = '1000000',
+                price_special_days = '1500000',
+                price_weekends = '1200000',
+                regular_person_capacity = 4,
+                rooms_count = 'ROOMS_COUNT_2',
         )
         """
 

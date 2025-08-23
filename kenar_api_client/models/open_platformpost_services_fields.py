@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List
 from kenar_api_client.models.post_services_fields_category import PostServicesFieldsCategory
 from typing import Optional, Set
 from typing_extensions import Self
@@ -27,12 +27,12 @@ class OpenPlatformpostServicesFields(BaseModel):
     """
     OpenPlatformpostServicesFields
     """ # noqa: E501
-    category: Optional[PostServicesFieldsCategory] = None
-    expertise_ids: Optional[List[StrictStr]] = Field(default=None, description="List of expertise ids")
-    work_hours_end: Optional[StrictInt] = Field(default=None, description="End hour of work in 24-hour format (e.g. 18 for 18:00). Only applicable if `works_24_7` is false.")
-    work_hours_start: Optional[StrictInt] = Field(default=None, description="Start hour of work in 24-hour format (e.g. 9 for 9:00). Only applicable if `works_24_7` is false.")
-    work_on_holidays: Optional[StrictBool] = Field(default=None, description="Whether the service provider works on holidays")
-    works_24_7: Optional[StrictBool] = Field(default=None, description="Whether the service provider is available 24/7. If true, `work_hours_start` and `work_hours_end` are ignored.")
+    category: PostServicesFieldsCategory
+    expertise_ids: List[StrictStr] = Field(description="List of expertise ids")
+    work_hours_end: StrictInt = Field(description="End hour of work in 24-hour format (e.g. 18 for 18:00). Only applicable if `works_24_7` is false.")
+    work_hours_start: StrictInt = Field(description="Start hour of work in 24-hour format (e.g. 9 for 9:00). Only applicable if `works_24_7` is false.")
+    work_on_holidays: StrictBool = Field(description="Whether the service provider works on holidays")
+    works_24_7: StrictBool = Field(description="Whether the service provider is available 24/7. If true, `work_hours_start` and `work_hours_end` are ignored.")
     __properties: ClassVar[List[str]] = ["category", "expertise_ids", "work_hours_end", "work_hours_start", "work_on_holidays", "works_24_7"]
 
     model_config = ConfigDict(
