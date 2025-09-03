@@ -5,11 +5,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**apartment_sell** | [**PostApartmentSellFields**](PostApartmentSellFields.md) |  | [optional] 
 **chat_enabled** | **bool** | امکان چت فعال باشد | 
 **city** | **str** | شهر آگهی | 
 **description** | **str** | توضیحات آگهی | 
 **district** | **str** | محله آگهی | [optional] 
 **hide_phone** | **bool** | عدم نمایش شماره تماس به کاربران | 
+**home_presell** | [**PostHomePresellFields**](PostHomePresellFields.md) |  | [optional] 
 **images** | **List[str]** |  | 
 **landline_numbers** | **List[str]** | Landline numbers to be added to the post | [optional] 
 **latitude** | **float** | عرض جغرافیایی آگهی | [optional] 

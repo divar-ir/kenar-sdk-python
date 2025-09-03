@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **price_weekends** | **str** | قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان | 
 **regular_person_capacity** | **int** | ظرفیت استاندارد افراد در اقامتگاه | 
 **rental_period** | [**TemporaryResidenceFieldsRentalPeriod**](TemporaryResidenceFieldsRentalPeriod.md) |  | [optional] 
-**rooms_count** | [**TemporaryResidenceFieldsRoomsCount**](TemporaryResidenceFieldsRoomsCount.md) |  | 
+**rooms_count** | [**PostRoomsCount**](PostRoomsCount.md) |  | 
 
 ## Example
 

@@ -24,6 +24,7 @@ from kenar_api_client.models.addon_semantic_identity_verification_result import 
 from kenar_api_client.models.addon_semantic_identity_verification_stage import AddonSemanticIdentityVerificationStage
 from kenar_api_client.models.addon_semantic_inspection_result import AddonSemanticInspectionResult
 from kenar_api_client.models.addon_semantic_new_face_verification_result import AddonSemanticNewFaceVerificationResult
+from kenar_api_client.models.addon_semantic_online_reservation_capability import AddonSemanticOnlineReservationCapability
 from kenar_api_client.models.addon_semantic_ownership_result import AddonSemanticOwnershipResult
 from kenar_api_client.models.addon_semantic_post_verification_result import AddonSemanticPostVerificationResult
 from kenar_api_client.models.addons_addon_semantic_payment_method import AddonsAddonSemanticPaymentMethod
@@ -42,11 +43,12 @@ class AddonsAddonSemantic(BaseModel):
     identity_verification_result: Optional[AddonSemanticIdentityVerificationResult] = None
     inspection_result: Optional[AddonSemanticInspectionResult] = None
     new_face_verification_result: Optional[AddonSemanticNewFaceVerificationResult] = None
+    online_reservation_capability: Optional[AddonSemanticOnlineReservationCapability] = None
     ownership_result: Optional[AddonSemanticOwnershipResult] = None
     payment_method: Optional[AddonsAddonSemanticPaymentMethod] = None
     post_verification_result: Optional[AddonSemanticPostVerificationResult] = None
     status: Optional[AddonsAddonSemanticStatus] = None
-    __properties: ClassVar[List[str]] = ["car_verification_failure_reason", "car_verification_last_successful_stage", "identity_verification_failure_reason", "identity_verification_last_successful_stage", "identity_verification_result", "inspection_result", "new_face_verification_result", "ownership_result", "payment_method", "post_verification_result", "status"]
+    __properties: ClassVar[List[str]] = ["car_verification_failure_reason", "car_verification_last_successful_stage", "identity_verification_failure_reason", "identity_verification_last_successful_stage", "identity_verification_result", "inspection_result", "new_face_verification_result", "online_reservation_capability", "ownership_result", "payment_method", "post_verification_result", "status"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -106,6 +108,7 @@ class AddonsAddonSemantic(BaseModel):
             "identity_verification_result": obj.get("identity_verification_result"),
             "inspection_result": obj.get("inspection_result"),
             "new_face_verification_result": obj.get("new_face_verification_result"),
+            "online_reservation_capability": obj.get("online_reservation_capability"),
             "ownership_result": obj.get("ownership_result"),
             "payment_method": obj.get("payment_method"),
             "post_verification_result": obj.get("post_verification_result"),

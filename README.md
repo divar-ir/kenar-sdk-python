@@ -140,11 +140,14 @@ Class | Method | HTTP request | Description
 *SemanticApi* | [**semantic_create_user_semantic2**](docs/SemanticApi.md#semantic_create_user_semantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
 *SemanticApi* | [**semantic_delete_user_semantic**](docs/SemanticApi.md#semantic_delete_user_semantic) | **DELETE** /v1/open-platform/semantic/user/{phone} | حذف اطلاعات معنایی کاربر
 *SemanticApi* | [**semantic_delete_user_semantic2**](docs/SemanticApi.md#semantic_delete_user_semantic2) | **DELETE** /v1/open-platform/semantic/users/{divar_user_id} | حذف اطلاعات معنایی کاربر
+*LimitedApi* | [**payment_commit_wallet_transaction**](docs/LimitedApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
+*LimitedApi* | [**payment_create_wallet_payment**](docs/LimitedApi.md#payment_create_wallet_payment) | **POST** /experimental/open-platform/wallet/payments/create | 
 *LimitedApi* | [**payment_get_balance**](docs/LimitedApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | 
 *LimitedApi* | [**payment_get_post_pricing**](docs/LimitedApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
 *LimitedApi* | [**payment_get_transaction**](docs/LimitedApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | 
 *LimitedApi* | [**payment_list_transactions**](docs/LimitedApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | 
 *LimitedApi* | [**payment_reorder_post**](docs/LimitedApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
+*LimitedApi* | [**payment_retrieve_wallet_transaction**](docs/LimitedApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
 
 
 ## Documentation For Models
@@ -154,6 +157,7 @@ Class | Method | HTTP request | Description
  - [AddonSemanticIdentityVerificationStage](docs/AddonSemanticIdentityVerificationStage.md)
  - [AddonSemanticInspectionResult](docs/AddonSemanticInspectionResult.md)
  - [AddonSemanticNewFaceVerificationResult](docs/AddonSemanticNewFaceVerificationResult.md)
+ - [AddonSemanticOnlineReservationCapability](docs/AddonSemanticOnlineReservationCapability.md)
  - [AddonSemanticOwnershipResult](docs/AddonSemanticOwnershipResult.md)
  - [AddonSemanticPostVerificationResult](docs/AddonSemanticPostVerificationResult.md)
  - [AddonsAction](docs/AddonsAction.md)
@@ -257,6 +261,10 @@ Class | Method | HTTP request | Description
  - [GetPostStatsResponsePostStats](docs/GetPostStatsResponsePostStats.md)
  - [GetServiceTypesResponseServiceTypeData](docs/GetServiceTypesResponseServiceTypeData.md)
  - [GooglerpcStatus](docs/GooglerpcStatus.md)
+ - [HomePresellFieldsConstructionPhase](docs/HomePresellFieldsConstructionPhase.md)
+ - [HomePresellFieldsDeliveryMonth](docs/HomePresellFieldsDeliveryMonth.md)
+ - [HomePresellFieldsDeliveryYear](docs/HomePresellFieldsDeliveryYear.md)
+ - [HomePresellFieldsUnitType](docs/HomePresellFieldsUnitType.md)
  - [ImageCarouselRowImageItem](docs/ImageCarouselRowImageItem.md)
  - [ManagementDevelopmentPost](docs/ManagementDevelopmentPost.md)
  - [MessageContactData](docs/MessageContactData.md)
@@ -268,21 +276,31 @@ Class | Method | HTTP request | Description
  - [MessageVoiceData](docs/MessageVoiceData.md)
  - [OAuthScopeScope](docs/OAuthScopeScope.md)
  - [OpenPlatformpostServicesFields](docs/OpenPlatformpostServicesFields.md)
+ - [PaymentCommitWalletTransactionRequest](docs/PaymentCommitWalletTransactionRequest.md)
+ - [PaymentCommitWalletTransactionResponse](docs/PaymentCommitWalletTransactionResponse.md)
+ - [PaymentCreateWalletPaymentRequest](docs/PaymentCreateWalletPaymentRequest.md)
+ - [PaymentCreateWalletPaymentResponse](docs/PaymentCreateWalletPaymentResponse.md)
  - [PaymentGetBalanceResponse](docs/PaymentGetBalanceResponse.md)
  - [PaymentGetPostPricingResponse](docs/PaymentGetPostPricingResponse.md)
  - [PaymentGetTransactionResponse](docs/PaymentGetTransactionResponse.md)
  - [PaymentListTransactionsResponse](docs/PaymentListTransactionsResponse.md)
  - [PaymentReorderPostBody](docs/PaymentReorderPostBody.md)
  - [PaymentReorderPostResponse](docs/PaymentReorderPostResponse.md)
+ - [PaymentRetrieveWalletTransactionResponse](docs/PaymentRetrieveWalletTransactionResponse.md)
  - [PaymentTicketGenerateResponse](docs/PaymentTicketGenerateResponse.md)
  - [PaymentTicketValidateRequest](docs/PaymentTicketValidateRequest.md)
  - [PaymentTicketValidateResponse](docs/PaymentTicketValidateResponse.md)
  - [PaymentTransaction](docs/PaymentTransaction.md)
  - [PaymentTransactionState](docs/PaymentTransactionState.md)
  - [PaymentTransactionType](docs/PaymentTransactionType.md)
+ - [PaymentWalletTransaction](docs/PaymentWalletTransaction.md)
+ - [PaymentWalletTransactionStatus](docs/PaymentWalletTransactionStatus.md)
+ - [PostApartmentSellFields](docs/PostApartmentSellFields.md)
  - [PostEditPostBody](docs/PostEditPostBody.md)
  - [PostGetImageUploadURLResponse](docs/PostGetImageUploadURLResponse.md)
  - [PostGetPostStatsResponse](docs/PostGetPostStatsResponse.md)
+ - [PostHomePresellFields](docs/PostHomePresellFields.md)
+ - [PostRoomsCount](docs/PostRoomsCount.md)
  - [PostServicesFieldsCategory](docs/PostServicesFieldsCategory.md)
  - [PostSubmitPostRequest](docs/PostSubmitPostRequest.md)
  - [PostSubmitPostResponse](docs/PostSubmitPostResponse.md)
@@ -303,7 +321,6 @@ Class | Method | HTTP request | Description
  - [TemporaryResidenceFieldsHeatingCoolingSystem](docs/TemporaryResidenceFieldsHeatingCoolingSystem.md)
  - [TemporaryResidenceFieldsPetsAllowed](docs/TemporaryResidenceFieldsPetsAllowed.md)
  - [TemporaryResidenceFieldsRentalPeriod](docs/TemporaryResidenceFieldsRentalPeriod.md)
- - [TemporaryResidenceFieldsRoomsCount](docs/TemporaryResidenceFieldsRoomsCount.md)
 
 
 <a id="documentation-for-authorization"></a>

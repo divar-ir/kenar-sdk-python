@@ -54,6 +54,7 @@ class OAuthScopeScope(str, Enum):
     POST_SEMANTIC_CREATE = 'POST_SEMANTIC_CREATE'
     NOTIFICATION_ACCESS_REVOCATION = 'NOTIFICATION_ACCESS_REVOCATION'
     SEND_EVENT = 'SEND_EVENT'
+    CREATE_WALLET_PAYMENT = 'CREATE_WALLET_PAYMENT'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

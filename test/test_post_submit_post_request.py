@@ -35,11 +35,34 @@ class TestPostSubmitPostRequest(unittest.TestCase):
         model = PostSubmitPostRequest()
         if include_optional:
             return PostSubmitPostRequest(
+                apartment_sell = kenar_api_client.models.post_apartment_sell_fields.postApartmentSellFields(
+                    floor = 1, 
+                    has_elevator = True, 
+                    has_own_image = True, 
+                    has_parking = True, 
+                    has_warehouse = True, 
+                    price = '1000000000', 
+                    rooms_count = 'ROOMS_COUNT_2', 
+                    size = 100, 
+                    year_built = 1404, ),
                 chat_enabled = True,
                 city = 'tehran',
                 description = 'I'm available only in chat.',
                 district = 'abshar',
                 hide_phone = True,
+                home_presell = kenar_api_client.models.post_home_presell_fields.postHomePresellFields(
+                    base_price_per_square_meter = '50000000', 
+                    construction_phase = 'CONSTRUCTION_PHASE_EXCAVATION', 
+                    delivery_month = 'DELIVERY_MONTH_TIR', 
+                    delivery_payment_percentage = 60, 
+                    delivery_year = 'DELIVERY_YEAR_1405', 
+                    developer_company_name = 'Mehr Construction Group', 
+                    down_payment_percentage = 40, 
+                    has_own_image = True, 
+                    min_unit_size = 60, 
+                    project_name = 'Paradise Tower', 
+                    project_physical_progress_percentage = 10, 
+                    unit_types_offered = ["UNIT_TYPE_RESIDENTIAL_APARTMENT","UNIT_TYPE_COMMERCIAL_UNIT"], ),
                 images = [
                     ''
                     ],

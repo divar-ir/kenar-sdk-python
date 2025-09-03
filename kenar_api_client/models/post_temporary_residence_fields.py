@@ -19,11 +19,11 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from kenar_api_client.models.post_rooms_count import PostRoomsCount
 from kenar_api_client.models.temporary_residence_fields_comfort_amenity import TemporaryResidenceFieldsComfortAmenity
 from kenar_api_client.models.temporary_residence_fields_heating_cooling_system import TemporaryResidenceFieldsHeatingCoolingSystem
 from kenar_api_client.models.temporary_residence_fields_pets_allowed import TemporaryResidenceFieldsPetsAllowed
 from kenar_api_client.models.temporary_residence_fields_rental_period import TemporaryResidenceFieldsRentalPeriod
-from kenar_api_client.models.temporary_residence_fields_rooms_count import TemporaryResidenceFieldsRoomsCount
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -49,7 +49,7 @@ class PostTemporaryResidenceFields(BaseModel):
     price_weekends: StrictStr = Field(description="قیمت اقامتگاه در آخر هفته (چهارشنبه تا جمعه) به تومان")
     regular_person_capacity: StrictInt = Field(description="ظرفیت استاندارد افراد در اقامتگاه")
     rental_period: Optional[TemporaryResidenceFieldsRentalPeriod] = None
-    rooms_count: TemporaryResidenceFieldsRoomsCount
+    rooms_count: PostRoomsCount
     __properties: ClassVar[List[str]] = ["area", "check_in_time", "check_out_time", "comfort_amenities", "damage_deposit", "extra_person_capacity", "fully_furnished", "has_own_image", "heating_cooling_system", "house_rules", "minimum_stay", "pets_allowed", "price_cost_per_extra_person", "price_regular_days", "price_special_days", "price_weekends", "regular_person_capacity", "rental_period", "rooms_count"]
 
     model_config = ConfigDict(

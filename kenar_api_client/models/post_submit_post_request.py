@@ -20,6 +20,8 @@ import json
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from kenar_api_client.models.open_platformpost_services_fields import OpenPlatformpostServicesFields
+from kenar_api_client.models.post_apartment_sell_fields import PostApartmentSellFields
+from kenar_api_client.models.post_home_presell_fields import PostHomePresellFields
 from kenar_api_client.models.post_temporary_residence_fields import PostTemporaryResidenceFields
 from kenar_api_client.models.submit_post_request_location_type import SubmitPostRequestLocationType
 from typing import Optional, Set
@@ -29,11 +31,13 @@ class PostSubmitPostRequest(BaseModel):
     """
     PostSubmitPostRequest
     """ # noqa: E501
+    apartment_sell: Optional[PostApartmentSellFields] = None
     chat_enabled: StrictBool = Field(description="امکان چت فعال باشد")
     city: StrictStr = Field(description="شهر آگهی")
     description: StrictStr = Field(description="توضیحات آگهی")
     district: Optional[StrictStr] = Field(default=None, description="محله آگهی")
     hide_phone: StrictBool = Field(description="عدم نمایش شماره تماس به کاربران")
+    home_presell: Optional[PostHomePresellFields] = None
     images: List[StrictStr]
     landline_numbers: Optional[List[StrictStr]] = Field(default=None, description="Landline numbers to be added to the post")
     latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="عرض جغرافیایی آگهی")
@@ -42,7 +46,7 @@ class PostSubmitPostRequest(BaseModel):
     services: Optional[OpenPlatformpostServicesFields] = None
     temporary_residence: Optional[PostTemporaryResidenceFields] = None
     title: StrictStr = Field(description="عنوان آگهی")
-    __properties: ClassVar[List[str]] = ["chat_enabled", "city", "description", "district", "hide_phone", "images", "landline_numbers", "latitude", "location_type", "longitude", "services", "temporary_residence", "title"]
+    __properties: ClassVar[List[str]] = ["apartment_sell", "chat_enabled", "city", "description", "district", "hide_phone", "home_presell", "images", "landline_numbers", "latitude", "location_type", "longitude", "services", "temporary_residence", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -83,6 +87,12 @@ class PostSubmitPostRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of apartment_sell
+        if self.apartment_sell:
+            _dict['apartment_sell'] = self.apartment_sell.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of home_presell
+        if self.home_presell:
+            _dict['home_presell'] = self.home_presell.to_dict()
         # override the default output from pydantic by calling `to_dict()` of services
         if self.services:
             _dict['services'] = self.services.to_dict()
@@ -101,11 +111,13 @@ class PostSubmitPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
+            "apartment_sell": PostApartmentSellFields.from_dict(obj["apartment_sell"]) if obj.get("apartment_sell") is not None else None,
             "chat_enabled": obj.get("chat_enabled"),
             "city": obj.get("city"),
             "description": obj.get("description"),
             "district": obj.get("district"),
             "hide_phone": obj.get("hide_phone"),
+            "home_presell": PostHomePresellFields.from_dict(obj["home_presell"]) if obj.get("home_presell") is not None else None,
             "images": obj.get("images"),
             "landline_numbers": obj.get("landline_numbers"),
             "latitude": obj.get("latitude"),

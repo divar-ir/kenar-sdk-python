@@ -26,6 +26,18 @@ class TestLimitedApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    def test_payment_commit_wallet_transaction(self) -> None:
+        """Test case for payment_commit_wallet_transaction
+
+        """
+        pass
+
+    def test_payment_create_wallet_payment(self) -> None:
+        """Test case for payment_create_wallet_payment
+
+        """
+        pass
+
     def test_payment_get_balance(self) -> None:
         """Test case for payment_get_balance
 
@@ -53,6 +65,12 @@ class TestLimitedApi(unittest.TestCase):
 
     def test_payment_reorder_post(self) -> None:
         """Test case for payment_reorder_post
+
+        """
+        pass
+
+    def test_payment_retrieve_wallet_transaction(self) -> None:
+        """Test case for payment_retrieve_wallet_transaction
 
         """
         pass

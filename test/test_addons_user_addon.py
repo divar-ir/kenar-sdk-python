@@ -70,6 +70,7 @@ class TestAddonsUserAddon(unittest.TestCase):
                     identity_verification_result = 'FACE_AND_ID_MATCHED', 
                     inspection_result = 'INSPECTION_APPROVED', 
                     new_face_verification_result = 'NEW_FACE_VERIFICATION_FAILED', 
+                    online_reservation_capability = 'ONLINE_RESERVATION_AVAILABLE', 
                     ownership_result = 'OWNERSHIP_CONFIRMED', 
                     payment_method = 'SECURE', 
                     post_verification_result = 'POST_INFORMATION_MATCHED', 

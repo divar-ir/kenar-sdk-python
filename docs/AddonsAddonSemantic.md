@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **identity_verification_result** | [**AddonSemanticIdentityVerificationResult**](AddonSemanticIdentityVerificationResult.md) |  | [optional] 
 **inspection_result** | [**AddonSemanticInspectionResult**](AddonSemanticInspectionResult.md) |  | [optional] 
 **new_face_verification_result** | [**AddonSemanticNewFaceVerificationResult**](AddonSemanticNewFaceVerificationResult.md) |  | [optional] 
+**online_reservation_capability** | [**AddonSemanticOnlineReservationCapability**](AddonSemanticOnlineReservationCapability.md) |  | [optional] 
 **ownership_result** | [**AddonSemanticOwnershipResult**](AddonSemanticOwnershipResult.md) |  | [optional] 
 **payment_method** | [**AddonsAddonSemanticPaymentMethod**](AddonsAddonSemanticPaymentMethod.md) |  | [optional] 
 **post_verification_result** | [**AddonSemanticPostVerificationResult**](AddonSemanticPostVerificationResult.md) |  | [optional] 

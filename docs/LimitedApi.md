@@ -4,12 +4,171 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**payment_commit_wallet_transaction**](LimitedApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
+[**payment_create_wallet_payment**](LimitedApi.md#payment_create_wallet_payment) | **POST** /experimental/open-platform/wallet/payments/create | 
 [**payment_get_balance**](LimitedApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | 
 [**payment_get_post_pricing**](LimitedApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
 [**payment_get_transaction**](LimitedApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | 
 [**payment_list_transactions**](LimitedApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | 
 [**payment_reorder_post**](LimitedApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
+[**payment_retrieve_wallet_transaction**](LimitedApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
 
+
+# **payment_commit_wallet_transaction**
+> PaymentCommitWalletTransactionResponse payment_commit_wallet_transaction(payment_commit_wallet_transaction_request)
+
+Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.models.payment_commit_wallet_transaction_request import PaymentCommitWalletTransactionRequest
+from kenar_api_client.models.payment_commit_wallet_transaction_response import PaymentCommitWalletTransactionResponse
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.LimitedApi(api_client)
+    payment_commit_wallet_transaction_request = kenar_api_client.PaymentCommitWalletTransactionRequest() # PaymentCommitWalletTransactionRequest | 
+
+    try:
+        api_response = api_instance.payment_commit_wallet_transaction(payment_commit_wallet_transaction_request)
+        print("The response of LimitedApi->payment_commit_wallet_transaction:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LimitedApi->payment_commit_wallet_transaction: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **payment_commit_wallet_transaction_request** | [**PaymentCommitWalletTransactionRequest**](PaymentCommitWalletTransactionRequest.md)|  | 
+
+### Return type
+
+[**PaymentCommitWalletTransactionResponse**](PaymentCommitWalletTransactionResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **payment_create_wallet_payment**
+> PaymentCreateWalletPaymentResponse payment_create_wallet_payment(payment_create_wallet_payment_request)
+
+Using this API you can start a payment transaction from the users wallet.
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.models.payment_create_wallet_payment_request import PaymentCreateWalletPaymentRequest
+from kenar_api_client.models.payment_create_wallet_payment_response import PaymentCreateWalletPaymentResponse
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.LimitedApi(api_client)
+    payment_create_wallet_payment_request = kenar_api_client.PaymentCreateWalletPaymentRequest() # PaymentCreateWalletPaymentRequest | 
+
+    try:
+        api_response = api_instance.payment_create_wallet_payment(payment_create_wallet_payment_request)
+        print("The response of LimitedApi->payment_create_wallet_payment:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LimitedApi->payment_create_wallet_payment: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **payment_create_wallet_payment_request** | [**PaymentCreateWalletPaymentRequest**](PaymentCreateWalletPaymentRequest.md)|  | 
+
+### Return type
+
+[**PaymentCreateWalletPaymentResponse**](PaymentCreateWalletPaymentResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payment_get_balance**
 > PaymentGetBalanceResponse payment_get_balance()
@@ -389,6 +548,83 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **payment_retrieve_wallet_transaction**
+> PaymentRetrieveWalletTransactionResponse payment_retrieve_wallet_transaction(token)
+
+Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.models.payment_retrieve_wallet_transaction_response import PaymentRetrieveWalletTransactionResponse
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.LimitedApi(api_client)
+    token = 'token_example' # str | Token of the transaction you want to retrieve
+
+    try:
+        api_response = api_instance.payment_retrieve_wallet_transaction(token)
+        print("The response of LimitedApi->payment_retrieve_wallet_transaction:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LimitedApi->payment_retrieve_wallet_transaction: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **str**| Token of the transaction you want to retrieve | 
+
+### Return type
+
+[**PaymentRetrieveWalletTransactionResponse**](PaymentRetrieveWalletTransactionResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
