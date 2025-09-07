@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_url** | **str** | The address you should redirect the user to | [optional] 
-**token** | **str** | Token of the transaction. used for next operations | [optional] 
+**payment_url** | **str** | آدرسی که باید کاربر را به آن هدایت کنید | [optional] 
+**token** | **str** | توکن تراکنش. برای عملیات‌های بعدی استفاده می‌شود | [optional] 
 
 ## Example
 

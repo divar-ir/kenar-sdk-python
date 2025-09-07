@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **str** | Token of the transaction you want to commit | [optional] 
+**token** | **str** | توکن تراکنشی که می‌خواهید commit کنید | [optional] 
 
 ## Example
 

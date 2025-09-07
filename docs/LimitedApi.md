@@ -17,7 +17,7 @@ Method | HTTP request | Description
 # **payment_commit_wallet_transaction**
 > PaymentCommitWalletTransactionResponse payment_commit_wallet_transaction(payment_commit_wallet_transaction_request)
 
-Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
 
 ### Example
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 # **payment_create_wallet_payment**
 > PaymentCreateWalletPaymentResponse payment_create_wallet_payment(payment_create_wallet_payment_request)
 
-Using this API you can start a payment transaction from the users wallet.
+با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
 
 ### Example
 
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
 # **payment_retrieve_wallet_transaction**
 > PaymentRetrieveWalletTransactionResponse payment_retrieve_wallet_transaction(token)
 
-Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
 ### Example
 
@@ -595,7 +595,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.LimitedApi(api_client)
-    token = 'token_example' # str | Token of the transaction you want to retrieve
+    token = 'token_example' # str | توکن تراکنشی که می‌خواهید بازیابی کنید
 
     try:
         api_response = api_instance.payment_retrieve_wallet_transaction(token)
@@ -612,7 +612,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **str**| Token of the transaction you want to retrieve | 
+ **token** | **str**| توکن تراکنشی که می‌خواهید بازیابی کنید | 
 
 ### Return type
 

@@ -68,7 +68,7 @@ class LimitedApi:
     ) -> PaymentCommitWalletTransactionResponse:
         """payment_commit_wallet_transaction
 
-        Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+        با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
 
         :param payment_commit_wallet_transaction_request: (required)
         :type payment_commit_wallet_transaction_request: PaymentCommitWalletTransactionRequest
@@ -135,7 +135,7 @@ class LimitedApi:
     ) -> ApiResponse[PaymentCommitWalletTransactionResponse]:
         """payment_commit_wallet_transaction
 
-        Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+        با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
 
         :param payment_commit_wallet_transaction_request: (required)
         :type payment_commit_wallet_transaction_request: PaymentCommitWalletTransactionRequest
@@ -202,7 +202,7 @@ class LimitedApi:
     ) -> RESTResponseType:
         """payment_commit_wallet_transaction
 
-        Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+        با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
 
         :param payment_commit_wallet_transaction_request: (required)
         :type payment_commit_wallet_transaction_request: PaymentCommitWalletTransactionRequest
@@ -342,7 +342,7 @@ class LimitedApi:
     ) -> PaymentCreateWalletPaymentResponse:
         """payment_create_wallet_payment
 
-        Using this API you can start a payment transaction from the users wallet.
+        با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
 
         :param payment_create_wallet_payment_request: (required)
         :type payment_create_wallet_payment_request: PaymentCreateWalletPaymentRequest
@@ -409,7 +409,7 @@ class LimitedApi:
     ) -> ApiResponse[PaymentCreateWalletPaymentResponse]:
         """payment_create_wallet_payment
 
-        Using this API you can start a payment transaction from the users wallet.
+        با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
 
         :param payment_create_wallet_payment_request: (required)
         :type payment_create_wallet_payment_request: PaymentCreateWalletPaymentRequest
@@ -476,7 +476,7 @@ class LimitedApi:
     ) -> RESTResponseType:
         """payment_create_wallet_payment
 
-        Using this API you can start a payment transaction from the users wallet.
+        با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
 
         :param payment_create_wallet_payment_request: (required)
         :type payment_create_wallet_payment_request: PaymentCreateWalletPaymentRequest
@@ -1937,7 +1937,7 @@ class LimitedApi:
     @validate_call
     def payment_retrieve_wallet_transaction(
         self,
-        token: Annotated[StrictStr, Field(description="Token of the transaction you want to retrieve")],
+        token: Annotated[StrictStr, Field(description="توکن تراکنشی که می‌خواهید بازیابی کنید")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1953,9 +1953,9 @@ class LimitedApi:
     ) -> PaymentRetrieveWalletTransactionResponse:
         """payment_retrieve_wallet_transaction
 
-        Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+        با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
-        :param token: Token of the transaction you want to retrieve (required)
+        :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2004,7 +2004,7 @@ class LimitedApi:
     @validate_call
     def payment_retrieve_wallet_transaction_with_http_info(
         self,
-        token: Annotated[StrictStr, Field(description="Token of the transaction you want to retrieve")],
+        token: Annotated[StrictStr, Field(description="توکن تراکنشی که می‌خواهید بازیابی کنید")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2020,9 +2020,9 @@ class LimitedApi:
     ) -> ApiResponse[PaymentRetrieveWalletTransactionResponse]:
         """payment_retrieve_wallet_transaction
 
-        Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+        با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
-        :param token: Token of the transaction you want to retrieve (required)
+        :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2071,7 +2071,7 @@ class LimitedApi:
     @validate_call
     def payment_retrieve_wallet_transaction_without_preload_content(
         self,
-        token: Annotated[StrictStr, Field(description="Token of the transaction you want to retrieve")],
+        token: Annotated[StrictStr, Field(description="توکن تراکنشی که می‌خواهید بازیابی کنید")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2087,9 +2087,9 @@ class LimitedApi:
     ) -> RESTResponseType:
         """payment_retrieve_wallet_transaction
 
-        Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+        با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
-        :param token: Token of the transaction you want to retrieve (required)
+        :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

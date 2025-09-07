@@ -5,18 +5,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**base_price_per_square_meter** | **str** | Base price per square meter in Toman | [optional] 
+**base_price_per_square_meter** | **str** | قیمت پایه هر متر مربع به تومان | [optional] 
 **construction_phase** | [**HomePresellFieldsConstructionPhase**](HomePresellFieldsConstructionPhase.md) |  | [optional] 
 **delivery_month** | [**HomePresellFieldsDeliveryMonth**](HomePresellFieldsDeliveryMonth.md) |  | [optional] 
-**delivery_payment_percentage** | **int** | Payment percentage required upon delivery | [optional] 
+**delivery_payment_percentage** | **int** | درصد پرداخت مورد نیاز در زمان تحویل | [optional] 
 **delivery_year** | [**HomePresellFieldsDeliveryYear**](HomePresellFieldsDeliveryYear.md) |  | [optional] 
-**developer_company_name** | **str** | Name of the developer company | [optional] 
-**down_payment_percentage** | **int** | Down payment percentage required | [optional] 
+**developer_company_name** | **str** | نام شرکت سازنده | [optional] 
+**down_payment_percentage** | **int** | درصد پیش پرداخت اولیه | [optional] 
 **has_own_image** | **bool** | تصاویر مربوط به خود ملک بوده و تزئینی نیستند. | 
-**min_unit_size** | **int** | Minimum unit size in square meters | [optional] 
-**project_name** | **str** | Name of the home presell project | [optional] 
-**project_physical_progress_percentage** | **int** | Physical progress percentage of the project | [optional] 
-**unit_types_offered** | [**List[HomePresellFieldsUnitType]**](HomePresellFieldsUnitType.md) | List of unit types offered in the project | [optional] 
+**min_unit_size** | **int** | حداقل مساحت واحد بر حسب متر مربع | [optional] 
+**project_name** | **str** | نام پروژه پیش‌فروش مسکن | [optional] 
+**project_physical_progress_percentage** | **int** | درصد پیشرفت فیزیکی پروژه | [optional] 
+**unit_types_offered** | [**List[HomePresellFieldsUnitType]**](HomePresellFieldsUnitType.md) | فهرست انواع واحد ارائه شده در پروژه | [optional] 
 
 ## Example
 

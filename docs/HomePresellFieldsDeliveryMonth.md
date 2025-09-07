@@ -1,6 +1,6 @@
 # HomePresellFieldsDeliveryMonth
 
-Delivery month (Persian/Shamsi calendar)
+ماه تحویل (تقویم شمسی)
 
 ## Enum
 

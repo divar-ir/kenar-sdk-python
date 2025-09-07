@@ -27,15 +27,15 @@ class PostApartmentSellFields(BaseModel):
     """
     PostApartmentSellFields
     """ # noqa: E501
-    floor: StrictInt = Field(description="Floor of the property. Use -1 for under ground floor and 0 for ground floor. Use 1 for first floor and so on.")
-    has_elevator: StrictBool = Field(description="Whether the property has an elevator")
+    floor: StrictInt = Field(description="طبقه ملک. از -1 برای زیرزمین و 0 برای همکف استفاده کنید. از 1 برای طبقه اول و غیره.")
+    has_elevator: StrictBool = Field(description="آیا ملک آسانسور دارد")
     has_own_image: StrictBool = Field(description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
-    has_parking: StrictBool = Field(description="Whether the property has a parking")
-    has_warehouse: StrictBool = Field(description="Whether the property has a warehouse")
-    price: StrictStr = Field(description="Price of the property in Toman")
+    has_parking: StrictBool = Field(description="آیا ملک پارکینگ دارد")
+    has_warehouse: StrictBool = Field(description="آیا ملک انباری دارد")
+    price: StrictStr = Field(description="قیمت ملک به تومان")
     rooms_count: PostRoomsCount
-    size: StrictInt = Field(description="Size of the property in square meters")
-    year_built: StrictInt = Field(description="Year the property was built (Persian/Shamsi calendar)")
+    size: StrictInt = Field(description="مساحت ملک بر حسب متر مربع")
+    year_built: StrictInt = Field(description="سال ساخت ملک (تقویم شمسی)")
     __properties: ClassVar[List[str]] = ["floor", "has_elevator", "has_own_image", "has_parking", "has_warehouse", "price", "rooms_count", "size", "year_built"]
 
     model_config = ConfigDict(

@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class HomePresellFieldsConstructionPhase(str, Enum):
     """
-    Current construction phase of the project
+    وضعیت فعلی پروژه
     """
 
     """

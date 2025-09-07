@@ -1,6 +1,6 @@
 # HomePresellFieldsDeliveryYear
 
-Delivery year (Persian/Shamsi calendar)
+سال تحویل (تقویم شمسی)
 
 ## Enum
 

@@ -1,6 +1,6 @@
 # HomePresellFieldsUnitType
 
-Type of units offered in the project
+نوع واحدهای ارائه شده در پروژه
 
 ## Enum
 

@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class HomePresellFieldsDeliveryMonth(str, Enum):
     """
-    Delivery month (Persian/Shamsi calendar)
+    ماه تحویل (تقویم شمسی)
     """
 
     """

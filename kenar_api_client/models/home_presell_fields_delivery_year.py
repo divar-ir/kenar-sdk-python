@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class HomePresellFieldsDeliveryYear(str, Enum):
     """
-    Delivery year (Persian/Shamsi calendar)
+    سال تحویل (تقویم شمسی)
     """
 
     """

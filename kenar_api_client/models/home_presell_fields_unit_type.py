@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class HomePresellFieldsUnitType(str, Enum):
     """
-    Type of units offered in the project
+    نوع واحدهای ارائه شده در پروژه
     """
 
     """

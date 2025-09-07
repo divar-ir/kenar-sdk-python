@@ -26,8 +26,8 @@ class PaymentCreateWalletPaymentResponse(BaseModel):
     """
     PaymentCreateWalletPaymentResponse
     """ # noqa: E501
-    payment_url: Optional[StrictStr] = Field(default=None, description="The address you should redirect the user to")
-    token: Optional[StrictStr] = Field(default=None, description="Token of the transaction. used for next operations")
+    payment_url: Optional[StrictStr] = Field(default=None, description="آدرسی که باید کاربر را به آن هدایت کنید")
+    token: Optional[StrictStr] = Field(default=None, description="توکن تراکنش. برای عملیات‌های بعدی استفاده می‌شود")
     __properties: ClassVar[List[str]] = ["payment_url", "token"]
 
     model_config = ConfigDict(

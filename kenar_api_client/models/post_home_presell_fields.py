@@ -30,18 +30,18 @@ class PostHomePresellFields(BaseModel):
     """
     PostHomePresellFields
     """ # noqa: E501
-    base_price_per_square_meter: Optional[StrictStr] = Field(default=None, description="Base price per square meter in Toman")
+    base_price_per_square_meter: Optional[StrictStr] = Field(default=None, description="قیمت پایه هر متر مربع به تومان")
     construction_phase: Optional[HomePresellFieldsConstructionPhase] = None
     delivery_month: Optional[HomePresellFieldsDeliveryMonth] = None
-    delivery_payment_percentage: Optional[StrictInt] = Field(default=None, description="Payment percentage required upon delivery")
+    delivery_payment_percentage: Optional[StrictInt] = Field(default=None, description="درصد پرداخت مورد نیاز در زمان تحویل")
     delivery_year: Optional[HomePresellFieldsDeliveryYear] = None
-    developer_company_name: Optional[StrictStr] = Field(default=None, description="Name of the developer company")
-    down_payment_percentage: Optional[StrictInt] = Field(default=None, description="Down payment percentage required")
+    developer_company_name: Optional[StrictStr] = Field(default=None, description="نام شرکت سازنده")
+    down_payment_percentage: Optional[StrictInt] = Field(default=None, description="درصد پیش پرداخت اولیه")
     has_own_image: StrictBool = Field(description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
-    min_unit_size: Optional[StrictInt] = Field(default=None, description="Minimum unit size in square meters")
-    project_name: Optional[StrictStr] = Field(default=None, description="Name of the home presell project")
-    project_physical_progress_percentage: Optional[StrictInt] = Field(default=None, description="Physical progress percentage of the project")
-    unit_types_offered: Optional[List[HomePresellFieldsUnitType]] = Field(default=None, description="List of unit types offered in the project")
+    min_unit_size: Optional[StrictInt] = Field(default=None, description="حداقل مساحت واحد بر حسب متر مربع")
+    project_name: Optional[StrictStr] = Field(default=None, description="نام پروژه پیش‌فروش مسکن")
+    project_physical_progress_percentage: Optional[StrictInt] = Field(default=None, description="درصد پیشرفت فیزیکی پروژه")
+    unit_types_offered: Optional[List[HomePresellFieldsUnitType]] = Field(default=None, description="فهرست انواع واحد ارائه شده در پروژه")
     __properties: ClassVar[List[str]] = ["base_price_per_square_meter", "construction_phase", "delivery_month", "delivery_payment_percentage", "delivery_year", "developer_company_name", "down_payment_percentage", "has_own_image", "min_unit_size", "project_name", "project_physical_progress_percentage", "unit_types_offered"]
 
     model_config = ConfigDict(

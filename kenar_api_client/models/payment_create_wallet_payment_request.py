@@ -26,9 +26,9 @@ class PaymentCreateWalletPaymentRequest(BaseModel):
     """
     PaymentCreateWalletPaymentRequest
     """ # noqa: E501
-    amount_rials: StrictStr = Field(description="Transaction amount in rials")
-    description: StrictStr = Field(description="A description of the transaction")
-    redirect_url: StrictStr = Field(description="The address user should be redirected to after paying the amount")
+    amount_rials: StrictStr = Field(description="مبلغ تراکنش به ریال")
+    description: StrictStr = Field(description="توضیحات تراکنش")
+    redirect_url: StrictStr = Field(description="آدرسی که کاربر باید بعد از پرداخت مبلغ به آن هدایت شود")
     __properties: ClassVar[List[str]] = ["amount_rials", "description", "redirect_url"]
 
     model_config = ConfigDict(
