@@ -110,6 +110,13 @@ class TestAssetsApi(unittest.TestCase):
         """
         pass
 
+    def test_assets_get_submit_schema(self) -> None:
+        """Test case for assets_get_submit_schema
+
+        Get submit schema
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -115,6 +115,7 @@ Class | Method | HTTP request | Description
 *AssetsApi* | [**assets_get_permissions**](docs/AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
 *AssetsApi* | [**assets_get_ram_memories**](docs/AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 *AssetsApi* | [**assets_get_service_types**](docs/AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
+*AssetsApi* | [**assets_get_submit_schema**](docs/AssetsApi.md#assets_get_submit_schema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | Get submit schema
 *ChatAPIApi* | [**chat_api_chat_bot_send_message**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
 *ChatAPIApi* | [**chat_api_chat_bot_send_message2**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
 *ChatAPIApi* | [**chat_api_chat_bot_send_message3**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
@@ -223,6 +224,7 @@ Class | Method | HTTP request | Description
  - [AssetsGetPermissionsResponsePermission](docs/AssetsGetPermissionsResponsePermission.md)
  - [AssetsGetRamMemoriesResponse](docs/AssetsGetRamMemoriesResponse.md)
  - [AssetsGetServiceTypesResponse](docs/AssetsGetServiceTypesResponse.md)
+ - [AssetsGetSubmitSchemaResponse](docs/AssetsGetSubmitSchemaResponse.md)
  - [AuthorizationAPICallerInfo](docs/AuthorizationAPICallerInfo.md)
  - [AuthorizationOAuthScope](docs/AuthorizationOAuthScope.md)
  - [ChatAPIChatBotSendMessageBody](docs/ChatAPIChatBotSendMessageBody.md)

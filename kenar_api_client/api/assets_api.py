@@ -29,6 +29,7 @@ from kenar_api_client.models.assets_get_o_auth_scopes_response import AssetsGetO
 from kenar_api_client.models.assets_get_permissions_response import AssetsGetPermissionsResponse
 from kenar_api_client.models.assets_get_ram_memories_response import AssetsGetRamMemoriesResponse
 from kenar_api_client.models.assets_get_service_types_response import AssetsGetServiceTypesResponse
+from kenar_api_client.models.assets_get_submit_schema_response import AssetsGetSubmitSchemaResponse
 
 from kenar_api_client.api_client import ApiClient, RequestSerialized
 from kenar_api_client.api_response import ApiResponse
@@ -3047,6 +3048,267 @@ class AssetsApi:
         return self.api_client.param_serialize(
             method='GET',
             resource_path='/v1/open-platform/assets/service-type',
+            path_params=_path_params,
+            query_params=_query_params,
+            header_params=_header_params,
+            body=_body_params,
+            post_params=_form_params,
+            files=_files,
+            auth_settings=_auth_settings,
+            collection_formats=_collection_formats,
+            _host=_host,
+            _request_auth=_request_auth
+        )
+
+
+
+
+    @validate_call
+    def assets_get_submit_schema(
+        self,
+        category_slug: StrictStr,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> AssetsGetSubmitSchemaResponse:
+        """Get submit schema
+
+        This API allows you to get the submit schema for a given category slug. Response is in JSON Schema format.  The schema defines the structure and validation rules for form fields when submitting posts in a specific category. Each field in the schema can have one of the following types:  **Basic Types:** - `string`: Text input fields (e.g., titles, descriptions, time values) - `integer`: Numeric input fields for whole numbers (e.g., prices, counts, sizes) - `float`: Numeric input fields for decimal numbers - `boolean`: True/false checkbox fields - `array`: Multi-select fields that allow multiple values  **Enum Fields:** Fields with predefined options use `enum` and `enumNames` properties: - `enum`: Array of internal values used for API communication - `enumNames`: Array of display labels shown to users (usually in Persian) - These are used for single-select dropdowns (e.g., floor selection, parking availability)  **Array Fields with Enums:** Multi-select fields combine `type: \"array\"` with enum properties: - `items.enum`: Available options for selection - `items.enumNames`: Display labels for each option - Users can select multiple values (e.g., comfort amenities, heating systems)  **Field Properties:** - `title`: Persian display name for the field - `required`: Array of field names that must be provided - `type`: Data type of the field  **Example Usage:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
+
+        :param category_slug: (required)
+        :type category_slug: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._assets_get_submit_schema_serialize(
+            category_slug=category_slug,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "AssetsGetSubmitSchemaResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        ).data
+
+
+    @validate_call
+    def assets_get_submit_schema_with_http_info(
+        self,
+        category_slug: StrictStr,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> ApiResponse[AssetsGetSubmitSchemaResponse]:
+        """Get submit schema
+
+        This API allows you to get the submit schema for a given category slug. Response is in JSON Schema format.  The schema defines the structure and validation rules for form fields when submitting posts in a specific category. Each field in the schema can have one of the following types:  **Basic Types:** - `string`: Text input fields (e.g., titles, descriptions, time values) - `integer`: Numeric input fields for whole numbers (e.g., prices, counts, sizes) - `float`: Numeric input fields for decimal numbers - `boolean`: True/false checkbox fields - `array`: Multi-select fields that allow multiple values  **Enum Fields:** Fields with predefined options use `enum` and `enumNames` properties: - `enum`: Array of internal values used for API communication - `enumNames`: Array of display labels shown to users (usually in Persian) - These are used for single-select dropdowns (e.g., floor selection, parking availability)  **Array Fields with Enums:** Multi-select fields combine `type: \"array\"` with enum properties: - `items.enum`: Available options for selection - `items.enumNames`: Display labels for each option - Users can select multiple values (e.g., comfort amenities, heating systems)  **Field Properties:** - `title`: Persian display name for the field - `required`: Array of field names that must be provided - `type`: Data type of the field  **Example Usage:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
+
+        :param category_slug: (required)
+        :type category_slug: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._assets_get_submit_schema_serialize(
+            category_slug=category_slug,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "AssetsGetSubmitSchemaResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        response_data.read()
+        return self.api_client.response_deserialize(
+            response_data=response_data,
+            response_types_map=_response_types_map,
+        )
+
+
+    @validate_call
+    def assets_get_submit_schema_without_preload_content(
+        self,
+        category_slug: StrictStr,
+        _request_timeout: Union[
+            None,
+            Annotated[StrictFloat, Field(gt=0)],
+            Tuple[
+                Annotated[StrictFloat, Field(gt=0)],
+                Annotated[StrictFloat, Field(gt=0)]
+            ]
+        ] = None,
+        _request_auth: Optional[Dict[StrictStr, Any]] = None,
+        _content_type: Optional[StrictStr] = None,
+        _headers: Optional[Dict[StrictStr, Any]] = None,
+        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
+    ) -> RESTResponseType:
+        """Get submit schema
+
+        This API allows you to get the submit schema for a given category slug. Response is in JSON Schema format.  The schema defines the structure and validation rules for form fields when submitting posts in a specific category. Each field in the schema can have one of the following types:  **Basic Types:** - `string`: Text input fields (e.g., titles, descriptions, time values) - `integer`: Numeric input fields for whole numbers (e.g., prices, counts, sizes) - `float`: Numeric input fields for decimal numbers - `boolean`: True/false checkbox fields - `array`: Multi-select fields that allow multiple values  **Enum Fields:** Fields with predefined options use `enum` and `enumNames` properties: - `enum`: Array of internal values used for API communication - `enumNames`: Array of display labels shown to users (usually in Persian) - These are used for single-select dropdowns (e.g., floor selection, parking availability)  **Array Fields with Enums:** Multi-select fields combine `type: \"array\"` with enum properties: - `items.enum`: Available options for selection - `items.enumNames`: Display labels for each option - Users can select multiple values (e.g., comfort amenities, heating systems)  **Field Properties:** - `title`: Persian display name for the field - `required`: Array of field names that must be provided - `type`: Data type of the field  **Example Usage:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
+
+        :param category_slug: (required)
+        :type category_slug: str
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :type _request_timeout: int, tuple(int, int), optional
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the
+                              authentication in the spec for a single request.
+        :type _request_auth: dict, optional
+        :param _content_type: force content-type for the request.
+        :type _content_type: str, Optional
+        :param _headers: set to override the headers for a single
+                         request; this effectively ignores the headers
+                         in the spec for a single request.
+        :type _headers: dict, optional
+        :param _host_index: set to override the host_index for a single
+                            request; this effectively ignores the host_index
+                            in the spec for a single request.
+        :type _host_index: int, optional
+        :return: Returns the result object.
+        """ # noqa: E501
+
+        _param = self._assets_get_submit_schema_serialize(
+            category_slug=category_slug,
+            _request_auth=_request_auth,
+            _content_type=_content_type,
+            _headers=_headers,
+            _host_index=_host_index
+        )
+
+        _response_types_map: Dict[str, Optional[str]] = {
+            '200': "AssetsGetSubmitSchemaResponse",
+        }
+        response_data = self.api_client.call_api(
+            *_param,
+            _request_timeout=_request_timeout
+        )
+        return response_data.response
+
+
+    def _assets_get_submit_schema_serialize(
+        self,
+        category_slug,
+        _request_auth,
+        _content_type,
+        _headers,
+        _host_index,
+    ) -> RequestSerialized:
+
+        _host = None
+
+        _collection_formats: Dict[str, str] = {
+        }
+
+        _path_params: Dict[str, str] = {}
+        _query_params: List[Tuple[str, str]] = []
+        _header_params: Dict[str, Optional[str]] = _headers or {}
+        _form_params: List[Tuple[str, str]] = []
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
+        _body_params: Optional[bytes] = None
+
+        # process the path parameters
+        if category_slug is not None:
+            _path_params['category_slug'] = category_slug
+        # process the query parameters
+        # process the header parameters
+        # process the form parameters
+        # process the body parameter
+
+
+        # set the HTTP header `Accept`
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
+
+
+        # authentication setting
+        _auth_settings: List[str] = [
+            'APIKey'
+        ]
+
+        return self.api_client.param_serialize(
+            method='GET',
+            resource_path='/v1/open-platform/assets/submit-schema/{category_slug}',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

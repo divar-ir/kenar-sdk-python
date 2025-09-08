@@ -35,6 +35,7 @@ class AppsServiceTag(str, Enum):
     CAR_EXPERT_INSPECTED = 'CAR_EXPERT_INSPECTED'
     HOME_EXPERT_INSPECTED = 'HOME_EXPERT_INSPECTED'
     MOBILE_EXPERT_INSPECTED = 'MOBILE_EXPERT_INSPECTED'
+    ONLINE_RESERVATION = 'ONLINE_RESERVATION'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:

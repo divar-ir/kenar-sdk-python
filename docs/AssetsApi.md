@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**assets_get_permissions**](AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
 [**assets_get_ram_memories**](AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
 [**assets_get_service_types**](AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
+[**assets_get_submit_schema**](AssetsApi.md#assets_get_submit_schema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | Get submit schema
 
 
 # **assets_get_body_statuses**
@@ -930,6 +931,139 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**AssetsGetServiceTypesResponse**](AssetsGetServiceTypesResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **assets_get_submit_schema**
+> AssetsGetSubmitSchemaResponse assets_get_submit_schema(category_slug)
+
+Get submit schema
+
+This API allows you to get the submit schema for a given category slug. Response is in JSON Schema format.
+
+The schema defines the structure and validation rules for form fields when submitting posts in a specific category. Each field in the schema can have one of the following types:
+
+**Basic Types:**
+- `string`: Text input fields (e.g., titles, descriptions, time values)
+- `integer`: Numeric input fields for whole numbers (e.g., prices, counts, sizes)
+- `float`: Numeric input fields for decimal numbers
+- `boolean`: True/false checkbox fields
+- `array`: Multi-select fields that allow multiple values
+
+**Enum Fields:**
+Fields with predefined options use `enum` and `enumNames` properties:
+- `enum`: Array of internal values used for API communication
+- `enumNames`: Array of display labels shown to users (usually in Persian)
+- These are used for single-select dropdowns (e.g., floor selection, parking availability)
+
+**Array Fields with Enums:**
+Multi-select fields combine `type: "array"` with enum properties:
+- `items.enum`: Available options for selection
+- `items.enumNames`: Display labels for each option
+- Users can select multiple values (e.g., comfort amenities, heating systems)
+
+**Field Properties:**
+- `title`: Persian display name for the field
+- `required`: Array of field names that must be provided
+- `type`: Data type of the field
+
+**Example Usage:**
+```json
+{
+  "properties": {
+    "size": {
+      "title": "متراژ (متر مربع)",
+      "type": "integer"
+    },
+    "elevator": {
+      "enum": ["دارد", "ندارد"],
+      "enumNames": ["دارد", "ندارد"],
+      "title": "آسانسور",
+      "type": "string"
+    },
+    "comfort_amenities": {
+      "items": {
+        "enum": ["اینترنت_پرسرعت", "تلویزیون"],
+        "enumNames": ["اینترنت پرسرعت", "تلویزیون"],
+        "type": "string"
+      },
+      "title": "امکانات رفاهی",
+      "type": "array"
+    }
+  }
+}
+```
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.models.assets_get_submit_schema_response import AssetsGetSubmitSchemaResponse
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.AssetsApi(api_client)
+    category_slug = 'category_slug_example' # str | 
+
+    try:
+        # Get submit schema
+        api_response = api_instance.assets_get_submit_schema(category_slug)
+        print("The response of AssetsApi->assets_get_submit_schema:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AssetsApi->assets_get_submit_schema: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category_slug** | **str**|  | 
+
+### Return type
+
+[**AssetsGetSubmitSchemaResponse**](AssetsGetSubmitSchemaResponse.md)
 
 ### Authorization
 
