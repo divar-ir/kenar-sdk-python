@@ -113,7 +113,7 @@ class TestAssetsApi(unittest.TestCase):
     def test_assets_get_submit_schema(self) -> None:
         """Test case for assets_get_submit_schema
 
-        Get submit schema
+        دریافت ساختار ثبت
         """
         pass
 

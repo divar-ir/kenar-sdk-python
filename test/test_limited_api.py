@@ -75,6 +75,13 @@ class TestLimitedApi(unittest.TestCase):
         """
         pass
 
+    def test_payment_submit_user_payment(self) -> None:
+        """Test case for payment_submit_user_payment
+
+        Submit a user payment
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

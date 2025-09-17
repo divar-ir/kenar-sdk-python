@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phone_number** | **str** | منسوخ شده. از divar_user_id استفاده کنید. | [optional] 
+**phone_number** | **str** |  | [optional] 
 **service_cost** | **int** |  | [optional] 
 **ticket_uuid** | **str** |  | [optional] 
 **user_id** | **str** |  | [optional] 

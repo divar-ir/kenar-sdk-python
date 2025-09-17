@@ -17,20 +17,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field
+from typing import Any, ClassVar, Dict, List
+from kenar_api_client.models.post_submit_post_general_data import PostSubmitPostGeneralData
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PaymentTicketValidateRequest(BaseModel):
+class PostSubmitUserPostRequest(BaseModel):
     """
-    PaymentTicketValidateRequest
+    PostSubmitUserPostRequest
     """ # noqa: E501
-    phone_number: Optional[StrictStr] = None
-    service_cost: Optional[StrictInt] = None
-    ticket_uuid: Optional[StrictStr] = None
-    user_id: Optional[StrictStr] = None
-    __properties: ClassVar[List[str]] = ["phone_number", "service_cost", "ticket_uuid", "user_id"]
+    category_fields: Dict[str, Any] = Field(description="فیلدهای ویژه هر دسته‌بندی که باید مطابق ساختار مشخص شده تکمیل شوند. ساختار را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/")
+    general_data: PostSubmitPostGeneralData
+    __properties: ClassVar[List[str]] = ["category_fields", "general_data"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +49,7 @@ class PaymentTicketValidateRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PaymentTicketValidateRequest from a JSON string"""
+        """Create an instance of PostSubmitUserPostRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,11 +70,14 @@ class PaymentTicketValidateRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of general_data
+        if self.general_data:
+            _dict['general_data'] = self.general_data.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PaymentTicketValidateRequest from a dict"""
+        """Create an instance of PostSubmitUserPostRequest from a dict"""
         if obj is None:
             return None
 
@@ -83,10 +85,8 @@ class PaymentTicketValidateRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "phone_number": obj.get("phone_number"),
-            "service_cost": obj.get("service_cost"),
-            "ticket_uuid": obj.get("ticket_uuid"),
-            "user_id": obj.get("user_id")
+            "category_fields": obj.get("category_fields"),
+            "general_data": PostSubmitPostGeneralData.from_dict(obj["general_data"]) if obj.get("general_data") is not None else None
         })
         return _obj
 

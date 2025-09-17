@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**payment_list_transactions**](LimitedApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | 
 [**payment_reorder_post**](LimitedApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
 [**payment_retrieve_wallet_transaction**](LimitedApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
+[**payment_submit_user_payment**](LimitedApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | Submit a user payment
 
 
 # **payment_commit_wallet_transaction**
@@ -617,6 +618,91 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PaymentRetrieveWalletTransactionResponse**](PaymentRetrieveWalletTransactionResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **payment_submit_user_payment**
+> object payment_submit_user_payment(amount_rials=amount_rials, profit_rials=profit_rials, services=services, reference_id=reference_id)
+
+Submit a user payment
+
+Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.LimitedApi(api_client)
+    amount_rials = 'amount_rials_example' # str | Total amount paid by the user, in rials. (optional)
+    profit_rials = 'profit_rials_example' # str | Profit or commission gained from this transaction, in rials. (optional)
+    services = ['services_example'] # List[str] | List of service slugs the user paid for (e.g. 'banner', 'title_refinement'). (optional)
+    reference_id = 'reference_id_example' # str | Reference ID of the invoice or transaction. (optional)
+
+    try:
+        # Submit a user payment
+        api_response = api_instance.payment_submit_user_payment(amount_rials=amount_rials, profit_rials=profit_rials, services=services, reference_id=reference_id)
+        print("The response of LimitedApi->payment_submit_user_payment:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling LimitedApi->payment_submit_user_payment: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **amount_rials** | **str**| Total amount paid by the user, in rials. | [optional] 
+ **profit_rials** | **str**| Profit or commission gained from this transaction, in rials. | [optional] 
+ **services** | [**List[str]**](str.md)| List of service slugs the user paid for (e.g. &#39;banner&#39;, &#39;title_refinement&#39;). | [optional] 
+ **reference_id** | **str**| Reference ID of the invoice or transaction. | [optional] 
+
+### Return type
+
+**object**
 
 ### Authorization
 

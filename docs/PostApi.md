@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**post_get_image_upload_url**](PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 [**post_get_post_stats**](PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 [**post_submit_post**](PostApi.md#post_submit_post) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
+[**post_submit_post_v2**](PostApi.md#post_submit_post_v2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+[**post_submit_user_post**](PostApi.md#post_submit_user_post) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
 
 
 # **post_edit_post**
@@ -309,6 +311,171 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **post_submit_post_request** | [**PostSubmitPostRequest**](PostSubmitPostRequest.md)|  | 
+
+### Return type
+
+[**PostSubmitPostResponse**](PostSubmitPostResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_submit_post_v2**
+> PostSubmitPostResponse post_submit_post_v2(post_submit_post_v2_request)
+
+ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+
+این API به شما امکان ثبت آگهی با استفاده از اعتبارسنجی طرح JSON را می‌دهد. این به مجوز `POST_SUBMIT` نیاز دارد.
+شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به طرح ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.models.post_submit_post_response import PostSubmitPostResponse
+from kenar_api_client.models.post_submit_post_v2_request import PostSubmitPostV2Request
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.PostApi(api_client)
+    post_submit_post_v2_request = kenar_api_client.PostSubmitPostV2Request() # PostSubmitPostV2Request | 
+
+    try:
+        # ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+        api_response = api_instance.post_submit_post_v2(post_submit_post_v2_request)
+        print("The response of PostApi->post_submit_post_v2:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PostApi->post_submit_post_v2: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **post_submit_post_v2_request** | [**PostSubmitPostV2Request**](PostSubmitPostV2Request.md)|  | 
+
+### Return type
+
+[**PostSubmitPostResponse**](PostSubmitPostResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_submit_user_post**
+> PostSubmitPostResponse post_submit_user_post(post_submit_user_post_request)
+
+ثبت آگهی به عنوان کاربر
+
+این API به شما امکان ثبت آگهی از طرف یک کاربر احراز هویت شده با استفاده از اعتبارسنجی طرح JSON را می‌دهد. این به احراز هویت OAuth با توکن دسترسی معتبر و دامنه OAuth `SUBMIT_USER_POST` نیاز دارد.
+بر خلاف SubmitPostV2 که آگهی‌ها را به عنوان ارائه‌دهنده ثبت می‌کند، این نقطه پایانی آگهی‌ها را به عنوان کاربر مرتبط با توکن دسترسی ارائه شده ثبت می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود.
+شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به طرح ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.models.post_submit_post_response import PostSubmitPostResponse
+from kenar_api_client.models.post_submit_user_post_request import PostSubmitUserPostRequest
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.PostApi(api_client)
+    post_submit_user_post_request = kenar_api_client.PostSubmitUserPostRequest() # PostSubmitUserPostRequest | 
+
+    try:
+        # ثبت آگهی به عنوان کاربر
+        api_response = api_instance.post_submit_user_post(post_submit_user_post_request)
+        print("The response of PostApi->post_submit_user_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling PostApi->post_submit_user_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **post_submit_user_post_request** | [**PostSubmitUserPostRequest**](PostSubmitUserPostRequest.md)|  | 
 
 ### Return type
 

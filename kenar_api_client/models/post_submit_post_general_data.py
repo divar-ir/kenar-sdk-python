@@ -19,34 +19,26 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from kenar_api_client.models.open_platformpost_services_fields import OpenPlatformpostServicesFields
-from kenar_api_client.models.post_apartment_sell_fields import PostApartmentSellFields
-from kenar_api_client.models.post_home_presell_fields import PostHomePresellFields
 from kenar_api_client.models.post_location_type import PostLocationType
-from kenar_api_client.models.post_temporary_residence_fields import PostTemporaryResidenceFields
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PostSubmitPostRequest(BaseModel):
+class PostSubmitPostGeneralData(BaseModel):
     """
-    PostSubmitPostRequest
+    PostSubmitPostGeneralData
     """ # noqa: E501
-    apartment_sell: Optional[PostApartmentSellFields] = None
+    category_slug: StrictStr = Field(description="نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-categories/")
     chat_enabled: StrictBool = Field(description="امکان چت فعال باشد")
     city: StrictStr = Field(description="شهر آگهی")
     description: StrictStr = Field(description="توضیحات آگهی")
     district: Optional[StrictStr] = Field(default=None, description="محله آگهی")
     hide_phone: StrictBool = Field(description="عدم نمایش شماره تماس به کاربران")
-    home_presell: Optional[PostHomePresellFields] = None
     images: List[StrictStr]
-    landline_numbers: Optional[List[StrictStr]] = Field(default=None, description="Landline numbers to be added to the post")
     latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="عرض جغرافیایی آگهی")
     location_type: PostLocationType
     longitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="طول جغرافیایی آگهی")
-    services: Optional[OpenPlatformpostServicesFields] = None
-    temporary_residence: Optional[PostTemporaryResidenceFields] = None
     title: StrictStr = Field(description="عنوان آگهی")
-    __properties: ClassVar[List[str]] = ["apartment_sell", "chat_enabled", "city", "description", "district", "hide_phone", "home_presell", "images", "landline_numbers", "latitude", "location_type", "longitude", "services", "temporary_residence", "title"]
+    __properties: ClassVar[List[str]] = ["category_slug", "chat_enabled", "city", "description", "district", "hide_phone", "images", "latitude", "location_type", "longitude", "title"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -66,7 +58,7 @@ class PostSubmitPostRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PostSubmitPostRequest from a JSON string"""
+        """Create an instance of PostSubmitPostGeneralData from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -87,23 +79,11 @@ class PostSubmitPostRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of apartment_sell
-        if self.apartment_sell:
-            _dict['apartment_sell'] = self.apartment_sell.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of home_presell
-        if self.home_presell:
-            _dict['home_presell'] = self.home_presell.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of services
-        if self.services:
-            _dict['services'] = self.services.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of temporary_residence
-        if self.temporary_residence:
-            _dict['temporary_residence'] = self.temporary_residence.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PostSubmitPostRequest from a dict"""
+        """Create an instance of PostSubmitPostGeneralData from a dict"""
         if obj is None:
             return None
 
@@ -111,20 +91,16 @@ class PostSubmitPostRequest(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "apartment_sell": PostApartmentSellFields.from_dict(obj["apartment_sell"]) if obj.get("apartment_sell") is not None else None,
+            "category_slug": obj.get("category_slug"),
             "chat_enabled": obj.get("chat_enabled"),
             "city": obj.get("city"),
             "description": obj.get("description"),
             "district": obj.get("district"),
             "hide_phone": obj.get("hide_phone"),
-            "home_presell": PostHomePresellFields.from_dict(obj["home_presell"]) if obj.get("home_presell") is not None else None,
             "images": obj.get("images"),
-            "landline_numbers": obj.get("landline_numbers"),
             "latitude": obj.get("latitude"),
             "location_type": obj.get("location_type"),
             "longitude": obj.get("longitude"),
-            "services": OpenPlatformpostServicesFields.from_dict(obj["services"]) if obj.get("services") is not None else None,
-            "temporary_residence": PostTemporaryResidenceFields.from_dict(obj["temporary_residence"]) if obj.get("temporary_residence") is not None else None,
             "title": obj.get("title")
         })
         return _obj

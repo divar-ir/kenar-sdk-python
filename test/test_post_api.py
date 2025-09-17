@@ -54,6 +54,20 @@ class TestPostApi(unittest.TestCase):
         """
         pass
 
+    def test_post_submit_post_v2(self) -> None:
+        """Test case for post_submit_post_v2
+
+        ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+        """
+        pass
+
+    def test_post_submit_user_post(self) -> None:
+        """Test case for post_submit_user_post
+
+        ثبت آگهی به عنوان کاربر
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

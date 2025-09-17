@@ -838,6 +838,8 @@ class DivarIconsIconName(str, Enum):
     CHEVRON_DOWN = 'CHEVRON_DOWN'
     TAG_O = 'TAG_O'
     PHONE_SPARKLES = 'PHONE_SPARKLES'
+    PAINT_BRUSH = 'PAINT_BRUSH'
+    VIDEO_LIBRARY = 'VIDEO_LIBRARY'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
