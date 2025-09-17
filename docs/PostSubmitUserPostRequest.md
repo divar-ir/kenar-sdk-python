@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**category_fields** | **object** | فیلدهای ویژه هر دسته‌بندی که باید مطابق ساختار مشخص شده تکمیل شوند. ساختار را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/ | 
+**category_fields** | **object** | فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://divar-ir.github.io/kenar-docs/openapi-doc/assets-get-submit-schema/ | 
 **general_data** | [**PostSubmitPostGeneralData**](PostSubmitPostGeneralData.md) |  | 
 
 ## Example

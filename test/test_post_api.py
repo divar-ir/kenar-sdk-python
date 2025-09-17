@@ -57,7 +57,7 @@ class TestPostApi(unittest.TestCase):
     def test_post_submit_post_v2(self) -> None:
         """Test case for post_submit_post_v2
 
-        ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+        ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
         """
         pass
 

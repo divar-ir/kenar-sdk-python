@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**post_get_image_upload_url**](PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
 [**post_get_post_stats**](PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 [**post_submit_post**](PostApi.md#post_submit_post) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
-[**post_submit_post_v2**](PostApi.md#post_submit_post_v2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+[**post_submit_post_v2**](PostApi.md#post_submit_post_v2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
 [**post_submit_user_post**](PostApi.md#post_submit_user_post) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
 
 
@@ -337,10 +337,10 @@ Name | Type | Description  | Notes
 # **post_submit_post_v2**
 > PostSubmitPostResponse post_submit_post_v2(post_submit_post_v2_request)
 
-ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
 
-این API به شما امکان ثبت آگهی با استفاده از اعتبارسنجی طرح JSON را می‌دهد. این به مجوز `POST_SUBMIT` نیاز دارد.
-شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به طرح ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
+این API به شما امکان ثبت آگهی با استفاده از اعتبارسنجی قالب JSON را می‌دهد. این به مجوز `POST_SUBMIT` نیاز دارد.
+شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به قالب ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
 
 ### Example
 
@@ -377,7 +377,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     post_submit_post_v2_request = kenar_api_client.PostSubmitPostV2Request() # PostSubmitPostV2Request | 
 
     try:
-        # ثبت آگهی با استفاده از اعتبارسنجی ساختار JSON
+        # ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
         api_response = api_instance.post_submit_post_v2(post_submit_post_v2_request)
         print("The response of PostApi->post_submit_post_v2:\n")
         pprint(api_response)
@@ -421,9 +421,9 @@ Name | Type | Description  | Notes
 
 ثبت آگهی به عنوان کاربر
 
-این API به شما امکان ثبت آگهی از طرف یک کاربر احراز هویت شده با استفاده از اعتبارسنجی طرح JSON را می‌دهد. این به احراز هویت OAuth با توکن دسترسی معتبر و دامنه OAuth `SUBMIT_USER_POST` نیاز دارد.
+این API به شما امکان ثبت آگهی از طرف یک کاربر احراز هویت شده با استفاده از اعتبارسنجی قالب JSON را می‌دهد. این به احراز هویت OAuth با توکن دسترسی معتبر و دامنه OAuth `SUBMIT_USER_POST` نیاز دارد.
 بر خلاف SubmitPostV2 که آگهی‌ها را به عنوان ارائه‌دهنده ثبت می‌کند، این نقطه پایانی آگهی‌ها را به عنوان کاربر مرتبط با توکن دسترسی ارائه شده ثبت می‌کند. آگهی متعلق به کاربر احراز هویت شده خواهد بود.
-شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به طرح ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
+شما داده‌های کامل آگهی را به عنوان یک رشته JSON ارائه می‌دهید که با احترام به قالب ثبت برای دسته‌بندی مشخص شده موجود در دارایی‌ها اعتبارسنجی خواهد شد.
 
 ### Example
 
