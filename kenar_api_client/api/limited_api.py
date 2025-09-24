@@ -2201,7 +2201,7 @@ class LimitedApi:
         amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
         profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
         services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
-        reference_id: Annotated[Optional[StrictStr], Field(description="Reference ID of the invoice or transaction.")] = None,
+        reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2225,7 +2225,7 @@ class LimitedApi:
         :type profit_rials: str
         :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
         :type services: List[str]
-        :param reference_id: Reference ID of the invoice or transaction.
+        :param reference_id: شناسه مرجع فاکتور یا تراکنش
         :type reference_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2280,7 +2280,7 @@ class LimitedApi:
         amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
         profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
         services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
-        reference_id: Annotated[Optional[StrictStr], Field(description="Reference ID of the invoice or transaction.")] = None,
+        reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2304,7 +2304,7 @@ class LimitedApi:
         :type profit_rials: str
         :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
         :type services: List[str]
-        :param reference_id: Reference ID of the invoice or transaction.
+        :param reference_id: شناسه مرجع فاکتور یا تراکنش
         :type reference_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2359,7 +2359,7 @@ class LimitedApi:
         amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
         profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
         services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
-        reference_id: Annotated[Optional[StrictStr], Field(description="Reference ID of the invoice or transaction.")] = None,
+        reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2383,7 +2383,7 @@ class LimitedApi:
         :type profit_rials: str
         :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
         :type services: List[str]
-        :param reference_id: Reference ID of the invoice or transaction.
+        :param reference_id: شناسه مرجع فاکتور یا تراکنش
         :type reference_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
