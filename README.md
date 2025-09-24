@@ -151,7 +151,7 @@ Class | Method | HTTP request | Description
 *LimitedApi* | [**payment_list_transactions**](docs/LimitedApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | 
 *LimitedApi* | [**payment_reorder_post**](docs/LimitedApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
 *LimitedApi* | [**payment_retrieve_wallet_transaction**](docs/LimitedApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
-*LimitedApi* | [**payment_submit_user_payment**](docs/LimitedApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | Submit a user payment
+*LimitedApi* | [**payment_submit_user_payment**](docs/LimitedApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 
 
 ## Documentation For Models

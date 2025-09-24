@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**payment_list_transactions**](LimitedApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | 
 [**payment_reorder_post**](LimitedApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
 [**payment_retrieve_wallet_transaction**](LimitedApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
-[**payment_submit_user_payment**](LimitedApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | Submit a user payment
+[**payment_submit_user_payment**](LimitedApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 
 
 # **payment_commit_wallet_transaction**
@@ -640,7 +640,7 @@ Name | Type | Description  | Notes
 # **payment_submit_user_payment**
 > object payment_submit_user_payment(amount_rials=amount_rials, profit_rials=profit_rials, services=services, reference_id=reference_id)
 
-Submit a user payment
+ثبت پرداخت کاربر
 
 این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
@@ -680,7 +680,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     reference_id = 'reference_id_example' # str | Reference ID of the invoice or transaction. (optional)
 
     try:
-        # Submit a user payment
+        # ثبت پرداخت کاربر
         api_response = api_instance.payment_submit_user_payment(amount_rials=amount_rials, profit_rials=profit_rials, services=services, reference_id=reference_id)
         print("The response of LimitedApi->payment_submit_user_payment:\n")
         pprint(api_response)

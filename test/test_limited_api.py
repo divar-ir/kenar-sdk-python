@@ -78,7 +78,7 @@ class TestLimitedApi(unittest.TestCase):
     def test_payment_submit_user_payment(self) -> None:
         """Test case for payment_submit_user_payment
 
-        Submit a user payment
+        ثبت پرداخت کاربر
         """
         pass
 
