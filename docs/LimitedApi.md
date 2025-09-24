@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 
 Submit a user payment
 
-Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
 ### Example
 
@@ -674,9 +674,9 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.LimitedApi(api_client)
-    amount_rials = 'amount_rials_example' # str | Total amount paid by the user, in rials. (optional)
-    profit_rials = 'profit_rials_example' # str | Profit or commission gained from this transaction, in rials. (optional)
-    services = ['services_example'] # List[str] | List of service slugs the user paid for (e.g. 'banner', 'title_refinement'). (optional)
+    amount_rials = 'amount_rials_example' # str | میزان پول پرداختی توسط کاربر به ریال (optional)
+    profit_rials = 'profit_rials_example' # str | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال (optional)
+    services = ['services_example'] # List[str] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) (optional)
     reference_id = 'reference_id_example' # str | Reference ID of the invoice or transaction. (optional)
 
     try:
@@ -695,9 +695,9 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **amount_rials** | **str**| Total amount paid by the user, in rials. | [optional] 
- **profit_rials** | **str**| Profit or commission gained from this transaction, in rials. | [optional] 
- **services** | [**List[str]**](str.md)| List of service slugs the user paid for (e.g. &#39;banner&#39;, &#39;title_refinement&#39;). | [optional] 
+ **amount_rials** | **str**| میزان پول پرداختی توسط کاربر به ریال | [optional] 
+ **profit_rials** | **str**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال | [optional] 
+ **services** | [**List[str]**](str.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) | [optional] 
  **reference_id** | **str**| Reference ID of the invoice or transaction. | [optional] 
 
 ### Return type

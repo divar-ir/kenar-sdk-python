@@ -28,7 +28,7 @@ class PaymentListTransactionsResponse(BaseModel):
     PaymentListTransactionsResponse
     """ # noqa: E501
     next_page_token: Optional[StrictStr] = Field(default=None, description="Token for the next page of results.")
-    transactions: Optional[List[PaymentTransaction]] = Field(default=None, description="List of transactions matching the request")
+    transactions: Optional[List[PaymentTransaction]] = Field(default=None, description="شناسه مرجع فاکتور یا تراکنش")
     __properties: ClassVar[List[str]] = ["next_page_token", "transactions"]
 
     model_config = ConfigDict(

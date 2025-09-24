@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **next_page_token** | **str** | Token for the next page of results. | [optional] 
-**transactions** | [**List[PaymentTransaction]**](PaymentTransaction.md) | List of transactions matching the request | [optional] 
+**transactions** | [**List[PaymentTransaction]**](PaymentTransaction.md) | شناسه مرجع فاکتور یا تراکنش | [optional] 
 
 ## Example
 

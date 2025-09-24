@@ -2198,9 +2198,9 @@ class LimitedApi:
     @validate_call
     def payment_submit_user_payment(
         self,
-        amount_rials: Annotated[Optional[StrictStr], Field(description="Total amount paid by the user, in rials.")] = None,
-        profit_rials: Annotated[Optional[StrictStr], Field(description="Profit or commission gained from this transaction, in rials.")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="List of service slugs the user paid for (e.g. 'banner', 'title_refinement').")] = None,
+        amount_rials: Annotated[Optional[StrictStr], Field(description="میزان پول پرداختی توسط کاربر به ریال")] = None,
+        profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال")] = None,
+        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
         reference_id: Annotated[Optional[StrictStr], Field(description="Reference ID of the invoice or transaction.")] = None,
         _request_timeout: Union[
             None,
@@ -2217,13 +2217,13 @@ class LimitedApi:
     ) -> object:
         """Submit a user payment
 
-        Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+        این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
-        :param amount_rials: Total amount paid by the user, in rials.
+        :param amount_rials: میزان پول پرداختی توسط کاربر به ریال
         :type amount_rials: str
-        :param profit_rials: Profit or commission gained from this transaction, in rials.
+        :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
         :type profit_rials: str
-        :param services: List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
         :type services: List[str]
         :param reference_id: Reference ID of the invoice or transaction.
         :type reference_id: str
@@ -2277,9 +2277,9 @@ class LimitedApi:
     @validate_call
     def payment_submit_user_payment_with_http_info(
         self,
-        amount_rials: Annotated[Optional[StrictStr], Field(description="Total amount paid by the user, in rials.")] = None,
-        profit_rials: Annotated[Optional[StrictStr], Field(description="Profit or commission gained from this transaction, in rials.")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="List of service slugs the user paid for (e.g. 'banner', 'title_refinement').")] = None,
+        amount_rials: Annotated[Optional[StrictStr], Field(description="میزان پول پرداختی توسط کاربر به ریال")] = None,
+        profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال")] = None,
+        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
         reference_id: Annotated[Optional[StrictStr], Field(description="Reference ID of the invoice or transaction.")] = None,
         _request_timeout: Union[
             None,
@@ -2296,13 +2296,13 @@ class LimitedApi:
     ) -> ApiResponse[object]:
         """Submit a user payment
 
-        Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+        این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
-        :param amount_rials: Total amount paid by the user, in rials.
+        :param amount_rials: میزان پول پرداختی توسط کاربر به ریال
         :type amount_rials: str
-        :param profit_rials: Profit or commission gained from this transaction, in rials.
+        :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
         :type profit_rials: str
-        :param services: List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
         :type services: List[str]
         :param reference_id: Reference ID of the invoice or transaction.
         :type reference_id: str
@@ -2356,9 +2356,9 @@ class LimitedApi:
     @validate_call
     def payment_submit_user_payment_without_preload_content(
         self,
-        amount_rials: Annotated[Optional[StrictStr], Field(description="Total amount paid by the user, in rials.")] = None,
-        profit_rials: Annotated[Optional[StrictStr], Field(description="Profit or commission gained from this transaction, in rials.")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="List of service slugs the user paid for (e.g. 'banner', 'title_refinement').")] = None,
+        amount_rials: Annotated[Optional[StrictStr], Field(description="میزان پول پرداختی توسط کاربر به ریال")] = None,
+        profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال")] = None,
+        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
         reference_id: Annotated[Optional[StrictStr], Field(description="Reference ID of the invoice or transaction.")] = None,
         _request_timeout: Union[
             None,
@@ -2375,13 +2375,13 @@ class LimitedApi:
     ) -> RESTResponseType:
         """Submit a user payment
 
-        Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This api is expected to be called with access token having `SUBMIT_USER_PAYMENT` scope.
+        این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
-        :param amount_rials: Total amount paid by the user, in rials.
+        :param amount_rials: میزان پول پرداختی توسط کاربر به ریال
         :type amount_rials: str
-        :param profit_rials: Profit or commission gained from this transaction, in rials.
+        :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال
         :type profit_rials: str
-        :param services: List of service slugs the user paid for (e.g. 'banner', 'title_refinement').
+        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
         :type services: List[str]
         :param reference_id: Reference ID of the invoice or transaction.
         :type reference_id: str
