@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 
 ثبت پرداخت کاربر
 
-این API مخصوص ثبت پرداخت‌های کاربران در سرویس شما هست. ضروری است که از این API برای ثبت پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
+باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
 ### Example
 
@@ -674,8 +674,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.LimitedApi(api_client)
-    amount_rials = 'amount_rials_example' # str | میزان پول پرداختی توسط کاربر به ریال (optional)
-    profit_rials = 'profit_rials_example' # str | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال (optional)
+    amount_rials = 'amount_rials_example' # str | کل مبلغ پرداختی توسط کاربر، به ریال (optional)
+    profit_rials = 'profit_rials_example' # str | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال (optional)
     services = ['services_example'] # List[str] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) (optional)
     reference_id = 'reference_id_example' # str | Reference ID of the invoice or transaction. (optional)
 
@@ -695,8 +695,8 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **amount_rials** | **str**| میزان پول پرداختی توسط کاربر به ریال | [optional] 
- **profit_rials** | **str**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد به ریال | [optional] 
+ **amount_rials** | **str**| کل مبلغ پرداختی توسط کاربر، به ریال | [optional] 
+ **profit_rials** | **str**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال | [optional] 
  **services** | [**List[str]**](str.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) | [optional] 
  **reference_id** | **str**| Reference ID of the invoice or transaction. | [optional] 
 
