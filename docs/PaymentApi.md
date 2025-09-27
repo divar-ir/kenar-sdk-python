@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 # **payment_get_transaction**
 > PaymentGetTransactionResponse payment_get_transaction(id)
 
-با استفاده از این (محدود) API می‌توانید جزئیات تراکنش را دریافت کنید.
+(محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
 
 ### Example
 
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 # **payment_retrieve_wallet_transaction**
 > PaymentRetrieveWalletTransactionResponse payment_retrieve_wallet_transaction(token)
 
-با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. (محدود) از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+(محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
 ### Example
 

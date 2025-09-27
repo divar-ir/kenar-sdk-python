@@ -1123,7 +1123,7 @@ class PaymentApi:
     ) -> PaymentGetTransactionResponse:
         """payment_get_transaction
 
-        با استفاده از این (محدود) API می‌توانید جزئیات تراکنش را دریافت کنید.
+        (محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
 
         :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
@@ -1190,7 +1190,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentGetTransactionResponse]:
         """payment_get_transaction
 
-        با استفاده از این (محدود) API می‌توانید جزئیات تراکنش را دریافت کنید.
+        (محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
 
         :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
@@ -1257,7 +1257,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """payment_get_transaction
 
-        با استفاده از این (محدود) API می‌توانید جزئیات تراکنش را دریافت کنید.
+        (محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
 
         :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
@@ -1953,7 +1953,7 @@ class PaymentApi:
     ) -> PaymentRetrieveWalletTransactionResponse:
         """payment_retrieve_wallet_transaction
 
-        با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. (محدود) از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+        (محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
         :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
@@ -2020,7 +2020,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentRetrieveWalletTransactionResponse]:
         """payment_retrieve_wallet_transaction
 
-        با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. (محدود) از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+        (محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
         :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
@@ -2087,7 +2087,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """payment_retrieve_wallet_transaction
 
-        با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. (محدود) از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+        (محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
         :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
