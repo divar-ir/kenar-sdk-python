@@ -18,7 +18,7 @@ Method | HTTP request | Description
 # **payment_commit_wallet_transaction**
 > PaymentCommitWalletTransactionResponse payment_commit_wallet_transaction(payment_commit_wallet_transaction_request)
 
-(Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+(محدود) با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
 
 ### Example
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 # **payment_create_wallet_payment**
 > PaymentCreateWalletPaymentResponse payment_create_wallet_payment(payment_create_wallet_payment_request)
 
-(Limited) Using this API you can start a payment transaction from the users wallet.
+(محدود) با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
 
 ### Example
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 # **payment_get_balance**
 > PaymentGetBalanceResponse payment_get_balance()
 
-(Limited) Using this API you can retrieve current balance of your app.
+(محدود) با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
 
 ### Example
 
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 # **payment_get_transaction**
 > PaymentGetTransactionResponse payment_get_transaction(id)
 
-(Limited) Using this API you can retrieve transaction details.
+با استفاده از این (محدود) API می‌توانید جزئیات تراکنش را دریافت کنید.
 
 ### Example
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 # **payment_list_transactions**
 > PaymentListTransactionsResponse payment_list_transactions(page_size=page_size, page_token=page_token)
 
-(Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+(محدود) با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
 
 ### Example
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 # **payment_reorder_post**
 > PaymentReorderPostResponse payment_reorder_post(post_token, payment_reorder_post_body)
 
-(Limited) Use GetPostPricing API to get the cost of the service before calling this API.
+(محدود) قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
 
 ### Example
 
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 # **payment_retrieve_wallet_transaction**
 > PaymentRetrieveWalletTransactionResponse payment_retrieve_wallet_transaction(token)
 
-(Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. (محدود) از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
 
 ### Example
 
