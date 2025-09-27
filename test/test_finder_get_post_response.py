@@ -35,7 +35,7 @@ class TestFinderGetPostResponse(unittest.TestCase):
         model = FinderGetPostResponse()
         if include_optional:
             return FinderGetPostResponse(
-                business_data = kenar_api_client.models.get_post_response_business_data.GetPostResponseBusinessData(
+                business_data = kenar_api_client.models.finder_get_post_response_business_data.finderGetPostResponseBusinessData(
                     business_name = '', 
                     business_type = 'CAR', ),
                 category = '',

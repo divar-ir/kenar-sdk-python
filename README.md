@@ -131,6 +131,15 @@ Class | Method | HTTP request | Description
 *FinderApi* | [**finder_get_user2**](docs/FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
 *FinderApi* | [**finder_get_user_posts**](docs/FinderApi.md#finder_get_user_posts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
 *FinderApi* | [**finder_search_post_v2**](docs/FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
+*PaymentApi* | [**payment_commit_wallet_transaction**](docs/PaymentApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
+*PaymentApi* | [**payment_create_wallet_payment**](docs/PaymentApi.md#payment_create_wallet_payment) | **POST** /experimental/open-platform/wallet/payments/create | 
+*PaymentApi* | [**payment_get_balance**](docs/PaymentApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | 
+*PaymentApi* | [**payment_get_post_pricing**](docs/PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
+*PaymentApi* | [**payment_get_transaction**](docs/PaymentApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | 
+*PaymentApi* | [**payment_list_transactions**](docs/PaymentApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | 
+*PaymentApi* | [**payment_reorder_post**](docs/PaymentApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
+*PaymentApi* | [**payment_retrieve_wallet_transaction**](docs/PaymentApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
+*PaymentApi* | [**payment_submit_user_payment**](docs/PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 *PaymentTicketApi* | [**payment_ticket_validate**](docs/PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *PostApi* | [**post_edit_post**](docs/PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *PostApi* | [**post_get_image_upload_url**](docs/PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
@@ -143,15 +152,6 @@ Class | Method | HTTP request | Description
 *SemanticApi* | [**semantic_create_user_semantic2**](docs/SemanticApi.md#semantic_create_user_semantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
 *SemanticApi* | [**semantic_delete_user_semantic**](docs/SemanticApi.md#semantic_delete_user_semantic) | **DELETE** /v1/open-platform/semantic/user/{phone} | حذف اطلاعات معنایی کاربر
 *SemanticApi* | [**semantic_delete_user_semantic2**](docs/SemanticApi.md#semantic_delete_user_semantic2) | **DELETE** /v1/open-platform/semantic/users/{divar_user_id} | حذف اطلاعات معنایی کاربر
-*LimitedApi* | [**payment_commit_wallet_transaction**](docs/LimitedApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | 
-*LimitedApi* | [**payment_create_wallet_payment**](docs/LimitedApi.md#payment_create_wallet_payment) | **POST** /experimental/open-platform/wallet/payments/create | 
-*LimitedApi* | [**payment_get_balance**](docs/LimitedApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | 
-*LimitedApi* | [**payment_get_post_pricing**](docs/LimitedApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
-*LimitedApi* | [**payment_get_transaction**](docs/LimitedApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | 
-*LimitedApi* | [**payment_list_transactions**](docs/LimitedApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | 
-*LimitedApi* | [**payment_reorder_post**](docs/LimitedApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | 
-*LimitedApi* | [**payment_retrieve_wallet_transaction**](docs/LimitedApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | 
-*LimitedApi* | [**payment_submit_user_payment**](docs/LimitedApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
 
 
 ## Documentation For Models
@@ -251,6 +251,7 @@ Class | Method | HTTP request | Description
  - [EventsRegisterEventSubscriptionRequestEventType](docs/EventsRegisterEventSubscriptionRequestEventType.md)
  - [FinderGetAllDevelopmentPostsResponse](docs/FinderGetAllDevelopmentPostsResponse.md)
  - [FinderGetPostResponse](docs/FinderGetPostResponse.md)
+ - [FinderGetPostResponseBusinessData](docs/FinderGetPostResponseBusinessData.md)
  - [FinderGetUserPostsResponse](docs/FinderGetUserPostsResponse.md)
  - [FinderGetUserPostsResponsePost](docs/FinderGetUserPostsResponsePost.md)
  - [FinderPostExtState](docs/FinderPostExtState.md)
@@ -261,7 +262,7 @@ Class | Method | HTTP request | Description
  - [FinderSearchQueryNumberRange](docs/FinderSearchQueryNumberRange.md)
  - [FinderUser](docs/FinderUser.md)
  - [GetPostPricingResponseReorder](docs/GetPostPricingResponseReorder.md)
- - [GetPostResponseBusinessData](docs/GetPostResponseBusinessData.md)
+ - [GetPostPricingResponseSubmit](docs/GetPostPricingResponseSubmit.md)
  - [GetPostStatsResponseDailyStats](docs/GetPostStatsResponseDailyStats.md)
  - [GetPostStatsResponsePostStats](docs/GetPostStatsResponsePostStats.md)
  - [GetServiceTypesResponseServiceTypeData](docs/GetServiceTypesResponseServiceTypeData.md)

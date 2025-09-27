@@ -20,8 +20,8 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from kenar_api_client.models.finder_get_post_response_business_data import FinderGetPostResponseBusinessData
 from kenar_api_client.models.finder_post_ext_state import FinderPostExtState
-from kenar_api_client.models.get_post_response_business_data import GetPostResponseBusinessData
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -29,7 +29,7 @@ class FinderGetPostResponse(BaseModel):
     """
     FinderGetPostResponse
     """ # noqa: E501
-    business_data: Optional[GetPostResponseBusinessData] = None
+    business_data: Optional[FinderGetPostResponseBusinessData] = None
     category: Optional[StrictStr] = None
     chat_enabled: Optional[StrictBool] = None
     city: Optional[StrictStr] = None
@@ -97,7 +97,7 @@ class FinderGetPostResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "business_data": GetPostResponseBusinessData.from_dict(obj["business_data"]) if obj.get("business_data") is not None else None,
+            "business_data": FinderGetPostResponseBusinessData.from_dict(obj["business_data"]) if obj.get("business_data") is not None else None,
             "category": obj.get("category"),
             "chat_enabled": obj.get("chat_enabled"),
             "city": obj.get("city"),

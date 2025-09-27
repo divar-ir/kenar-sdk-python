@@ -37,6 +37,9 @@ class TestPaymentGetPostPricingResponse(unittest.TestCase):
             return PaymentGetPostPricingResponse(
                 reorder = kenar_api_client.models.get_post_pricing_response_reorder.GetPostPricingResponseReorder(
                     available = True, 
+                    cost_rials = '', ),
+                submit = kenar_api_client.models.get_post_pricing_response_submit.GetPostPricingResponseSubmit(
+                    available = True, 
                     cost_rials = '', )
             )
         else:

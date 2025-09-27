@@ -17,20 +17,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from kenar_api_client.models.get_post_pricing_response_reorder import GetPostPricingResponseReorder
-from kenar_api_client.models.get_post_pricing_response_submit import GetPostPricingResponseSubmit
+from kenar_api_client.models.premium_panel_business_data_sub_business_type import PremiumPanelBusinessDataSubBusinessType
 from typing import Optional, Set
 from typing_extensions import Self
 
-class PaymentGetPostPricingResponse(BaseModel):
+class FinderGetPostResponseBusinessData(BaseModel):
     """
-    PaymentGetPostPricingResponse
+    FinderGetPostResponseBusinessData
     """ # noqa: E501
-    reorder: Optional[GetPostPricingResponseReorder] = None
-    submit: Optional[GetPostPricingResponseSubmit] = None
-    __properties: ClassVar[List[str]] = ["reorder", "submit"]
+    business_name: Optional[StrictStr] = None
+    business_type: Optional[PremiumPanelBusinessDataSubBusinessType] = None
+    __properties: ClassVar[List[str]] = ["business_name", "business_type"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +49,7 @@ class PaymentGetPostPricingResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of PaymentGetPostPricingResponse from a JSON string"""
+        """Create an instance of FinderGetPostResponseBusinessData from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,17 +70,11 @@ class PaymentGetPostPricingResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of reorder
-        if self.reorder:
-            _dict['reorder'] = self.reorder.to_dict()
-        # override the default output from pydantic by calling `to_dict()` of submit
-        if self.submit:
-            _dict['submit'] = self.submit.to_dict()
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of PaymentGetPostPricingResponse from a dict"""
+        """Create an instance of FinderGetPostResponseBusinessData from a dict"""
         if obj is None:
             return None
 
@@ -89,8 +82,8 @@ class PaymentGetPostPricingResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "reorder": GetPostPricingResponseReorder.from_dict(obj["reorder"]) if obj.get("reorder") is not None else None,
-            "submit": GetPostPricingResponseSubmit.from_dict(obj["submit"]) if obj.get("submit") is not None else None
+            "business_name": obj.get("business_name"),
+            "business_type": obj.get("business_type")
         })
         return _obj
 
