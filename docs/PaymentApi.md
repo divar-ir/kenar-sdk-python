@@ -676,7 +676,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     api_instance = kenar_api_client.PaymentApi(api_client)
     amount_rials = 'amount_rials_example' # str | کل مبلغ پرداختی توسط کاربر، به ریال (optional)
     profit_rials = 'profit_rials_example' # str | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال (optional)
-    services = ['services_example'] # List[str] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) (optional)
+    services = ['services_example'] # List[str] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود. (optional)
     reference_id = 'reference_id_example' # str | شناسه مرجع فاکتور یا تراکنش (optional)
 
     try:
@@ -697,7 +697,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **amount_rials** | **str**| کل مبلغ پرداختی توسط کاربر، به ریال | [optional] 
  **profit_rials** | **str**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال | [optional] 
- **services** | [**List[str]**](str.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...) | [optional] 
+ **services** | [**List[str]**](str.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود. | [optional] 
  **reference_id** | **str**| شناسه مرجع فاکتور یا تراکنش | [optional] 
 
 ### Return type

@@ -2200,7 +2200,7 @@ class PaymentApi:
         self,
         amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
         profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
+        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.")] = None,
         reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
         _request_timeout: Union[
             None,
@@ -2223,7 +2223,7 @@ class PaymentApi:
         :type amount_rials: str
         :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
         :type profit_rials: str
-        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
+        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
         :type services: List[str]
         :param reference_id: شناسه مرجع فاکتور یا تراکنش
         :type reference_id: str
@@ -2279,7 +2279,7 @@ class PaymentApi:
         self,
         amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
         profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
+        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.")] = None,
         reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
         _request_timeout: Union[
             None,
@@ -2302,7 +2302,7 @@ class PaymentApi:
         :type amount_rials: str
         :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
         :type profit_rials: str
-        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
+        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
         :type services: List[str]
         :param reference_id: شناسه مرجع فاکتور یا تراکنش
         :type reference_id: str
@@ -2358,7 +2358,7 @@ class PaymentApi:
         self,
         amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
         profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)")] = None,
+        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.")] = None,
         reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
         _request_timeout: Union[
             None,
@@ -2381,7 +2381,7 @@ class PaymentApi:
         :type amount_rials: str
         :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
         :type profit_rials: str
-        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «بنر»، «بهبود عنوان» و ...)
+        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
         :type services: List[str]
         :param reference_id: شناسه مرجع فاکتور یا تراکنش
         :type reference_id: str
