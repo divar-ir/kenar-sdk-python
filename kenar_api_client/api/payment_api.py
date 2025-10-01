@@ -17,7 +17,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import Field, StrictInt, StrictStr
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 from typing_extensions import Annotated
 from kenar_api_client.models.payment_commit_wallet_transaction_request import PaymentCommitWalletTransactionRequest
 from kenar_api_client.models.payment_commit_wallet_transaction_response import PaymentCommitWalletTransactionResponse
@@ -30,6 +30,7 @@ from kenar_api_client.models.payment_list_transactions_response import PaymentLi
 from kenar_api_client.models.payment_reorder_post_body import PaymentReorderPostBody
 from kenar_api_client.models.payment_reorder_post_response import PaymentReorderPostResponse
 from kenar_api_client.models.payment_retrieve_wallet_transaction_response import PaymentRetrieveWalletTransactionResponse
+from kenar_api_client.models.payment_submit_user_payment_request import PaymentSubmitUserPaymentRequest
 
 from kenar_api_client.api_client import ApiClient, RequestSerialized
 from kenar_api_client.api_response import ApiResponse
@@ -2198,10 +2199,7 @@ class PaymentApi:
     @validate_call
     def payment_submit_user_payment(
         self,
-        amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
-        profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.")] = None,
-        reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
+        payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2219,14 +2217,8 @@ class PaymentApi:
 
         باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
-        :param amount_rials: کل مبلغ پرداختی توسط کاربر، به ریال
-        :type amount_rials: str
-        :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
-        :type profit_rials: str
-        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
-        :type services: List[str]
-        :param reference_id: شناسه مرجع فاکتور یا تراکنش
-        :type reference_id: str
+        :param payment_submit_user_payment_request: (required)
+        :type payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2250,10 +2242,7 @@ class PaymentApi:
         """ # noqa: E501
 
         _param = self._payment_submit_user_payment_serialize(
-            amount_rials=amount_rials,
-            profit_rials=profit_rials,
-            services=services,
-            reference_id=reference_id,
+            payment_submit_user_payment_request=payment_submit_user_payment_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2277,10 +2266,7 @@ class PaymentApi:
     @validate_call
     def payment_submit_user_payment_with_http_info(
         self,
-        amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
-        profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.")] = None,
-        reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
+        payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2298,14 +2284,8 @@ class PaymentApi:
 
         باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
-        :param amount_rials: کل مبلغ پرداختی توسط کاربر، به ریال
-        :type amount_rials: str
-        :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
-        :type profit_rials: str
-        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
-        :type services: List[str]
-        :param reference_id: شناسه مرجع فاکتور یا تراکنش
-        :type reference_id: str
+        :param payment_submit_user_payment_request: (required)
+        :type payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2329,10 +2309,7 @@ class PaymentApi:
         """ # noqa: E501
 
         _param = self._payment_submit_user_payment_serialize(
-            amount_rials=amount_rials,
-            profit_rials=profit_rials,
-            services=services,
-            reference_id=reference_id,
+            payment_submit_user_payment_request=payment_submit_user_payment_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2356,10 +2333,7 @@ class PaymentApi:
     @validate_call
     def payment_submit_user_payment_without_preload_content(
         self,
-        amount_rials: Annotated[Optional[StrictStr], Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")] = None,
-        profit_rials: Annotated[Optional[StrictStr], Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")] = None,
-        services: Annotated[Optional[List[StrictStr]], Field(description="لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.")] = None,
-        reference_id: Annotated[Optional[StrictStr], Field(description="شناسه مرجع فاکتور یا تراکنش")] = None,
+        payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2377,14 +2351,8 @@ class PaymentApi:
 
         باید با استفاده از این API پرداخت کاربران را ثبت کنید. ضروری است که از این API برای ثبت هر پرداخت کاربر به همراه مبلغ دریافتی استفاده کنید. انتظار می‌رود این API با توکن دسترسی دارای دامنه SUBMIT_USER_PAYMENT فراخوانی شود.
 
-        :param amount_rials: کل مبلغ پرداختی توسط کاربر، به ریال
-        :type amount_rials: str
-        :param profit_rials: بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال
-        :type profit_rials: str
-        :param services: لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود.
-        :type services: List[str]
-        :param reference_id: شناسه مرجع فاکتور یا تراکنش
-        :type reference_id: str
+        :param payment_submit_user_payment_request: (required)
+        :type payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2408,10 +2376,7 @@ class PaymentApi:
         """ # noqa: E501
 
         _param = self._payment_submit_user_payment_serialize(
-            amount_rials=amount_rials,
-            profit_rials=profit_rials,
-            services=services,
-            reference_id=reference_id,
+            payment_submit_user_payment_request=payment_submit_user_payment_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2430,10 +2395,7 @@ class PaymentApi:
 
     def _payment_submit_user_payment_serialize(
         self,
-        amount_rials,
-        profit_rials,
-        services,
-        reference_id,
+        payment_submit_user_payment_request,
         _request_auth,
         _content_type,
         _headers,
@@ -2443,7 +2405,6 @@ class PaymentApi:
         _host = None
 
         _collection_formats: Dict[str, str] = {
-            'services': 'multi',
         }
 
         _path_params: Dict[str, str] = {}
@@ -2457,25 +2418,11 @@ class PaymentApi:
 
         # process the path parameters
         # process the query parameters
-        if amount_rials is not None:
-            
-            _query_params.append(('amount_rials', amount_rials))
-            
-        if profit_rials is not None:
-            
-            _query_params.append(('profit_rials', profit_rials))
-            
-        if services is not None:
-            
-            _query_params.append(('services', services))
-            
-        if reference_id is not None:
-            
-            _query_params.append(('reference_id', reference_id))
-            
         # process the header parameters
         # process the form parameters
         # process the body parameter
+        if payment_submit_user_payment_request is not None:
+            _body_params = payment_submit_user_payment_request
 
 
         # set the HTTP header `Accept`
@@ -2486,6 +2433,19 @@ class PaymentApi:
                 ]
             )
 
+        # set the HTTP header `Content-Type`
+        if _content_type:
+            _header_params['Content-Type'] = _content_type
+        else:
+            _default_content_type = (
+                self.api_client.select_header_content_type(
+                    [
+                        'application/json'
+                    ]
+                )
+            )
+            if _default_content_type is not None:
+                _header_params['Content-Type'] = _default_content_type
 
         # authentication setting
         _auth_settings: List[str] = [

@@ -35,7 +35,7 @@ class TestAddonsGetUserAddonsResponse(unittest.TestCase):
         model = AddonsGetUserAddonsResponse()
         if include_optional:
             return AddonsGetUserAddonsResponse(
-                addons = [
+                user_addons = [
                     kenar_api_client.models.addons_user_addon.addonsUserAddon(
                         divar_user_id = '', 
                         filters = kenar_api_client.models.addons_user_addon_filters.addonsUserAddonFilters(
@@ -72,6 +72,7 @@ class TestAddonsGetUserAddonsResponse(unittest.TestCase):
                             identity_verification_result = 'FACE_AND_ID_MATCHED', 
                             inspection_result = 'INSPECTION_APPROVED', 
                             new_face_verification_result = 'NEW_FACE_VERIFICATION_FAILED', 
+                            online_reservation_capability = 'ONLINE_RESERVATION_AVAILABLE', 
                             ownership_result = 'OWNERSHIP_CONFIRMED', 
                             payment_method = 'SECURE', 
                             post_verification_result = 'POST_INFORMATION_MATCHED', ), 

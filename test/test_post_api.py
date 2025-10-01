@@ -26,6 +26,13 @@ class TestPostApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
+    def test_post_can_user_submit_post(self) -> None:
+        """Test case for post_can_user_submit_post
+
+        Check if user can submit post
+        """
+        pass
+
     def test_post_edit_post(self) -> None:
         """Test case for post_edit_post
 

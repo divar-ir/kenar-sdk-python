@@ -17,18 +17,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List, Optional
-from kenar_api_client.models.addons_user_addon import AddonsUserAddon
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AddonsGetUserAddonsResponse(BaseModel):
+class PaymentSubmitUserPaymentRequest(BaseModel):
     """
-    AddonsGetUserAddonsResponse
+    PaymentSubmitUserPaymentRequest
     """ # noqa: E501
-    user_addons: Optional[List[AddonsUserAddon]] = None
-    __properties: ClassVar[List[str]] = ["user_addons"]
+    amount_rials: StrictStr = Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")
+    profit_rials: StrictStr = Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")
+    reference_id: StrictStr = Field(description="شناسه مرجع فاکتور یا تراکنش")
+    services: List[StrictStr] = Field(description="لیست شناسه خدماتی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه خدمت استفاده شود.")
+    __properties: ClassVar[List[str]] = ["amount_rials", "profit_rials", "reference_id", "services"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +50,7 @@ class AddonsGetUserAddonsResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AddonsGetUserAddonsResponse from a JSON string"""
+        """Create an instance of PaymentSubmitUserPaymentRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,18 +71,11 @@ class AddonsGetUserAddonsResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in user_addons (list)
-        _items = []
-        if self.user_addons:
-            for _item_user_addons in self.user_addons:
-                if _item_user_addons:
-                    _items.append(_item_user_addons.to_dict())
-            _dict['user_addons'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AddonsGetUserAddonsResponse from a dict"""
+        """Create an instance of PaymentSubmitUserPaymentRequest from a dict"""
         if obj is None:
             return None
 
@@ -88,7 +83,10 @@ class AddonsGetUserAddonsResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "user_addons": [AddonsUserAddon.from_dict(_item) for _item in obj["user_addons"]] if obj.get("user_addons") is not None else None
+            "amount_rials": obj.get("amount_rials"),
+            "profit_rials": obj.get("profit_rials"),
+            "reference_id": obj.get("reference_id"),
+            "services": obj.get("services")
         })
         return _obj
 

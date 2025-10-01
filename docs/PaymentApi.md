@@ -638,7 +638,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **payment_submit_user_payment**
-> object payment_submit_user_payment(amount_rials=amount_rials, profit_rials=profit_rials, services=services, reference_id=reference_id)
+> object payment_submit_user_payment(payment_submit_user_payment_request)
 
 ثبت پرداخت کاربر
 
@@ -650,6 +650,7 @@ Name | Type | Description  | Notes
 
 ```python
 import kenar_api_client
+from kenar_api_client.models.payment_submit_user_payment_request import PaymentSubmitUserPaymentRequest
 from kenar_api_client.rest import ApiException
 from pprint import pprint
 
@@ -674,14 +675,11 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.PaymentApi(api_client)
-    amount_rials = 'amount_rials_example' # str | کل مبلغ پرداختی توسط کاربر، به ریال (optional)
-    profit_rials = 'profit_rials_example' # str | بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال (optional)
-    services = ['services_example'] # List[str] | لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود. (optional)
-    reference_id = 'reference_id_example' # str | شناسه مرجع فاکتور یا تراکنش (optional)
+    payment_submit_user_payment_request = kenar_api_client.PaymentSubmitUserPaymentRequest() # PaymentSubmitUserPaymentRequest | 
 
     try:
         # ثبت پرداخت کاربر
-        api_response = api_instance.payment_submit_user_payment(amount_rials=amount_rials, profit_rials=profit_rials, services=services, reference_id=reference_id)
+        api_response = api_instance.payment_submit_user_payment(payment_submit_user_payment_request)
         print("The response of PaymentApi->payment_submit_user_payment:\n")
         pprint(api_response)
     except Exception as e:
@@ -695,10 +693,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **amount_rials** | **str**| کل مبلغ پرداختی توسط کاربر، به ریال | [optional] 
- **profit_rials** | **str**| بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال | [optional] 
- **services** | [**List[str]**](str.md)| لیست شناسه سرویس‌هایی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه سرویس استفاده شود. | [optional] 
- **reference_id** | **str**| شناسه مرجع فاکتور یا تراکنش | [optional] 
+ **payment_submit_user_payment_request** | [**PaymentSubmitUserPaymentRequest**](PaymentSubmitUserPaymentRequest.md)|  | 
 
 ### Return type
 
@@ -710,7 +705,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

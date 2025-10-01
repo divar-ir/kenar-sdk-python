@@ -17,18 +17,17 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, StrictBool
 from typing import Any, ClassVar, Dict, List, Optional
-from kenar_api_client.models.addons_user_addon import AddonsUserAddon
 from typing import Optional, Set
 from typing_extensions import Self
 
-class AddonsGetUserAddonsResponse(BaseModel):
+class PostCanUserSubmitPostResponse(BaseModel):
     """
-    AddonsGetUserAddonsResponse
+    PostCanUserSubmitPostResponse
     """ # noqa: E501
-    user_addons: Optional[List[AddonsUserAddon]] = None
-    __properties: ClassVar[List[str]] = ["user_addons"]
+    can_submit: Optional[StrictBool] = None
+    __properties: ClassVar[List[str]] = ["can_submit"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +47,7 @@ class AddonsGetUserAddonsResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of AddonsGetUserAddonsResponse from a JSON string"""
+        """Create an instance of PostCanUserSubmitPostResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,18 +68,11 @@ class AddonsGetUserAddonsResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in user_addons (list)
-        _items = []
-        if self.user_addons:
-            for _item_user_addons in self.user_addons:
-                if _item_user_addons:
-                    _items.append(_item_user_addons.to_dict())
-            _dict['user_addons'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of AddonsGetUserAddonsResponse from a dict"""
+        """Create an instance of PostCanUserSubmitPostResponse from a dict"""
         if obj is None:
             return None
 
@@ -88,7 +80,7 @@ class AddonsGetUserAddonsResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "user_addons": [AddonsUserAddon.from_dict(_item) for _item in obj["user_addons"]] if obj.get("user_addons") is not None else None
+            "can_submit": obj.get("can_submit")
         })
         return _obj
 

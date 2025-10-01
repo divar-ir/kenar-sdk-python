@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**addons** | [**List[AddonsUserAddon]**](AddonsUserAddon.md) |  | [optional] 
+**user_addons** | [**List[AddonsUserAddon]**](AddonsUserAddon.md) |  | [optional] 
 
 ## Example
 
