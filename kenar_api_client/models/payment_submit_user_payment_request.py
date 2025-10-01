@@ -27,7 +27,7 @@ class PaymentSubmitUserPaymentRequest(BaseModel):
     PaymentSubmitUserPaymentRequest
     """ # noqa: E501
     amount_rials: StrictStr = Field(description="کل مبلغ پرداختی توسط کاربر، به ریال")
-    profit_rials: StrictStr = Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد (سود یا کمیسیون)، به ریال")
+    profit_rials: StrictStr = Field(description="بخشی از مبلغ پرداختی که به شما تعلق می‌گیرد، به ریال. به عنوان مثال در افزونه‌های پرداخت امن بخش اعظم مبلغ پرداختی سهم فروشنده آگهی هست و این پارامتر باید برابر بخشی از مبلغ پرداختی که مربوط به کمیسیون سرویس‌دهنده پرداخت امن است قرار بگیرد. در صورتی که چنین مفهومی در فرایند پرداخت شما وجود ندارد مقدار این پارامتر را دقیقا برابر amount_rials ارسال کنید.")
     reference_id: StrictStr = Field(description="شناسه مرجع فاکتور یا تراکنش")
     services: List[StrictStr] = Field(description="لیست شناسه خدماتی که کاربر برای آنها پرداخت انجام داده است (مثلاً «banner»، «title_refinement» و ...). توصیه می‌شود از نام‌های انگلیسی کوتاه و توصیفی به‌عنوان شناسه خدمت استفاده شود.")
     __properties: ClassVar[List[str]] = ["amount_rials", "profit_rials", "reference_id", "services"]
