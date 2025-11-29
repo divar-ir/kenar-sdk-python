@@ -1,6 +1,6 @@
 # PostLocationType
 
-Type of the location
+نوع موقعیت
 
 ## Enum
 

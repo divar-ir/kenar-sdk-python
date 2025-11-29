@@ -6,9 +6,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **buttons** | [**ChatapiChatButtonGrid**](ChatapiChatButtonGrid.md) |  | [optional] 
-**media_token** | **str** | Token for attached media (if any) | [optional] 
-**text_message** | **str** | Text message content to be sent by the bot | 
-**user_id** | **str** | Unique identifier for the user to start or continue a conversation with | [optional] 
+**media_token** | **str** | توکن برای مدیای ضمیمه شده (در صورت وجود) | [optional] 
+**text_message** | **str** | محتوای پیام متنی برای ارسال توسط ربات | 
+**user_id** | **str** | شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه | [optional] 
 
 ## Example
 

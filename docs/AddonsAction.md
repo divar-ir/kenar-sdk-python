@@ -1,13 +1,13 @@
 # AddonsAction
 
-Represents an action that can be performed
+نمایان‌گر یک عملیات که می‌تواند انجام شود
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **get_dynamic_action** | [**AddonsGetDynamicAction**](AddonsGetDynamicAction.md) |  | [optional] 
-**open_direct_link** | **str** | An action to send user to your URL directly with just a resource id (if applicable) | [optional] 
+**open_direct_link** | **str** | عملیاتی برای ارسال کاربر به URL شما به صورت مستقیم با فقط یک شناسه منبع (در صورت وجود) | [optional] 
 **open_post_manage_page** | [**AddonsOpenPostManagePage**](AddonsOpenPostManagePage.md) |  | [optional] 
 **open_post_page** | [**AddonsOpenPostPage**](AddonsOpenPostPage.md) |  | [optional] 
 **open_server_link** | [**AddonsOpenServerLink**](AddonsOpenServerLink.md) |  | [optional] 

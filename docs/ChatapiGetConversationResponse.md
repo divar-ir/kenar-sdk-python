@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conversation** | [**ChatapiConversation**](ChatapiConversation.md) |  | 
-**messages** | [**List[ChatapiMessage]**](ChatapiMessage.md) | List of messages in the conversation | 
+**messages** | [**List[ChatapiMessage]**](ChatapiMessage.md) | فهرست پیام‌های مکالمه | 
 
 ## Example
 

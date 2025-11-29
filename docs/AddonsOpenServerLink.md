@@ -1,12 +1,12 @@
 # AddonsOpenServerLink
 
-An action to pass complete session data and retrieve redirect location from your server on each user action
+عملیاتی برای ارسال داده‌های کامل نشست و دریافت مکان هدایت از سرور شما در هر عملیات کاربر
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **object** | A data that you can set and will be returned to you upon user click to recognize the action | [optional] 
+**data** | **object** | داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود | [optional] 
 
 ## Example
 

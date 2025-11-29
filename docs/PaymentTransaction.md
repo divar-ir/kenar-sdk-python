@@ -5,8 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**app_slug** | **str** | شناسه اپلیکیشنی که تراکنش را ایجاد کرده است | [optional] 
 **cost_rials** | **str** | هزینه تراکنش به ریال برای اپلیکیشن شما | [optional] 
-**created_at** | **datetime** | The time when the transaction was created | [optional] 
+**created_at** | **datetime** | زمان ایجاد تراکنش | [optional] 
 **extra_details** | **str** | همان جزئیات اضافی که در درخواست ارسال کردید | [optional] 
 **id** | **str** | همان uuid هنگام ایجاد تراکنش | [optional] 
 **state** | [**PaymentTransactionState**](PaymentTransactionState.md) |  | [optional] 

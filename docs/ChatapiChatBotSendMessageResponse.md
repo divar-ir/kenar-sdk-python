@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**conversation_id** | **str** | ID of the conversation created or updated | [optional] [readonly] 
+**conversation_id** | **str** | شناسه مکالمه ایجاد شده یا به‌روزرسانی شده | [optional] [readonly] 
 
 ## Example
 

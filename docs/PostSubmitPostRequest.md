@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **hide_phone** | **bool** | عدم نمایش شماره تماس به کاربران | 
 **home_presell** | [**PostHomePresellFields**](PostHomePresellFields.md) |  | [optional] 
 **images** | **List[str]** |  | 
-**landline_numbers** | **List[str]** | Landline numbers to be added to the post | [optional] 
+**landline_numbers** | **List[str]** | شماره‌های ثابت برای افزودن به آگهی | [optional] 
 **latitude** | **float** | عرض جغرافیایی آگهی | [optional] 
 **location_type** | [**PostLocationType**](PostLocationType.md) |  | 
 **longitude** | **float** | طول جغرافیایی آگهی | [optional] 

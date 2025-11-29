@@ -1,6 +1,6 @@
 # TemporaryResidenceFieldsHeatingCoolingSystem
 
-List of heating and cooling systems available
+فهرست سیستم‌های گرمایش و سرمایش موجود
 
 ## Enum
 

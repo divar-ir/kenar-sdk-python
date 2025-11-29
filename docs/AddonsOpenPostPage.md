@@ -1,12 +1,12 @@
 # AddonsOpenPostPage
 
-An action to open a post page in the app
+عملیاتی برای باز کردن صفحه آگهی در اپلیکیشن
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**post_token** | **str** | Token of the post to open | 
+**post_token** | **str** | توکن آگهی برای باز کردن | 
 
 ## Example
 

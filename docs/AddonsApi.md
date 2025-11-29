@@ -23,6 +23,8 @@ Method | HTTP request | Description
 این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد:
 - BUSINESS_ADDON_CREATE.{business_token}
 
+مجوزهای مورد نیاز: BUSINESS_ADDON_CREATE.
+
 ### Example
 
 * Api Key Authentication (APIKey):
@@ -110,6 +112,8 @@ Name | Type | Description  | Notes
 - USER_POSTS_ADDON_CREATE
 - POST_ADDON_CREATE.{post_token}
 
+مجوزهای مورد نیاز: ADD_ON_CREATE.
+
 ### Example
 
 * Api Key Authentication (APIKey):
@@ -194,6 +198,8 @@ Name | Type | Description  | Notes
 افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند.
 می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید.
 این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
+
+مجوزهای مورد نیاز: USER_ADDON_CREATE.
 
 ### Example
 
@@ -364,6 +370,8 @@ Name | Type | Description  | Notes
 
 فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
+مجوزهای مورد نیاز: ADD_ON_DELETE.
+
 ### Example
 
 * Api Key Authentication (APIKey):
@@ -522,6 +530,8 @@ Name | Type | Description  | Notes
 
 این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند.
 فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
+
+مجوزهای مورد نیاز: USER_ADDON_DELETE.
 
 ### Example
 

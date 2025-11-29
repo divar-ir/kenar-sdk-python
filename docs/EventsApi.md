@@ -5,7 +5,7 @@ All URIs are relative to *https://open-api.divar.ir*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**events_register_event_subscription**](EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
-[**events_send_event**](EventsApi.md#events_send_event) | **POST** /experimental/open-platform/events/send | Send an event to a user
+[**events_send_event**](EventsApi.md#events_send_event) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر با استفاده از API
 
 
 # **events_register_event_subscription**
@@ -22,6 +22,8 @@ Method | HTTP request | Description
 پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد.
 مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است.
 برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).
+
+مجوزهای مورد نیاز: EVENTS_REGISTER_SUBSCRIPTION.
 
 ### Example
 
@@ -97,11 +99,13 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **events_send_event**
-> object events_send_event(primary_button_action_open_post_page_post_token, primary_button_action_open_post_manage_page_post_token, message=message, primary_button_title=primary_button_title, primary_button_action_open_direct_link=primary_button_action_open_direct_link, primary_button_action_open_server_link_data=primary_button_action_open_server_link_data, primary_button_action_get_dynamic_action_data=primary_button_action_get_dynamic_action_data, target_type=target_type, target_resource_id=target_resource_id)
+> object events_send_event(message=message, target_type=target_type, target_resource_id=target_resource_id)
 
-Send an event to a user
+ارسال رویداد به کاربر با استفاده از API
 
-Using this API, you can send an event to a user. The event can be specific to a post or general. The event can include buttons with custom actions allowing users to interact with your app.
+با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.
+
+مجوزهای مورد نیاز: EVENTS_SEND.
 
 ### Example
 
@@ -133,19 +137,13 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.EventsApi(api_client)
-    primary_button_action_open_post_page_post_token = 'primary_button_action_open_post_page_post_token_example' # str | Token of the post to open
-    primary_button_action_open_post_manage_page_post_token = 'primary_button_action_open_post_manage_page_post_token_example' # str | Token of the post to redirect to its management page
-    message = 'message_example' # str | The event message to display to the user (optional)
-    primary_button_title = 'primary_button_title_example' # str | The text to display on the button (optional)
-    primary_button_action_open_direct_link = 'primary_button_action_open_direct_link_example' # str | An action to send user to your URL directly with just a resource id (if applicable) (optional)
-    primary_button_action_open_server_link_data = None # object | A data that you can set and will be returned to you upon user click to recognize the action (optional)
-    primary_button_action_get_dynamic_action_data = None # object | A data that you can set and will be returned to you upon user click to recognize the action (optional)
-    target_type = 'target_type_example' # str | Target of the event; USER or POST (optional)
-    target_resource_id = 'target_resource_id_example' # str | id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token.  (optional)
+    message = 'message_example' # str | پیام رویداد برای نمایش به کاربر (optional)
+    target_type = 'target_type_example' # str | هدف رویداد؛ USER یا POST (optional)
+    target_resource_id = 'target_resource_id_example' # str | شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد. (optional)
 
     try:
-        # Send an event to a user
-        api_response = api_instance.events_send_event(primary_button_action_open_post_page_post_token, primary_button_action_open_post_manage_page_post_token, message=message, primary_button_title=primary_button_title, primary_button_action_open_direct_link=primary_button_action_open_direct_link, primary_button_action_open_server_link_data=primary_button_action_open_server_link_data, primary_button_action_get_dynamic_action_data=primary_button_action_get_dynamic_action_data, target_type=target_type, target_resource_id=target_resource_id)
+        # ارسال رویداد به کاربر با استفاده از API
+        api_response = api_instance.events_send_event(message=message, target_type=target_type, target_resource_id=target_resource_id)
         print("The response of EventsApi->events_send_event:\n")
         pprint(api_response)
     except Exception as e:
@@ -159,15 +157,9 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **primary_button_action_open_post_page_post_token** | **str**| Token of the post to open | 
- **primary_button_action_open_post_manage_page_post_token** | **str**| Token of the post to redirect to its management page | 
- **message** | **str**| The event message to display to the user | [optional] 
- **primary_button_title** | **str**| The text to display on the button | [optional] 
- **primary_button_action_open_direct_link** | **str**| An action to send user to your URL directly with just a resource id (if applicable) | [optional] 
- **primary_button_action_open_server_link_data** | [**object**](.md)| A data that you can set and will be returned to you upon user click to recognize the action | [optional] 
- **primary_button_action_get_dynamic_action_data** | [**object**](.md)| A data that you can set and will be returned to you upon user click to recognize the action | [optional] 
- **target_type** | **str**| Target of the event; USER or POST | [optional] 
- **target_resource_id** | **str**| id of the target. When target type is USER, it should be the Divar User ID of that user and when target type is POST, it should be the post token.  | [optional] 
+ **message** | **str**| پیام رویداد برای نمایش به کاربر | [optional] 
+ **target_type** | **str**| هدف رویداد؛ USER یا POST | [optional] 
+ **target_resource_id** | **str**| شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد. | [optional] 
 
 ### Return type
 

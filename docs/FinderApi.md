@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**finder_get_post**](FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 [**finder_get_user**](FinderApi.md#finder_get_user) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 [**finder_get_user2**](FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
+[**finder_get_user_idby_phone**](FinderApi.md#finder_get_user_idby_phone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه دیوار کاربر با شماره تلفن
 [**finder_get_user_posts**](FinderApi.md#finder_get_user_posts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
 [**finder_search_post_v2**](FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
 
@@ -16,8 +17,10 @@ Method | HTTP request | Description
 
 دریافت آگهی دیوار
 
-This API allows you to get details about Divar post by its token.
-You can use the token to get the post data and its state 
+این API به شما امکان دریافت جزئیات آگهی دیوار با استفاده از توکن آن را می‌دهد.
+می‌توانید از توکن برای دریافت داده‌های آگهی و وضعیت آن استفاده کنید
+
+مجوزهای مورد نیاز: GET_POST.
 
 ### Example
 
@@ -101,6 +104,8 @@ Name | Type | Description  | Notes
 با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید.
 با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید.
 
+
+مجوزهای مورد نیاز: USER_RETRIEVE.
 
 ### Example
 
@@ -254,6 +259,89 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **finder_get_user_idby_phone**
+> FinderGetUserIDByPhoneResponse finder_get_user_idby_phone(finder_get_user_idby_phone_request)
+
+دریافت شناسه دیوار کاربر با شماره تلفن
+
+با استفاده از این API می‌توانید شناسه‌ی دیوار یک کاربر را با استفاده از شماره تلفن دریافت کنید. این اجازه مختص برنامه‌هایی است که دسترسی به شماره تماس کاربر ندارند و برای ارائه‌ی خدمات پشتیبانی به کاربران، نیاز به تبدیل شماره به شناسه‌ی دیوار دارند.
+
+مجوزهای مورد نیاز: GET_USER_ID_BY_PHONE.
+
+### Example
+
+* Api Key Authentication (APIKey):
+
+```python
+import kenar_api_client
+from kenar_api_client.models.finder_get_user_idby_phone_request import FinderGetUserIDByPhoneRequest
+from kenar_api_client.models.finder_get_user_idby_phone_response import FinderGetUserIDByPhoneResponse
+from kenar_api_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://open-api.divar.ir
+# See configuration.py for a list of all supported configuration parameters.
+configuration = kenar_api_client.Configuration(
+    host = "https://open-api.divar.ir"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: APIKey
+configuration.api_key['APIKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with kenar_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = kenar_api_client.FinderApi(api_client)
+    finder_get_user_idby_phone_request = kenar_api_client.FinderGetUserIDByPhoneRequest() # FinderGetUserIDByPhoneRequest | 
+
+    try:
+        # دریافت شناسه دیوار کاربر با شماره تلفن
+        api_response = api_instance.finder_get_user_idby_phone(finder_get_user_idby_phone_request)
+        print("The response of FinderApi->finder_get_user_idby_phone:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling FinderApi->finder_get_user_idby_phone: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **finder_get_user_idby_phone_request** | [**FinderGetUserIDByPhoneRequest**](FinderGetUserIDByPhoneRequest.md)|  | 
+
+### Return type
+
+[**FinderGetUserIDByPhoneResponse**](FinderGetUserIDByPhoneResponse.md)
+
+### Authorization
+
+[APIKey](../README.md#APIKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | پاسخ موفقیت‌آمیز. |  -  |
+**0** | پاسخ خطای غیرمنتظره. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **finder_get_user_posts**
 > FinderGetUserPostsResponse finder_get_user_posts()
 
@@ -261,6 +349,8 @@ This endpoint does not need any parameter.
 
 این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد.
 می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
+
+مجوزهای مورد نیاز: GET_USER_POSTS.
 
 ### Example
 
@@ -340,6 +430,8 @@ This endpoint does not need any parameter.
 می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید.
 آگهی‌ها بر اساس زمان آنها مرتب می‌شوند.
 
+
+مجوزهای مورد نیاز: SEARCH_POST.
 
 ### Example
 

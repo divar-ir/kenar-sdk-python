@@ -1,12 +1,12 @@
 # AddonsOpenPostManagePage
 
-An action to open a post management page in the app
+عملیاتی برای باز کردن صفحه مدیریت آگهی در اپلیکیشن
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**post_token** | **str** | Token of the post to redirect to its management page | 
+**post_token** | **str** | توکن آگهی برای هدایت به صفحه مدیریت آن | 
 
 ## Example
 

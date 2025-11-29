@@ -1,6 +1,6 @@
 # PostRoomsCount
 
-Number of rooms in the residence
+تعداد اتاق‌های اقامتگاه
 
 ## Enum
 

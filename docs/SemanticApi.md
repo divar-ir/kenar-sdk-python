@@ -20,6 +20,8 @@ Method | HTTP request | Description
 این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.
 
 
+مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
+
 ### Example
 
 * Api Key Authentication (APIKey):
@@ -104,6 +106,8 @@ Name | Type | Description  | Notes
 نام کاربری در دیوار همان شماره موبایل است.
 این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد.
 از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+
+مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
 
 ### Example
 
@@ -273,6 +277,8 @@ Name | Type | Description  | Notes
 حذف اطلاعات معنایی کاربر
 
 می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+
+مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
 
 ### Example
 

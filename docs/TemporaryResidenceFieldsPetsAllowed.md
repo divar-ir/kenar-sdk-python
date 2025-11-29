@@ -1,6 +1,6 @@
 # TemporaryResidenceFieldsPetsAllowed
 
-Pet policy for the residence
+سیاست نگهداری حیوان خانگی برای اقامتگاه
 
 ## Enum
 

@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**media_token** | **str** | Token for attached media (if any) | [optional] 
-**message** | **str** | Text message content to be sent | 
+**media_token** | **str** | توکن برای مدیای ضمیمه شده (در صورت وجود) | [optional] 
+**message** | **str** | محتوای پیام متنی برای ارسال | 
 **receiver_buttons** | [**ChatapiChatButtonGrid**](ChatapiChatButtonGrid.md) |  | [optional] 
 **sender_buttons** | [**ChatapiChatButtonGrid**](ChatapiChatButtonGrid.md) |  | [optional] 
 

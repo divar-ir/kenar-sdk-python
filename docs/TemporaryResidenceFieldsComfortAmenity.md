@@ -1,6 +1,6 @@
 # TemporaryResidenceFieldsComfortAmenity
 
-List of comfort amenities available in the residence
+فهرست امکانات رفاهی موجود در اقامتگاه
 
 ## Enum
 

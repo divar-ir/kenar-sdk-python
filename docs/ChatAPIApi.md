@@ -22,6 +22,8 @@ Method | HTTP request | Description
 می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.
 فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
+مجوزهای مورد نیاز: CHAT_BOT_SEND_MESSAGE.
+
 ### Example
 
 * Api Key Authentication (APIKey):
@@ -54,7 +56,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
+    conversation_id = 'conversation_id_example' # str | شناسه منحصر به فرد برای مکالمه
     chat_api_chat_bot_send_message_body = kenar_api_client.ChatAPIChatBotSendMessageBody() # ChatAPIChatBotSendMessageBody | 
 
     try:
@@ -73,7 +75,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**| Unique identifier for the conversation | 
+ **conversation_id** | **str**| شناسه منحصر به فرد برای مکالمه | 
  **chat_api_chat_bot_send_message_body** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -138,7 +140,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    user_id = 'user_id_example' # str | Unique identifier for the user to start or continue a conversation with
+    user_id = 'user_id_example' # str | شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه
     chat_api_chat_bot_send_message_body = kenar_api_client.ChatAPIChatBotSendMessageBody() # ChatAPIChatBotSendMessageBody | 
 
     try:
@@ -157,7 +159,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **str**| Unique identifier for the user to start or continue a conversation with | 
+ **user_id** | **str**| شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه | 
  **chat_api_chat_bot_send_message_body** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -222,7 +224,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
+    conversation_id = 'conversation_id_example' # str | شناسه منحصر به فرد برای مکالمه
     chat_api_chat_bot_send_message_body = kenar_api_client.ChatAPIChatBotSendMessageBody() # ChatAPIChatBotSendMessageBody | 
 
     try:
@@ -241,7 +243,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**| Unique identifier for the conversation | 
+ **conversation_id** | **str**| شناسه منحصر به فرد برای مکالمه | 
  **chat_api_chat_bot_send_message_body** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -306,7 +308,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    user_id = 'user_id_example' # str | Unique identifier for the user to start or continue a conversation with
+    user_id = 'user_id_example' # str | شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه
     chat_api_chat_bot_send_message_body = kenar_api_client.ChatAPIChatBotSendMessageBody() # ChatAPIChatBotSendMessageBody | 
 
     try:
@@ -325,7 +327,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **str**| Unique identifier for the user to start or continue a conversation with | 
+ **user_id** | **str**| شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه | 
  **chat_api_chat_bot_send_message_body** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -390,7 +392,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
+    conversation_id = 'conversation_id_example' # str | شناسه منحصر به فرد برای مکالمه
     chat_api_chat_bot_send_message_body = kenar_api_client.ChatAPIChatBotSendMessageBody() # ChatAPIChatBotSendMessageBody | 
 
     try:
@@ -409,7 +411,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**| Unique identifier for the conversation | 
+ **conversation_id** | **str**| شناسه منحصر به فرد برای مکالمه | 
  **chat_api_chat_bot_send_message_body** | [**ChatAPIChatBotSendMessageBody**](ChatAPIChatBotSendMessageBody.md)|  | 
 
 ### Return type
@@ -446,6 +448,8 @@ Name | Type | Description  | Notes
 - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token}
 
 
+مجوزهای مورد نیاز: CHAT_SEND_MESSAGE_OAUTH.
+
 ### Example
 
 * Api Key Authentication (APIKey):
@@ -478,7 +482,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
+    conversation_id = 'conversation_id_example' # str | شناسه منحصر به فرد برای مکالمه
     chat_api_conversation_send_message_body = kenar_api_client.ChatAPIConversationSendMessageBody() # ChatAPIConversationSendMessageBody | 
 
     try:
@@ -497,7 +501,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**| Unique identifier for the conversation | 
+ **conversation_id** | **str**| شناسه منحصر به فرد برای مکالمه | 
  **chat_api_conversation_send_message_body** | [**ChatAPIConversationSendMessageBody**](ChatAPIConversationSendMessageBody.md)|  | 
 
 ### Return type
@@ -528,6 +532,8 @@ Name | Type | Description  | Notes
 تولید توکن آپلود
 
 این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.
+
+مجوزهای مورد نیاز: CHAT_UPLOAD_MEDIA.
 
 ### Example
 
@@ -609,6 +615,8 @@ Name | Type | Description  | Notes
 
 این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.
 
+مجوزهای مورد نیاز: CHAT_READ_CONVERSATION.
+
 ### Example
 
 * Api Key Authentication (APIKey):
@@ -640,7 +648,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.ChatAPIApi(api_client)
-    conversation_id = 'conversation_id_example' # str | Unique identifier for the conversation
+    conversation_id = 'conversation_id_example' # str | شناسه منحصر به فرد برای مکالمه
 
     try:
         # دریافت مکالمه با شناسه آن
@@ -658,7 +666,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **conversation_id** | **str**| Unique identifier for the conversation | 
+ **conversation_id** | **str**| شناسه منحصر به فرد برای مکالمه | 
 
 ### Return type
 

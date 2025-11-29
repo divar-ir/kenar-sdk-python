@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**next_page_token** | **str** | Token for the next page of results. | [optional] 
-**transactions** | [**List[PaymentTransaction]**](PaymentTransaction.md) | شناسه مرجع فاکتور یا تراکنش | [optional] 
+**next_page_token** | **str** | توکن برای صفحه بعدی نتایج. | [optional] 
+**transactions** | [**List[PaymentTransaction]**](PaymentTransaction.md) | فهرست تراکنش‌هایی که با درخواست مطابقت دارند | [optional] 
 
 ## Example
 

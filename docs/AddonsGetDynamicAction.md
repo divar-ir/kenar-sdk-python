@@ -1,12 +1,12 @@
 # AddonsGetDynamicAction
 
-Represents a dynamic action that can be fetched and invoked on user's device
+نمایان‌گر یک اکشن پویا که می‌تواند در دستگاه کاربر دریافت و اجرا شود
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **object** | A data that you can set and will be returned to you upon user click to recognize the action | [optional] 
+**data** | **object** | داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود | [optional] 
 
 ## Example
 

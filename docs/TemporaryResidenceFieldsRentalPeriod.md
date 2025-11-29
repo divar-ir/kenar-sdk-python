@@ -1,6 +1,6 @@
 # TemporaryResidenceFieldsRentalPeriod
 
-Rental period type (daily, weekly, monthly)
+نوع دوره اجاره (روزانه، هفتگی، ماهانه)
 
 ## Enum
 
