@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**payment_commit_wallet_transaction**](PaymentApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | تایید تراکنش کیف پول
 [**payment_create_wallet_payment**](PaymentApi.md#payment_create_wallet_payment) | **POST** /experimental/open-platform/wallet/payments/create | ایجاد پرداخت کیف پول
 [**payment_get_balance**](PaymentApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | دریافت موجودی اپلیکیشن
-[**payment_get_post_pricing**](PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
+[**payment_get_post_pricing**](PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
 [**payment_get_transaction**](PaymentApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | دریافت جزئیات تراکنش
 [**payment_list_transactions**](PaymentApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | لیست تراکنش‌ها
-[**payment_publish_user_post**](PaymentApi.md#payment_publish_user_post) | **POST** /experimental/open-platform/post/{post_token}/publish | پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+[**payment_publish_user_post**](PaymentApi.md#payment_publish_user_post) | **POST** /experimental/open-platform/post/{post_token}/publish | Pay for user post submission on behalf of provider
 [**payment_renew_post**](PaymentApi.md#payment_renew_post) | **POST** /experimental/open-platform/post/{post_token}/renew | تمدید آگهی
 [**payment_reorder_post**](PaymentApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | نردبان آگهی
 [**payment_retrieve_wallet_transaction**](PaymentApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | بازیابی تراکنش کیف پول
-[**payment_submit_user_payment**](PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
+[**payment_submit_user_payment**](PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | Submit a user payment
 
 
 # **payment_commit_wallet_transaction**
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 تایید تراکنش کیف پول
 
-(محدود) با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.
+(Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
 
 مجوزهای مورد نیاز: WALLET_PAYMENT.
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ایجاد پرداخت کیف پول
 
-(محدود) با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.
+(Limited) Using this API you can start a payment transaction from the users wallet.
 
 مجوزهای مورد نیاز: WALLET_PAYMENT.
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 
 دریافت موجودی اپلیکیشن
 
-(محدود) با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.
+(Limited) Using this API you can retrieve current balance of your app.
 
 مجوزهای مورد نیاز: BALANCE_RETRIEVE.
 
@@ -264,9 +264,9 @@ This endpoint does not need any parameter.
 # **payment_get_post_pricing**
 > PaymentGetPostPricingResponse payment_get_post_pricing(post_token)
 
-دریافت هزینه سرویس
+Retrieve the cost of the service
 
-با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان، تمدید و ثبت را دریافت کنید. قیمت این API لزوماً با قیمت در دیوار یکسان نیست و ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی، تمدید آگهی یا ثبت آگهی) استفاده کنید.
+Using this API and with user permission, you can get the price of various services like Reorder, Renew, and Submit.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post, renewing a post, or submitting a post).
 
 مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
 
@@ -304,7 +304,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     post_token = 'post_token_example' # str | شناسه منحصر به فرد 8-9 کاراکتری برای آگهی
 
     try:
-        # دریافت هزینه سرویس
+        # Retrieve the cost of the service
         api_response = api_instance.payment_get_post_pricing(post_token)
         print("The response of PaymentApi->payment_get_post_pricing:\n")
         pprint(api_response)
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 دریافت جزئیات تراکنش
 
-(محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.
+(Limited) Using this API you can retrieve transaction details.
 
 مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
 
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 
 لیست تراکنش‌ها
 
-(محدود) با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
+(Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
 
 مجوزهای مورد نیاز: TRANSACTION_LIST.
 
@@ -512,9 +512,9 @@ Name | Type | Description  | Notes
 # **payment_publish_user_post**
 > PaymentPublishUserPostResponse payment_publish_user_post(post_token, payment_publish_user_post_body)
 
-پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+Pay for user post submission on behalf of provider
 
-این API به ارائه‌دهندگان امکان پرداخت هزینه ثبت آگهی کاربر را می‌دهد. post_token باید از API SubmitUserPost در مجموعه آگهی‌ها دریافت شود.
+This API allows providers to pay for user post submission costs. The post_token should be obtained from the SubmitUserPost API in post collection.
 
 مجوزهای مورد نیاز: PUBLISH_USER_POST.
 
@@ -554,7 +554,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     payment_publish_user_post_body = kenar_api_client.PaymentPublishUserPostBody() # PaymentPublishUserPostBody | 
 
     try:
-        # پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+        # Pay for user post submission on behalf of provider
         api_response = api_instance.payment_publish_user_post(post_token, payment_publish_user_post_body)
         print("The response of PaymentApi->payment_publish_user_post:\n")
         pprint(api_response)
@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 
 تمدید آگهی
 
-(محدود) از این API برای تمدید آگهی استفاده کنید که دوره نمایش آن را تمدید می‌کند. قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
+(Limited) Use this API to renew a post, which extends its visibility period. Use GetPostPricing API to get the cost of the service before calling this API.
 
 مجوزهای مورد نیاز: POST_RENEW.
 
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 
 نردبان آگهی
 
-(محدود) قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.
+(Limited) Use GetPostPricing API to get the cost of the service before calling this API.
 
 مجوزهای مورد نیاز: POST_REORDER.
 
@@ -769,7 +769,7 @@ Name | Type | Description  | Notes
 
 بازیابی تراکنش کیف پول
 
-(محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.
+(Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
 
 مجوزهای مورد نیاز: WALLET_PAYMENT.
 
@@ -849,9 +849,9 @@ Name | Type | Description  | Notes
 # **payment_submit_user_payment**
 > object payment_submit_user_payment(payment_submit_user_payment_request)
 
-ثبت پرداخت کاربر
+Submit a user payment
 
-با استفاده از این API، باید پرداخت کاربر را ثبت کنید. ضروری است که از این API برای ثبت پرداخت کاربر همراه با مبلغ دریافت شده استفاده کنید. این API به توکن دسترسی با دامنه OAuth `SUBMIT_USER_PAYMENT` نیاز دارد.
+Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This API requires an access token with the `SUBMIT_USER_PAYMENT` OAuth scope.
 
 مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
 
@@ -889,7 +889,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     payment_submit_user_payment_request = kenar_api_client.PaymentSubmitUserPaymentRequest() # PaymentSubmitUserPaymentRequest | 
 
     try:
-        # ثبت پرداخت کاربر
+        # Submit a user payment
         api_response = api_instance.payment_submit_user_payment(payment_submit_user_payment_request)
         print("The response of PaymentApi->payment_submit_user_payment:\n")
         pprint(api_response)

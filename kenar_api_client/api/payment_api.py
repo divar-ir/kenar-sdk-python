@@ -73,7 +73,7 @@ class PaymentApi:
     ) -> PaymentCommitWalletTransactionResponse:
         """تایید تراکنش کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param payment_commit_wallet_transaction_request: (required)
         :type payment_commit_wallet_transaction_request: PaymentCommitWalletTransactionRequest
@@ -140,7 +140,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentCommitWalletTransactionResponse]:
         """تایید تراکنش کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param payment_commit_wallet_transaction_request: (required)
         :type payment_commit_wallet_transaction_request: PaymentCommitWalletTransactionRequest
@@ -207,7 +207,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """تایید تراکنش کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک پرداخت موفق را commit کنید. این API idempotent است و می‌توانید چندین بار آن را فراخوانی کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param payment_commit_wallet_transaction_request: (required)
         :type payment_commit_wallet_transaction_request: PaymentCommitWalletTransactionRequest
@@ -347,7 +347,7 @@ class PaymentApi:
     ) -> PaymentCreateWalletPaymentResponse:
         """ایجاد پرداخت کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can start a payment transaction from the users wallet.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param payment_create_wallet_payment_request: (required)
         :type payment_create_wallet_payment_request: PaymentCreateWalletPaymentRequest
@@ -414,7 +414,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentCreateWalletPaymentResponse]:
         """ایجاد پرداخت کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can start a payment transaction from the users wallet.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param payment_create_wallet_payment_request: (required)
         :type payment_create_wallet_payment_request: PaymentCreateWalletPaymentRequest
@@ -481,7 +481,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """ایجاد پرداخت کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک تراکنش پرداخت از کیف پول کاربران شروع کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can start a payment transaction from the users wallet.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param payment_create_wallet_payment_request: (required)
         :type payment_create_wallet_payment_request: PaymentCreateWalletPaymentRequest
@@ -620,7 +620,7 @@ class PaymentApi:
     ) -> PaymentGetBalanceResponse:
         """دریافت موجودی اپلیکیشن
 
-        (محدود) با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
+        (Limited) Using this API you can retrieve current balance of your app.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -683,7 +683,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentGetBalanceResponse]:
         """دریافت موجودی اپلیکیشن
 
-        (محدود) با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
+        (Limited) Using this API you can retrieve current balance of your app.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -746,7 +746,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """دریافت موجودی اپلیکیشن
 
-        (محدود) با استفاده از این API می‌توانید موجودی فعلی اپلیکیشن خود را دریافت کنید.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
+        (Limited) Using this API you can retrieve current balance of your app.  مجوزهای مورد نیاز: BALANCE_RETRIEVE.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -865,9 +865,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PaymentGetPostPricingResponse:
-        """دریافت هزینه سرویس
+        """Retrieve the cost of the service
 
-        با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان، تمدید و ثبت را دریافت کنید. قیمت این API لزوماً با قیمت در دیوار یکسان نیست و ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی، تمدید آگهی یا ثبت آگهی) استفاده کنید.  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
+        Using this API and with user permission, you can get the price of various services like Reorder, Renew, and Submit.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post, renewing a post, or submitting a post).  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
 
         :param post_token: شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
         :type post_token: str
@@ -932,9 +932,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PaymentGetPostPricingResponse]:
-        """دریافت هزینه سرویس
+        """Retrieve the cost of the service
 
-        با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان، تمدید و ثبت را دریافت کنید. قیمت این API لزوماً با قیمت در دیوار یکسان نیست و ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی، تمدید آگهی یا ثبت آگهی) استفاده کنید.  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
+        Using this API and with user permission, you can get the price of various services like Reorder, Renew, and Submit.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post, renewing a post, or submitting a post).  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
 
         :param post_token: شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
         :type post_token: str
@@ -999,9 +999,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت هزینه سرویس
+        """Retrieve the cost of the service
 
-        با استفاده از این API و با مجوز کاربر، می‌توانید قیمت سرویس‌های مختلف مانند نردبان، تمدید و ثبت را دریافت کنید. قیمت این API لزوماً با قیمت در دیوار یکسان نیست و ممکن است متفاوت باشد. از این API برای دریافت قیمت قبل از اعمال سرویس‌ها (مانند نردبان آگهی، تمدید آگهی یا ثبت آگهی) استفاده کنید.  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
+        Using this API and with user permission, you can get the price of various services like Reorder, Renew, and Submit.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post, renewing a post, or submitting a post).  مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
 
         :param post_token: شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
         :type post_token: str
@@ -1128,7 +1128,7 @@ class PaymentApi:
     ) -> PaymentGetTransactionResponse:
         """دریافت جزئیات تراکنش
 
-        (محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
+        (Limited) Using this API you can retrieve transaction details.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
 
         :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
@@ -1195,7 +1195,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentGetTransactionResponse]:
         """دریافت جزئیات تراکنش
 
-        (محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
+        (Limited) Using this API you can retrieve transaction details.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
 
         :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
@@ -1262,7 +1262,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """دریافت جزئیات تراکنش
 
-        (محدود) با استفاده از این API می‌توانید جزئیات تراکنش را دریافت کنید.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
+        (Limited) Using this API you can retrieve transaction details.  مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
 
         :param id: شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
         :type id: str
@@ -1390,7 +1390,7 @@ class PaymentApi:
     ) -> PaymentListTransactionsResponse:
         """لیست تراکنش‌ها
 
-        (محدود) با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.  مجوزهای مورد نیاز: TRANSACTION_LIST.
+        (Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.  مجوزهای مورد نیاز: TRANSACTION_LIST.
 
         :param page_size: تعداد تراکنش‌ها برای برگرداندن در هر صفحه
         :type page_size: int
@@ -1461,7 +1461,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentListTransactionsResponse]:
         """لیست تراکنش‌ها
 
-        (محدود) با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.  مجوزهای مورد نیاز: TRANSACTION_LIST.
+        (Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.  مجوزهای مورد نیاز: TRANSACTION_LIST.
 
         :param page_size: تعداد تراکنش‌ها برای برگرداندن در هر صفحه
         :type page_size: int
@@ -1532,7 +1532,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """لیست تراکنش‌ها
 
-        (محدود) با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.  مجوزهای مورد نیاز: TRANSACTION_LIST.
+        (Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.  مجوزهای مورد نیاز: TRANSACTION_LIST.
 
         :param page_size: تعداد تراکنش‌ها برای برگرداندن در هر صفحه
         :type page_size: int
@@ -1668,9 +1668,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PaymentPublishUserPostResponse:
-        """پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+        """Pay for user post submission on behalf of provider
 
-        این API به ارائه‌دهندگان امکان پرداخت هزینه ثبت آگهی کاربر را می‌دهد. post_token باید از API SubmitUserPost در مجموعه آگهی‌ها دریافت شود.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
+        This API allows providers to pay for user post submission costs. The post_token should be obtained from the SubmitUserPost API in post collection.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
 
         :param post_token: توکن آگهی دریافت شده از RPC SubmitUserPost. شناسه منحصر به فرد 8-9 کاراکتری برای آگهی ثبت شده توسط کاربر. (required)
         :type post_token: str
@@ -1739,9 +1739,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PaymentPublishUserPostResponse]:
-        """پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+        """Pay for user post submission on behalf of provider
 
-        این API به ارائه‌دهندگان امکان پرداخت هزینه ثبت آگهی کاربر را می‌دهد. post_token باید از API SubmitUserPost در مجموعه آگهی‌ها دریافت شود.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
+        This API allows providers to pay for user post submission costs. The post_token should be obtained from the SubmitUserPost API in post collection.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
 
         :param post_token: توکن آگهی دریافت شده از RPC SubmitUserPost. شناسه منحصر به فرد 8-9 کاراکتری برای آگهی ثبت شده توسط کاربر. (required)
         :type post_token: str
@@ -1810,9 +1810,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+        """Pay for user post submission on behalf of provider
 
-        این API به ارائه‌دهندگان امکان پرداخت هزینه ثبت آگهی کاربر را می‌دهد. post_token باید از API SubmitUserPost در مجموعه آگهی‌ها دریافت شود.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
+        This API allows providers to pay for user post submission costs. The post_token should be obtained from the SubmitUserPost API in post collection.  مجوزهای مورد نیاز: PUBLISH_USER_POST.
 
         :param post_token: توکن آگهی دریافت شده از RPC SubmitUserPost. شناسه منحصر به فرد 8-9 کاراکتری برای آگهی ثبت شده توسط کاربر. (required)
         :type post_token: str
@@ -1959,7 +1959,7 @@ class PaymentApi:
     ) -> PaymentRenewPostResponse:
         """تمدید آگهی
 
-        (محدود) از این API برای تمدید آگهی استفاده کنید که دوره نمایش آن را تمدید می‌کند. قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.  مجوزهای مورد نیاز: POST_RENEW.
+        (Limited) Use this API to renew a post, which extends its visibility period. Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_RENEW.
 
         :param post_token: (required)
         :type post_token: str
@@ -2030,7 +2030,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentRenewPostResponse]:
         """تمدید آگهی
 
-        (محدود) از این API برای تمدید آگهی استفاده کنید که دوره نمایش آن را تمدید می‌کند. قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.  مجوزهای مورد نیاز: POST_RENEW.
+        (Limited) Use this API to renew a post, which extends its visibility period. Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_RENEW.
 
         :param post_token: (required)
         :type post_token: str
@@ -2101,7 +2101,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """تمدید آگهی
 
-        (محدود) از این API برای تمدید آگهی استفاده کنید که دوره نمایش آن را تمدید می‌کند. قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.  مجوزهای مورد نیاز: POST_RENEW.
+        (Limited) Use this API to renew a post, which extends its visibility period. Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_RENEW.
 
         :param post_token: (required)
         :type post_token: str
@@ -2248,7 +2248,7 @@ class PaymentApi:
     ) -> PaymentReorderPostResponse:
         """نردبان آگهی
 
-        (محدود) قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.  مجوزهای مورد نیاز: POST_REORDER.
+        (Limited) Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_REORDER.
 
         :param post_token: (required)
         :type post_token: str
@@ -2319,7 +2319,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentReorderPostResponse]:
         """نردبان آگهی
 
-        (محدود) قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.  مجوزهای مورد نیاز: POST_REORDER.
+        (Limited) Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_REORDER.
 
         :param post_token: (required)
         :type post_token: str
@@ -2390,7 +2390,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """نردبان آگهی
 
-        (محدود) قبل از فراخوانی این API، از API GetPostPricing برای دریافت هزینه سرویس استفاده کنید.  مجوزهای مورد نیاز: POST_REORDER.
+        (Limited) Use GetPostPricing API to get the cost of the service before calling this API.  مجوزهای مورد نیاز: POST_REORDER.
 
         :param post_token: (required)
         :type post_token: str
@@ -2536,7 +2536,7 @@ class PaymentApi:
     ) -> PaymentRetrieveWalletTransactionResponse:
         """بازیابی تراکنش کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
@@ -2603,7 +2603,7 @@ class PaymentApi:
     ) -> ApiResponse[PaymentRetrieveWalletTransactionResponse]:
         """بازیابی تراکنش کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
@@ -2670,7 +2670,7 @@ class PaymentApi:
     ) -> RESTResponseType:
         """بازیابی تراکنش کیف پول
 
-        (محدود) با استفاده از این API می‌توانید یک تراکنش و وضعیت آن را بازیابی کنید. از این API برای اعتبارسنجی پرداخت قبل از commit استفاده کنید.  مجوزهای مورد نیاز: WALLET_PAYMENT.
+        (Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.  مجوزهای مورد نیاز: WALLET_PAYMENT.
 
         :param token: توکن تراکنشی که می‌خواهید بازیابی کنید (required)
         :type token: str
@@ -2795,9 +2795,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """ثبت پرداخت کاربر
+        """Submit a user payment
 
-        با استفاده از این API، باید پرداخت کاربر را ثبت کنید. ضروری است که از این API برای ثبت پرداخت کاربر همراه با مبلغ دریافت شده استفاده کنید. این API به توکن دسترسی با دامنه OAuth `SUBMIT_USER_PAYMENT` نیاز دارد.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
+        Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This API requires an access token with the `SUBMIT_USER_PAYMENT` OAuth scope.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
 
         :param payment_submit_user_payment_request: (required)
         :type payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest
@@ -2862,9 +2862,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """ثبت پرداخت کاربر
+        """Submit a user payment
 
-        با استفاده از این API، باید پرداخت کاربر را ثبت کنید. ضروری است که از این API برای ثبت پرداخت کاربر همراه با مبلغ دریافت شده استفاده کنید. این API به توکن دسترسی با دامنه OAuth `SUBMIT_USER_PAYMENT` نیاز دارد.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
+        Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This API requires an access token with the `SUBMIT_USER_PAYMENT` OAuth scope.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
 
         :param payment_submit_user_payment_request: (required)
         :type payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest
@@ -2929,9 +2929,9 @@ class PaymentApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """ثبت پرداخت کاربر
+        """Submit a user payment
 
-        با استفاده از این API، باید پرداخت کاربر را ثبت کنید. ضروری است که از این API برای ثبت پرداخت کاربر همراه با مبلغ دریافت شده استفاده کنید. این API به توکن دسترسی با دامنه OAuth `SUBMIT_USER_PAYMENT` نیاز دارد.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
+        Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This API requires an access token with the `SUBMIT_USER_PAYMENT` OAuth scope.  مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
 
         :param payment_submit_user_payment_request: (required)
         :type payment_submit_user_payment_request: PaymentSubmitUserPaymentRequest

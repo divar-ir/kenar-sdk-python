@@ -50,7 +50,7 @@ class TestPaymentApi(unittest.TestCase):
     def test_payment_get_post_pricing(self) -> None:
         """Test case for payment_get_post_pricing
 
-        دریافت هزینه سرویس
+        Retrieve the cost of the service
         """
         pass
 
@@ -71,7 +71,7 @@ class TestPaymentApi(unittest.TestCase):
     def test_payment_publish_user_post(self) -> None:
         """Test case for payment_publish_user_post
 
-        پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+        Pay for user post submission on behalf of provider
         """
         pass
 
@@ -99,7 +99,7 @@ class TestPaymentApi(unittest.TestCase):
     def test_payment_submit_user_payment(self) -> None:
         """Test case for payment_submit_user_payment
 
-        ثبت پرداخت کاربر
+        Submit a user payment
         """
         pass
 

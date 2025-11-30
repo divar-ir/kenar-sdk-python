@@ -135,14 +135,14 @@ Class | Method | HTTP request | Description
 *PaymentApi* | [**payment_commit_wallet_transaction**](docs/PaymentApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | تایید تراکنش کیف پول
 *PaymentApi* | [**payment_create_wallet_payment**](docs/PaymentApi.md#payment_create_wallet_payment) | **POST** /experimental/open-platform/wallet/payments/create | ایجاد پرداخت کیف پول
 *PaymentApi* | [**payment_get_balance**](docs/PaymentApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | دریافت موجودی اپلیکیشن
-*PaymentApi* | [**payment_get_post_pricing**](docs/PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت هزینه سرویس
+*PaymentApi* | [**payment_get_post_pricing**](docs/PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
 *PaymentApi* | [**payment_get_transaction**](docs/PaymentApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | دریافت جزئیات تراکنش
 *PaymentApi* | [**payment_list_transactions**](docs/PaymentApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | لیست تراکنش‌ها
-*PaymentApi* | [**payment_publish_user_post**](docs/PaymentApi.md#payment_publish_user_post) | **POST** /experimental/open-platform/post/{post_token}/publish | پرداخت هزینه ثبت آگهی کاربر از طرف ارائه‌دهنده
+*PaymentApi* | [**payment_publish_user_post**](docs/PaymentApi.md#payment_publish_user_post) | **POST** /experimental/open-platform/post/{post_token}/publish | Pay for user post submission on behalf of provider
 *PaymentApi* | [**payment_renew_post**](docs/PaymentApi.md#payment_renew_post) | **POST** /experimental/open-platform/post/{post_token}/renew | تمدید آگهی
 *PaymentApi* | [**payment_reorder_post**](docs/PaymentApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | نردبان آگهی
 *PaymentApi* | [**payment_retrieve_wallet_transaction**](docs/PaymentApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | بازیابی تراکنش کیف پول
-*PaymentApi* | [**payment_submit_user_payment**](docs/PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | ثبت پرداخت کاربر
+*PaymentApi* | [**payment_submit_user_payment**](docs/PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | Submit a user payment
 *PaymentTicketApi* | [**payment_ticket_validate**](docs/PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *PostApi* | [**post_can_user_submit_post**](docs/PostApi.md#post_can_user_submit_post) | **GET** /experimental/open-platform/user-posts/can-submit | بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
 *PostApi* | [**post_create_business_customized_button**](docs/PostApi.md#post_create_business_customized_button) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌و‌کار
