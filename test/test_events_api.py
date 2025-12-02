@@ -36,7 +36,7 @@ class TestEventsApi(unittest.TestCase):
     def test_events_send_event(self) -> None:
         """Test case for events_send_event
 
-        ارسال رویداد به کاربر با استفاده از API
+        ارسال رویداد به کاربر
         """
         pass
 

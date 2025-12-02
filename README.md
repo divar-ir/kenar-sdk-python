@@ -72,6 +72,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -81,7 +83,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_business_addon_body = kenar_api_client.AddonsCreateBusinessAddonBody() # AddonsCreateBusinessAddonBody | 
 
     try:
-        # افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
+        # ایجاد افزونه کسب‌وکار
         api_response = api_instance.addons_create_business_addon(business_token, addons_create_business_addon_body)
         print("The response of AddonsApi->addons_create_business_addon:\n")
         pprint(api_response)
@@ -96,26 +98,26 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AddonsApi* | [**addons_create_business_addon**](docs/AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
-*AddonsApi* | [**addons_create_post_addon_v2**](docs/AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
-*AddonsApi* | [**addons_create_user_addon_v2**](docs/AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
-*AddonsApi* | [**addons_create_user_addon_v22**](docs/AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
-*AddonsApi* | [**addons_delete_post_addon**](docs/AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
-*AddonsApi* | [**addons_delete_post_addon2**](docs/AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
+*AddonsApi* | [**addons_create_business_addon**](docs/AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | ایجاد افزونه کسب‌وکار
+*AddonsApi* | [**addons_create_post_addon_v2**](docs/AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | ایجاد افزونه آگهی
+*AddonsApi* | [**addons_create_user_addon_v2**](docs/AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | ایجاد افزونه کاربر
+*AddonsApi* | [**addons_create_user_addon_v22**](docs/AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | ایجاد افزونه کاربر
+*AddonsApi* | [**addons_delete_post_addon**](docs/AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه آگهی
+*AddonsApi* | [**addons_delete_post_addon2**](docs/AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه آگهی
 *AddonsApi* | [**addons_delete_user_addon**](docs/AddonsApi.md#addons_delete_user_addon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
-*AssetsApi* | [**assets_get_body_statuses**](docs/AssetsApi.md#assets_get_body_statuses) | **GET** /v1/open-platform/assets/body-status | دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
-*AssetsApi* | [**assets_get_brand_models**](docs/AssetsApi.md#assets_get_brand_models) | **GET** /v1/open-platform/assets/brand-model/{category} | دریافت مدل‌های برند در دسته‌بندی دیوار
-*AssetsApi* | [**assets_get_categories**](docs/AssetsApi.md#assets_get_categories) | **GET** /v1/open-platform/assets/category | دریافت دسته‌بندی‌های دیوار
-*AssetsApi* | [**assets_get_cities**](docs/AssetsApi.md#assets_get_cities) | **GET** /v1/open-platform/assets/city | دریافت شهرهای دیوار
-*AssetsApi* | [**assets_get_colors**](docs/AssetsApi.md#assets_get_colors) | **GET** /v1/open-platform/assets/color/{category} | دریافت رنگ‌ها در دسته‌بندی دیوار
-*AssetsApi* | [**assets_get_districts**](docs/AssetsApi.md#assets_get_districts) | **GET** /v1/open-platform/assets/district | دریافت مناطق دیوار
-*AssetsApi* | [**assets_get_districts2**](docs/AssetsApi.md#assets_get_districts2) | **GET** /v1/open-platform/assets/district/{city_slug} | دریافت مناطق دیوار
-*AssetsApi* | [**assets_get_internal_storages**](docs/AssetsApi.md#assets_get_internal_storages) | **GET** /v1/open-platform/assets/internal-storage | دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
-*AssetsApi* | [**assets_get_o_auth_scopes**](docs/AssetsApi.md#assets_get_o_auth_scopes) | **GET** /v1/open-platform/assets/oauth-scope | دریافت دامنه‌های OAuth کنار دیوار
-*AssetsApi* | [**assets_get_permissions**](docs/AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | دریافت مجوزهای کنار دیوار
-*AssetsApi* | [**assets_get_ram_memories**](docs/AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
-*AssetsApi* | [**assets_get_service_types**](docs/AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | دریافت انواع سرویس موجود در کنار دیوار
-*AssetsApi* | [**assets_get_submit_schema**](docs/AssetsApi.md#assets_get_submit_schema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | دریافت قالب ثبت
+*AssetsApi* | [**assets_get_body_statuses**](docs/AssetsApi.md#assets_get_body_statuses) | **GET** /v1/open-platform/assets/body-status | لیست گزینه‌های وضعیت بدنه
+*AssetsApi* | [**assets_get_brand_models**](docs/AssetsApi.md#assets_get_brand_models) | **GET** /v1/open-platform/assets/brand-model/{category} | لیست مدل برندها بر اساس دسته‌بندی
+*AssetsApi* | [**assets_get_categories**](docs/AssetsApi.md#assets_get_categories) | **GET** /v1/open-platform/assets/category | لیست همه دسته‌بندی‌ها
+*AssetsApi* | [**assets_get_cities**](docs/AssetsApi.md#assets_get_cities) | **GET** /v1/open-platform/assets/city | لیست همه شهرها
+*AssetsApi* | [**assets_get_colors**](docs/AssetsApi.md#assets_get_colors) | **GET** /v1/open-platform/assets/color/{category} | لیست رنگ‌ها بر اساس دسته‌بندی
+*AssetsApi* | [**assets_get_districts**](docs/AssetsApi.md#assets_get_districts) | **GET** /v1/open-platform/assets/district | لیست محله‌ها
+*AssetsApi* | [**assets_get_districts2**](docs/AssetsApi.md#assets_get_districts2) | **GET** /v1/open-platform/assets/district/{city_slug} | لیست محله‌ها
+*AssetsApi* | [**assets_get_internal_storages**](docs/AssetsApi.md#assets_get_internal_storages) | **GET** /v1/open-platform/assets/internal-storage | لیست گزینه‌های حافظه داخلی
+*AssetsApi* | [**assets_get_o_auth_scopes**](docs/AssetsApi.md#assets_get_o_auth_scopes) | **GET** /v1/open-platform/assets/oauth-scope | لیست دامنه‌های OAuth
+*AssetsApi* | [**assets_get_permissions**](docs/AssetsApi.md#assets_get_permissions) | **GET** /v1/open-platform/assets/permission | لیست مجوزهای کنار دیوار
+*AssetsApi* | [**assets_get_ram_memories**](docs/AssetsApi.md#assets_get_ram_memories) | **GET** /v1/open-platform/assets/ram-memory | لیست گزینه‌های حافظه RAM
+*AssetsApi* | [**assets_get_service_types**](docs/AssetsApi.md#assets_get_service_types) | **GET** /v1/open-platform/assets/service-type | لیست انواع سرویس
+*AssetsApi* | [**assets_get_submit_schema**](docs/AssetsApi.md#assets_get_submit_schema) | **GET** /v1/open-platform/assets/submit-schema/{category_slug} | دریافت schema ثبت آگهی برای دسته‌بندی
 *ChatAPIApi* | [**chat_api_chat_bot_send_message**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message) | **POST** /v1/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
 *ChatAPIApi* | [**chat_api_chat_bot_send_message2**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message2) | **POST** /v1/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot
 *ChatAPIApi* | [**chat_api_chat_bot_send_message3**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message3) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
@@ -123,41 +125,41 @@ Class | Method | HTTP request | Description
 *ChatAPIApi* | [**chat_api_chat_bot_send_message5**](docs/ChatAPIApi.md#chat_api_chat_bot_send_message5) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot
 *ChatAPIApi* | [**chat_api_conversation_send_message**](docs/ChatAPIApi.md#chat_api_conversation_send_message) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه
 *ChatAPIApi* | [**chat_api_generate_upload_token**](docs/ChatAPIApi.md#chat_api_generate_upload_token) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود
-*ChatAPIApi* | [**chat_api_get_conversation**](docs/ChatAPIApi.md#chat_api_get_conversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن
+*ChatAPIApi* | [**chat_api_get_conversation**](docs/ChatAPIApi.md#chat_api_get_conversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه
 *EventsApi* | [**events_register_event_subscription**](docs/EventsApi.md#events_register_event_subscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد
-*EventsApi* | [**events_send_event**](docs/EventsApi.md#events_send_event) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر با استفاده از API
+*EventsApi* | [**events_send_event**](docs/EventsApi.md#events_send_event) | **POST** /experimental/open-platform/events/send | ارسال رویداد به کاربر
 *FinderApi* | [**finder_get_post**](docs/FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 *FinderApi* | [**finder_get_user**](docs/FinderApi.md#finder_get_user) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 *FinderApi* | [**finder_get_user2**](docs/FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
-*FinderApi* | [**finder_get_user_idby_phone**](docs/FinderApi.md#finder_get_user_idby_phone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه دیوار کاربر با شماره تلفن
+*FinderApi* | [**finder_get_user_idby_phone**](docs/FinderApi.md#finder_get_user_idby_phone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه کاربر دیوار با شماره تلفن
 *FinderApi* | [**finder_get_user_posts**](docs/FinderApi.md#finder_get_user_posts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
-*FinderApi* | [**finder_search_post_v2**](docs/FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
-*PaymentApi* | [**payment_commit_wallet_transaction**](docs/PaymentApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | تایید تراکنش کیف پول
+*FinderApi* | [**finder_search_post_v2**](docs/FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | جستجوی آگهی‌های دیوار
+*PaymentApi* | [**payment_commit_wallet_transaction**](docs/PaymentApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | نهایی کردن تراکنش کیف پول
 *PaymentApi* | [**payment_create_wallet_payment**](docs/PaymentApi.md#payment_create_wallet_payment) | **POST** /experimental/open-platform/wallet/payments/create | ایجاد پرداخت کیف پول
 *PaymentApi* | [**payment_get_balance**](docs/PaymentApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | دریافت موجودی اپلیکیشن
-*PaymentApi* | [**payment_get_post_pricing**](docs/PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
+*PaymentApi* | [**payment_get_post_pricing**](docs/PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت قیمت خدمات آگهی
 *PaymentApi* | [**payment_get_transaction**](docs/PaymentApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | دریافت جزئیات تراکنش
 *PaymentApi* | [**payment_list_transactions**](docs/PaymentApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | لیست تراکنش‌ها
-*PaymentApi* | [**payment_publish_user_post**](docs/PaymentApi.md#payment_publish_user_post) | **POST** /experimental/open-platform/post/{post_token}/publish | Pay for user post submission on behalf of provider
+*PaymentApi* | [**payment_publish_user_post**](docs/PaymentApi.md#payment_publish_user_post) | **POST** /experimental/open-platform/post/{post_token}/publish | انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
 *PaymentApi* | [**payment_renew_post**](docs/PaymentApi.md#payment_renew_post) | **POST** /experimental/open-platform/post/{post_token}/renew | تمدید آگهی
 *PaymentApi* | [**payment_reorder_post**](docs/PaymentApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | نردبان آگهی
-*PaymentApi* | [**payment_retrieve_wallet_transaction**](docs/PaymentApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | بازیابی تراکنش کیف پول
-*PaymentApi* | [**payment_submit_user_payment**](docs/PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | Submit a user payment
-*PaymentTicketApi* | [**payment_ticket_validate**](docs/PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
+*PaymentApi* | [**payment_retrieve_wallet_transaction**](docs/PaymentApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | دریافت تراکنش کیف پول
+*PaymentApi* | [**payment_submit_user_payment**](docs/PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | ثبت رکورد پرداخت کاربر
+*PaymentTicketApi* | [**payment_ticket_validate**](docs/PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی تیکت پرداخت
 *PostApi* | [**post_can_user_submit_post**](docs/PostApi.md#post_can_user_submit_post) | **GET** /experimental/open-platform/user-posts/can-submit | بررسی اینکه آیا کاربر می‌تواند آگهی ارسال کند
-*PostApi* | [**post_create_business_customized_button**](docs/PostApi.md#post_create_business_customized_button) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌و‌کار
+*PostApi* | [**post_create_business_customized_button**](docs/PostApi.md#post_create_business_customized_button) | **POST** /experimental/open-platform/business/{business_token}/customized-button | ایجاد دکمه اختصاصی برای آگهی‌های کسب‌وکار
 *PostApi* | [**post_delete_business_customized_button**](docs/PostApi.md#post_delete_business_customized_button) | **DELETE** /experimental/open-platform/business/{business_token}/customized-button | حذف دکمه اختصاصی از آگهی‌های کسب‌و‌کار
 *PostApi* | [**post_delete_post_customized_button**](docs/PostApi.md#post_delete_post_customized_button) | **DELETE** /experimental/open-platform/posts/{post_token}/customized-button | حذف دکمه اختصاصی از آگهی
 *PostApi* | [**post_delete_user_post**](docs/PostApi.md#post_delete_user_post) | **DELETE** /v1/open-platform/post/{post_token} | حذف آگهی
 *PostApi* | [**post_edit_post**](docs/PostApi.md#post_edit_post) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
-*PostApi* | [**post_edit_post_v2**](docs/PostApi.md#post_edit_post_v2) | **PUT** /v2/open-platform/post/{post_token} | ویرایش آگهی با پشتیبانی از فیلد ماسک
+*PostApi* | [**post_edit_post_v2**](docs/PostApi.md#post_edit_post_v2) | **PUT** /v2/open-platform/post/{post_token} | ویرایش آگهی (پیشرفته)
 *PostApi* | [**post_get_image_upload_url**](docs/PostApi.md#post_get_image_upload_url) | **GET** /v1/open-platform/post/image-upload-url | دریافت آدرس اپلود تصاویر آگهی (منسوخ شده)
 *PostApi* | [**post_get_post_stats**](docs/PostApi.md#post_get_post_stats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
-*PostApi* | [**post_get_upload_urls_v2**](docs/PostApi.md#post_get_upload_urls_v2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود برای تصاویر و ویدیو‌ی آگهی‌ها
+*PostApi* | [**post_get_upload_urls_v2**](docs/PostApi.md#post_get_upload_urls_v2) | **GET** /v2/open-platform/post/upload-urls | دریافت آدرس آپلود تصاویر و ویدیو
 *PostApi* | [**post_get_user_post**](docs/PostApi.md#post_get_user_post) | **GET** /v1/open-platform/user-post/{token} | دریافت آگهی با توکن
-*PostApi* | [**post_set_post_customized_button**](docs/PostApi.md#post_set_post_customized_button) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی بر روی آگهی ثبت شده
-*PostApi* | [**post_submit_post**](docs/PostApi.md#post_submit_post) | **POST** /experimental/open-platform/posts/new | ثبت آگهی
-*PostApi* | [**post_submit_post_v2**](docs/PostApi.md#post_submit_post_v2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
+*PostApi* | [**post_set_post_customized_button**](docs/PostApi.md#post_set_post_customized_button) | **POST** /experimental/open-platform/posts/{post_token}/customized-button | تنظیم دکمه اختصاصی روی آگهی
+*PostApi* | [**post_submit_post**](docs/PostApi.md#post_submit_post) | **POST** /experimental/open-platform/posts/new | ثبت آگهی (منسوخ شده)
+*PostApi* | [**post_submit_post_v2**](docs/PostApi.md#post_submit_post_v2) | **POST** /experimental/open-platform/posts/new-v2 | ثبت آگهی
 *PostApi* | [**post_submit_user_post**](docs/PostApi.md#post_submit_user_post) | **POST** /experimental/open-platform/user-posts/new | ثبت آگهی به عنوان کاربر
 *SemanticApi* | [**semantic_create_post_semantic**](docs/SemanticApi.md#semantic_create_post_semantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *SemanticApi* | [**semantic_create_user_semantic**](docs/SemanticApi.md#semantic_create_user_semantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر

@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,9 +26,9 @@ class SemanticCreatePostSemanticBody(BaseModel):
     """
     SemanticCreatePostSemanticBody
     """ # noqa: E501
-    cost: Optional[StrictInt] = None
-    semantic: Optional[Dict[str, StrictStr]] = None
-    ticket_uuid: Optional[StrictStr] = None
+    cost: Optional[StrictInt] = Field(default=None, description="هزینه مرتبط با عملیات")
+    semantic: Dict[str, StrictStr] = Field(description="مپ key-value اطلاعات معنایی برای ذخیره")
+    ticket_uuid: Optional[StrictStr] = Field(default=None, description="UUID تیکت پرداخت (اختیاری)")
     __properties: ClassVar[List[str]] = ["cost", "semantic", "ticket_uuid"]
 
     model_config = ConfigDict(

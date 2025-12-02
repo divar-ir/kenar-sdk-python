@@ -29,7 +29,7 @@ class PostApartmentSellFields(BaseModel):
     """ # noqa: E501
     floor: StrictInt = Field(description="طبقه ملک. از -1 برای زیرزمین و 0 برای همکف استفاده کنید. از 1 برای طبقه اول و غیره.")
     has_elevator: StrictBool = Field(description="آیا ملک آسانسور دارد")
-    has_own_image: StrictBool = Field(description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
+    has_own_image: StrictBool = Field(description="آیا تصاویر واقعی ملک هستند (نه تزئینی)")
     has_parking: StrictBool = Field(description="آیا ملک پارکینگ دارد")
     has_warehouse: StrictBool = Field(description="آیا ملک انباری دارد")
     price: StrictStr = Field(description="قیمت ملک به تومان")

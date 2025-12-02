@@ -28,10 +28,10 @@ from typing_extensions import Self
 
 class AddonsAction(BaseModel):
     """
-    نمایان‌گر یک عملیات که می‌تواند انجام شود
+    نمایانگر یک Action که می‌تواند انجام شود
     """ # noqa: E501
     get_dynamic_action: Optional[AddonsGetDynamicAction] = None
-    open_direct_link: Optional[StrictStr] = Field(default=None, description="عملیاتی برای ارسال کاربر به URL شما به صورت مستقیم با فقط یک شناسه منبع (در صورت وجود)")
+    open_direct_link: Optional[StrictStr] = Field(default=None, description="عملیاتی برای هدایت مستقیم کاربر به URL شما (در صورت وجود resource id)")
     open_post_manage_page: Optional[AddonsOpenPostManagePage] = None
     open_post_page: Optional[AddonsOpenPostPage] = None
     open_server_link: Optional[AddonsOpenServerLink] = None

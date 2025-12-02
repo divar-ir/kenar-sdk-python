@@ -32,11 +32,11 @@ class PostSubmitPostRequest(BaseModel):
     PostSubmitPostRequest
     """ # noqa: E501
     apartment_sell: Optional[PostApartmentSellFields] = None
-    chat_enabled: StrictBool = Field(description="امکان چت فعال باشد")
+    chat_enabled: StrictBool = Field(description="فعال بودن چت")
     city: StrictStr = Field(description="شهر آگهی")
     description: StrictStr = Field(description="توضیحات آگهی")
     district: Optional[StrictStr] = Field(default=None, description="محله آگهی")
-    hide_phone: StrictBool = Field(description="عدم نمایش شماره تماس به کاربران")
+    hide_phone: StrictBool = Field(description="مخفی کردن شماره تماس از کاربران")
     home_presell: Optional[PostHomePresellFields] = None
     images: List[StrictStr]
     landline_numbers: Optional[List[StrictStr]] = Field(default=None, description="شماره‌های ثابت برای افزودن به آگهی")

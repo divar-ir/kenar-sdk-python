@@ -4,18 +4,21 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payment_ticket_validate**](PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
+[**payment_ticket_validate**](PaymentTicketApi.md#payment_ticket_validate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی تیکت پرداخت
 
 
 # **payment_ticket_validate**
 > PaymentTicketValidateResponse payment_ticket_validate(payment_ticket_validate_request)
 
-اعتبارسنجی بلیط پرداخت
+اعتبارسنجی تیکت پرداخت
 
-بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند.
-با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
+این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.
 
-مجوزهای مورد نیاز: PAYMENT_TICKET_VALIDATE.
+**نکات مهم**:
+- این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود
+- پاسخ شامل payload ارائه شده توسط صادرکننده است
+
+مجوزهای مورد نیاز: `PAYMENT_TICKET_VALIDATE`
 
 ### Example
 
@@ -52,7 +55,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     payment_ticket_validate_request = kenar_api_client.PaymentTicketValidateRequest() # PaymentTicketValidateRequest | 
 
     try:
-        # اعتبارسنجی بلیط پرداخت
+        # اعتبارسنجی تیکت پرداخت
         api_response = api_instance.payment_ticket_validate(payment_ticket_validate_request)
         print("The response of PaymentTicketApi->payment_ticket_validate:\n")
         pprint(api_response)

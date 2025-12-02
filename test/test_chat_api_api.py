@@ -78,7 +78,7 @@ class TestChatAPIApi(unittest.TestCase):
     def test_chat_api_get_conversation(self) -> None:
         """Test case for chat_api_get_conversation
 
-        دریافت مکالمه با شناسه آن
+        دریافت مکالمه
         """
         pass
 

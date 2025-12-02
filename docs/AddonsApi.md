@@ -4,30 +4,32 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addons_create_business_addon**](AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
-[**addons_create_post_addon_v2**](AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
-[**addons_create_user_addon_v2**](AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
-[**addons_create_user_addon_v22**](AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
-[**addons_delete_post_addon**](AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی
-[**addons_delete_post_addon2**](AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی
+[**addons_create_business_addon**](AddonsApi.md#addons_create_business_addon) | **POST** /v1/open-platform/addons/business/{business_token} | ایجاد افزونه کسب‌وکار
+[**addons_create_post_addon_v2**](AddonsApi.md#addons_create_post_addon_v2) | **POST** /v2/open-platform/addons/post/{token} | ایجاد افزونه آگهی
+[**addons_create_user_addon_v2**](AddonsApi.md#addons_create_user_addon_v2) | **POST** /v2/open-platform/addons/user/{phone} | ایجاد افزونه کاربر
+[**addons_create_user_addon_v22**](AddonsApi.md#addons_create_user_addon_v22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | ایجاد افزونه کاربر
+[**addons_delete_post_addon**](AddonsApi.md#addons_delete_post_addon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه آگهی
+[**addons_delete_post_addon2**](AddonsApi.md#addons_delete_post_addon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه آگهی
 [**addons_delete_user_addon**](AddonsApi.md#addons_delete_user_addon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر
 
 
 # **addons_create_business_addon**
 > AddonsCreateBusinessAddonResponse addons_create_business_addon(business_token, addons_create_business_addon_body)
 
-افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
+ایجاد افزونه کسب‌وکار
 
-با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید.
-می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید.
-این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد:
-- BUSINESS_ADDON_CREATE.{business_token}
+این API امکان ایجاد افزونه کسب‌وکار را فراهم می‌کند که روی تمام آگهی‌های منتشر شده یک کسب‌وکار نمایش داده می‌شود.
 
-مجوزهای مورد نیاز: BUSINESS_ADDON_CREATE.
+**نکات مهم**:
+- ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند
+- مالکیت کسب‌وکار قبل از ایجاد افزونه بررسی می‌شود
+
+مجوزهای مورد نیاز: `BUSINESS_ADDON_CREATE`. OAuth scope موردنیاز: `BUSINESS_ADDON_CREATE.business_token`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -53,6 +55,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -61,7 +65,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_business_addon_body = kenar_api_client.AddonsCreateBusinessAddonBody() # AddonsCreateBusinessAddonBody | 
 
     try:
-        # افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
+        # ایجاد افزونه کسب‌وکار
         api_response = api_instance.addons_create_business_addon(business_token, addons_create_business_addon_body)
         print("The response of AddonsApi->addons_create_business_addon:\n")
         pprint(api_response)
@@ -85,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -104,19 +108,20 @@ Name | Type | Description  | Notes
 # **addons_create_post_addon_v2**
 > object addons_create_post_addon_v2(token, addons_create_post_addon_v2_body)
 
-افزودن افزونه جدید به آگهی
+ایجاد افزونه آگهی
 
-با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید.
-می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید.
-این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد:
-- USER_POSTS_ADDON_CREATE
-- POST_ADDON_CREATE.{post_token}
+این API امکان ایجاد افزونه متصل به یک آگهی خاص را فراهم می‌کند. افزونه در صفحه جزئیات آگهی نمایش داده می‌شود.
 
-مجوزهای مورد نیاز: ADD_ON_CREATE.
+**نکات مهم**:
+- ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند
+- مسیرهای معنایی از ویجت‌ها برای دسته‌بندی استخراج می‌شوند
+
+مجوزهای مورد نیاز: `ADD_ON_CREATE`. OAuth scope موردنیاز: `POST_ADDON_CREATE.post_token` یا `USER_POSTS_ADDON_CREATE`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -141,6 +146,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -149,7 +156,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_post_addon_v2_body = kenar_api_client.AddonsCreatePostAddonV2Body() # AddonsCreatePostAddonV2Body | 
 
     try:
-        # افزودن افزونه جدید به آگهی
+        # ایجاد افزونه آگهی
         api_response = api_instance.addons_create_post_addon_v2(token, addons_create_post_addon_v2_body)
         print("The response of AddonsApi->addons_create_post_addon_v2:\n")
         pprint(api_response)
@@ -173,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -192,18 +199,20 @@ Name | Type | Description  | Notes
 # **addons_create_user_addon_v2**
 > AddonsCreateUserAddonResponseV2 addons_create_user_addon_v2(phone, addons_create_user_addon_v2_body)
 
-افزودن افزونه جدید به کاربر
+ایجاد افزونه کاربر
 
-با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید.
-افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند.
-می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید.
-این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
+این API امکان ایجاد افزونه کاربر را فراهم می‌کند که به صورت خودکار به تمام آگهی‌های کاربر متصل می‌شود. افزونه برای آگهی‌های آینده اعمال شده و همچنین تا 30 آگهی اخیر به عقب برمی‌گردد.
 
-مجوزهای مورد نیاز: USER_ADDON_CREATE.
+**نکات مهم**:
+- می‌توان دسته‌بندی‌ها را برای فیلتر کردن آگهی‌هایی که افزونه دریافت می‌کنند مشخص کرد
+- ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند
+
+مجوزهای مورد نیاز: `USER_ADDON_CREATE`. OAuth scope موردنیاز: `USER_ADDON_CREATE`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -229,6 +238,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -237,7 +248,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_user_addon_v2_body = kenar_api_client.AddonsCreateUserAddonV2Body() # AddonsCreateUserAddonV2Body | 
 
     try:
-        # افزودن افزونه جدید به کاربر
+        # ایجاد افزونه کاربر
         api_response = api_instance.addons_create_user_addon_v2(phone, addons_create_user_addon_v2_body)
         print("The response of AddonsApi->addons_create_user_addon_v2:\n")
         pprint(api_response)
@@ -261,7 +272,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -280,16 +291,20 @@ Name | Type | Description  | Notes
 # **addons_create_user_addon_v22**
 > AddonsCreateUserAddonResponseV2 addons_create_user_addon_v22(divar_user_id, addons_create_user_addon_v2_body)
 
-افزودن افزونه جدید به کاربر
+ایجاد افزونه کاربر
 
-با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید.
-افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند.
-می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید.
-این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
+این API امکان ایجاد افزونه کاربر را فراهم می‌کند که به صورت خودکار به تمام آگهی‌های کاربر متصل می‌شود. افزونه برای آگهی‌های آینده اعمال شده و همچنین تا 30 آگهی اخیر به عقب برمی‌گردد.
+
+**نکات مهم**:
+- می‌توان دسته‌بندی‌ها را برای فیلتر کردن آگهی‌هایی که افزونه دریافت می‌کنند مشخص کرد
+- ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند
+
+OAuth scope موردنیاز: `USER_ADDON_CREATE`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -315,6 +330,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -323,7 +340,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     addons_create_user_addon_v2_body = kenar_api_client.AddonsCreateUserAddonV2Body() # AddonsCreateUserAddonV2Body | 
 
     try:
-        # افزودن افزونه جدید به کاربر
+        # ایجاد افزونه کاربر
         api_response = api_instance.addons_create_user_addon_v22(divar_user_id, addons_create_user_addon_v2_body)
         print("The response of AddonsApi->addons_create_user_addon_v22:\n")
         pprint(api_response)
@@ -347,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -366,11 +383,15 @@ Name | Type | Description  | Notes
 # **addons_delete_post_addon**
 > object addons_delete_post_addon(token)
 
-حذف افزونه از آگهی
+حذف افزونه آگهی
 
-فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
+این API امکان حذف افزونه از یک آگهی را فراهم می‌کند. تمام افزونه‌های ایجاد شده توسط اپلیکیشن شما برای توکن آگهی مشخص شده حذف می‌شوند.
 
-مجوزهای مورد نیاز: ADD_ON_DELETE.
+**نکات مهم**:
+- فقط افزونه‌های ایجاد شده توسط اپلیکیشن شما قابل حذف هستند
+
+
+مجوزهای مورد نیاز: `ADD_ON_DELETE`
 
 ### Example
 
@@ -405,7 +426,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     token = 'token_example' # str | 
 
     try:
-        # حذف افزونه از آگهی
+        # حذف افزونه آگهی
         api_response = api_instance.addons_delete_post_addon(token)
         print("The response of AddonsApi->addons_delete_post_addon:\n")
         pprint(api_response)
@@ -447,9 +468,13 @@ Name | Type | Description  | Notes
 # **addons_delete_post_addon2**
 > object addons_delete_post_addon2(token)
 
-حذف افزونه از آگهی
+حذف افزونه آگهی
 
-فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
+این API امکان حذف افزونه از یک آگهی را فراهم می‌کند. تمام افزونه‌های ایجاد شده توسط اپلیکیشن شما برای توکن آگهی مشخص شده حذف می‌شوند.
+
+**نکات مهم**:
+- فقط افزونه‌های ایجاد شده توسط اپلیکیشن شما قابل حذف هستند
+
 
 ### Example
 
@@ -484,7 +509,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     token = 'token_example' # str | 
 
     try:
-        # حذف افزونه از آگهی
+        # حذف افزونه آگهی
         api_response = api_instance.addons_delete_post_addon2(token)
         print("The response of AddonsApi->addons_delete_post_addon2:\n")
         pprint(api_response)
@@ -528,10 +553,13 @@ Name | Type | Description  | Notes
 
 حذف افزونه کاربر
 
-این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند.
-فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
+این API امکان حذف افزونه کاربر با شناسه را فراهم می‌کند. این کار افزونه کاربر و تمام افزونه‌های آگهی مرتبط را حذف می‌کند.
 
-مجوزهای مورد نیاز: USER_ADDON_DELETE.
+**نکات مهم**:
+- فقط افزونه‌های کاربر ایجاد شده توسط اپلیکیشن شما قابل حذف هستند
+
+
+مجوزهای مورد نیاز: `USER_ADDON_DELETE`
 
 ### Example
 

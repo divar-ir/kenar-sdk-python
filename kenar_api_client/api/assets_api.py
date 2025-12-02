@@ -65,9 +65,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetBodyStatusesResponse:
-        """دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+        """لیست گزینه‌های وضعیت بدنه
 
-        دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های وضعیت بدنه موجود برای دسته‌بندی‌های خودرو را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -128,9 +128,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetBodyStatusesResponse]:
-        """دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+        """لیست گزینه‌های وضعیت بدنه
 
-        دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های وضعیت بدنه موجود برای دسته‌بندی‌های خودرو را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -191,9 +191,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+        """لیست گزینه‌های وضعیت بدنه
 
-        دریافت تمام گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار. این ترجمه فارسی برای هر گزینه وضعیت بدنه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های وضعیت بدنه موجود برای دسته‌بندی‌های خودرو را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -312,9 +312,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetBrandModelsResponse:
-        """دریافت مدل‌های برند در دسته‌بندی دیوار
+        """لیست مدل برندها بر اساس دسته‌بندی
 
-        دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت مدل برندها برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - مدل برندها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
 
         :param category: (required)
         :type category: str
@@ -379,9 +379,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetBrandModelsResponse]:
-        """دریافت مدل‌های برند در دسته‌بندی دیوار
+        """لیست مدل برندها بر اساس دسته‌بندی
 
-        دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت مدل برندها برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - مدل برندها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
 
         :param category: (required)
         :type category: str
@@ -446,9 +446,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت مدل‌های برند در دسته‌بندی دیوار
+        """لیست مدل برندها بر اساس دسته‌بندی
 
-        دریافت تمام مدل‌های برند دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر مدل برند که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت مدل برندها برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - مدل برندها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
 
         :param category: (required)
         :type category: str
@@ -572,9 +572,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetCategoriesResponse:
-        """دریافت دسته‌بندی‌های دیوار
+        """لیست همه دسته‌بندی‌ها
 
-        دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت همه دسته‌بندی‌های دیوار را فراهم می‌کند. شناسه دسته‌بندی‌ها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -635,9 +635,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetCategoriesResponse]:
-        """دریافت دسته‌بندی‌های دیوار
+        """لیست همه دسته‌بندی‌ها
 
-        دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت همه دسته‌بندی‌های دیوار را فراهم می‌کند. شناسه دسته‌بندی‌ها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -698,9 +698,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت دسته‌بندی‌های دیوار
+        """لیست همه دسته‌بندی‌ها
 
-        دریافت تمام دسته‌بندی‌های دیوار. این ترجمه فارسی برای هر دسته‌بندی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت همه دسته‌بندی‌های دیوار را فراهم می‌کند. شناسه دسته‌بندی‌ها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -818,9 +818,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetCitiesResponse:
-        """دریافت شهرهای دیوار
+        """لیست همه شهرها
 
-        دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت همه شهرهای دیوار را فراهم می‌کند. شناسه شهرها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -881,9 +881,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetCitiesResponse]:
-        """دریافت شهرهای دیوار
+        """لیست همه شهرها
 
-        دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت همه شهرهای دیوار را فراهم می‌کند. شناسه شهرها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -944,9 +944,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت شهرهای دیوار
+        """لیست همه شهرها
 
-        دریافت تمام شهرهای دیوار. این ترجمه فارسی برای هر شهر که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت همه شهرهای دیوار را فراهم می‌کند. شناسه شهرها و نام‌های فارسی آنها برای استفاده در ثبت و جستجوی آگهی برمی‌گردد.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1065,9 +1065,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetColorsResponse:
-        """دریافت رنگ‌ها در دسته‌بندی دیوار
+        """لیست رنگ‌ها بر اساس دسته‌بندی
 
-        دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت رنگ‌های موجود برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - رنگ‌ها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
 
         :param category: (required)
         :type category: str
@@ -1132,9 +1132,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetColorsResponse]:
-        """دریافت رنگ‌ها در دسته‌بندی دیوار
+        """لیست رنگ‌ها بر اساس دسته‌بندی
 
-        دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت رنگ‌های موجود برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - رنگ‌ها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
 
         :param category: (required)
         :type category: str
@@ -1199,9 +1199,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت رنگ‌ها در دسته‌بندی دیوار
+        """لیست رنگ‌ها بر اساس دسته‌بندی
 
-        دریافت تمام رنگ‌های دیوار در دسته‌بندی مشخص شده. این ترجمه فارسی برای هر رنگ که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت رنگ‌های موجود برای یک دسته‌بندی خاص را فراهم می‌کند. دسته‌بندی‌های پشتیبانی شده: `light` (خودرو) و `mobile-phones`.  **نکات مهم**: - رنگ‌ها با نام‌های فارسی برگردانده می‌شوند - دسته‌بندی باید یکی از دسته‌بندی‌های پشتیبانی شده باشد، در غیر این صورت خطا برمی‌گردد
 
         :param category: (required)
         :type category: str
@@ -1326,9 +1326,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetDistrictsResponse:
-        """دریافت مناطق دیوار
+        """لیست محله‌ها
 
-        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
 
         :param city_slug:
         :type city_slug: str
@@ -1393,9 +1393,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetDistrictsResponse]:
-        """دریافت مناطق دیوار
+        """لیست محله‌ها
 
-        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
 
         :param city_slug:
         :type city_slug: str
@@ -1460,9 +1460,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت مناطق دیوار
+        """لیست محله‌ها
 
-        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
 
         :param city_slug:
         :type city_slug: str
@@ -1589,9 +1589,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetDistrictsResponse:
-        """دریافت مناطق دیوار
+        """لیست محله‌ها
 
-        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
 
         :param city_slug: (required)
         :type city_slug: str
@@ -1656,9 +1656,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetDistrictsResponse]:
-        """دریافت مناطق دیوار
+        """لیست محله‌ها
 
-        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
 
         :param city_slug: (required)
         :type city_slug: str
@@ -1723,9 +1723,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت مناطق دیوار
+        """لیست محله‌ها
 
-        دریافت تمام مناطق دیوار. این ترجمه فارسی برای هر منطقه که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت محله‌های دیوار را فراهم می‌کند. می‌توان بدون پارامتر برای دریافت همه محله‌ها یا با city_slug برای دریافت محله‌های یک شهر خاص فراخوانی کرد.
 
         :param city_slug: (required)
         :type city_slug: str
@@ -1849,9 +1849,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetInternalStoragesResponse:
-        """دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+        """لیست گزینه‌های حافظه داخلی
 
-        دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های حافظه داخلی موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1912,9 +1912,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetInternalStoragesResponse]:
-        """دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+        """لیست گزینه‌های حافظه داخلی
 
-        دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های حافظه داخلی موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1975,9 +1975,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+        """لیست گزینه‌های حافظه داخلی
 
-        دریافت تمام گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل دیوار. این ترجمه فارسی برای هر گزینه حافظه داخلی که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های حافظه داخلی موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2095,9 +2095,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetOAuthScopesResponse:
-        """دریافت دامنه‌های OAuth کنار دیوار
+        """لیست دامنه‌های OAuth
 
-        اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
+        این API لیست OAuth scopeهای موجود برای کنار دیوار را برمی‌گرداند. از این scopeها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر scope شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی scopeها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2158,9 +2158,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetOAuthScopesResponse]:
-        """دریافت دامنه‌های OAuth کنار دیوار
+        """لیست دامنه‌های OAuth
 
-        اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
+        این API لیست OAuth scopeهای موجود برای کنار دیوار را برمی‌گرداند. از این scopeها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر scope شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی scopeها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2221,9 +2221,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت دامنه‌های OAuth کنار دیوار
+        """لیست دامنه‌های OAuth
 
-        اینها دامنه‌های موجود برای OAuth2.0 کنار دیوار هستند. از دامنه‌ها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر یا انجام اقدامات از طرف آنها استفاده کنید.
+        این API لیست OAuth scopeهای موجود برای کنار دیوار را برمی‌گرداند. از این scopeها در جریان OAuth برای درخواست دسترسی به داده‌های کاربر استفاده کنید.  **نکات مهم**: - هر scope شامل وضعیت چرخه حیات است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده) - برخی scopeها نیاز به resource id دارند (مثلاً توکن آگهی، شناسه مکالمه)
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2341,9 +2341,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetPermissionsResponse:
-        """دریافت مجوزهای کنار دیوار
+        """لیست مجوزهای کنار دیوار
 
-        این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
+        این API امکان دریافت مجوزهای موجود کنار دیوار را فراهم می‌کند. این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند و با دامنه‌های OAuth متفاوت هستند.  **نکات مهم**: - مجوزها برای استفاده داخلی هستند و اپلیکیشن‌ها نباید مستقیماً به آنها وابسته باشند - هر مجوز شامل وضعیت چرخه حیات آن است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده)
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2404,9 +2404,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetPermissionsResponse]:
-        """دریافت مجوزهای کنار دیوار
+        """لیست مجوزهای کنار دیوار
 
-        این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
+        این API امکان دریافت مجوزهای موجود کنار دیوار را فراهم می‌کند. این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند و با دامنه‌های OAuth متفاوت هستند.  **نکات مهم**: - مجوزها برای استفاده داخلی هستند و اپلیکیشن‌ها نباید مستقیماً به آنها وابسته باشند - هر مجوز شامل وضعیت چرخه حیات آن است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده)
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2467,9 +2467,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت مجوزهای کنار دیوار
+        """لیست مجوزهای کنار دیوار
 
-        این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند. آنها را با دامنه‌های OAuth اشتباه نگیرید. انتظار می‌رود اپلیکیشن‌ها نسبت به این مجوزها کور باشند. اینها فقط برای استفاده‌های داخلی ایجاد شده‌اند، اما در صورت نیاز آزادانه درخواست فعال‌سازی برای اپلیکیشن خود را ارائه دهید.
+        این API امکان دریافت مجوزهای موجود کنار دیوار را فراهم می‌کند. این مجوزها برای کنترل دسترسی در اپلیکیشن‌های کنار دیوار استفاده می‌شوند و با دامنه‌های OAuth متفاوت هستند.  **نکات مهم**: - مجوزها برای استفاده داخلی هستند و اپلیکیشن‌ها نباید مستقیماً به آنها وابسته باشند - هر مجوز شامل وضعیت چرخه حیات آن است (آزمایشی، فعال، در حال منسوخ شدن، منسوخ شده)
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2587,9 +2587,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetRamMemoriesResponse:
-        """دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+        """لیست گزینه‌های حافظه RAM
 
-        دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های حافظه RAM موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2650,9 +2650,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetRamMemoriesResponse]:
-        """دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+        """لیست گزینه‌های حافظه RAM
 
-        دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های حافظه RAM موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2713,9 +2713,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+        """لیست گزینه‌های حافظه RAM
 
-        دریافت تمام گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار. این ترجمه فارسی برای هر گزینه حافظه رم که در آگهی‌ها استفاده می‌شود، ارائه می‌دهد.
+        این API امکان دریافت گزینه‌های حافظه RAM موجود برای دسته‌بندی‌های موبایل، تبلت و لپ‌تاپ را فراهم می‌کند.
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2833,9 +2833,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetServiceTypesResponse:
-        """دریافت انواع سرویس موجود در کنار دیوار
+        """لیست انواع سرویس
 
-        این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
+        این API امکان دریافت انواع سرویس موجود در کنار دیوار را فراهم می‌کند. انواع سرویس برای گروه‌بندی سرویس‌های مشابه استفاده می‌شوند.  **نکات مهم**: - می‌توان انواع سرویس جدید را در صورت نیاز درخواست داد
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2896,9 +2896,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetServiceTypesResponse]:
-        """دریافت انواع سرویس موجود در کنار دیوار
+        """لیست انواع سرویس
 
-        این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
+        این API امکان دریافت انواع سرویس موجود در کنار دیوار را فراهم می‌کند. انواع سرویس برای گروه‌بندی سرویس‌های مشابه استفاده می‌شوند.  **نکات مهم**: - می‌توان انواع سرویس جدید را در صورت نیاز درخواست داد
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -2959,9 +2959,9 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت انواع سرویس موجود در کنار دیوار
+        """لیست انواع سرویس
 
-        این انواع سرویس برای گروه‌بندی سرویس‌های مشابه در کنار دیوار استفاده می‌شود. هر ایده جدید با انواع سرویس جدید خوشامد است. در صورت نیاز آزادانه درخواست دهید.
+        این API امکان دریافت انواع سرویس موجود در کنار دیوار را فراهم می‌کند. انواع سرویس برای گروه‌بندی سرویس‌های مشابه استفاده می‌شوند.  **نکات مهم**: - می‌توان انواع سرویس جدید را در صورت نیاز درخواست داد
 
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -3080,7 +3080,7 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> AssetsGetSubmitSchemaResponse:
-        """دریافت قالب ثبت
+        """دریافت schema ثبت آگهی برای دسته‌بندی
 
         این API به شما امکان دریافت قالب ثبت آگهی برای یک دسته‌بندی مشخص را می‌دهد. پاسخ در قالب JSON Schema است.  قالب تعریف کننده ساختار و قوانین برای فیلدهای فرم زمانی که آگهی در یک دسته‌بندی مشخص ثبت می‌شود. هر فیلد در قالب می‌تواند یکی از انواع زیر را داشته باشد:  **انواع اصلی:** - `string`: فیلدهای ورودی متنی (مانند عنوان، توضیحات، مقادیر زمانی) - `integer`: فیلدهای ورودی عددی برای اعداد صحیح (مانند قیمت، تعداد، اندازه) - `float`: فیلدهای ورودی عددی برای اعداد اعشاری - `boolean`: فیلدهای ورودی بولین (صحیح/غلط) - `array`: فیلدهای ورودی چندگانه که امکان انتخاب چند مقدار را دارند  **فیلدهای Enum:** فیلدها با گزینه‌های پیش‌تعریف شده از `enum` و `enumNames` استفاده می‌کنند: - `enum`: آرایه از مقادیر داخلی استفاده شده برای ارتباط API - `enumNames`: آرایه از برچسب‌های نمایشی نشان داده شده به کاربر (معمولاً به زبان فارسی) - اینها برای فیلدهای ورودی چندگانه (مانند انتخاب طبقه، امکان استفاده از پارکینگ) استفاده می‌شوند  **فیلدهای آرایه با Enum:** فیلدهای ورودی چندگانه ترکیب `type: \"array\"` با کلید Enum را دارند: - `items.enum`: گزینه‌های موجود برای انتخاب - `items.enumNames`: برچسب‌های نمایشی برای هر گزینه - کاربران می‌توانند چند مقدار را انتخاب کنند (مانند امکانات رفاهی، سیستم‌های گرمایش)  **ویژگی‌های فیلد:** - `title`: نام نمایشی فارسی برای فیلد - `required`: آرایه از نام فیلدهای اجباری که باید ارائه شوند - `type`: نوع داده فیلد  **مثال استفاده:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
 
@@ -3147,7 +3147,7 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[AssetsGetSubmitSchemaResponse]:
-        """دریافت قالب ثبت
+        """دریافت schema ثبت آگهی برای دسته‌بندی
 
         این API به شما امکان دریافت قالب ثبت آگهی برای یک دسته‌بندی مشخص را می‌دهد. پاسخ در قالب JSON Schema است.  قالب تعریف کننده ساختار و قوانین برای فیلدهای فرم زمانی که آگهی در یک دسته‌بندی مشخص ثبت می‌شود. هر فیلد در قالب می‌تواند یکی از انواع زیر را داشته باشد:  **انواع اصلی:** - `string`: فیلدهای ورودی متنی (مانند عنوان، توضیحات، مقادیر زمانی) - `integer`: فیلدهای ورودی عددی برای اعداد صحیح (مانند قیمت، تعداد، اندازه) - `float`: فیلدهای ورودی عددی برای اعداد اعشاری - `boolean`: فیلدهای ورودی بولین (صحیح/غلط) - `array`: فیلدهای ورودی چندگانه که امکان انتخاب چند مقدار را دارند  **فیلدهای Enum:** فیلدها با گزینه‌های پیش‌تعریف شده از `enum` و `enumNames` استفاده می‌کنند: - `enum`: آرایه از مقادیر داخلی استفاده شده برای ارتباط API - `enumNames`: آرایه از برچسب‌های نمایشی نشان داده شده به کاربر (معمولاً به زبان فارسی) - اینها برای فیلدهای ورودی چندگانه (مانند انتخاب طبقه، امکان استفاده از پارکینگ) استفاده می‌شوند  **فیلدهای آرایه با Enum:** فیلدهای ورودی چندگانه ترکیب `type: \"array\"` با کلید Enum را دارند: - `items.enum`: گزینه‌های موجود برای انتخاب - `items.enumNames`: برچسب‌های نمایشی برای هر گزینه - کاربران می‌توانند چند مقدار را انتخاب کنند (مانند امکانات رفاهی، سیستم‌های گرمایش)  **ویژگی‌های فیلد:** - `title`: نام نمایشی فارسی برای فیلد - `required`: آرایه از نام فیلدهای اجباری که باید ارائه شوند - `type`: نوع داده فیلد  **مثال استفاده:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
 
@@ -3214,7 +3214,7 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت قالب ثبت
+        """دریافت schema ثبت آگهی برای دسته‌بندی
 
         این API به شما امکان دریافت قالب ثبت آگهی برای یک دسته‌بندی مشخص را می‌دهد. پاسخ در قالب JSON Schema است.  قالب تعریف کننده ساختار و قوانین برای فیلدهای فرم زمانی که آگهی در یک دسته‌بندی مشخص ثبت می‌شود. هر فیلد در قالب می‌تواند یکی از انواع زیر را داشته باشد:  **انواع اصلی:** - `string`: فیلدهای ورودی متنی (مانند عنوان، توضیحات، مقادیر زمانی) - `integer`: فیلدهای ورودی عددی برای اعداد صحیح (مانند قیمت، تعداد، اندازه) - `float`: فیلدهای ورودی عددی برای اعداد اعشاری - `boolean`: فیلدهای ورودی بولین (صحیح/غلط) - `array`: فیلدهای ورودی چندگانه که امکان انتخاب چند مقدار را دارند  **فیلدهای Enum:** فیلدها با گزینه‌های پیش‌تعریف شده از `enum` و `enumNames` استفاده می‌کنند: - `enum`: آرایه از مقادیر داخلی استفاده شده برای ارتباط API - `enumNames`: آرایه از برچسب‌های نمایشی نشان داده شده به کاربر (معمولاً به زبان فارسی) - اینها برای فیلدهای ورودی چندگانه (مانند انتخاب طبقه، امکان استفاده از پارکینگ) استفاده می‌شوند  **فیلدهای آرایه با Enum:** فیلدهای ورودی چندگانه ترکیب `type: \"array\"` با کلید Enum را دارند: - `items.enum`: گزینه‌های موجود برای انتخاب - `items.enumNames`: برچسب‌های نمایشی برای هر گزینه - کاربران می‌توانند چند مقدار را انتخاب کنند (مانند امکانات رفاهی، سیستم‌های گرمایش)  **ویژگی‌های فیلد:** - `title`: نام نمایشی فارسی برای فیلد - `required`: آرایه از نام فیلدهای اجباری که باید ارائه شوند - `type`: نوع داده فیلد  **مثال استفاده:** ```json {   \"properties\": {     \"size\": {       \"title\": \"متراژ (متر مربع)\",       \"type\": \"integer\"     },     \"elevator\": {       \"enum\": [\"دارد\", \"ندارد\"],       \"enumNames\": [\"دارد\", \"ندارد\"],       \"title\": \"آسانسور\",       \"type\": \"string\"     },     \"comfort_amenities\": {       \"items\": {         \"enum\": [\"اینترنت_پرسرعت\", \"تلویزیون\"],         \"enumNames\": [\"اینترنت پرسرعت\", \"تلویزیون\"],         \"type\": \"string\"       },       \"title\": \"امکانات رفاهی\",       \"type\": \"array\"     }   } } ```
 

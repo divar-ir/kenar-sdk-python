@@ -58,7 +58,7 @@ class EventsApi:
     ) -> object:
         """اشتراک در رویداد
 
-        این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).  مجوزهای مورد نیاز: EVENTS_REGISTER_SUBSCRIPTION.
+        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به scope `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به scope `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  مجوزهای مورد نیاز: `EVENTS_REGISTER_SUBSCRIPTION`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
 
         :param events_register_event_subscription_request: (required)
         :type events_register_event_subscription_request: EventsRegisterEventSubscriptionRequest
@@ -125,7 +125,7 @@ class EventsApi:
     ) -> ApiResponse[object]:
         """اشتراک در رویداد
 
-        این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).  مجوزهای مورد نیاز: EVENTS_REGISTER_SUBSCRIPTION.
+        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به scope `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به scope `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  مجوزهای مورد نیاز: `EVENTS_REGISTER_SUBSCRIPTION`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
 
         :param events_register_event_subscription_request: (required)
         :type events_register_event_subscription_request: EventsRegisterEventSubscriptionRequest
@@ -192,7 +192,7 @@ class EventsApi:
     ) -> RESTResponseType:
         """اشتراک در رویداد
 
-        این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).  مجوزهای مورد نیاز: EVENTS_REGISTER_SUBSCRIPTION.
+        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به scope `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به scope `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  مجوزهای مورد نیاز: `EVENTS_REGISTER_SUBSCRIPTION`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
 
         :param events_register_event_subscription_request: (required)
         :type events_register_event_subscription_request: EventsRegisterEventSubscriptionRequest
@@ -292,7 +292,8 @@ class EventsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -318,7 +319,7 @@ class EventsApi:
         self,
         message: Annotated[Optional[StrictStr], Field(description="پیام رویداد برای نمایش به کاربر")] = None,
         target_type: Annotated[Optional[StrictStr], Field(description="هدف رویداد؛ USER یا POST")] = None,
-        target_resource_id: Annotated[Optional[StrictStr], Field(description="شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد.")] = None,
+        target_resource_id: Annotated[Optional[StrictStr], Field(description="شناسه هدف. اگر نوع هدف USER است، باید شناسه کاربر دیوار باشد و اگر POST است، باید توکن آگهی باشد.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -332,15 +333,15 @@ class EventsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """ارسال رویداد به کاربر با استفاده از API
+        """ارسال رویداد به کاربر
 
-        با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.  مجوزهای مورد نیاز: EVENTS_SEND.
+        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  مجوزهای مورد نیاز: `EVENTS_SEND`. OAuth scope موردنیاز: `SEND_EVENT`
 
         :param message: پیام رویداد برای نمایش به کاربر
         :type message: str
         :param target_type: هدف رویداد؛ USER یا POST
         :type target_type: str
-        :param target_resource_id: شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد.
+        :param target_resource_id: شناسه هدف. اگر نوع هدف USER است، باید شناسه کاربر دیوار باشد و اگر POST است، باید توکن آگهی باشد.
         :type target_resource_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -393,7 +394,7 @@ class EventsApi:
         self,
         message: Annotated[Optional[StrictStr], Field(description="پیام رویداد برای نمایش به کاربر")] = None,
         target_type: Annotated[Optional[StrictStr], Field(description="هدف رویداد؛ USER یا POST")] = None,
-        target_resource_id: Annotated[Optional[StrictStr], Field(description="شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد.")] = None,
+        target_resource_id: Annotated[Optional[StrictStr], Field(description="شناسه هدف. اگر نوع هدف USER است، باید شناسه کاربر دیوار باشد و اگر POST است، باید توکن آگهی باشد.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -407,15 +408,15 @@ class EventsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """ارسال رویداد به کاربر با استفاده از API
+        """ارسال رویداد به کاربر
 
-        با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.  مجوزهای مورد نیاز: EVENTS_SEND.
+        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  مجوزهای مورد نیاز: `EVENTS_SEND`. OAuth scope موردنیاز: `SEND_EVENT`
 
         :param message: پیام رویداد برای نمایش به کاربر
         :type message: str
         :param target_type: هدف رویداد؛ USER یا POST
         :type target_type: str
-        :param target_resource_id: شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد.
+        :param target_resource_id: شناسه هدف. اگر نوع هدف USER است، باید شناسه کاربر دیوار باشد و اگر POST است، باید توکن آگهی باشد.
         :type target_resource_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -468,7 +469,7 @@ class EventsApi:
         self,
         message: Annotated[Optional[StrictStr], Field(description="پیام رویداد برای نمایش به کاربر")] = None,
         target_type: Annotated[Optional[StrictStr], Field(description="هدف رویداد؛ USER یا POST")] = None,
-        target_resource_id: Annotated[Optional[StrictStr], Field(description="شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد.")] = None,
+        target_resource_id: Annotated[Optional[StrictStr], Field(description="شناسه هدف. اگر نوع هدف USER است، باید شناسه کاربر دیوار باشد و اگر POST است، باید توکن آگهی باشد.")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -482,15 +483,15 @@ class EventsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """ارسال رویداد به کاربر با استفاده از API
+        """ارسال رویداد به کاربر
 
-        با استفاده از این API، می‌توانید رویدادی به کاربر ارسال کنید. رویداد می‌تواند مربوط به یک آگهی خاص یا عمومی باشد. رویداد می‌تواند شامل دکمه‌هایی با عملیات سفارشی باشد که به کاربران اجازه می‌دهد با برنامه شما تعامل داشته باشند.  مجوزهای مورد نیاز: EVENTS_SEND.
+        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  مجوزهای مورد نیاز: `EVENTS_SEND`. OAuth scope موردنیاز: `SEND_EVENT`
 
         :param message: پیام رویداد برای نمایش به کاربر
         :type message: str
         :param target_type: هدف رویداد؛ USER یا POST
         :type target_type: str
-        :param target_resource_id: شناسه هدف. وقتی نوع هدف USER است، باید شناسه کاربر دیوار آن کاربر باشد و وقتی نوع هدف POST است، باید توکن آگهی باشد.
+        :param target_resource_id: شناسه هدف. اگر نوع هدف USER است، باید شناسه کاربر دیوار باشد و اگر POST است، باید توکن آگهی باشد.
         :type target_resource_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -589,7 +590,8 @@ class EventsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(

@@ -27,8 +27,8 @@ class GetPostStatsResponsePostStats(BaseModel):
     """
     GetPostStatsResponsePostStats
     """ # noqa: E501
-    daily: Optional[List[GetPostStatsResponseDailyStats]] = Field(default=None, description="مقدار آمار مورد نظر در هفت روز اخیر")
-    total: Optional[StrictInt] = Field(default=None, description="تعداد کلی آمار (مثلا بازدید)")
+    daily: Optional[List[GetPostStatsResponseDailyStats]] = Field(default=None, description="مقدار روزانه آمار در هفت روز گذشته")
+    total: Optional[StrictInt] = Field(default=None, description="مجموع آمار (مثلاً بازدید)")
     __properties: ClassVar[List[str]] = ["daily", "total"]
 
     model_config = ConfigDict(

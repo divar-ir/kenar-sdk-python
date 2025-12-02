@@ -26,8 +26,8 @@ class PaymentRenewPostBody(BaseModel):
     """
     PaymentRenewPostBody
     """ # noqa: E501
-    extra_details: Optional[StrictStr] = Field(default=None, description="جزئیات اضافی که می‌خواهید به سمت کنار ارسال کنید. این فیلد اختیاری است و می‌تواند برای حل ناسازگاری‌ها در تراکنش استفاده شود.")
-    id: Optional[StrictStr] = Field(default=None, description="یک uuid نسخه 4 که باید برای هر پرداخت منحصر به فرد باشد. این uuid باید در سمت شما تولید شده و در درخواست ارسال شود. اگر id ای ارسال شود که تراکنش موفق یا نیمه موفقی در سمت کنار داشته باشد، خطا دریافت خواهید کرد.")
+    extra_details: Optional[StrictStr] = Field(default=None, description="اطلاعات تکمیلی که می‌خواهید به کنار ارسال کنید. این فیلد اختیاری است و برای رفع مغایرت‌های احتمالی در تراکنش کاربرد دارد.")
+    id: Optional[StrictStr] = Field(default=None, description="یک UUID نسخه ۴ که باید برای هر پرداخت یکتا باشد. این UUID باید در سمت شما ساخته شده و در درخواست ارسال شود. اگر id ارسال‌شده قبلاً تراکنش موفق یا نیمه‌موفقی در کنار داشته باشد، خطا دریافت می‌کنید.")
     __properties: ClassVar[List[str]] = ["extra_details", "id"]
 
     model_config = ConfigDict(

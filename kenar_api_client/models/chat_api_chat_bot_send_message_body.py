@@ -28,7 +28,7 @@ class ChatAPIChatBotSendMessageBody(BaseModel):
     ChatAPIChatBotSendMessageBody
     """ # noqa: E501
     buttons: Optional[ChatapiChatButtonGrid] = None
-    media_token: Optional[StrictStr] = Field(default=None, description="توکن برای مدیای ضمیمه شده (در صورت وجود)")
+    media_token: Optional[StrictStr] = Field(default=None, description="توکن فایل ضمیمه شده (در صورت وجود)")
     text_message: StrictStr = Field(description="محتوای پیام متنی برای ارسال توسط ربات")
     user_id: Optional[StrictStr] = Field(default=None, description="شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه")
     __properties: ClassVar[List[str]] = ["buttons", "media_token", "text_message", "user_id"]

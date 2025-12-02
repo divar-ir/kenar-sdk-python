@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**daily** | [**List[GetPostStatsResponseDailyStats]**](GetPostStatsResponseDailyStats.md) | مقدار آمار مورد نظر در هفت روز اخیر | [optional] 
-**total** | **int** | تعداد کلی آمار (مثلا بازدید) | [optional] 
+**daily** | [**List[GetPostStatsResponseDailyStats]**](GetPostStatsResponseDailyStats.md) | مقدار روزانه آمار در هفت روز گذشته | [optional] 
+**total** | **int** | مجموع آمار (مثلاً بازدید) | [optional] 
 
 ## Example
 

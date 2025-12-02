@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **str** | توکن کدگذاری شده base64 ایمن برای URL که می‌تواند در نقطه پایانی آپلود استفاده شود | [optional] [readonly] 
+**token** | **str** | توکن با کدگذاری base64 که می‌توان در endpoint آپلود از آن استفاده کرد | [optional] [readonly] 
 
 ## Example
 

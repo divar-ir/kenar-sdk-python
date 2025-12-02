@@ -27,8 +27,8 @@ class PostGeneralDataPostVideo(BaseModel):
     PostGeneralDataPostVideo
     """ # noqa: E501
     duration: StrictStr = Field(description="زمان ویدیو به ثانیه")
-    name: StrictStr = Field(description="Name of the video, retrieved from `video_name` field in the response of upload video endpoint")
-    thumbnail_name: StrictStr = Field(description="کاور ویدیو. این مقدار را از روی فیلد `thumbnail_name` در پاسخ به درخواست آپلود ویدیو پر کنید. این تصویر، فریم اول ویدیو‌ی آپلود شده است.")
+    name: StrictStr = Field(description="نام ویدیو (از فیلد `video_name` در پاسخ آپلود)")
+    thumbnail_name: StrictStr = Field(description="کاور ویدیو (از فیلد `thumbnail_name` در پاسخ آپلود). فریم اول ویدیوی آپلود‌شده است.")
     __properties: ClassVar[List[str]] = ["duration", "name", "thumbnail_name"]
 
     model_config = ConfigDict(

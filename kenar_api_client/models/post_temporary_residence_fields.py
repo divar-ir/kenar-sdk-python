@@ -38,7 +38,7 @@ class PostTemporaryResidenceFields(BaseModel):
     damage_deposit: Optional[StrictStr] = Field(default=None, description="مبلغ ودیعه خسارت به تومان")
     extra_person_capacity: StrictInt = Field(description="تعداد افراد اضافه مجاز در اقامتگاه")
     fully_furnished: Optional[StrictBool] = Field(default=None, description="آیا اقامتگاه کاملاً مبله است")
-    has_own_image: StrictBool = Field(description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
+    has_own_image: StrictBool = Field(description="آیا تصاویر واقعی ملک هستند (نه تزئینی)")
     heating_cooling_system: Optional[List[TemporaryResidenceFieldsHeatingCoolingSystem]] = None
     house_rules: Optional[StrictStr] = Field(default=None, description="قوانین و مقررات خانه")
     minimum_stay: Optional[StrictInt] = Field(default=None, description="حداقل تعداد روزهای مورد نیاز برای اقامت")

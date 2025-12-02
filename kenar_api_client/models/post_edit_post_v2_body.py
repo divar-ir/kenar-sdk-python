@@ -27,9 +27,9 @@ class PostEditPostV2Body(BaseModel):
     """
     PostEditPostV2Body
     """ # noqa: E501
-    category_data: Optional[Dict[str, Any]] = Field(default=None, description="فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/")
+    category_data: Optional[Dict[str, Any]] = Field(default=None, description="فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/")
     general_data: Optional[PostPostGeneralData] = None
-    update_mask: List[StrictStr] = Field(description="فیلد ماسک مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تو در تو برای هر دو general_data و category_data استفاده کنید (مثلاً، 'general_data.title'، 'category_data.price'). این امکان تمایز بین حذف یک فیلد و به‌روزرسانی نکردن آن را فراهم می‌کند.")
+    update_mask: List[StrictStr] = Field(description="مشخص می‌کند کدام فیلدها به‌روزرسانی شوند. از مسیرهای تودرتو مانند 'general_data.title' یا 'category_data.price' استفاده کنید. این کار تمایز بین پاک کردن یک فیلد و تغییر ندادن آن را ممکن می‌سازد.")
     __properties: ClassVar[List[str]] = ["category_data", "general_data", "update_mask"]
 
     model_config = ConfigDict(

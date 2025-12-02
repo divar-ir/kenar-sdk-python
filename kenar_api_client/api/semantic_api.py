@@ -16,8 +16,9 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from pydantic import StrictStr
+from pydantic import Field, StrictStr
 from typing import Any, Dict, Optional
+from typing_extensions import Annotated
 from kenar_api_client.models.semantic_create_post_semantic_body import SemanticCreatePostSemanticBody
 from kenar_api_client.models.semantic_create_user_semantic_body import SemanticCreateUserSemanticBody
 from kenar_api_client.models.semantic_create_user_semantic_response import SemanticCreateUserSemanticResponse
@@ -43,7 +44,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_post_semantic(
         self,
-        token: StrictStr,
+        token: Annotated[StrictStr, Field(description="توکن آگهی")],
         semantic_create_post_semantic_body: SemanticCreatePostSemanticBody,
         _request_timeout: Union[
             None,
@@ -60,9 +61,9 @@ class SemanticApi:
     ) -> object:
         """ایجاد اطلاعات معنایی آگهی
 
-        در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.   مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
+        این API امکان ذخیره اطلاعات درباره یک آگهی در دیوار بدون افزودن افزونه را فراهم می‌کند.  مجوزهای مورد نیاز: `POST_SEMANTIC_CREATE`. OAuth scope موردنیاز: `POST_SEMANTIC_CREATE.post_token`
 
-        :param token: (required)
+        :param token: توکن آگهی (required)
         :type token: str
         :param semantic_create_post_semantic_body: (required)
         :type semantic_create_post_semantic_body: SemanticCreatePostSemanticBody
@@ -114,7 +115,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_post_semantic_with_http_info(
         self,
-        token: StrictStr,
+        token: Annotated[StrictStr, Field(description="توکن آگهی")],
         semantic_create_post_semantic_body: SemanticCreatePostSemanticBody,
         _request_timeout: Union[
             None,
@@ -131,9 +132,9 @@ class SemanticApi:
     ) -> ApiResponse[object]:
         """ایجاد اطلاعات معنایی آگهی
 
-        در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.   مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
+        این API امکان ذخیره اطلاعات درباره یک آگهی در دیوار بدون افزودن افزونه را فراهم می‌کند.  مجوزهای مورد نیاز: `POST_SEMANTIC_CREATE`. OAuth scope موردنیاز: `POST_SEMANTIC_CREATE.post_token`
 
-        :param token: (required)
+        :param token: توکن آگهی (required)
         :type token: str
         :param semantic_create_post_semantic_body: (required)
         :type semantic_create_post_semantic_body: SemanticCreatePostSemanticBody
@@ -185,7 +186,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_post_semantic_without_preload_content(
         self,
-        token: StrictStr,
+        token: Annotated[StrictStr, Field(description="توکن آگهی")],
         semantic_create_post_semantic_body: SemanticCreatePostSemanticBody,
         _request_timeout: Union[
             None,
@@ -202,9 +203,9 @@ class SemanticApi:
     ) -> RESTResponseType:
         """ایجاد اطلاعات معنایی آگهی
 
-        در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است. این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.   مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
+        این API امکان ذخیره اطلاعات درباره یک آگهی در دیوار بدون افزودن افزونه را فراهم می‌کند.  مجوزهای مورد نیاز: `POST_SEMANTIC_CREATE`. OAuth scope موردنیاز: `POST_SEMANTIC_CREATE.post_token`
 
-        :param token: (required)
+        :param token: توکن آگهی (required)
         :type token: str
         :param semantic_create_post_semantic_body: (required)
         :type semantic_create_post_semantic_body: SemanticCreatePostSemanticBody
@@ -308,7 +309,8 @@ class SemanticApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -332,7 +334,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_user_semantic(
         self,
-        phone: StrictStr,
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
         semantic_create_user_semantic_body: SemanticCreateUserSemanticBody,
         _request_timeout: Union[
             None,
@@ -349,9 +351,9 @@ class SemanticApi:
     ) -> SemanticCreateUserSemanticResponse:
         """ایجاد اطلاعات معنایی کاربر
 
-        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.  مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  مجوزهای مورد نیاز: `USER_SEMANTIC_CREATE`. OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
 
-        :param phone: (required)
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
         :param semantic_create_user_semantic_body: (required)
         :type semantic_create_user_semantic_body: SemanticCreateUserSemanticBody
@@ -403,7 +405,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_user_semantic_with_http_info(
         self,
-        phone: StrictStr,
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
         semantic_create_user_semantic_body: SemanticCreateUserSemanticBody,
         _request_timeout: Union[
             None,
@@ -420,9 +422,9 @@ class SemanticApi:
     ) -> ApiResponse[SemanticCreateUserSemanticResponse]:
         """ایجاد اطلاعات معنایی کاربر
 
-        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.  مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  مجوزهای مورد نیاز: `USER_SEMANTIC_CREATE`. OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
 
-        :param phone: (required)
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
         :param semantic_create_user_semantic_body: (required)
         :type semantic_create_user_semantic_body: SemanticCreateUserSemanticBody
@@ -474,7 +476,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_user_semantic_without_preload_content(
         self,
-        phone: StrictStr,
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
         semantic_create_user_semantic_body: SemanticCreateUserSemanticBody,
         _request_timeout: Union[
             None,
@@ -491,9 +493,9 @@ class SemanticApi:
     ) -> RESTResponseType:
         """ایجاد اطلاعات معنایی کاربر
 
-        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.  مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  مجوزهای مورد نیاز: `USER_SEMANTIC_CREATE`. OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
 
-        :param phone: (required)
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
         :param semantic_create_user_semantic_body: (required)
         :type semantic_create_user_semantic_body: SemanticCreateUserSemanticBody
@@ -597,7 +599,8 @@ class SemanticApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -621,7 +624,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_user_semantic2(
         self,
-        divar_user_id: StrictStr,
+        divar_user_id: Annotated[StrictStr, Field(description="شناسه کاربر دیوار")],
         semantic_create_user_semantic_body: SemanticCreateUserSemanticBody,
         _request_timeout: Union[
             None,
@@ -638,9 +641,9 @@ class SemanticApi:
     ) -> SemanticCreateUserSemanticResponse:
         """ایجاد اطلاعات معنایی کاربر
 
-        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
 
-        :param divar_user_id: (required)
+        :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
         :param semantic_create_user_semantic_body: (required)
         :type semantic_create_user_semantic_body: SemanticCreateUserSemanticBody
@@ -692,7 +695,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_user_semantic2_with_http_info(
         self,
-        divar_user_id: StrictStr,
+        divar_user_id: Annotated[StrictStr, Field(description="شناسه کاربر دیوار")],
         semantic_create_user_semantic_body: SemanticCreateUserSemanticBody,
         _request_timeout: Union[
             None,
@@ -709,9 +712,9 @@ class SemanticApi:
     ) -> ApiResponse[SemanticCreateUserSemanticResponse]:
         """ایجاد اطلاعات معنایی کاربر
 
-        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
 
-        :param divar_user_id: (required)
+        :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
         :param semantic_create_user_semantic_body: (required)
         :type semantic_create_user_semantic_body: SemanticCreateUserSemanticBody
@@ -763,7 +766,7 @@ class SemanticApi:
     @validate_call
     def semantic_create_user_semantic2_without_preload_content(
         self,
-        divar_user_id: StrictStr,
+        divar_user_id: Annotated[StrictStr, Field(description="شناسه کاربر دیوار")],
         semantic_create_user_semantic_body: SemanticCreateUserSemanticBody,
         _request_timeout: Union[
             None,
@@ -780,9 +783,9 @@ class SemanticApi:
     ) -> RESTResponseType:
         """ایجاد اطلاعات معنایی کاربر
 
-        در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است. نام کاربری در دیوار همان شماره موبایل است. این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد. از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
 
-        :param divar_user_id: (required)
+        :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
         :param semantic_create_user_semantic_body: (required)
         :type semantic_create_user_semantic_body: SemanticCreateUserSemanticBody
@@ -886,7 +889,8 @@ class SemanticApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -910,8 +914,8 @@ class SemanticApi:
     @validate_call
     def semantic_delete_user_semantic(
         self,
-        phone: StrictStr,
-        divar_user_id: Optional[StrictStr] = None,
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
+        divar_user_id: Annotated[Optional[StrictStr], Field(description="شناسه کاربر دیوار")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -927,11 +931,11 @@ class SemanticApi:
     ) -> object:
         """حذف اطلاعات معنایی کاربر
 
-        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.  مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  مجوزهای مورد نیاز: `USER_SEMANTIC_DELETE`
 
-        :param phone: (required)
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
-        :param divar_user_id:
+        :param divar_user_id: شناسه کاربر دیوار
         :type divar_user_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -981,8 +985,8 @@ class SemanticApi:
     @validate_call
     def semantic_delete_user_semantic_with_http_info(
         self,
-        phone: StrictStr,
-        divar_user_id: Optional[StrictStr] = None,
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
+        divar_user_id: Annotated[Optional[StrictStr], Field(description="شناسه کاربر دیوار")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -998,11 +1002,11 @@ class SemanticApi:
     ) -> ApiResponse[object]:
         """حذف اطلاعات معنایی کاربر
 
-        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.  مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  مجوزهای مورد نیاز: `USER_SEMANTIC_DELETE`
 
-        :param phone: (required)
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
-        :param divar_user_id:
+        :param divar_user_id: شناسه کاربر دیوار
         :type divar_user_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1052,8 +1056,8 @@ class SemanticApi:
     @validate_call
     def semantic_delete_user_semantic_without_preload_content(
         self,
-        phone: StrictStr,
-        divar_user_id: Optional[StrictStr] = None,
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
+        divar_user_id: Annotated[Optional[StrictStr], Field(description="شناسه کاربر دیوار")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1069,11 +1073,11 @@ class SemanticApi:
     ) -> RESTResponseType:
         """حذف اطلاعات معنایی کاربر
 
-        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.  مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  مجوزهای مورد نیاز: `USER_SEMANTIC_DELETE`
 
-        :param phone: (required)
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
-        :param divar_user_id:
+        :param divar_user_id: شناسه کاربر دیوار
         :type divar_user_id: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1188,8 +1192,8 @@ class SemanticApi:
     @validate_call
     def semantic_delete_user_semantic2(
         self,
-        divar_user_id: StrictStr,
-        phone: Optional[StrictStr] = None,
+        divar_user_id: Annotated[StrictStr, Field(description="شناسه کاربر دیوار")],
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1205,11 +1209,11 @@ class SemanticApi:
     ) -> object:
         """حذف اطلاعات معنایی کاربر
 
-        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
 
-        :param divar_user_id: (required)
+        :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
-        :param phone:
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1259,8 +1263,8 @@ class SemanticApi:
     @validate_call
     def semantic_delete_user_semantic2_with_http_info(
         self,
-        divar_user_id: StrictStr,
-        phone: Optional[StrictStr] = None,
+        divar_user_id: Annotated[StrictStr, Field(description="شناسه کاربر دیوار")],
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1276,11 +1280,11 @@ class SemanticApi:
     ) -> ApiResponse[object]:
         """حذف اطلاعات معنایی کاربر
 
-        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
 
-        :param divar_user_id: (required)
+        :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
-        :param phone:
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
@@ -1330,8 +1334,8 @@ class SemanticApi:
     @validate_call
     def semantic_delete_user_semantic2_without_preload_content(
         self,
-        divar_user_id: StrictStr,
-        phone: Optional[StrictStr] = None,
+        divar_user_id: Annotated[StrictStr, Field(description="شناسه کاربر دیوار")],
+        phone: Annotated[StrictStr, Field(description="شماره موبایل کاربر")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1347,11 +1351,11 @@ class SemanticApi:
     ) -> RESTResponseType:
         """حذف اطلاعات معنایی کاربر
 
-        می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
 
-        :param divar_user_id: (required)
+        :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
-        :param phone:
+        :param phone: شماره موبایل کاربر (required)
         :type phone: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request

@@ -20,7 +20,7 @@ from typing_extensions import Self
 
 class TemporaryResidenceFieldsPetsAllowed(str, Enum):
     """
-    سیاست نگهداری حیوان خانگی برای اقامتگاه
+    شرایط پذیرش حیوان خانگی در اقامتگاه
     """
 
     """

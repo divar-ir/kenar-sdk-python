@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,7 +26,7 @@ class PaymentTicketValidateResponse(BaseModel):
     """
     PaymentTicketValidateResponse
     """ # noqa: E501
-    issuer_payload: Optional[Dict[str, Any]] = None
+    issuer_payload: Optional[Dict[str, Any]] = Field(default=None, description="داده payload ارائه شده توسط صادرکننده تیکت")
     __properties: ClassVar[List[str]] = ["issuer_payload"]
 
     model_config = ConfigDict(

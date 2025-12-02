@@ -28,12 +28,12 @@ class PostPostGeneralData(BaseModel):
     """
     PostPostGeneralData
     """ # noqa: E501
-    category_slug: StrictStr = Field(description="نام دسته‌بندی هدف. دسته‌بندی‌های موجود را در این آدرس بیابید: https://kenar.divar.dev/openapi-doc/assets-get-categories/")
-    chat_enabled: StrictBool = Field(description="امکان چت فعال باشد")
+    category_slug: StrictStr = Field(description="slug دسته‌بندی. لیست دسته‌بندی‌ها: https://kenar.divar.dev/openapi-doc/assets-get-categories/")
+    chat_enabled: StrictBool = Field(description="فعال بودن چت")
     city: StrictStr = Field(description="شهر آگهی")
     description: StrictStr = Field(description="توضیحات آگهی")
     district: Optional[StrictStr] = Field(default=None, description="محله آگهی")
-    hide_phone: StrictBool = Field(description="عدم نمایش شماره تماس به کاربران")
+    hide_phone: StrictBool = Field(description="مخفی کردن شماره تماس از کاربران")
     images: List[StrictStr]
     latitude: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="عرض جغرافیایی آگهی")
     location_type: PostLocationType

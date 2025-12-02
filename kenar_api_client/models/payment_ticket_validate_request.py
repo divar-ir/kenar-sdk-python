@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
@@ -26,10 +26,10 @@ class PaymentTicketValidateRequest(BaseModel):
     """
     PaymentTicketValidateRequest
     """ # noqa: E501
-    phone_number: Optional[StrictStr] = None
-    service_cost: Optional[StrictInt] = None
-    ticket_uuid: Optional[StrictStr] = None
-    user_id: Optional[StrictStr] = None
+    phone_number: Optional[StrictStr] = Field(default=None, description="شماره تلفن کاربر (به جای آن از user_id استفاده کنید)")
+    service_cost: StrictInt = Field(description="هزینه سرویس به ریال")
+    ticket_uuid: StrictStr = Field(description="شناسه منحصر به فرد تیکت پرداخت")
+    user_id: Optional[StrictStr] = Field(default=None, description="شناسه منحصر به فرد کاربر")
     __properties: ClassVar[List[str]] = ["phone_number", "service_cost", "ticket_uuid", "user_id"]
 
     model_config = ConfigDict(

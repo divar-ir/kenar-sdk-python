@@ -26,7 +26,7 @@ class GetPostStatsResponseDailyStats(BaseModel):
     """
     GetPostStatsResponseDailyStats
     """ # noqa: E501
-    count: Optional[StrictInt] = Field(default=None, description="تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید)")
+    count: Optional[StrictInt] = Field(default=None, description="تعداد روزانه آمار (مثلاً بازدید)")
     var_date: Optional[StrictStr] = Field(default=None, description="تاریخ به فرمت YYYY-MM-DD", alias="date")
     __properties: ClassVar[List[str]] = ["count", "date"]
 

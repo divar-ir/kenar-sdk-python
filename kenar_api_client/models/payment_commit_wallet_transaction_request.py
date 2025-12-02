@@ -26,7 +26,7 @@ class PaymentCommitWalletTransactionRequest(BaseModel):
     """
     PaymentCommitWalletTransactionRequest
     """ # noqa: E501
-    token: Optional[StrictStr] = Field(default=None, description="توکن تراکنشی که می‌خواهید commit کنید")
+    token: Optional[StrictStr] = Field(default=None, description="توکن تراکنشی که می‌خواهید نهایی کنید")
     __properties: ClassVar[List[str]] = ["token"]
 
     model_config = ConfigDict(

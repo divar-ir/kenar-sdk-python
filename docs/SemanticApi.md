@@ -16,15 +16,14 @@ Method | HTTP request | Description
 
 ایجاد اطلاعات معنایی آگهی
 
-در برخی موارد، ذخیره اطلاعات مربوط به آگهی در دیوار بدون افزودن افزونه ضروری است.
-این API توکن دسترسی با دامنه `POST_SEMANTIC_CREATE` را انتظار دارد.
+این API امکان ذخیره اطلاعات درباره یک آگهی در دیوار بدون افزودن افزونه را فراهم می‌کند.
 
-
-مجوزهای مورد نیاز: POST_SEMANTIC_CREATE.
+مجوزهای مورد نیاز: `POST_SEMANTIC_CREATE`. OAuth scope موردنیاز: `POST_SEMANTIC_CREATE.post_token`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -49,11 +48,13 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.SemanticApi(api_client)
-    token = 'token_example' # str | 
+    token = 'token_example' # str | توکن آگهی
     semantic_create_post_semantic_body = kenar_api_client.SemanticCreatePostSemanticBody() # SemanticCreatePostSemanticBody | 
 
     try:
@@ -72,7 +73,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **str**|  | 
+ **token** | **str**| توکن آگهی | 
  **semantic_create_post_semantic_body** | [**SemanticCreatePostSemanticBody**](SemanticCreatePostSemanticBody.md)|  | 
 
 ### Return type
@@ -81,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -102,16 +103,17 @@ Name | Type | Description  | Notes
 
 ایجاد اطلاعات معنایی کاربر
 
-در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است.
-نام کاربری در دیوار همان شماره موبایل است.
-این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد.
-از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.
 
-مجوزهای مورد نیاز: USER_SEMANTIC_CREATE.
+**نکات مهم**:
+- امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد
+
+مجوزهای مورد نیاز: `USER_SEMANTIC_CREATE`. OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -137,11 +139,13 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.SemanticApi(api_client)
-    phone = 'phone_example' # str | 
+    phone = 'phone_example' # str | شماره موبایل کاربر
     semantic_create_user_semantic_body = kenar_api_client.SemanticCreateUserSemanticBody() # SemanticCreateUserSemanticBody | 
 
     try:
@@ -160,7 +164,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone** | **str**|  | 
+ **phone** | **str**| شماره موبایل کاربر | 
  **semantic_create_user_semantic_body** | [**SemanticCreateUserSemanticBody**](SemanticCreateUserSemanticBody.md)|  | 
 
 ### Return type
@@ -169,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -190,14 +194,17 @@ Name | Type | Description  | Notes
 
 ایجاد اطلاعات معنایی کاربر
 
-در برخی موارد، ذخیره اطلاعات مربوط به کاربر در دیوار بدون افزودن افزونه ضروری است.
-نام کاربری در دیوار همان شماره موبایل است.
-این API توکن دسترسی با دامنه `USER_VERIFICATION_CREATE` را انتظار دارد.
-از APIهای اطلاعات معنایی کاربر برای این منظور استفاده کنید. این سرویس امکان ارسال اطلاعات معنایی و بلیط پرداخت اختیاری را فراهم می‌کند.
+این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.
+
+**نکات مهم**:
+- امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد
+
+OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -223,11 +230,13 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.SemanticApi(api_client)
-    divar_user_id = 'divar_user_id_example' # str | 
+    divar_user_id = 'divar_user_id_example' # str | شناسه کاربر دیوار
     semantic_create_user_semantic_body = kenar_api_client.SemanticCreateUserSemanticBody() # SemanticCreateUserSemanticBody | 
 
     try:
@@ -246,7 +255,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **divar_user_id** | **str**|  | 
+ **divar_user_id** | **str**| شناسه کاربر دیوار | 
  **semantic_create_user_semantic_body** | [**SemanticCreateUserSemanticBody**](SemanticCreateUserSemanticBody.md)|  | 
 
 ### Return type
@@ -255,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -276,9 +285,9 @@ Name | Type | Description  | Notes
 
 حذف اطلاعات معنایی کاربر
 
-می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
 
-مجوزهای مورد نیاز: USER_SEMANTIC_DELETE.
+مجوزهای مورد نیاز: `USER_SEMANTIC_DELETE`
 
 ### Example
 
@@ -310,8 +319,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.SemanticApi(api_client)
-    phone = 'phone_example' # str | 
-    divar_user_id = 'divar_user_id_example' # str |  (optional)
+    phone = 'phone_example' # str | شماره موبایل کاربر
+    divar_user_id = 'divar_user_id_example' # str | شناسه کاربر دیوار (optional)
 
     try:
         # حذف اطلاعات معنایی کاربر
@@ -329,8 +338,8 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **phone** | **str**|  | 
- **divar_user_id** | **str**|  | [optional] 
+ **phone** | **str**| شماره موبایل کاربر | 
+ **divar_user_id** | **str**| شناسه کاربر دیوار | [optional] 
 
 ### Return type
 
@@ -355,11 +364,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **semantic_delete_user_semantic2**
-> object semantic_delete_user_semantic2(divar_user_id, phone=phone)
+> object semantic_delete_user_semantic2(divar_user_id, phone)
 
 حذف اطلاعات معنایی کاربر
 
-می‌توانید اطلاعات معنایی یک کاربر را با فراخوانی این API حذف کنید.
+این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
 
 ### Example
 
@@ -391,12 +400,12 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.SemanticApi(api_client)
-    divar_user_id = 'divar_user_id_example' # str | 
-    phone = 'phone_example' # str |  (optional)
+    divar_user_id = 'divar_user_id_example' # str | شناسه کاربر دیوار
+    phone = 'phone_example' # str | شماره موبایل کاربر
 
     try:
         # حذف اطلاعات معنایی کاربر
-        api_response = api_instance.semantic_delete_user_semantic2(divar_user_id, phone=phone)
+        api_response = api_instance.semantic_delete_user_semantic2(divar_user_id, phone)
         print("The response of SemanticApi->semantic_delete_user_semantic2:\n")
         pprint(api_response)
     except Exception as e:
@@ -410,8 +419,8 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **divar_user_id** | **str**|  | 
- **phone** | **str**|  | [optional] 
+ **divar_user_id** | **str**| شناسه کاربر دیوار | 
+ **phone** | **str**| شماره موبایل کاربر | 
 
 ### Return type
 

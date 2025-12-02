@@ -6,11 +6,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **apartment_sell** | [**PostApartmentSellFields**](PostApartmentSellFields.md) |  | [optional] 
-**chat_enabled** | **bool** | امکان چت فعال باشد | 
+**chat_enabled** | **bool** | فعال بودن چت | 
 **city** | **str** | شهر آگهی | 
 **description** | **str** | توضیحات آگهی | 
 **district** | **str** | محله آگهی | [optional] 
-**hide_phone** | **bool** | عدم نمایش شماره تماس به کاربران | 
+**hide_phone** | **bool** | مخفی کردن شماره تماس از کاربران | 
 **home_presell** | [**PostHomePresellFields**](PostHomePresellFields.md) |  | [optional] 
 **images** | **List[str]** |  | 
 **landline_numbers** | **List[str]** | شماره‌های ثابت برای افزودن به آگهی | [optional] 

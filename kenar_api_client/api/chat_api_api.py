@@ -64,7 +64,7 @@ class ChatAPIApi:
     ) -> ChatapiChatBotSendMessageResponse:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.  مجوزهای مورد نیاز: CHAT_BOT_SEND_MESSAGE.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_BOT_SEND_MESSAGE`. OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -135,7 +135,7 @@ class ChatAPIApi:
     ) -> ApiResponse[ChatapiChatBotSendMessageResponse]:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.  مجوزهای مورد نیاز: CHAT_BOT_SEND_MESSAGE.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_BOT_SEND_MESSAGE`. OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -206,7 +206,7 @@ class ChatAPIApi:
     ) -> RESTResponseType:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.  مجوزهای مورد نیاز: CHAT_BOT_SEND_MESSAGE.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_BOT_SEND_MESSAGE`. OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -312,7 +312,8 @@ class ChatAPIApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -353,7 +354,7 @@ class ChatAPIApi:
     ) -> ChatapiChatBotSendMessageResponse:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param user_id: شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه (required)
         :type user_id: str
@@ -424,7 +425,7 @@ class ChatAPIApi:
     ) -> ApiResponse[ChatapiChatBotSendMessageResponse]:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param user_id: شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه (required)
         :type user_id: str
@@ -495,7 +496,7 @@ class ChatAPIApi:
     ) -> RESTResponseType:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param user_id: شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه (required)
         :type user_id: str
@@ -601,7 +602,8 @@ class ChatAPIApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -642,7 +644,7 @@ class ChatAPIApi:
     ) -> ChatapiChatBotSendMessageResponse:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -713,7 +715,7 @@ class ChatAPIApi:
     ) -> ApiResponse[ChatapiChatBotSendMessageResponse]:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -784,7 +786,7 @@ class ChatAPIApi:
     ) -> RESTResponseType:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -890,7 +892,8 @@ class ChatAPIApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -931,7 +934,7 @@ class ChatAPIApi:
     ) -> ChatapiChatBotSendMessageResponse:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param user_id: شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه (required)
         :type user_id: str
@@ -1002,7 +1005,7 @@ class ChatAPIApi:
     ) -> ApiResponse[ChatapiChatBotSendMessageResponse]:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param user_id: شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه (required)
         :type user_id: str
@@ -1073,7 +1076,7 @@ class ChatAPIApi:
     ) -> RESTResponseType:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param user_id: شناسه منحصر به فرد کاربر برای شروع یا ادامه مکالمه (required)
         :type user_id: str
@@ -1179,7 +1182,8 @@ class ChatAPIApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1220,7 +1224,7 @@ class ChatAPIApi:
     ) -> ChatapiChatBotSendMessageResponse:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -1291,7 +1295,7 @@ class ChatAPIApi:
     ) -> ApiResponse[ChatapiChatBotSendMessageResponse]:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -1362,7 +1366,7 @@ class ChatAPIApi:
     ) -> RESTResponseType:
         """ارسال پیام به مکالمه ChatBot
 
-        می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
+        این API امکان ارسال پیام از ربات چت شما به یک مکالمه یا کاربر را فراهم می‌کند. می‌توانید این API را با conversation_id یا user_id فراخوانی کنید.  **نکات مهم**: - هنگام استفاده از user_id، باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد  OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -1468,7 +1472,8 @@ class ChatAPIApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1509,7 +1514,7 @@ class ChatAPIApi:
     ) -> ChatapiConversationSendMessageResponse:
         """ارسال پیام به مکالمه
 
-        این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token}   مجوزهای مورد نیاز: CHAT_SEND_MESSAGE_OAUTH.
+        این API امکان ارسال پیام متنی یا رسانه به یک مکالمه را فراهم می‌کند. اگر مکالمه وجود نداشته باشد، به صورت خودکار ایجاد می‌شود.  **نکات مهم**: - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را برای فرستنده و گیرنده ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_SEND_MESSAGE_OAUTH`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -1580,7 +1585,7 @@ class ChatAPIApi:
     ) -> ApiResponse[ChatapiConversationSendMessageResponse]:
         """ارسال پیام به مکالمه
 
-        این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token}   مجوزهای مورد نیاز: CHAT_SEND_MESSAGE_OAUTH.
+        این API امکان ارسال پیام متنی یا رسانه به یک مکالمه را فراهم می‌کند. اگر مکالمه وجود نداشته باشد، به صورت خودکار ایجاد می‌شود.  **نکات مهم**: - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را برای فرستنده و گیرنده ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_SEND_MESSAGE_OAUTH`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -1651,7 +1656,7 @@ class ChatAPIApi:
     ) -> RESTResponseType:
         """ارسال پیام به مکالمه
 
-        این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token}   مجوزهای مورد نیاز: CHAT_SEND_MESSAGE_OAUTH.
+        این API امکان ارسال پیام متنی یا رسانه به یک مکالمه را فراهم می‌کند. اگر مکالمه وجود نداشته باشد، به صورت خودکار ایجاد می‌شود.  **نکات مهم**: - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو) - می‌توان شبکه دکمه‌ها را برای فرستنده و گیرنده ضمیمه کرد  مجوزهای مورد نیاز: `CHAT_SEND_MESSAGE_OAUTH`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -1757,7 +1762,8 @@ class ChatAPIApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1797,7 +1803,7 @@ class ChatAPIApi:
     ) -> ChatapiGenerateUploadTokenResponse:
         """تولید توکن آپلود
 
-        این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.  مجوزهای مورد نیاز: CHAT_UPLOAD_MEDIA.
+        این API توکن آپلود برای بارگذاری فایل‌های رسانه‌ای در پیام‌های چت تولید می‌کند.  مجوزهای مورد نیاز: `CHAT_UPLOAD_MEDIA`
 
         :param body: (required)
         :type body: object
@@ -1864,7 +1870,7 @@ class ChatAPIApi:
     ) -> ApiResponse[ChatapiGenerateUploadTokenResponse]:
         """تولید توکن آپلود
 
-        این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.  مجوزهای مورد نیاز: CHAT_UPLOAD_MEDIA.
+        این API توکن آپلود برای بارگذاری فایل‌های رسانه‌ای در پیام‌های چت تولید می‌کند.  مجوزهای مورد نیاز: `CHAT_UPLOAD_MEDIA`
 
         :param body: (required)
         :type body: object
@@ -1931,7 +1937,7 @@ class ChatAPIApi:
     ) -> RESTResponseType:
         """تولید توکن آپلود
 
-        این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.  مجوزهای مورد نیاز: CHAT_UPLOAD_MEDIA.
+        این API توکن آپلود برای بارگذاری فایل‌های رسانه‌ای در پیام‌های چت تولید می‌کند.  مجوزهای مورد نیاز: `CHAT_UPLOAD_MEDIA`
 
         :param body: (required)
         :type body: object
@@ -2069,9 +2075,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ChatapiGetConversationResponse:
-        """دریافت مکالمه با شناسه آن
+        """دریافت مکالمه
 
-        این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.  مجوزهای مورد نیاز: CHAT_READ_CONVERSATION.
+        این API امکان دریافت مکالمه و پیام‌های آن با شناسه مکالمه را فراهم می‌کند. جزئیات مکالمه و پیام‌های متنی تا زمان انقضای توکن OAuth برمی‌گردد.  **نکات مهم**: - فقط پیام‌های متنی برگردانده می‌شوند (سایر انواع پیام فیلتر می‌شوند) - پیام‌ها به ترتیب صعودی برگردانده می‌شوند  مجوزهای مورد نیاز: `CHAT_READ_CONVERSATION`. OAuth scope موردنیاز: `CHAT_CONVERSATION_READ.conversation_id`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -2136,9 +2142,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[ChatapiGetConversationResponse]:
-        """دریافت مکالمه با شناسه آن
+        """دریافت مکالمه
 
-        این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.  مجوزهای مورد نیاز: CHAT_READ_CONVERSATION.
+        این API امکان دریافت مکالمه و پیام‌های آن با شناسه مکالمه را فراهم می‌کند. جزئیات مکالمه و پیام‌های متنی تا زمان انقضای توکن OAuth برمی‌گردد.  **نکات مهم**: - فقط پیام‌های متنی برگردانده می‌شوند (سایر انواع پیام فیلتر می‌شوند) - پیام‌ها به ترتیب صعودی برگردانده می‌شوند  مجوزهای مورد نیاز: `CHAT_READ_CONVERSATION`. OAuth scope موردنیاز: `CHAT_CONVERSATION_READ.conversation_id`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -2203,9 +2209,9 @@ class ChatAPIApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """دریافت مکالمه با شناسه آن
+        """دریافت مکالمه
 
-        این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.  مجوزهای مورد نیاز: CHAT_READ_CONVERSATION.
+        این API امکان دریافت مکالمه و پیام‌های آن با شناسه مکالمه را فراهم می‌کند. جزئیات مکالمه و پیام‌های متنی تا زمان انقضای توکن OAuth برمی‌گردد.  **نکات مهم**: - فقط پیام‌های متنی برگردانده می‌شوند (سایر انواع پیام فیلتر می‌شوند) - پیام‌ها به ترتیب صعودی برگردانده می‌شوند  مجوزهای مورد نیاز: `CHAT_READ_CONVERSATION`. OAuth scope موردنیاز: `CHAT_CONVERSATION_READ.conversation_id`
 
         :param conversation_id: شناسه منحصر به فرد برای مکالمه (required)
         :type conversation_id: str
@@ -2292,7 +2298,8 @@ class ChatAPIApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'APIKey'
+            'APIKey', 
+            'OAuth'
         ]
 
         return self.api_client.param_serialize(

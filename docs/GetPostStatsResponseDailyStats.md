@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**count** | **int** | تعداد روزانه‌ی آمار مورد نظر (مثلا بازدید) | [optional] 
+**count** | **int** | تعداد روزانه آمار (مثلاً بازدید) | [optional] 
 **var_date** | **str** | تاریخ به فرمت YYYY-MM-DD | [optional] 
 
 ## Example

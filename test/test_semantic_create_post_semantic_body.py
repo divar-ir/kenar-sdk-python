@@ -43,6 +43,9 @@ class TestSemanticCreatePostSemanticBody(unittest.TestCase):
             )
         else:
             return SemanticCreatePostSemanticBody(
+                semantic = {
+                    'key' : ''
+                    },
         )
         """
 

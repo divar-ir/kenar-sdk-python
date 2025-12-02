@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **str** | توکن تراکنشی که می‌خواهید commit کنید | [optional] 
+**token** | **str** | توکن تراکنشی که می‌خواهید نهایی کنید | [optional] 
 
 ## Example
 

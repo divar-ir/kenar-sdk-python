@@ -27,7 +27,7 @@ class PostSubmitPostV2Request(BaseModel):
     """
     PostSubmitPostV2Request
     """ # noqa: E501
-    category_fields: Dict[str, Any] = Field(description="فیلدهای ویژه هر دسته‌بندی که باید مطابق قالب مشخص شده تکمیل شوند. قالب را از اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/")
+    category_fields: Dict[str, Any] = Field(description="فیلدهای مختص دسته‌بندی که باید مطابق schema تکمیل شوند. schema را اینجا ببینید: https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/")
     general_data: PostPostGeneralData
     landline_numbers: Optional[List[StrictStr]] = Field(default=None, description="شماره‌های ثابت برای افزودن به آگهی")
     __properties: ClassVar[List[str]] = ["category_fields", "general_data", "landline_numbers"]

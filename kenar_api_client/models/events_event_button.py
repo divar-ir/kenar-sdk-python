@@ -28,7 +28,7 @@ class EventsEventButton(BaseModel):
     EventsEventButton
     """ # noqa: E501
     action: Optional[AddonsAction] = None
-    title: Optional[StrictStr] = Field(default=None, description="متن برای نمایش روی دکمه")
+    title: Optional[StrictStr] = Field(default=None, description="متن دکمه")
     __properties: ClassVar[List[str]] = ["action", "title"]
 
     model_config = ConfigDict(

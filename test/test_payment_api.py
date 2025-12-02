@@ -29,7 +29,7 @@ class TestPaymentApi(unittest.TestCase):
     def test_payment_commit_wallet_transaction(self) -> None:
         """Test case for payment_commit_wallet_transaction
 
-        تایید تراکنش کیف پول
+        نهایی کردن تراکنش کیف پول
         """
         pass
 
@@ -50,7 +50,7 @@ class TestPaymentApi(unittest.TestCase):
     def test_payment_get_post_pricing(self) -> None:
         """Test case for payment_get_post_pricing
 
-        Retrieve the cost of the service
+        دریافت قیمت خدمات آگهی
         """
         pass
 
@@ -71,7 +71,7 @@ class TestPaymentApi(unittest.TestCase):
     def test_payment_publish_user_post(self) -> None:
         """Test case for payment_publish_user_post
 
-        Pay for user post submission on behalf of provider
+        انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
         """
         pass
 
@@ -92,14 +92,14 @@ class TestPaymentApi(unittest.TestCase):
     def test_payment_retrieve_wallet_transaction(self) -> None:
         """Test case for payment_retrieve_wallet_transaction
 
-        بازیابی تراکنش کیف پول
+        دریافت تراکنش کیف پول
         """
         pass
 
     def test_payment_submit_user_payment(self) -> None:
         """Test case for payment_submit_user_payment
 
-        Submit a user payment
+        ثبت رکورد پرداخت کاربر
         """
         pass
 

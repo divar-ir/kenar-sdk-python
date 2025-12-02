@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **delivery_year** | [**HomePresellFieldsDeliveryYear**](HomePresellFieldsDeliveryYear.md) |  | [optional] 
 **developer_company_name** | **str** | نام شرکت سازنده | [optional] 
 **down_payment_percentage** | **int** | درصد پیش پرداخت اولیه | [optional] 
-**has_own_image** | **bool** | تصاویر مربوط به خود ملک بوده و تزئینی نیستند. | 
+**has_own_image** | **bool** | آیا تصاویر واقعی ملک هستند (نه تزئینی) | 
 **min_unit_size** | **int** | حداقل مساحت واحد بر حسب متر مربع | [optional] 
 **project_name** | **str** | نام پروژه پیش‌فروش مسکن | [optional] 
 **project_physical_progress_percentage** | **int** | درصد پیشرفت فیزیکی پروژه | [optional] 

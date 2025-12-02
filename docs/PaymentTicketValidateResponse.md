@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**issuer_payload** | **object** |  | [optional] 
+**issuer_payload** | **object** | داده payload ارائه شده توسط صادرکننده تیکت | [optional] 
 
 ## Example
 

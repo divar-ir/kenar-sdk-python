@@ -24,9 +24,9 @@ from typing_extensions import Self
 
 class AddonsGetDynamicAction(BaseModel):
     """
-    نمایان‌گر یک اکشن پویا که می‌تواند در دستگاه کاربر دریافت و اجرا شود
+    نمایانگر یک Action پویا که می‌تواند در دستگاه کاربر دریافت و اجرا شود
     """ # noqa: E501
-    data: Optional[Dict[str, Any]] = Field(default=None, description="داده‌ای که می‌توانید تنظیم کنید و پس از کلیک کاربر برای شناسایی عملیات به شما برگردانده می‌شود")
+    data: Optional[Dict[str, Any]] = Field(default=None, description="داده‌ای که می‌توانید مقداردهی کنید و هنگام کلیک کاربر به شما برگردانده می‌شود")
     __properties: ClassVar[List[str]] = ["data"]
 
     model_config = ConfigDict(

@@ -27,7 +27,7 @@ class ChatAPIConversationSendMessageBody(BaseModel):
     """
     ChatAPIConversationSendMessageBody
     """ # noqa: E501
-    media_token: Optional[StrictStr] = Field(default=None, description="توکن برای مدیای ضمیمه شده (در صورت وجود)")
+    media_token: Optional[StrictStr] = Field(default=None, description="توکن فایل ضمیمه شده (در صورت وجود)")
     message: StrictStr = Field(description="محتوای پیام متنی برای ارسال")
     receiver_buttons: Optional[ChatapiChatButtonGrid] = None
     sender_buttons: Optional[ChatapiChatButtonGrid] = None

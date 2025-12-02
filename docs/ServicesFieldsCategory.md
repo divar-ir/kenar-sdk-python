@@ -1,6 +1,6 @@
 # ServicesFieldsCategory
 
-زیردسته‌بندی سرویس
+دسته‌بندی فرعی سرویس
 
 ## Enum
 

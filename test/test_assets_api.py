@@ -29,91 +29,91 @@ class TestAssetsApi(unittest.TestCase):
     def test_assets_get_body_statuses(self) -> None:
         """Test case for assets_get_body_statuses
 
-        دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
+        لیست گزینه‌های وضعیت بدنه
         """
         pass
 
     def test_assets_get_brand_models(self) -> None:
         """Test case for assets_get_brand_models
 
-        دریافت مدل‌های برند در دسته‌بندی دیوار
+        لیست مدل برندها بر اساس دسته‌بندی
         """
         pass
 
     def test_assets_get_categories(self) -> None:
         """Test case for assets_get_categories
 
-        دریافت دسته‌بندی‌های دیوار
+        لیست همه دسته‌بندی‌ها
         """
         pass
 
     def test_assets_get_cities(self) -> None:
         """Test case for assets_get_cities
 
-        دریافت شهرهای دیوار
+        لیست همه شهرها
         """
         pass
 
     def test_assets_get_colors(self) -> None:
         """Test case for assets_get_colors
 
-        دریافت رنگ‌ها در دسته‌بندی دیوار
+        لیست رنگ‌ها بر اساس دسته‌بندی
         """
         pass
 
     def test_assets_get_districts(self) -> None:
         """Test case for assets_get_districts
 
-        دریافت مناطق دیوار
+        لیست محله‌ها
         """
         pass
 
     def test_assets_get_districts2(self) -> None:
         """Test case for assets_get_districts2
 
-        دریافت مناطق دیوار
+        لیست محله‌ها
         """
         pass
 
     def test_assets_get_internal_storages(self) -> None:
         """Test case for assets_get_internal_storages
 
-        دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+        لیست گزینه‌های حافظه داخلی
         """
         pass
 
     def test_assets_get_o_auth_scopes(self) -> None:
         """Test case for assets_get_o_auth_scopes
 
-        دریافت دامنه‌های OAuth کنار دیوار
+        لیست دامنه‌های OAuth
         """
         pass
 
     def test_assets_get_permissions(self) -> None:
         """Test case for assets_get_permissions
 
-        دریافت مجوزهای کنار دیوار
+        لیست مجوزهای کنار دیوار
         """
         pass
 
     def test_assets_get_ram_memories(self) -> None:
         """Test case for assets_get_ram_memories
 
-        دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
+        لیست گزینه‌های حافظه RAM
         """
         pass
 
     def test_assets_get_service_types(self) -> None:
         """Test case for assets_get_service_types
 
-        دریافت انواع سرویس موجود در کنار دیوار
+        لیست انواع سرویس
         """
         pass
 
     def test_assets_get_submit_schema(self) -> None:
         """Test case for assets_get_submit_schema
 
-        دریافت قالب ثبت
+        دریافت schema ثبت آگهی برای دسته‌بندی
         """
         pass
 

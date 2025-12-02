@@ -7,9 +7,9 @@ Method | HTTP request | Description
 [**finder_get_post**](FinderApi.md#finder_get_post) | **GET** /v1/open-platform/finder/post/{token} | دریافت آگهی دیوار
 [**finder_get_user**](FinderApi.md#finder_get_user) | **POST** /v1/open-platform/users | دریافت اطلاعات کاربر
 [**finder_get_user2**](FinderApi.md#finder_get_user2) | **GET** /v1/open-platform/users | دریافت اطلاعات کاربر
-[**finder_get_user_idby_phone**](FinderApi.md#finder_get_user_idby_phone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه دیوار کاربر با شماره تلفن
+[**finder_get_user_idby_phone**](FinderApi.md#finder_get_user_idby_phone) | **POST** /v1/open-platform/get-user-id-by-phone | دریافت شناسه کاربر دیوار با شماره تلفن
 [**finder_get_user_posts**](FinderApi.md#finder_get_user_posts) | **GET** /v1/open-platform/finder/user-posts | دریافت آگهی‌های کاربر
-[**finder_search_post_v2**](FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | جستجو آگهی‌های دیوار با فیلترهایی
+[**finder_search_post_v2**](FinderApi.md#finder_search_post_v2) | **POST** /v2/open-platform/finder/post | جستجوی آگهی‌های دیوار
 
 
 # **finder_get_post**
@@ -17,10 +17,13 @@ Method | HTTP request | Description
 
 دریافت آگهی دیوار
 
-این API به شما امکان دریافت جزئیات آگهی دیوار با استفاده از توکن آن را می‌دهد.
-می‌توانید از توکن برای دریافت داده‌های آگهی و وضعیت آن استفاده کنید
+این API امکان دریافت داده‌های عمومی آگهی با توکن را فراهم می‌کند. جزئیات آگهی شامل داده‌های دسته‌بندی، موقعیت، وضعیت، زمان‌ها و اطلاعات کسب‌وکار برمی‌گردد.
 
-مجوزهای مورد نیاز: GET_POST.
+**نکات مهم**:
+- فقط داده‌های عمومی آگهی برگردانده می‌شوند (فیلدهای خصوصی حذف می‌شوند)
+- می‌توان هر آگهی منتشر شده‌ای را دریافت کرد، محدود به آگهی‌های خود کاربر نیست
+
+مجوزهای مورد نیاز: `GET_POST`
 
 ### Example
 
@@ -100,16 +103,18 @@ Name | Type | Description  | Notes
 
 دریافت اطلاعات کاربر
 
-پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید.
-با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید.
-با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید.
+این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth scopeهای اعطا شده بستگی دارد.
 
+**نکات مهم**:
+- با scope `USER_PHONE`: شماره تلفن کاربر برمی‌گردد
+- با scope `USER_ID`: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)
 
-مجوزهای مورد نیاز: USER_RETRIEVE.
+مجوزهای مورد نیاز: `USER_RETRIEVE`. OAuth scope موردنیاز: `USER_ID` یا `USER_PHONE`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -133,6 +138,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -164,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -185,14 +192,18 @@ Name | Type | Description  | Notes
 
 دریافت اطلاعات کاربر
 
-پس از دریافت توکن دسترسی، می‌توانید از این API برای دریافت اطلاعات کاربر استفاده کنید.
-با scope `USER_PHONE` می‌توانید شماره تلفن کاربر را دریافت کنید.
-با scope `USER_ID` می‌توانید شناسه کاربر را دریافت کرده و می‌توانید روی منحصر به فرد بودن این شناسه تکیه کنید.
+این API اطلاعات کاربر احراز هویت شده را برمی‌گرداند. داده‌های برگشتی به OAuth scopeهای اعطا شده بستگی دارد.
 
+**نکات مهم**:
+- با scope `USER_PHONE`: شماره تلفن کاربر برمی‌گردد
+- با scope `USER_ID`: شناسه مبهم‌شده کاربر برمی‌گردد (یکتا برای هر اپلیکیشن)
+
+OAuth scope موردنیاز: `USER_ID` یا `USER_PHONE`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -216,6 +227,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -243,7 +256,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -262,11 +275,15 @@ This endpoint does not need any parameter.
 # **finder_get_user_idby_phone**
 > FinderGetUserIDByPhoneResponse finder_get_user_idby_phone(finder_get_user_idby_phone_request)
 
-دریافت شناسه دیوار کاربر با شماره تلفن
+دریافت شناسه کاربر دیوار با شماره تلفن
 
-با استفاده از این API می‌توانید شناسه‌ی دیوار یک کاربر را با استفاده از شماره تلفن دریافت کنید. این اجازه مختص برنامه‌هایی است که دسترسی به شماره تماس کاربر ندارند و برای ارائه‌ی خدمات پشتیبانی به کاربران، نیاز به تبدیل شماره به شناسه‌ی دیوار دارند.
+این API امکان پیدا کردن شناسه کاربر با شماره تلفن را می‌دهد. مناسب برای یکپارچه‌سازی با سیستم‌های CRM یا پشتیبانی.
 
-مجوزهای مورد نیاز: GET_USER_ID_BY_PHONE.
+**نکات مهم**:
+- شناسه مبهم‌شده برمی‌گردد (یکتا برای هر اپلیکیشن، نه شناسه واقعی کاربر دیوار)
+
+
+مجوزهای مورد نیاز: `GET_USER_ID_BY_PHONE`
 
 ### Example
 
@@ -303,7 +320,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     finder_get_user_idby_phone_request = kenar_api_client.FinderGetUserIDByPhoneRequest() # FinderGetUserIDByPhoneRequest | 
 
     try:
-        # دریافت شناسه دیوار کاربر با شماره تلفن
+        # دریافت شناسه کاربر دیوار با شماره تلفن
         api_response = api_instance.finder_get_user_idby_phone(finder_get_user_idby_phone_request)
         print("The response of FinderApi->finder_get_user_idby_phone:\n")
         pprint(api_response)
@@ -347,14 +364,18 @@ Name | Type | Description  | Notes
 
 دریافت آگهی‌های کاربر
 
-این API به شما امکان دریافت تمام آگهی‌های یک کاربر را می‌دهد.
-می‌توانید از این API برای نمایش آگهی‌های کاربر در سرویس خود استفاده کنید.
+این API امکان دریافت لیست آگهی‌های متعلق به کاربر احراز هویت شده را فراهم می‌کند. اطلاعات پایه شامل توکن، عنوان، تصاویر، دسته‌بندی و وضعیت نمایش شماره تلفن برمی‌گردد.
 
-مجوزهای مورد نیاز: GET_USER_POSTS.
+**نکات مهم**:
+- فقط آگهی‌های متعلق به کاربر احراز هویت شده برگردانده می‌شوند
+- آگهی‌ها در وضعیت‌های مختلف برگردانده می‌شوند: منتشر شده، در انتظار پرداخت، در انتظار بررسی یا نیازمند اصلاح
+
+مجوزهای مورد نیاز: `GET_USER_POSTS`. OAuth scope موردنیاز: `USER_POSTS_GET`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -378,6 +399,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -405,7 +428,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -424,14 +447,15 @@ This endpoint does not need any parameter.
 # **finder_search_post_v2**
 > FinderSearchPostV2Response finder_search_post_v2(finder_search_posts_v2_request)
 
-جستجو آگهی‌های دیوار با فیلترهایی
+جستجوی آگهی‌های دیوار
 
-این API به شما امکان جستجو آگهی‌های دیوار با برخی فیلترها را می‌دهد.
-می‌توانید آگهی‌ها را بر اساس دسته‌بندی، شهر، منطقه و برخی فیلترهای دیگر جستجو کنید.
-آگهی‌ها بر اساس زمان آنها مرتب می‌شوند.
+این API امکان جستجوی آگهی‌های منتشر شده دیوار با فیلتر را فراهم می‌کند. می‌توانید بر اساس دسته‌بندی، شهر، محله و فیلدهای ویژه دسته‌بندی مانند محدوده قیمت، متراژ، تعداد اتاق و سال تولید فیلتر کنید.
 
+**نکات مهم**:
+- آگهی‌ها بر اساس زمان آخرین تغییر مرتب می‌شوند
+- فقط آگهی‌های منتشر شده برگردانده می‌شوند
 
-مجوزهای مورد نیاز: SEARCH_POST.
+مجوزهای مورد نیاز: `SEARCH_POST`
 
 ### Example
 
@@ -468,7 +492,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     finder_search_posts_v2_request = kenar_api_client.FinderSearchPostsV2Request() # FinderSearchPostsV2Request | 
 
     try:
-        # جستجو آگهی‌های دیوار با فیلترهایی
+        # جستجوی آگهی‌های دیوار
         api_response = api_instance.finder_search_post_v2(finder_search_posts_v2_request)
         print("The response of FinderApi->finder_search_post_v2:\n")
         pprint(api_response)

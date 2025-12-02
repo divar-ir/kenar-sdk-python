@@ -36,7 +36,7 @@ class TestPostApi(unittest.TestCase):
     def test_post_create_business_customized_button(self) -> None:
         """Test case for post_create_business_customized_button
 
-        ایجاد دکمه اختصاصی برای آگهی‌های کسب‌و‌کار
+        ایجاد دکمه اختصاصی برای آگهی‌های کسب‌وکار
         """
         pass
 
@@ -71,7 +71,7 @@ class TestPostApi(unittest.TestCase):
     def test_post_edit_post_v2(self) -> None:
         """Test case for post_edit_post_v2
 
-        ویرایش آگهی با پشتیبانی از فیلد ماسک
+        ویرایش آگهی (پیشرفته)
         """
         pass
 
@@ -92,7 +92,7 @@ class TestPostApi(unittest.TestCase):
     def test_post_get_upload_urls_v2(self) -> None:
         """Test case for post_get_upload_urls_v2
 
-        دریافت آدرس آپلود برای تصاویر و ویدیو‌ی آگهی‌ها
+        دریافت آدرس آپلود تصاویر و ویدیو
         """
         pass
 
@@ -106,21 +106,21 @@ class TestPostApi(unittest.TestCase):
     def test_post_set_post_customized_button(self) -> None:
         """Test case for post_set_post_customized_button
 
-        تنظیم دکمه اختصاصی بر روی آگهی ثبت شده
+        تنظیم دکمه اختصاصی روی آگهی
         """
         pass
 
     def test_post_submit_post(self) -> None:
         """Test case for post_submit_post
 
-        ثبت آگهی
+        ثبت آگهی (منسوخ شده)
         """
         pass
 
     def test_post_submit_post_v2(self) -> None:
         """Test case for post_submit_post_v2
 
-        ثبت آگهی با استفاده از اعتبارسنجی قالب JSON
+        ثبت آگهی
         """
         pass
 

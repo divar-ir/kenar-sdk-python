@@ -26,7 +26,7 @@ class ChatapiGenerateUploadTokenResponse(BaseModel):
     """
     ChatapiGenerateUploadTokenResponse
     """ # noqa: E501
-    token: Optional[StrictStr] = Field(default=None, description="توکن کدگذاری شده base64 ایمن برای URL که می‌تواند در نقطه پایانی آپلود استفاده شود")
+    token: Optional[StrictStr] = Field(default=None, description="توکن با کدگذاری base64 که می‌توان در endpoint آپلود از آن استفاده کرد")
     __properties: ClassVar[List[str]] = ["token"]
 
     model_config = ConfigDict(

@@ -37,7 +37,7 @@ class TestPostCreateBusinessCustomizedButtonBody(unittest.TestCase):
             return PostCreateBusinessCustomizedButtonBody(
                 customized_button = kenar_api_client.models.post_customized_button.postCustomizedButton(
                     action = kenar_api_client.models.عملیات.عملیات(
-                        get_dynamic_action = kenar_api_client.models.دریافت_اکشن_پویا.دریافت اکشن پویا(
+                        get_dynamic_action = kenar_api_client.models.دریافت_action_پویا.دریافت Action پویا(
                             data = {"your-internal-id":"something"}, ), 
                         open_direct_link = 'https://your-site.com/some-path', 
                         open_post_manage_page = kenar_api_client.models.باز_کردن_صفحه_مدیریت_آگهی.باز کردن صفحه مدیریت آگهی(
@@ -52,7 +52,7 @@ class TestPostCreateBusinessCustomizedButtonBody(unittest.TestCase):
             return PostCreateBusinessCustomizedButtonBody(
                 customized_button = kenar_api_client.models.post_customized_button.postCustomizedButton(
                     action = kenar_api_client.models.عملیات.عملیات(
-                        get_dynamic_action = kenar_api_client.models.دریافت_اکشن_پویا.دریافت اکشن پویا(
+                        get_dynamic_action = kenar_api_client.models.دریافت_action_پویا.دریافت Action پویا(
                             data = {"your-internal-id":"something"}, ), 
                         open_direct_link = 'https://your-site.com/some-path', 
                         open_post_manage_page = kenar_api_client.models.باز_کردن_صفحه_مدیریت_آگهی.باز کردن صفحه مدیریت آگهی(

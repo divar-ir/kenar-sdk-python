@@ -44,6 +44,10 @@ class TestSemanticCreateUserSemanticBody(unittest.TestCase):
             )
         else:
             return SemanticCreateUserSemanticBody(
+                phone = '',
+                semantic = {
+                    'key' : ''
+                    },
         )
         """
 

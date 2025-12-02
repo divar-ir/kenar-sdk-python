@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **action** | [**AddonsAction**](AddonsAction.md) |  | [optional] 
-**title** | **str** | متن برای نمایش روی دکمه | [optional] 
+**title** | **str** | متن دکمه | [optional] 
 
 ## Example
 

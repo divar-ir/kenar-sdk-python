@@ -37,7 +37,7 @@ class PostHomePresellFields(BaseModel):
     delivery_year: Optional[HomePresellFieldsDeliveryYear] = None
     developer_company_name: Optional[StrictStr] = Field(default=None, description="نام شرکت سازنده")
     down_payment_percentage: Optional[StrictInt] = Field(default=None, description="درصد پیش پرداخت اولیه")
-    has_own_image: StrictBool = Field(description="تصاویر مربوط به خود ملک بوده و تزئینی نیستند.")
+    has_own_image: StrictBool = Field(description="آیا تصاویر واقعی ملک هستند (نه تزئینی)")
     min_unit_size: Optional[StrictInt] = Field(default=None, description="حداقل مساحت واحد بر حسب متر مربع")
     project_name: Optional[StrictStr] = Field(default=None, description="نام پروژه پیش‌فروش مسکن")
     project_physical_progress_percentage: Optional[StrictInt] = Field(default=None, description="درصد پیشرفت فیزیکی پروژه")

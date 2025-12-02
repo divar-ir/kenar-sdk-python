@@ -34,7 +34,7 @@ from typing_extensions import Self
 
 class AddonsAddonSemantic(BaseModel):
     """
-    این پیام استخراج شده توسط OpenPlatform از اطلاعات معنایی ارائه‌دهنده سرویس است. راهنماها:  - همیشه بررسی کنید که آیا فیلد یا مقدار enum مناسبی قبل از  افزودن وجود دارد.  - مقدار صفر هر enum باید {ENUM_NAME}_UNSPECIFIED باشد.  - مقادیر Enum نباید با هیچ آگهی خاص یا صفت شخص  مطابقت داشته باشد.
+    پیام استخراج‌شده توسط OpenPlatform از semantic ارائه‌دهنده سرویس. راهنما: - قبل از افزودن enum جدید، بررسی کنید که آیا مقدار مناسبی وجود دارد. - مقدار صفر هر enum باید {ENUM_NAME}_UNSPECIFIED باشد. - مقادیر Enum نباید مختص آگهی یا شخص خاصی باشند.
     """ # noqa: E501
     car_verification_failure_reason: Optional[AddonSemanticCarVerificationStage] = None
     car_verification_last_successful_stage: Optional[AddonSemanticCarVerificationStage] = None

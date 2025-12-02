@@ -50,7 +50,7 @@ class TestFinderApi(unittest.TestCase):
     def test_finder_get_user_idby_phone(self) -> None:
         """Test case for finder_get_user_idby_phone
 
-        دریافت شناسه دیوار کاربر با شماره تلفن
+        دریافت شناسه کاربر دیوار با شماره تلفن
         """
         pass
 
@@ -64,7 +64,7 @@ class TestFinderApi(unittest.TestCase):
     def test_finder_search_post_v2(self) -> None:
         """Test case for finder_search_post_v2
 
-        جستجو آگهی‌های دیوار با فیلترهایی
+        جستجوی آگهی‌های دیوار
         """
         pass
 

@@ -5,10 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phone_number** | **str** |  | [optional] 
-**service_cost** | **int** |  | [optional] 
-**ticket_uuid** | **str** |  | [optional] 
-**user_id** | **str** |  | [optional] 
+**phone_number** | **str** | شماره تلفن کاربر (به جای آن از user_id استفاده کنید) | [optional] 
+**service_cost** | **int** | هزینه سرویس به ریال | 
+**ticket_uuid** | **str** | شناسه منحصر به فرد تیکت پرداخت | 
+**user_id** | **str** | شناسه منحصر به فرد کاربر | [optional] 
 
 ## Example
 

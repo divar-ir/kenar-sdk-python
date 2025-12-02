@@ -54,9 +54,9 @@ class PaymentTicketApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> PaymentTicketValidateResponse:
-        """اعتبارسنجی بلیط پرداخت
+        """اعتبارسنجی تیکت پرداخت
 
-        بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.  مجوزهای مورد نیاز: PAYMENT_TICKET_VALIDATE.
+        این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.  **نکات مهم**: - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود - پاسخ شامل payload ارائه شده توسط صادرکننده است  مجوزهای مورد نیاز: `PAYMENT_TICKET_VALIDATE`
 
         :param payment_ticket_validate_request: (required)
         :type payment_ticket_validate_request: PaymentTicketValidateRequest
@@ -121,9 +121,9 @@ class PaymentTicketApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[PaymentTicketValidateResponse]:
-        """اعتبارسنجی بلیط پرداخت
+        """اعتبارسنجی تیکت پرداخت
 
-        بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.  مجوزهای مورد نیاز: PAYMENT_TICKET_VALIDATE.
+        این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.  **نکات مهم**: - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود - پاسخ شامل payload ارائه شده توسط صادرکننده است  مجوزهای مورد نیاز: `PAYMENT_TICKET_VALIDATE`
 
         :param payment_ticket_validate_request: (required)
         :type payment_ticket_validate_request: PaymentTicketValidateRequest
@@ -188,9 +188,9 @@ class PaymentTicketApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """اعتبارسنجی بلیط پرداخت
+        """اعتبارسنجی تیکت پرداخت
 
-        بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.  مجوزهای مورد نیاز: PAYMENT_TICKET_VALIDATE.
+        این API امکان اعتبارسنجی تیکت پرداخت و دریافت payload صادرکننده آن را فراهم می‌کند. برای تایید تیکت‌های ارائه شده توسط کاربران جهت یکپارچه‌سازی با سرویس‌های دیوار استفاده کنید.  **نکات مهم**: - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود - پاسخ شامل payload ارائه شده توسط صادرکننده است  مجوزهای مورد نیاز: `PAYMENT_TICKET_VALIDATE`
 
         :param payment_ticket_validate_request: (required)
         :type payment_ticket_validate_request: PaymentTicketValidateRequest

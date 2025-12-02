@@ -4,31 +4,36 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**payment_commit_wallet_transaction**](PaymentApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | تایید تراکنش کیف پول
+[**payment_commit_wallet_transaction**](PaymentApi.md#payment_commit_wallet_transaction) | **POST** /experimental/open-platform/wallet/payments/commit | نهایی کردن تراکنش کیف پول
 [**payment_create_wallet_payment**](PaymentApi.md#payment_create_wallet_payment) | **POST** /experimental/open-platform/wallet/payments/create | ایجاد پرداخت کیف پول
 [**payment_get_balance**](PaymentApi.md#payment_get_balance) | **GET** /experimental/open-platform/balance | دریافت موجودی اپلیکیشن
-[**payment_get_post_pricing**](PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | Retrieve the cost of the service
+[**payment_get_post_pricing**](PaymentApi.md#payment_get_post_pricing) | **GET** /v1/open-platform/post/{post_token}/pricing | دریافت قیمت خدمات آگهی
 [**payment_get_transaction**](PaymentApi.md#payment_get_transaction) | **GET** /experimental/open-platform/transactions/{id} | دریافت جزئیات تراکنش
 [**payment_list_transactions**](PaymentApi.md#payment_list_transactions) | **GET** /experimental/open-platform/transactions | لیست تراکنش‌ها
-[**payment_publish_user_post**](PaymentApi.md#payment_publish_user_post) | **POST** /experimental/open-platform/post/{post_token}/publish | Pay for user post submission on behalf of provider
+[**payment_publish_user_post**](PaymentApi.md#payment_publish_user_post) | **POST** /experimental/open-platform/post/{post_token}/publish | انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
 [**payment_renew_post**](PaymentApi.md#payment_renew_post) | **POST** /experimental/open-platform/post/{post_token}/renew | تمدید آگهی
 [**payment_reorder_post**](PaymentApi.md#payment_reorder_post) | **POST** /experimental/open-platform/post/{post_token}/reorder | نردبان آگهی
-[**payment_retrieve_wallet_transaction**](PaymentApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | بازیابی تراکنش کیف پول
-[**payment_submit_user_payment**](PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | Submit a user payment
+[**payment_retrieve_wallet_transaction**](PaymentApi.md#payment_retrieve_wallet_transaction) | **GET** /experimental/open-platform/wallet/payments/{token} | دریافت تراکنش کیف پول
+[**payment_submit_user_payment**](PaymentApi.md#payment_submit_user_payment) | **POST** /v1/open-platform/user-payments | ثبت رکورد پرداخت کاربر
 
 
 # **payment_commit_wallet_transaction**
 > PaymentCommitWalletTransactionResponse payment_commit_wallet_transaction(payment_commit_wallet_transaction_request)
 
-تایید تراکنش کیف پول
+نهایی کردن تراکنش کیف پول
 
-(Limited) Using this API you can commit a successful payment. This API is idempotent and you can call it multiple times.
+این API تراکنش پرداخت کیف پول را پس از پرداخت موفق نهایی می‌کند.
 
-مجوزهای مورد نیاز: WALLET_PAYMENT.
+**نکات مهم**:
+- این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است
+- فقط تراکنش‌هایی که در وضعیت PAID هستند را نهایی کنید
+
+مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -54,6 +59,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -61,7 +68,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     payment_commit_wallet_transaction_request = kenar_api_client.PaymentCommitWalletTransactionRequest() # PaymentCommitWalletTransactionRequest | 
 
     try:
-        # تایید تراکنش کیف پول
+        # نهایی کردن تراکنش کیف پول
         api_response = api_instance.payment_commit_wallet_transaction(payment_commit_wallet_transaction_request)
         print("The response of PaymentApi->payment_commit_wallet_transaction:\n")
         pprint(api_response)
@@ -84,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -105,13 +112,22 @@ Name | Type | Description  | Notes
 
 ایجاد پرداخت کیف پول
 
-(Limited) Using this API you can start a payment transaction from the users wallet.
+این API امکان شروع تراکنش پرداخت از کیف پول دیوار کاربر را فراهم می‌کند. کاربر برای تکمیل پرداخت هدایت می‌شود و می‌توانید وضعیت تراکنش را پیگیری کنید.
 
-مجوزهای مورد نیاز: WALLET_PAYMENT.
+**نکات مهم**:
+- این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است
+- کاربر برای تکمیل تراکنش به آدرس پرداخت هدایت می‌شود
+- پس از پرداخت، کاربر به `redirect_url` مشخص شده شما هدایت می‌شود
+- از `RetrieveWalletTransaction` برای بررسی وضعیت پرداخت استفاده کنید
+- از `CommitWalletTransaction` برای نهایی کردن تراکنش پس از پرداخت موفق استفاده کنید
+
+
+مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -136,6 +152,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -167,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -188,9 +206,13 @@ Name | Type | Description  | Notes
 
 دریافت موجودی اپلیکیشن
 
-(Limited) Using this API you can retrieve current balance of your app.
+این API امکان دریافت موجودی فعلی اپلیکیشن شما به ریال را فراهم می‌کند. برای نظارت بر موجودی حساب قبل از انجام عملیات‌های پولی استفاده کنید.
 
-مجوزهای مورد نیاز: BALANCE_RETRIEVE.
+**نکات مهم**:
+- این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است
+- موجودی به ریال ایران برگردانده می‌شود
+
+مجوزهای مورد نیاز: `BALANCE_RETRIEVE`
 
 ### Example
 
@@ -264,15 +286,21 @@ This endpoint does not need any parameter.
 # **payment_get_post_pricing**
 > PaymentGetPostPricingResponse payment_get_post_pricing(post_token)
 
-Retrieve the cost of the service
+دریافت قیمت خدمات آگهی
 
-Using this API and with user permission, you can get the price of various services like Reorder, Renew, and Submit.The price of this API is not necessarily the same as the price on Divar, and pricing may vary.Use this API to get the price before applying services (such as reordering a post, renewing a post, or submitting a post).
+این API امکان دریافت اطلاعات قیمت‌گذاری برای خدمات مرتبط با آگهی را فراهم می‌کند. قبل از انجام عملیات‌های پولی مانند نردبان، تمدید یا ثبت آگهی از این برای بررسی هزینه‌ها استفاده کنید.
 
-مجوزهای مورد نیاز: POST_PRICING_RETRIEVE.
+**نکات مهم**:
+- قیمت‌گذاری مختص اپلیکیشن شما است و ممکن است با قیمت‌گذاری استاندارد دیوار متفاوت باشد
+- قیمت‌ها ممکن است بر اساس دسته‌بندی و شهر آگهی متفاوت باشند
+- فلگ `available` نشان می‌دهد که آیا سرویس برای این آگهی قابل اعمال است
+
+مجوزهای مورد نیاز: `POST_PRICING_RETRIEVE`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_PRICING_READ`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -297,6 +325,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -304,7 +334,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     post_token = 'post_token_example' # str | شناسه منحصر به فرد 8-9 کاراکتری برای آگهی
 
     try:
-        # Retrieve the cost of the service
+        # دریافت قیمت خدمات آگهی
         api_response = api_instance.payment_get_post_pricing(post_token)
         print("The response of PaymentApi->payment_get_post_pricing:\n")
         pprint(api_response)
@@ -327,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -348,9 +378,16 @@ Name | Type | Description  | Notes
 
 دریافت جزئیات تراکنش
 
-(Limited) Using this API you can retrieve transaction details.
+این API امکان دریافت اطلاعات دقیق یک تراکنش خاص با شناسه آن را فراهم می‌کند. برای پیگیری وضعیت تراکنش، هزینه‌ها و متادیتا استفاده کنید.
 
-مجوزهای مورد نیاز: TRANSACTION_RETRIEVE.
+**نکات مهم**:
+- این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است
+- شناسه تراکنش همان UUID است که هنگام ایجاد تراکنش ارسال کردید
+- وضعیت‌های تراکنش: PENDING، COMPLETED، FAILED، REFUNDED
+- انواع تراکنش: REORDER، SUBMIT، RENEW
+- برای تایید تکمیل تراکنش پس از عملیات‌های پولی استفاده کنید
+
+مجوزهای مورد نیاز: `TRANSACTION_RETRIEVE`
 
 ### Example
 
@@ -430,9 +467,15 @@ Name | Type | Description  | Notes
 
 لیست تراکنش‌ها
 
-(Limited) Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+این API امکان دریافت لیست صفحه‌بندی شده از تراکنش‌های اپلیکیشن شما را فراهم می‌کند. برای تاریخچه تراکنش، ممیزی و تسویه حساب استفاده کنید.
 
-مجوزهای مورد نیاز: TRANSACTION_LIST.
+**نکات مهم**:
+- این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است
+- نتایج صفحه‌بندی شده هستند - از `page_size` برای کنترل تعداد آیتم‌ها در هر صفحه استفاده کنید
+- از `page_token` در پاسخ برای دریافت صفحه بعدی استفاده کنید
+- تراکنش‌ها بر اساس زمان ایجاد مرتب می‌شوند (جدیدترین اول)
+
+مجوزهای مورد نیاز: `TRANSACTION_LIST`
 
 ### Example
 
@@ -465,7 +508,7 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.PaymentApi(api_client)
-    page_size = 56 # int | تعداد تراکنش‌ها برای برگرداندن در هر صفحه (optional)
+    page_size = 56 # int | تعداد تراکنش‌ها در هر صفحه (optional)
     page_token = 'page_token_example' # str | توکن برای صفحه بعدی نتایج (optional)
 
     try:
@@ -484,7 +527,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_size** | **int**| تعداد تراکنش‌ها برای برگرداندن در هر صفحه | [optional] 
+ **page_size** | **int**| تعداد تراکنش‌ها در هر صفحه | [optional] 
  **page_token** | **str**| توکن برای صفحه بعدی نتایج | [optional] 
 
 ### Return type
@@ -512,15 +555,23 @@ Name | Type | Description  | Notes
 # **payment_publish_user_post**
 > PaymentPublishUserPostResponse payment_publish_user_post(post_token, payment_publish_user_post_body)
 
-Pay for user post submission on behalf of provider
+انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
 
-This API allows providers to pay for user post submission costs. The post_token should be obtained from the SubmitUserPost API in post collection.
+این API امکان پرداخت هزینه انتشار آگهی ثبت شده توسط کاربر از طرف اپلیکیشن شما را فراهم می‌کند. هزینه از موجودی اپلیکیشن شما کسر می‌شود و آگهی منتشر می‌شود.
 
-مجوزهای مورد نیاز: PUBLISH_USER_POST.
+**نکات مهم**:
+- ابتدا آگهی باید با API `SubmitUserPost` ایجاد شده باشد
+- یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید
+- آگهی باید در وضعیت نیازمند پرداخت (WAITING_FOR_PAYMENT) باشد
+- از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید
+- هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است
+
+مجوزهای مورد نیاز: `PUBLISH_USER_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -546,6 +597,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -554,7 +607,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     payment_publish_user_post_body = kenar_api_client.PaymentPublishUserPostBody() # PaymentPublishUserPostBody | 
 
     try:
-        # Pay for user post submission on behalf of provider
+        # انتشار آگهی کاربر (پرداخت توسط ارائه‌دهنده)
         api_response = api_instance.payment_publish_user_post(post_token, payment_publish_user_post_body)
         print("The response of PaymentApi->payment_publish_user_post:\n")
         pprint(api_response)
@@ -578,7 +631,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -599,13 +652,23 @@ Name | Type | Description  | Notes
 
 تمدید آگهی
 
-(Limited) Use this API to renew a post, which extends its visibility period. Use GetPostPricing API to get the cost of the service before calling this API.
+این API امکان تمدید آگهی را فراهم می‌کند که دوره نمایش آن در دیوار را افزایش می‌دهد. هزینه از موجودی اپلیکیشن شما کسر می‌شود.
 
-مجوزهای مورد نیاز: POST_RENEW.
+**نکات مهم**:
+- این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است
+- قبل از تمدید، از `GetPostPricing` برای بررسی هزینه استفاده کنید
+- یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید
+- آگهی باید در وضعیت PUBLISHED و واجد شرایط تمدید باشد
+- از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید
+- هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است
+- تمدید، نمایش آگهی را افزایش داده و عمر آن را بازنشانی می‌کند
+
+مجوزهای مورد نیاز: `POST_RENEW`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_RENEW`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -630,6 +693,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -663,7 +728,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -684,13 +749,22 @@ Name | Type | Description  | Notes
 
 نردبان آگهی
 
-(Limited) Use GetPostPricing API to get the cost of the service before calling this API.
+این API امکان نردبان کردن آگهی به بالای لیست را فراهم می‌کند. هزینه از موجودی اپلیکیشن شما کسر می‌شود.
 
-مجوزهای مورد نیاز: POST_REORDER.
+**نکات مهم**:
+- این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است
+- قبل از نردبان، از `GetPostPricing` برای بررسی هزینه استفاده کنید
+- یک `id` منحصر به فرد (UUID v4) برای جلوگیری از تکرار ارسال کنید
+- آگهی باید در وضعیت PUBLISHED باشد
+- از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید
+- هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است
+
+مجوزهای مورد نیاز: `POST_REORDER`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_REORDER`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -715,6 +789,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
@@ -748,7 +824,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -767,15 +843,20 @@ Name | Type | Description  | Notes
 # **payment_retrieve_wallet_transaction**
 > PaymentRetrieveWalletTransactionResponse payment_retrieve_wallet_transaction(token)
 
-بازیابی تراکنش کیف پول
+دریافت تراکنش کیف پول
 
-(Limited) Using this API you can retrieve a transaction and its status. Use this API to validate the payment before committing.
+این API امکان دریافت وضعیت فعلی و جزئیات تراکنش پرداخت کیف پول را فراهم می‌کند. برای تایید تکمیل پرداخت قبل از commit کردن تراکنش استفاده کنید.
 
-مجوزهای مورد نیاز: WALLET_PAYMENT.
+**نکات مهم**:
+- این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است
+- وضعیت‌های تراکنش: UNKNOWN، CREATED، EXPIRED، PAID، COMMITTED
+
+مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -800,14 +881,16 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kenar_api_client.PaymentApi(api_client)
-    token = 'token_example' # str | توکن تراکنشی که می‌خواهید بازیابی کنید
+    token = 'token_example' # str | توکن تراکنشی که می‌خواهید دریافت کنید
 
     try:
-        # بازیابی تراکنش کیف پول
+        # دریافت تراکنش کیف پول
         api_response = api_instance.payment_retrieve_wallet_transaction(token)
         print("The response of PaymentApi->payment_retrieve_wallet_transaction:\n")
         pprint(api_response)
@@ -822,7 +905,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **str**| توکن تراکنشی که می‌خواهید بازیابی کنید | 
+ **token** | **str**| توکن تراکنشی که می‌خواهید دریافت کنید | 
 
 ### Return type
 
@@ -830,7 +913,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 
@@ -849,15 +932,23 @@ Name | Type | Description  | Notes
 # **payment_submit_user_payment**
 > object payment_submit_user_payment(payment_submit_user_payment_request)
 
-Submit a user payment
+ثبت رکورد پرداخت کاربر
 
-Using this API, you should submit a user payment. It is imperative you use this API to submit a user payment along with the received amount. This API requires an access token with the `SUBMIT_USER_PAYMENT` OAuth scope.
+این API امکان گزارش پرداخت انجام شده توسط کاربر به سرویس شما را فراهم می‌کند. از این برای اطلاع‌رسانی دیوار درباره تراکنش‌هایی که کاربران از طریق پلتفرم شما پرداخت می‌کنند استفاده کنید.
 
-مجوزهای مورد نیاز: SUBMIT_USER_PAYMENT.
+**نکات مهم**:
+- باید پرداخت‌ها را در بازه زمانی توافق شده گزارش دهید
+- `reference_id` باید برای هر تراکنش منحصر به فرد باشد (برای تسویه حساب استفاده می‌شود)
+- شناسه خدماتی که کاربر برای آنها پرداخت کرده را لیست کنید (مثلاً 'banner', 'title_refinement')
+- این داده‌ها برای تقسیم درآمد و گزارش مالی استفاده می‌شوند
+
+
+مجوزهای مورد نیاز: `SUBMIT_USER_PAYMENT`. OAuth scope موردنیاز: `SUBMIT_USER_PAYMENT`
 
 ### Example
 
 * Api Key Authentication (APIKey):
+* OAuth Authentication (OAuth):
 
 ```python
 import kenar_api_client
@@ -882,6 +973,8 @@ configuration.api_key['APIKey'] = os.environ["API_KEY"]
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['APIKey'] = 'Bearer'
 
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
 # Enter a context with an instance of the API client
 with kenar_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -889,7 +982,7 @@ with kenar_api_client.ApiClient(configuration) as api_client:
     payment_submit_user_payment_request = kenar_api_client.PaymentSubmitUserPaymentRequest() # PaymentSubmitUserPaymentRequest | 
 
     try:
-        # Submit a user payment
+        # ثبت رکورد پرداخت کاربر
         api_response = api_instance.payment_submit_user_payment(payment_submit_user_payment_request)
         print("The response of PaymentApi->payment_submit_user_payment:\n")
         pprint(api_response)
@@ -912,7 +1005,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey)
+[APIKey](../README.md#APIKey), [OAuth](../README.md#OAuth)
 
 ### HTTP request headers
 

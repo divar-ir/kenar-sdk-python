@@ -29,42 +29,42 @@ class TestAddonsApi(unittest.TestCase):
     def test_addons_create_business_addon(self) -> None:
         """Test case for addons_create_business_addon
 
-        افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
+        ایجاد افزونه کسب‌وکار
         """
         pass
 
     def test_addons_create_post_addon_v2(self) -> None:
         """Test case for addons_create_post_addon_v2
 
-        افزودن افزونه جدید به آگهی
+        ایجاد افزونه آگهی
         """
         pass
 
     def test_addons_create_user_addon_v2(self) -> None:
         """Test case for addons_create_user_addon_v2
 
-        افزودن افزونه جدید به کاربر
+        ایجاد افزونه کاربر
         """
         pass
 
     def test_addons_create_user_addon_v22(self) -> None:
         """Test case for addons_create_user_addon_v22
 
-        افزودن افزونه جدید به کاربر
+        ایجاد افزونه کاربر
         """
         pass
 
     def test_addons_delete_post_addon(self) -> None:
         """Test case for addons_delete_post_addon
 
-        حذف افزونه از آگهی
+        حذف افزونه آگهی
         """
         pass
 
     def test_addons_delete_post_addon2(self) -> None:
         """Test case for addons_delete_post_addon2
 
-        حذف افزونه از آگهی
+        حذف افزونه آگهی
         """
         pass
 

@@ -5,9 +5,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cost** | **int** |  | [optional] 
-**semantic** | **Dict[str, str]** |  | [optional] 
-**ticket_uuid** | **str** |  | [optional] 
+**cost** | **int** | هزینه مرتبط با عملیات | [optional] 
+**semantic** | **Dict[str, str]** | مپ key-value اطلاعات معنایی برای ذخیره | 
+**ticket_uuid** | **str** | UUID تیکت پرداخت (اختیاری) | [optional] 
 
 ## Example
 

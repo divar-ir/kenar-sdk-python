@@ -42,6 +42,8 @@ class TestPaymentTicketValidateRequest(unittest.TestCase):
             )
         else:
             return PaymentTicketValidateRequest(
+                service_cost = 56,
+                ticket_uuid = '',
         )
         """
 
