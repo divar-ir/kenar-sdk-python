@@ -58,7 +58,7 @@ class EventsApi:
     ) -> object:
         """اشتراک در رویداد
 
-        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به scope `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به scope `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  مجوزهای مورد نیاز: `EVENTS_REGISTER_SUBSCRIPTION`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
+        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به اسکوپ `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به اسکوپ `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EVENTS_REGISTER_SUBSCRIPTION`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
 
         :param events_register_event_subscription_request: (required)
         :type events_register_event_subscription_request: EventsRegisterEventSubscriptionRequest
@@ -125,7 +125,7 @@ class EventsApi:
     ) -> ApiResponse[object]:
         """اشتراک در رویداد
 
-        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به scope `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به scope `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  مجوزهای مورد نیاز: `EVENTS_REGISTER_SUBSCRIPTION`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
+        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به اسکوپ `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به اسکوپ `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EVENTS_REGISTER_SUBSCRIPTION`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
 
         :param events_register_event_subscription_request: (required)
         :type events_register_event_subscription_request: EventsRegisterEventSubscriptionRequest
@@ -192,7 +192,7 @@ class EventsApi:
     ) -> RESTResponseType:
         """اشتراک در رویداد
 
-        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به scope `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به scope `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  مجوزهای مورد نیاز: `EVENTS_REGISTER_SUBSCRIPTION`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
+        این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.  **نکات مهم**: - برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به اسکوپ `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` - برای رویداد `POST_UPDATE`: نیاز به اسکوپ `USER_POSTS_GET` - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EVENTS_REGISTER_SUBSCRIPTION`  ##### OAuth اسکوپ موردنیاز:  - `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
 
         :param events_register_event_subscription_request: (required)
         :type events_register_event_subscription_request: EventsRegisterEventSubscriptionRequest
@@ -335,7 +335,7 @@ class EventsApi:
     ) -> object:
         """ارسال رویداد به کاربر
 
-        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  مجوزهای مورد نیاز: `EVENTS_SEND`. OAuth scope موردنیاز: `SEND_EVENT`
+        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EVENTS_SEND`  ##### OAuth اسکوپ موردنیاز:  - `SEND_EVENT`
 
         :param message: پیام رویداد برای نمایش به کاربر
         :type message: str
@@ -410,7 +410,7 @@ class EventsApi:
     ) -> ApiResponse[object]:
         """ارسال رویداد به کاربر
 
-        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  مجوزهای مورد نیاز: `EVENTS_SEND`. OAuth scope موردنیاز: `SEND_EVENT`
+        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EVENTS_SEND`  ##### OAuth اسکوپ موردنیاز:  - `SEND_EVENT`
 
         :param message: پیام رویداد برای نمایش به کاربر
         :type message: str
@@ -485,7 +485,7 @@ class EventsApi:
     ) -> RESTResponseType:
         """ارسال رویداد به کاربر
 
-        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  مجوزهای مورد نیاز: `EVENTS_SEND`. OAuth scope موردنیاز: `SEND_EVENT`
+        این API امکان ارسال اعلان رویداد به یک کاربر را فراهم می‌کند. رویداد می‌تواند به یک کاربر خاص یا یک آگهی هدف‌گیری شود. رویدادها می‌توانند شامل دکمه‌هایی با اقدامات سفارشی باشند که به کاربران امکان تعامل با اپلیکیشن شما را می‌دهند.  **نکات مهم**: - عنوان دکمه‌ها باید بین 5 تا 50 کاراکتر باشد - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `EVENTS_SEND`  ##### OAuth اسکوپ موردنیاز:  - `SEND_EVENT`
 
         :param message: پیام رویداد برای نمایش به کاربر
         :type message: str

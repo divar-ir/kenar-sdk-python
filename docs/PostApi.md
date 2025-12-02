@@ -28,7 +28,15 @@ Method | HTTP request | Description
 
 این API بررسی می‌کند که آیا کاربر واجد شرایط ثبت آگهی است. تایید می‌کند که کاربر در لیست سیاه نیست، متخلف نیست و احراز هویت شده است.
 
-مجوزهای مورد نیاز: `CAN_USER_SUBMIT_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `CAN_USER_SUBMIT_POST`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `SUBMIT_USER_POST`
 
 ### Example
 
@@ -109,7 +117,15 @@ This endpoint does not need any parameter.
 
 این API تنظیمات دکمه اختصاصی را برای تمام آگهی‌های کسب‌وکار ایجاد می‌کند.
 
-مجوزهای مورد نیاز: `BUSINESS_CUSTOMIZED_BUTTON_CREATE`. OAuth scope موردنیاز: `BUSINESS_CREATE_CUSTOMIZED_BUTTON.business_token`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `BUSINESS_CUSTOMIZED_BUTTON_CREATE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `BUSINESS_CREATE_CUSTOMIZED_BUTTON.business_token`
 
 ### Example
 
@@ -196,7 +212,11 @@ Name | Type | Description  | Notes
 
 این API تنظیمات دکمه اختصاصی را از تمام آگهی‌های کسب‌وکار حذف می‌کند.
 
-مجوزهای مورد نیاز: `BUSINESS_CUSTOMIZED_BUTTON_CREATE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `BUSINESS_CUSTOMIZED_BUTTON_CREATE`
 
 ### Example
 
@@ -277,7 +297,15 @@ Name | Type | Description  | Notes
 
 این API تنظیمات دکمه اختصاصی را از یک آگهی حذف می‌کند.
 
-مجوزهای مورد نیاز: `SET_CUSTOMIZED_BUTTON`. OAuth scope موردنیاز: `USER_SET_CUSTOMIZED_BUTTON`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `SET_CUSTOMIZED_BUTTON`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `USER_SET_CUSTOMIZED_BUTTON`
 
 ### Example
 
@@ -361,7 +389,15 @@ Name | Type | Description  | Notes
 
 این API امکان حذف آگهی را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل حذف هستند.
 
-مجوزهای مورد نیاز: `DELETE_USER_POST`. OAuth scope موردنیاز: `DELETE_USER_POST`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `DELETE_USER_POST`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `DELETE_USER_POST`
 
 ### Example
 
@@ -449,7 +485,15 @@ Name | Type | Description  | Notes
 - عنوان باید بین 3 تا 50 کاراکتر باشد
 - آگهی نباید منقضی شده باشد
 
-مجوزهای مورد نیاز: `EDIT_POST`. OAuth scope موردنیاز: `POST_EDIT.post_token`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `EDIT_POST`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `POST_EDIT.post_token`
 
 ### Example
 
@@ -539,10 +583,18 @@ Name | Type | Description  | Notes
 **نکات مهم**:
 - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند
 - از `update_mask` برای مشخص کردن فیلدهای مورد به‌روزرسانی استفاده کنید
-- هنگام استفاده از scope `EDIT_USER_POST`، آگهی باید متعلق به کاربر احراز هویت شده باشد
+- هنگام استفاده از اسکوپ `EDIT_USER_POST`، آگهی باید متعلق به کاربر احراز هویت شده باشد
 - آگهی نباید منقضی شده باشد
 
-مجوزهای مورد نیاز: `EDIT_POST`. OAuth scope موردنیاز: `EDIT_USER_POST` یا `POST_EDIT.post_token`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `EDIT_POST`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `EDIT_USER_POST` یا `POST_EDIT.post_token`
 
 ### Example
 
@@ -629,7 +681,11 @@ Name | Type | Description  | Notes
 
 این API آدرس آپلود برای بارگذاری تصاویر آگهی را برمی‌گرداند.
 
-مجوزهای مورد نیاز: `UPLOAD_POST_IMAGE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `UPLOAD_POST_IMAGE`
 
 ### Example
 
@@ -710,7 +766,15 @@ This endpoint does not need any parameter.
 **نکات مهم**:
 - فقط آمار آگهی‌های متعلق به کاربر احراز هویت شده برگردانده می‌شود
 
-مجوزهای مورد نیاز: `POST_STATS_RETRIEVE`. OAuth scope موردنیاز: `USER_POSTS_STATS_READ`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `POST_STATS_RETRIEVE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `USER_POSTS_STATS_READ`
 
 ### Example
 
@@ -798,7 +862,11 @@ Name | Type | Description  | Notes
 **نکات مهم**:
 - آدرس برگشتی برای آپلود نیاز به api-key شما دارد
 
-مجوزهای مورد نیاز: `UPLOAD_POST_IMAGE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `UPLOAD_POST_IMAGE`
 
 ### Example
 
@@ -876,7 +944,15 @@ This endpoint does not need any parameter.
 
 این API امکان دریافت اطلاعات دقیق یک آگهی شامل داده‌های عمومی، داده‌های دسته‌بندی، داده‌های کسب‌وکار، وضعیت و دلیل رد را فراهم می‌کند. فقط آگهی‌های متعلق به کاربر احراز هویت شده قابل دریافت هستند.
 
-مجوزهای مورد نیاز: `GET_USER_POST`. OAuth scope موردنیاز: `USER_POSTS_GET`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `GET_USER_POST`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `USER_POSTS_GET`
 
 ### Example
 
@@ -961,7 +1037,15 @@ Name | Type | Description  | Notes
 
 این API تنظیمات دکمه اختصاصی را برای یک آگهی تعیین می‌کند. اگر دکمه وجود نداشته باشد، ایجاد می‌شود. اگر از قبل وجود داشته باشد، داده‌های آن به‌روزرسانی می‌شوند.
 
-مجوزهای مورد نیاز: `SET_CUSTOMIZED_BUTTON`. OAuth scope موردنیاز: `USER_SET_CUSTOMIZED_BUTTON`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `SET_CUSTOMIZED_BUTTON`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `USER_SET_CUSTOMIZED_BUTTON`
 
 ### Example
 
@@ -1048,7 +1132,11 @@ Name | Type | Description  | Notes
 
 این API امکان ثبت آگهی با فیلدهای پایه برای دسته‌بندی‌های خاص را فراهم می‌کند.
 
-مجوزهای مورد نیاز: `SUBMIT_POST`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `SUBMIT_POST`
 
 ### Example
 
@@ -1136,7 +1224,11 @@ Name | Type | Description  | Notes
 - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود
 - این برای ثبت در سطح اپلیکیشن است (آگهی‌های ارائه‌دهنده)
 
-مجوزهای مورد نیاز: `SUBMIT_POST`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `SUBMIT_POST`
 
 ### Example
 
@@ -1223,7 +1315,15 @@ Name | Type | Description  | Notes
 - فیلدهای ویژه دسته‌بندی باید از [قالب](https://kenar.divar.dev/openapi-doc/assets-get-submit-schema/) پیروی کنند
 - تمام فیلدهای اجباری ذکر شده در قالب باید ارسال شوند، در غیر این صورت ثبت ناموفق خواهد بود
 
-مجوزهای مورد نیاز: `SUBMIT_USER_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `SUBMIT_USER_POST`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `SUBMIT_USER_POST`
 
 ### Example
 

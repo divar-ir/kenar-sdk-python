@@ -26,7 +26,15 @@ Method | HTTP request | Description
 - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو)
 - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد
 
-مجوزهای مورد نیاز: `CHAT_BOT_SEND_MESSAGE`. OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `CHAT_BOT_SEND_MESSAGE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CHAT_BOT_USER_MESSAGE_SEND`
 
 ### Example
 
@@ -119,7 +127,11 @@ Name | Type | Description  | Notes
 - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو)
 - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد
 
-OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+#### دسترسی‌ها:
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CHAT_BOT_USER_MESSAGE_SEND`
 
 ### Example
 
@@ -212,7 +224,11 @@ Name | Type | Description  | Notes
 - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو)
 - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد
 
-OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+#### دسترسی‌ها:
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CHAT_BOT_USER_MESSAGE_SEND`
 
 ### Example
 
@@ -305,7 +321,11 @@ Name | Type | Description  | Notes
 - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو)
 - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد
 
-OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+#### دسترسی‌ها:
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CHAT_BOT_USER_MESSAGE_SEND`
 
 ### Example
 
@@ -398,7 +418,11 @@ Name | Type | Description  | Notes
 - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو)
 - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد
 
-OAuth scope موردنیاز: `CHAT_BOT_USER_MESSAGE_SEND`
+#### دسترسی‌ها:
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CHAT_BOT_USER_MESSAGE_SEND`
 
 ### Example
 
@@ -490,7 +514,15 @@ Name | Type | Description  | Notes
 - یا پیام متنی یا توکن رسانه باید ارسال شود (نه هر دو)
 - می‌توان شبکه دکمه‌ها را برای فرستنده و گیرنده ضمیمه کرد
 
-مجوزهای مورد نیاز: `CHAT_SEND_MESSAGE_OAUTH`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `CHAT_SEND_MESSAGE_OAUTH`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CHAT_POST_CONVERSATIONS_MESSAGE_SEND.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND` یا `CONVERSATION_SEND_MESSAGE.conversation_id`
 
 ### Example
 
@@ -578,7 +610,11 @@ Name | Type | Description  | Notes
 
 این API توکن آپلود برای بارگذاری فایل‌های رسانه‌ای در پیام‌های چت تولید می‌کند.
 
-مجوزهای مورد نیاز: `CHAT_UPLOAD_MEDIA`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `CHAT_UPLOAD_MEDIA`
 
 ### Example
 
@@ -664,7 +700,15 @@ Name | Type | Description  | Notes
 - فقط پیام‌های متنی برگردانده می‌شوند (سایر انواع پیام فیلتر می‌شوند)
 - پیام‌ها به ترتیب صعودی برگردانده می‌شوند
 
-مجوزهای مورد نیاز: `CHAT_READ_CONVERSATION`. OAuth scope موردنیاز: `CHAT_CONVERSATION_READ.conversation_id`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `CHAT_READ_CONVERSATION`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CHAT_CONVERSATION_READ.conversation_id`
 
 ### Example
 

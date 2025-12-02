@@ -16,12 +16,20 @@ Method | HTTP request | Description
 این API امکان اشتراک در رویدادها برای دریافت اعلان‌ها از طریق webhook هنگام وقوع رویدادها را فراهم می‌کند. پس از اشتراک، هنگام وقوع رویداد مربوطه در آدرس webhook شما مطلع خواهید شد.
 
 **نکات مهم**:
-- برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به scope `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ`
-- برای رویداد `POST_UPDATE`: نیاز به scope `USER_POSTS_GET`
+- برای رویداد `NEW_MESSAGE_ON_POST`: نیاز به اسکوپ `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ`
+- برای رویداد `POST_UPDATE`: نیاز به اسکوپ `USER_POSTS_GET`
 - آدرس webhook باید در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده باشد
 - برخی رویدادها به صورت پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های ربات چت)
 
-مجوزهای مورد نیاز: `EVENTS_REGISTER_SUBSCRIPTION`. OAuth scope موردنیاز: `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `EVENTS_REGISTER_SUBSCRIPTION`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CHAT_POST_CONVERSATIONS_READ.post_token` یا `CHAT_SUPPLIER_ALL_CONVERSATIONS_READ` یا `USER_POSTS_GET`
 
 ### Example
 
@@ -111,7 +119,15 @@ Name | Type | Description  | Notes
 - هنگام هدف‌گیری کاربر، target_resource_id باید با شناسه مبهم شده کاربر احراز هویت شده مطابقت داشته باشد
 - هنگام هدف‌گیری آگهی، آگهی باید متعلق به کاربر احراز هویت شده باشد
 
-مجوزهای مورد نیاز: `EVENTS_SEND`. OAuth scope موردنیاز: `SEND_EVENT`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `EVENTS_SEND`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `SEND_EVENT`
 
 ### Example
 

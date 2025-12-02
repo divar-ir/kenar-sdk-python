@@ -18,7 +18,11 @@ Method | HTTP request | Description
 - این API توسط اپلیکیشن‌های کنار برای اعتبارسنجی تیکت‌ها استفاده می‌شود
 - پاسخ شامل payload ارائه شده توسط صادرکننده است
 
-مجوزهای مورد نیاز: `PAYMENT_TICKET_VALIDATE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `PAYMENT_TICKET_VALIDATE`
 
 ### Example
 

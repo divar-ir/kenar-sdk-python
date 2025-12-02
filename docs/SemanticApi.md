@@ -18,7 +18,15 @@ Method | HTTP request | Description
 
 این API امکان ذخیره اطلاعات درباره یک آگهی در دیوار بدون افزودن افزونه را فراهم می‌کند.
 
-مجوزهای مورد نیاز: `POST_SEMANTIC_CREATE`. OAuth scope موردنیاز: `POST_SEMANTIC_CREATE.post_token`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `POST_SEMANTIC_CREATE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `POST_SEMANTIC_CREATE.post_token`
 
 ### Example
 
@@ -108,7 +116,15 @@ Name | Type | Description  | Notes
 **نکات مهم**:
 - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد
 
-مجوزهای مورد نیاز: `USER_SEMANTIC_CREATE`. OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `USER_SEMANTIC_CREATE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `USER_VERIFICATION_CREATE`
 
 ### Example
 
@@ -199,7 +215,11 @@ Name | Type | Description  | Notes
 **نکات مهم**:
 - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد
 
-OAuth scope موردنیاز: `USER_VERIFICATION_CREATE`
+#### دسترسی‌ها:
+
+##### OAuth اسکوپ موردنیاز:
+
+- `USER_VERIFICATION_CREATE`
 
 ### Example
 
@@ -287,7 +307,11 @@ Name | Type | Description  | Notes
 
 این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
 
-مجوزهای مورد نیاز: `USER_SEMANTIC_DELETE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `USER_SEMANTIC_DELETE`
 
 ### Example
 

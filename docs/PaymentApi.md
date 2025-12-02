@@ -28,7 +28,15 @@ Method | HTTP request | Description
 - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است
 - فقط تراکنش‌هایی که در وضعیت PAID هستند را نهایی کنید
 
-مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `WALLET_PAYMENT`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CREATE_WALLET_PAYMENT`
 
 ### Example
 
@@ -122,7 +130,15 @@ Name | Type | Description  | Notes
 - از `CommitWalletTransaction` برای نهایی کردن تراکنش پس از پرداخت موفق استفاده کنید
 
 
-مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `WALLET_PAYMENT`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CREATE_WALLET_PAYMENT`
 
 ### Example
 
@@ -212,7 +228,11 @@ Name | Type | Description  | Notes
 - این قابلیت فقط برای اپلیکیشن‌های تایید شده در دسترس است
 - موجودی به ریال ایران برگردانده می‌شود
 
-مجوزهای مورد نیاز: `BALANCE_RETRIEVE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `BALANCE_RETRIEVE`
 
 ### Example
 
@@ -295,7 +315,15 @@ This endpoint does not need any parameter.
 - قیمت‌ها ممکن است بر اساس دسته‌بندی و شهر آگهی متفاوت باشند
 - فلگ `available` نشان می‌دهد که آیا سرویس برای این آگهی قابل اعمال است
 
-مجوزهای مورد نیاز: `POST_PRICING_RETRIEVE`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_PRICING_READ`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `POST_PRICING_RETRIEVE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `PAYMENT_ALL_POSTS_PRICING_READ`
 
 ### Example
 
@@ -387,7 +415,11 @@ Name | Type | Description  | Notes
 - انواع تراکنش: REORDER، SUBMIT، RENEW
 - برای تایید تکمیل تراکنش پس از عملیات‌های پولی استفاده کنید
 
-مجوزهای مورد نیاز: `TRANSACTION_RETRIEVE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `TRANSACTION_RETRIEVE`
 
 ### Example
 
@@ -475,7 +507,11 @@ Name | Type | Description  | Notes
 - از `page_token` در پاسخ برای دریافت صفحه بعدی استفاده کنید
 - تراکنش‌ها بر اساس زمان ایجاد مرتب می‌شوند (جدیدترین اول)
 
-مجوزهای مورد نیاز: `TRANSACTION_LIST`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `TRANSACTION_LIST`
 
 ### Example
 
@@ -566,7 +602,15 @@ Name | Type | Description  | Notes
 - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید
 - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است
 
-مجوزهای مورد نیاز: `PUBLISH_USER_POST`. OAuth scope موردنیاز: `SUBMIT_USER_POST`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `PUBLISH_USER_POST`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `SUBMIT_USER_POST`
 
 ### Example
 
@@ -663,7 +707,15 @@ Name | Type | Description  | Notes
 - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است
 - تمدید، نمایش آگهی را افزایش داده و عمر آن را بازنشانی می‌کند
 
-مجوزهای مورد نیاز: `POST_RENEW`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_RENEW`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `POST_RENEW`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `PAYMENT_ALL_POSTS_RENEW`
 
 ### Example
 
@@ -759,7 +811,15 @@ Name | Type | Description  | Notes
 - از کافی بودن موجودی اپلیکیشن خود اطمینان حاصل کنید
 - هزینه‌ها بر اساس دسته‌بندی و شهر آگهی متفاوت است
 
-مجوزهای مورد نیاز: `POST_REORDER`. OAuth scope موردنیاز: `PAYMENT_ALL_POSTS_REORDER`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `POST_REORDER`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `PAYMENT_ALL_POSTS_REORDER`
 
 ### Example
 
@@ -851,7 +911,15 @@ Name | Type | Description  | Notes
 - این قابلیت آزمایشی است و فقط برای اپلیکیشن‌های تایید شده در دسترس است
 - وضعیت‌های تراکنش: UNKNOWN، CREATED، EXPIRED، PAID، COMMITTED
 
-مجوزهای مورد نیاز: `WALLET_PAYMENT`. OAuth scope موردنیاز: `CREATE_WALLET_PAYMENT`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `WALLET_PAYMENT`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `CREATE_WALLET_PAYMENT`
 
 ### Example
 
@@ -943,7 +1011,15 @@ Name | Type | Description  | Notes
 - این داده‌ها برای تقسیم درآمد و گزارش مالی استفاده می‌شوند
 
 
-مجوزهای مورد نیاز: `SUBMIT_USER_PAYMENT`. OAuth scope موردنیاز: `SUBMIT_USER_PAYMENT`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `SUBMIT_USER_PAYMENT`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `SUBMIT_USER_PAYMENT`
 
 ### Example
 

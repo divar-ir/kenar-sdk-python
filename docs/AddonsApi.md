@@ -24,7 +24,15 @@ Method | HTTP request | Description
 - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند
 - مالکیت کسب‌وکار قبل از ایجاد افزونه بررسی می‌شود
 
-مجوزهای مورد نیاز: `BUSINESS_ADDON_CREATE`. OAuth scope موردنیاز: `BUSINESS_ADDON_CREATE.business_token`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `BUSINESS_ADDON_CREATE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `BUSINESS_ADDON_CREATE.business_token`
 
 ### Example
 
@@ -116,7 +124,15 @@ Name | Type | Description  | Notes
 - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند
 - مسیرهای معنایی از ویجت‌ها برای دسته‌بندی استخراج می‌شوند
 
-مجوزهای مورد نیاز: `ADD_ON_CREATE`. OAuth scope موردنیاز: `POST_ADDON_CREATE.post_token` یا `USER_POSTS_ADDON_CREATE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `ADD_ON_CREATE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `POST_ADDON_CREATE.post_token` یا `USER_POSTS_ADDON_CREATE`
 
 ### Example
 
@@ -207,7 +223,15 @@ Name | Type | Description  | Notes
 - می‌توان دسته‌بندی‌ها را برای فیلتر کردن آگهی‌هایی که افزونه دریافت می‌کنند مشخص کرد
 - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند
 
-مجوزهای مورد نیاز: `USER_ADDON_CREATE`. OAuth scope موردنیاز: `USER_ADDON_CREATE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `USER_ADDON_CREATE`
+
+##### OAuth اسکوپ موردنیاز:
+
+- `USER_ADDON_CREATE`
 
 ### Example
 
@@ -299,7 +323,11 @@ Name | Type | Description  | Notes
 - می‌توان دسته‌بندی‌ها را برای فیلتر کردن آگهی‌هایی که افزونه دریافت می‌کنند مشخص کرد
 - ویجت‌ها باید معتبر بوده و از مشخصات فرمت ویجت پیروی کنند
 
-OAuth scope موردنیاز: `USER_ADDON_CREATE`
+#### دسترسی‌ها:
+
+##### OAuth اسکوپ موردنیاز:
+
+- `USER_ADDON_CREATE`
 
 ### Example
 
@@ -391,7 +419,11 @@ Name | Type | Description  | Notes
 - فقط افزونه‌های ایجاد شده توسط اپلیکیشن شما قابل حذف هستند
 
 
-مجوزهای مورد نیاز: `ADD_ON_DELETE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `ADD_ON_DELETE`
 
 ### Example
 
@@ -559,7 +591,11 @@ Name | Type | Description  | Notes
 - فقط افزونه‌های کاربر ایجاد شده توسط اپلیکیشن شما قابل حذف هستند
 
 
-مجوزهای مورد نیاز: `USER_ADDON_DELETE`
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `USER_ADDON_DELETE`
 
 ### Example
 
