@@ -129,6 +129,10 @@ Name | Type | Description  | Notes
 
 #### دسترسی‌ها:
 
+##### مجوزهای API Key مورد نیاز:
+
+- `CHAT_BOT_SEND_MESSAGE`
+
 ##### OAuth اسکوپ موردنیاز:
 
 - `CHAT_BOT_USER_MESSAGE_SEND`
@@ -225,6 +229,10 @@ Name | Type | Description  | Notes
 - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد
 
 #### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `CHAT_BOT_SEND_MESSAGE`
 
 ##### OAuth اسکوپ موردنیاز:
 
@@ -323,6 +331,10 @@ Name | Type | Description  | Notes
 
 #### دسترسی‌ها:
 
+##### مجوزهای API Key مورد نیاز:
+
+- `CHAT_BOT_SEND_MESSAGE`
+
 ##### OAuth اسکوپ موردنیاز:
 
 - `CHAT_BOT_USER_MESSAGE_SEND`
@@ -419,6 +431,10 @@ Name | Type | Description  | Notes
 - می‌توان شبکه دکمه‌ها را به پیام ضمیمه کرد
 
 #### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `CHAT_BOT_SEND_MESSAGE`
 
 ##### OAuth اسکوپ موردنیاز:
 

@@ -641,7 +641,7 @@ class SemanticApi:
     ) -> SemanticCreateUserSemanticResponse:
         """ایجاد اطلاعات معنایی کاربر
 
-        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_CREATE`  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
 
         :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
@@ -712,7 +712,7 @@ class SemanticApi:
     ) -> ApiResponse[SemanticCreateUserSemanticResponse]:
         """ایجاد اطلاعات معنایی کاربر
 
-        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_CREATE`  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
 
         :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
@@ -783,7 +783,7 @@ class SemanticApi:
     ) -> RESTResponseType:
         """ایجاد اطلاعات معنایی کاربر
 
-        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
+        این API امکان ایجاد یا به‌روزرسانی semantic کاربر بدون افزودن افزونه را می‌دهد.  **نکات مهم**: - امکان ارسال اطلاعات معنایی و تیکت پرداخت (اختیاری) وجود دارد  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_CREATE`  ##### OAuth اسکوپ موردنیاز:  - `USER_VERIFICATION_CREATE`
 
         :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
@@ -1209,7 +1209,7 @@ class SemanticApi:
     ) -> object:
         """حذف اطلاعات معنایی کاربر
 
-        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_DELETE`
 
         :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
@@ -1280,7 +1280,7 @@ class SemanticApi:
     ) -> ApiResponse[object]:
         """حذف اطلاعات معنایی کاربر
 
-        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_DELETE`
 
         :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str
@@ -1351,7 +1351,7 @@ class SemanticApi:
     ) -> RESTResponseType:
         """حذف اطلاعات معنایی کاربر
 
-        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
+        این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.  #### دسترسی‌ها:  ##### مجوزهای API Key مورد نیاز:  - `USER_SEMANTIC_DELETE`
 
         :param divar_user_id: شناسه کاربر دیوار (required)
         :type divar_user_id: str

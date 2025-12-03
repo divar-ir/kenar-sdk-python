@@ -212,6 +212,10 @@ Name | Type | Description  | Notes
 
 #### دسترسی‌ها:
 
+##### مجوزهای API Key مورد نیاز:
+
+- `USER_RETRIEVE`
+
 ##### OAuth اسکوپ موردنیاز:
 
 - `USER_ID` یا `USER_PHONE`

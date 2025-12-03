@@ -508,6 +508,12 @@ Name | Type | Description  | Notes
 - فقط افزونه‌های ایجاد شده توسط اپلیکیشن شما قابل حذف هستند
 
 
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `ADD_ON_DELETE`
+
 ### Example
 
 * Api Key Authentication (APIKey):

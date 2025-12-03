@@ -217,6 +217,10 @@ Name | Type | Description  | Notes
 
 #### دسترسی‌ها:
 
+##### مجوزهای API Key مورد نیاز:
+
+- `USER_SEMANTIC_CREATE`
+
 ##### OAuth اسکوپ موردنیاز:
 
 - `USER_VERIFICATION_CREATE`
@@ -393,6 +397,12 @@ Name | Type | Description  | Notes
 حذف اطلاعات معنایی کاربر
 
 این API امکان حذف اطلاعات معنایی یک کاربر را فراهم می‌کند.
+
+#### دسترسی‌ها:
+
+##### مجوزهای API Key مورد نیاز:
+
+- `USER_SEMANTIC_DELETE`
 
 ### Example
 
